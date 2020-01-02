@@ -23,6 +23,5 @@ Here you will be able to find each file with short description of its content.
 * **.gitignore** - contains filetypes which shouldn't be in the repo
 * **temp** - temporary folder for testing
 * **README.MD** - Readme about our app
-* **package-lock.json** - contains information about project (name, version, etc) and it lists the packages that project is dependent on with lock the versions of dependencies that are installed.
- * **package.json** - contains information about project (name, version, etc) and it lists the packages that project is dependent on
- 
+* **package-lock.json** - contains information about project (name, version, etc) and it lists the packages that project is dependent on with lock the versions of dependencies that are installed. (Node.js thing)
+ * **package.json** - contains information about project (name, version, etc) and it lists the packages that project is dependent on. (Node.js thing)
