@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
@@ -42,25 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^3.1.0",
-    "prettier": "1.19.1"
-  },
-  "prettier": {
-    "prettier.printWidth": 80,
-    "prettier.packageManager": "npm",
-    "prettier.arrowParens": "always",
-    "prettier.bracketSpacing": true,
-    "prettier.htmlWhitespaceSensitivity": "css",
-    "prettier.ignorePath": ".prettierignore",
-    "prettier.jsxBracketSameLine": false,
-    "prettier.jsxSingleQuote": true,
-    "prettier.proseWrap": "preserve",
-    "prettier.quoteProps": "as-needed",
-    "prettier.semi": true,
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 2,
-    "prettier.trailingComma": "all",
-    "prettier.useTabs": false
+    "husky": "^3.1.0"
   },
   "husky": {
     "hooks": {
