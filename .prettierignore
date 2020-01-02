@@ -1,0 +1,7 @@
+.eslintrc.js
+.vscode/settings.json
+docs/docs.md
+package-lock.json
+package.json
+public/manifest.json
+README.md
