@@ -13,7 +13,7 @@ Here you will be able to find each file with short description of its content.
   - **manifest.json** - required when create PWA. Contains all settings about mobile/desktop app
   - **robots.txt** - tells search engine crawlers which pages or files the crawler can or can't request from your site. This is used mainly to avoid overloading your site with requests
 - **src** - main directory which contains all source code.
-  - **components** - React coomponents; each component should be in separate file
+  - **components** - React components; each component should be in separate file
     - **App.js** - Parent component; within import each component;
   - **styles** - CSS styles; 1 stylesheet should refers 1 component
     - **index.css** - contains global styles like body's style
