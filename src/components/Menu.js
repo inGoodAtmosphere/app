@@ -12,7 +12,7 @@ const Menu = ({ isActive }) => {
     setIsOpen(true);
   };
   return (
-    <nav className={`menu ${isActive && 'menu--isActive'}`}>
+    <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
       <a href="/mapa" className="menu__item">
         Mapa
       </a>

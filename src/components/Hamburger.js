@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Hamburger = ({ isActive, setIsActive }) => (
   <button
     type="button"
-    className={`hamburger ${isActive && 'hamburger--isActive'}`}
+    className={`hamburger ${isActive ? 'hamburger--isActive' : ''}`}
     onClick={() => setIsActive(!isActive)}
   >
     Hamburger
@@ -12,6 +12,6 @@ const Hamburger = ({ isActive, setIsActive }) => (
 );
 Hamburger.propTypes = {
   isActive: PropTypes.bool.isRequired,
-  setIsActive: PropTypes.func,
+  setIsActive: PropTypes.func.isRequired,
 };
 export default Hamburger;
