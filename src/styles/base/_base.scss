@@ -8,3 +8,9 @@ html {
 body {
   background: $dark-bg;
 }
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
