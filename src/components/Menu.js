@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import RegisterModal from './RegisterModal';
+import LoginModal from './LoginModal';
 
 const Menu = ({ isActive }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [registerModalIsOpen, setRegisterIsOpen] = useState(false);
+  const [loginModalIsOpen, setLoginIsOpen] = useState(false);
 
-  const closeModal = () => {
-    setIsOpen(false);
+  const closeLoginModal = () => {
+    setLoginIsOpen(false);
   };
-  const openModal = () => {
-    setIsOpen(true);
+  const openLoginModal = () => {
+    setLoginIsOpen(true);
+  };
+  const closeRegisterModal = () => {
+    setRegisterIsOpen(false);
+  };
+  const openRegisterModal = () => {
+    setRegisterIsOpen(true);
   };
   return (
     <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
@@ -33,20 +41,23 @@ const Menu = ({ isActive }) => {
       </a>
       <button
         type="button"
-        onClick={openModal}
+        onClick={openLoginModal}
         className="menu__item menu__login"
       >
         Zaloguj się
       </button>
-
+      <LoginModal closeModal={closeLoginModal} modalIsOpen={loginModalIsOpen} />
       <button
         type="button"
-        onClick={openModal}
+        onClick={openRegisterModal}
         className="menu__item menu__register"
       >
-        Zarejsetruj się
+        Zarejestruj się
       </button>
-      <RegisterModal closeModal={closeModal} modalIsOpen={modalIsOpen} />
+      <RegisterModal
+        closeModal={closeRegisterModal}
+        modalIsOpen={registerModalIsOpen}
+      />
     </nav>
   );
 };

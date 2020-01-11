@@ -35,6 +35,7 @@ const RegisterModal = ({ modalIsOpen, closeModal }) => (
       <input type="password" placeholder="Powtórz hasło" />
       <input type="text" placeholder="Imię (opcjonalnie)" />
       <input type="text" placeholder="Nazwisko (opcjonalnie)" />
+      <button type="submit">Zarejestruj się</button>
     </form>
   </Modal>
 );
