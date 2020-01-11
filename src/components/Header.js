@@ -2,7 +2,10 @@ import React from 'react';
 
 const Header = () => (
   <header>
-    <h1>inGoodAtmosphere</h1>
+    <img src="https://picsum.photos/225/50" alt="Logo" />
+    <button type="button" className="hamburger">
+      Hamburger
+    </button>
   </header>
 );
 
