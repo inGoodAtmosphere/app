@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Header = ({ Hamburger }) => (
   <header>
-    <a href="/">
+    <Link to="/">
       <img src="https://picsum.photos/225/50" alt="Logo" />
-    </a>
+    </Link>
     {Hamburger}
   </header>
 );

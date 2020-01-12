@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import Menu from '../components/Menu';
 import Hamburger from '../components/Hamburger';
 import AboutUs from '../components/AboutUs';
-import Map from '../components/Map';
+import Mapa from '../components/Map';
 import Campaign from '../components/Campaign';
 import Partners from '../components/Partners';
 import Sensors from '../components/Sensors';
@@ -26,7 +26,7 @@ const Routes = () => {
         <Switch>
           <Route path="/" component={LandingPage} exact />
           <Route path="/o-nas" component={AboutUs} />
-          <Route path="/mapa" component={Map} />
+          <Route path="/mapa" component={Mapa} />
           <Route path="/kampania" component={Campaign} />
           <Route path="/partnerzy" component={Partners} />
           <Route path="/czujniki" component={Sensors} />
