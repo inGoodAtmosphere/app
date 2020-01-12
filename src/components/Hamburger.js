@@ -7,7 +7,9 @@ const Hamburger = ({ isActive, setIsActive }) => (
     className={`hamburger ${isActive ? 'hamburger--isActive' : ''}`}
     onClick={() => setIsActive(!isActive)}
   >
-    Hamburger
+    <span className="hamburger__box">
+      <span className="hamburger__line" />
+    </span>
   </button>
 );
 Hamburger.propTypes = {

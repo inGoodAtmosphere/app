@@ -9,7 +9,7 @@ const LandingPage = () => (
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus
       illo beatae!
     </h2>
-    <button type="button">Zobacz jak</button>
+    <a href="/kampania">Zobacz jak</a>
     <InfoCard
       className="project"
       header="Nasz projekt"
