@@ -1,35 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Marker = (props) => {
-  const { color, title } = props;
+const Marker = ({ color, title, data }) => {
+  console.log(data);
   return (
     <div>
       <div
         className="marker"
         style={{ backgroundColor: color }}
-        // style={{
-        //   position: 'absolute',
-        //   top: '50%',
-        //   left: '50%',
-        //   width: '18px',
-        //   height: '18px',
-        //   backgroundColor: '#000',
-        //   border: '2px solid #fff',
-        //   borderRadius: '100%',
-        //   userSelect: 'none',
-        //   transform: 'translate(-50%, -50%)',
-        // }}
         title={title}
       />
       <div className="pulse" />
     </div>
   );
 };
+// NOTE: marker wywoluje sie przy component update
+// TODO: przy mouncie okreslic kolor
 Marker.defaultProps = {
-  color: '',
+  color: '#000',
 };
 Marker.propTypes = {
+  data: PropTypes.shape({
+    pm25: PropTypes.number,
+    pm10: PropTypes.number,
+  }).isRequired,
   color: PropTypes.string,
   title: PropTypes.string.isRequired,
 };

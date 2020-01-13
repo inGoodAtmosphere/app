@@ -2,6 +2,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import AboutUsCard from './AboutUsCard';
+import { content } from '../data/about-us.json';
 
 const AboutUs = () => {
   const settings = {
@@ -20,12 +21,7 @@ const AboutUs = () => {
       },
     ],
   };
-  const content = {
-    name: 'Anonim',
-    role: 'Programista, elektronik',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Incidunt officiis obcaecati officia mollitia cumque natus qui!',
-  };
+
   return (
     <div className="slider">
       <Slider {...settings}>
