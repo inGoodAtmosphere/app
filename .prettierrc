@@ -5,7 +5,7 @@
   "htmlWhitespaceSensitivity": "css",
   "endOfLine": "lf",
   "jsxBracketSameLine": false,
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
   "semi": true,

@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  color: $light-bg;
+}
+body {
+  background: $dark-bg;
+}
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
