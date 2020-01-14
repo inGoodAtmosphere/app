@@ -22,7 +22,6 @@ const Map = () => (
             lng={sensor.lng}
             title={sensor.title}
             data={data}
-            color="#f11"
           />
         );
       })}
