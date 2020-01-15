@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 html {
+  font-family: "Lato", sans-serif;
   font-size: 62.5%;
   color: $light-bg;
 }
@@ -10,7 +11,34 @@ body {
 }
 a {
   text-decoration: none;
+  color: $dark-bg;
+  font-size: $s-size;
 }
 button:hover {
   cursor: pointer;
+}
+main{
+  padding: $spacing;
+}
+.container {
+  width: 100vw;
+}
+h1 {
+  font-size: $l-size;
+}
+h2 {
+  font-size: $m-size;
+}
+h3 {
+  font-size: $s-size;
+}
+h4 {
+  font-size: $xs-size;
+}
+p {
+  font-size: $xs-size;
+}
+.card {
+  border-radius: $spacing;
+  padding: $spacing;
 }
