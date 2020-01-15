@@ -1,53 +1,52 @@
 .landing-page > * {
-    font-weight: bold;
+  font-weight: bold;
 }
 .project {
-    background-color: $light-bg;
-    color: black;
-    width: 100%;
-    padding: 25px;
+  background-color: $light-bg;
+  color: black;
+  width: 100%;
+  padding: 25px;
 }
 .air {
-    margin: $spacing;
+  margin: $spacing;
 }
 .air__btn {
-    font-weight: normal;
-    background: none;
-    color: $light-bg;
-    border-radius: $spacing;
-    padding: 10px;
-    border: 1px solid $light-bg;
+  font-weight: normal;
+  background: none;
+  color: $light-bg;
+  border-radius: $spacing;
+  padding: 10px;
+  border: 1px solid $light-bg;
 }
 .map {
-    height: 300px;
-    position: relative;
+  height: 300px;
+  position: relative;
 }
 .map__header {
-    height: 100px;
-    border-radius: $spacing $spacing 0 0;
-    background: $dark-accent;
+  height: 100px;
+  border-radius: $spacing $spacing 0 0;
+  background: $dark-accent;
 }
 .map__h {
-    padding: $spacing*1.5;
-    width: 250px;
+  padding: $spacing * 1.5;
+  width: 250px;
 }
 .map__p {
-    
-    font-weight: bold;
-    font-size: $s-size;
-    padding: 70px $spacing;
-    color: $text;
-    margin: 0;
+  font-weight: bold;
+  font-size: $s-size;
+  padding: 70px $spacing;
+  color: $text;
+  margin: 0;
 }
 .map__content {
-    height: 180px;
-    border-radius: 0 0 $spacing $spacing;
-    background: $light-bg;
+  height: 180px;
+  border-radius: 0 0 $spacing $spacing;
+  background: $light-bg;
 }
 .map__img {
-    border-radius: $spacing;
-    position: absolute;
-    top: $spacing;
-    right: $spacing;
-    padding: $spacing;
+  border-radius: $spacing;
+  position: absolute;
+  top: $spacing;
+  right: $spacing;
+  padding: $spacing;
 }

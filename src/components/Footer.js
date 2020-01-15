@@ -16,11 +16,17 @@ const Footer = () => (
       <a href="/aplikacja">Aplikacja</a>
       <a href="/regulamin">Regulamin</a>
     </div>
-    <h3 className="footer__center">Nasi partnerzy: </h3>
+    <h3>Nasi partnerzy: </h3>
     <div className="footer__partner">
-      <img src={partner1} alt="MSK" />
-      <img src={partner1} alt="MSK" />
-      <img src={partner1} alt="MSK" />
+      <a href="https://www.msk.earth/">
+        <img src={partner1} alt="MSK" />
+      </a>
+      <a href="https://www.msk.earth/">
+        <img src={partner1} alt="MSK" />
+      </a>
+      <a href="https://www.msk.earth/">
+        <img src={partner1} alt="MSK" />
+      </a>
     </div>
   </footer>
 );
