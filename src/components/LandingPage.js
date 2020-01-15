@@ -1,6 +1,6 @@
-import React from "react";
-import InfoCard from "./InfoCard";
-import { content } from "../data/landing-page.json";
+import React from 'react';
+import InfoCard from './InfoCard';
+import { content } from '../data/landing-page.json';
 
 const LandingPage = () => (
   <main className="landing-page">
