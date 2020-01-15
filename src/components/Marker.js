@@ -1,8 +1,16 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 const Marker = ({ title, data: { pm25 } }) => {
   const [color, setColor] = useState('');
+  const [show, setShow] = useState(false);
+  const handleClick = () => {
+    // console.log(key, childProps);
+    setShow(!show);
+  };
   useEffect(() => {
     console.log(pm25);
     if (pm25 < 10) setColor('#44A368');
@@ -15,6 +23,7 @@ const Marker = ({ title, data: { pm25 } }) => {
   return (
     <>
       <div
+        onClick={handleClick}
         className="marker"
         // prettier-ignore
         style={{
@@ -24,6 +33,26 @@ const Marker = ({ title, data: { pm25 } }) => {
         }}
         title={title}
       />
+      {show && (
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            handleClick();
+          }}
+        >
+          <div
+            style={{
+              width: 100,
+              height: 100,
+              background: '#f11',
+            }}
+          >
+            <button type="button" onClick={handleClick}>
+              X
+            </button>
+            <h2>{title}</h2>
+          </div>
+        </OutsideClickHandler>
+      )}
     </>
   );
 };
