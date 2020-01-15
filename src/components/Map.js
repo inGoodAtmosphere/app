@@ -9,7 +9,6 @@ const Map = () => (
   <div style={{ width: '50vw', height: '50vh' }}>
     <GoogleMap
       defaultCenter={{ lat: 50.264518, lng: 19.015257 }}
-      // onChildClick={handleChildClick}
       defaultZoom={10}
       bootstrapURLKeys={{ key }}
     >
@@ -17,7 +16,6 @@ const Map = () => (
         const data = measurements.find(
           (measurement) => measurement.id === sensor.id,
         );
-        console.log(data);
         return (
           <Marker
             key={sensor.id}
