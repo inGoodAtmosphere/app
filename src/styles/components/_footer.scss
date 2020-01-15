@@ -1,7 +1,7 @@
 footer {
   margin: 0;
   color: $text;
-  width: 100vw;
+  width: 100%;
   background: $light-bg;
 }
 .partner {
@@ -13,9 +13,9 @@ i.fab {
   width: 40px;
   height: 40px;
 }
-.footer__icons, .footer__links {
+.footer__icons,
+.footer__links {
   margin: $spacing;
-  width: 100%;
   display: flex;
   justify-content: space-around;
 }
