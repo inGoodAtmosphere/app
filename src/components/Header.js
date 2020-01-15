@@ -1,17 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import Hamburger from './Hamburger';
+import Menu from './Menu';
 
-const Header = ({ Hamburger }) => (
-  <header>
-    <Link to="/">
-      <img src="https://picsum.photos/225/50" alt="Logo" />
-    </Link>
-    {Hamburger}
-  </header>
-);
-Header.propTypes = {
-  Hamburger: PropTypes.element.isRequired,
+const Header = () => {
+  const [isActive, setIsActive] = useState(false);
+  return (
+    <>
+      <header>
+        <a href="/">
+          <img src="https://picsum.photos/225/50" alt="Logo" />
+        </a>
+        <Hamburger isActive={isActive} setIsActive={setIsActive} />
+      </header>
+      <Menu isActive={isActive} />
+    </>
+  );
 };
 
 export default Header;
