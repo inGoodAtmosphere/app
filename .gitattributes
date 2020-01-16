@@ -1,34 +1,20 @@
-# .gitattributes snippet to force users to use same line endings for project.
-        # 
-        # Handle line endings automatically for files detected as text
-        # and leave all files detected as binary untouched.
-        * text=auto
-
-        #
-        # The above will handle all files NOT found below
-        # https://help.github.com/articles/dealing-with-line-endings/
-        # https://github.com/Danimoth/gitattributes/blob/master/Web.gitattributes
-
-
-
-        # These files are text and should be normalized (Convert crlf => lf)
-        *.php text
-        *.css text
-        *.js text
-        *.json text
-        *.htm text
-        *.html text
-        *.xml text
-        *.txt text
-        *.ini text
-        *.inc text
-        *.pl text
-        *.rb text
-        *.py text
-        *.scm text
-        *.sql text
-        .htaccess text
-        *.sh text
+*.php eol=lf
+        *.css eol=lf
+        *.js eol=lf
+        *.json eol=lf
+        *.htm eol=lf
+        *.html eol=lf
+        *.xml eol=lf
+        *.txt eol=lf
+        *.ini eol=lf
+        *.inc eol=lf
+        *.pl eol=lf
+        *.rb eol=lf
+        *.py eol=lf
+        *.scm eol=lf
+        *.sql eol=lf
+        .htaccess eol=lf
+        *.sh eol=lf
 
         # These files are binary and should be left untouched
         # (binary is a macro for -text -diff)
