@@ -5,7 +5,7 @@ import { withGetScreen } from 'react-getscreen';
 import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
 
-const Marker = ({ title, data: { pm25 }, isMobile }) => {
+const Marker = ({ title, data: { pm25, pm10 }, isMobile }) => {
   const [color, setColor] = useState('');
   const [show, setShow] = useState(false);
   const handleClick = () => {
@@ -41,17 +41,17 @@ const Marker = ({ title, data: { pm25 }, isMobile }) => {
               handleClick();
             }}
           >
-            <div
-              style={{
-                width: 100,
-                height: 100,
-                background: '#f11',
-              }}
-            >
-              <button type="button" onClick={handleClick}>
+            <div className="marker__info-window">
+              <button
+                type="button"
+                className="marker__info-window__close"
+                onClick={handleClick}
+              >
                 X
               </button>
               <h2>{title}</h2>
+              <p>{pm10}</p>
+              <p>{pm25}</p>
             </div>
           </OutsideClickHandler>
         )
@@ -62,6 +62,7 @@ const Marker = ({ title, data: { pm25 }, isMobile }) => {
 Marker.propTypes = {
   data: PropTypes.shape({
     pm25: PropTypes.number,
+    pm10: PropTypes.number,
   }).isRequired,
   title: PropTypes.string.isRequired,
   isMobile: PropTypes.func.isRequired,

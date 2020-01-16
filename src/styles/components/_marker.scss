@@ -1,5 +1,5 @@
 .marker {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   width: 18px;
@@ -7,4 +7,16 @@
   border-radius: 100%;
   user-select: none;
   transform: translate(-50%, -50%);
+}
+.marker__info-window {
+  position: absolute;
+  transform: translate(-50%, -120%);
+  background: $dark-bg;
+  z-index: 1;
+}
+.marker__info-window__close {
+  border: none;
+  background: transparent;
+  color: $light-accent;
+  font-size: $s-size;
 }
