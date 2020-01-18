@@ -3,6 +3,7 @@ footer {
   color: $text;
   width: 100%;
   background: $light-bg;
+  padding: $spacing;
 }
 .partner {
   background-image: url('/public/img/MSK-logo.png');
@@ -25,5 +26,5 @@ h3 {
 .footer__partner {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: $spacing;
+  padding: $spacing;
 }

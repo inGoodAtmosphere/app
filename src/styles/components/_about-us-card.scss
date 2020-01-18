@@ -1,0 +1,45 @@
+.slider {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+    color: $dark-bg;
+    width: 24rem;
+    height: 48rem;
+    border-radius: $spacing;
+    background: $light-bg;
+    margin: $spacing;
+    margin-bottom: 25%;
+} 
+.card__image {
+    top: -9%;
+    position: absolute;
+    height: 55%;
+    width: 80%;
+    border-radius: $spacing;
+    margin: 6%;
+}
+.card__us {
+    margin-top: 40%;
+}
+.card__faded {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+    color: $dark-bg;
+    width: 24rem;
+    height: 48rem;
+    border-radius: $spacing;
+    background: $light-bg;
+    margin: $spacing;
+    opacity: 60%;
+    scale: 80%;
+}
