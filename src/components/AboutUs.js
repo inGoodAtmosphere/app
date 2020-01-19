@@ -8,14 +8,14 @@ const AboutUs = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
     // lazyLoad: true,
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           arrows: false,
         },
       },
@@ -25,6 +25,11 @@ const AboutUs = () => {
   return (
     <div className="slider">
       <Slider {...settings}>
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
       </Slider>
     </div>
