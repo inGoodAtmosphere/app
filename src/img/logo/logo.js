@@ -13,6 +13,7 @@ function SvgLogoV2(props) {
       imageRendering="optimizeQuality"
       fillRule="evenodd"
       clipRule="evenodd"
+      className="svg__block"
       {...props}
     >
       <path

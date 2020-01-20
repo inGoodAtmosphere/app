@@ -1,9 +1,4 @@
-h1 {
-  padding-left: 20px;
-  text-transform: uppercase;
-}
-
-h2 {
-  padding-left: 10px;
+.campaign__h2 {
+  padding-left: $spacing;
   color: $light-accent;
 }

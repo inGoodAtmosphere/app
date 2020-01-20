@@ -10,8 +10,7 @@
   fill: $dark-bg;
   fill-rule: nonzero;
 }
-svg {
-  transform: scale(0.2);
-  -webkit-transform: scale(0.2);
-  position: relative;
+.svg__block {
+  width: 275px;
+  height: 210px;
 }

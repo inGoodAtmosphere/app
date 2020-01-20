@@ -1,12 +1,13 @@
 import React from 'react';
 import InfoCard from './InfoCard';
 import { content } from '../data/landing-page.json';
+import Logo from '../img/logo/logo';
 
 const LandingPage = () => (
   <main className="landing-page">
-    <img src="https://picsum.photos/280/210" alt="Logo" />
+    <Logo />
     <div className="air">
-      <h1>Feel the air</h1>
+      <h1 className="air__motto">Feel the air</h1>
       <h2>{content.h2}</h2>
       <a className="air__btn" href="/kampania">
         Zobacz jak

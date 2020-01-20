@@ -8,8 +8,9 @@ const Header = () => {
   return (
     <>
       <header>
-        <Logo />
-
+        <a href="/">
+          <Logo />
+        </a>
         <Hamburger isActive={isActive} setIsActive={setIsActive} />
       </header>
       <Menu isActive={isActive} />
