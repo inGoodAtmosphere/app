@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
 import mapContext from '../contexts/map-context';
 
-const Marker = ({ title, data, isMobile }) => {
+const Marker = ({ title, data, data: { measurement }, isMobile }) => {
   const [color, setColor] = useState('');
   const [show, setShow] = useState(false);
   const { dispatch } = useContext(mapContext);
@@ -15,16 +15,16 @@ const Marker = ({ title, data, isMobile }) => {
   };
   const handleClick = () => {
     switchWindow();
-    dispatch({ type: 'SET_SELECTED_SENSOR', data });
+    dispatch({ type: 'SET_SELECTED_SENSOR', measurement });
   };
   useEffect(() => {
-    if (data.pm25 < 10) setColor('#44A368');
-    else if (data.pm25 < 20) setColor('#C1E080');
-    else if (data.pm25 < 50) setColor('#C19330');
-    else if (data.pm25 < 100) setColor('#E1625A');
-    else if (data.pm25 >= 100) setColor('#7C1D7A');
+    if (measurement[0].pm25 < 10) setColor('#44A368');
+    else if (measurement[0].pm25 < 20) setColor('#C1E080');
+    else if (measurement[0].pm25 < 50) setColor('#C19330');
+    else if (measurement[0].pm25 < 100) setColor('#E1625A');
+    else if (measurement[0].pm25 >= 100) setColor('#7C1D7A');
     else setColor('#999999');
-  }, [data.pm25]);
+  }, [measurement]);
   return (
     <>
       <div
@@ -56,8 +56,8 @@ const Marker = ({ title, data, isMobile }) => {
                 X
               </button>
               <h2>{title}</h2>
-              <p>{data.pm10}</p>
-              <p>{data.pm25}</p>
+              <p>{measurement[0].pm10}</p>
+              <p>{measurement[0].pm25}</p>
             </div>
           </OutsideClickHandler>
         )

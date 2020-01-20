@@ -1,7 +1,7 @@
 const mapReducer = (state, action) => {
   switch (action.type) {
     case 'SET_SELECTED_SENSOR':
-      return { ...action.data };
+      return [...action.measurement];
     default:
       return state;
   }

@@ -1,34 +1,139 @@
 {
   "measurements": [
     {
+      "id": 1000000000001,
       "title": "Katowice",
-      "pm25": 4.32,
-      "pm10": 43.21,
-      "id": 1000000000001
+      "measurement": [
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        }
+      ]
     },
     {
+      "id": 1000000000002,
       "title": "Zabrze",
-      "pm25": 14.32,
-      "pm10": 3.21,
-      "id": 1000000000002
+      "measurement": [
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        }
+      ]
     },
     {
+      "id": 1000000000003,
       "title": "Siemianowice Śląskie",
-      "pm25": 44.32,
-      "pm10": 53.21,
-      "id": 1000000000003
+      "measurement": [
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        }
+      ]
     },
     {
+      "id": 1000000000004,
       "title": "Gliwice",
-      "pm25": 455.32,
-      "pm10": 43.21,
-      "id": 1000000000004
+      "measurement": [
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        }
+      ]
     },
     {
+      "id": 1000000000005,
       "title": "Ruda Śląska",
-      "pm25": 1.32,
-      "pm10": 3.21,
-      "id": 1000000000005
+      "measurement": [
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        },
+        {
+          "time": 1092312109,
+          "pm25": 3.42,
+          "pm10": 5.32,
+          "temperature": 3.2,
+          "humidity": 43
+        }
+      ]
     }
   ]
 }
