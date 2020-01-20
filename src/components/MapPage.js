@@ -5,7 +5,7 @@ import MapContext from '../contexts/map-context';
 import mapReducer from '../reducers/map-reducer';
 
 const MapPage = () => {
-  const [state, dispatch] = useReducer(mapReducer, [{ pm25: 231, pm10: 231 }]);
+  const [state, dispatch] = useReducer(mapReducer, {});
   return (
     <MapContext.Provider value={{ state, dispatch }}>
       <div>
