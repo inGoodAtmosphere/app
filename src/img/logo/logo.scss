@@ -1,0 +1,17 @@
+@import '../../styles/base/settings';
+.fil0 {
+  fill: $light-bg;
+}
+.fil2 {
+  fill: $light-bg;
+  fill-rule: nonzero;
+}
+.fil1 {
+  fill: $dark-bg;
+  fill-rule: nonzero;
+}
+svg {
+  transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+  position: relative;
+}

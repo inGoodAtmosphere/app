@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.fil0 {
+  fill: white;
+}
+.fil1 {
+  fill: white;
+  fill-rule: nonzero;
+}

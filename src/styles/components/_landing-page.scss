@@ -6,11 +6,14 @@
   color: black;
   width: 100%;
   padding: 25px;
+  margin-top: $spacing;
+  border-radius: $spacing;
 }
 .air {
   margin: $spacing;
 }
 .air__btn {
+  margin-bottom: $spacing;
   font-weight: normal;
   background: none;
   color: $light-bg;

@@ -1,0 +1,32 @@
+
+.menu {
+	background: $light-bg;
+	position: absolute;
+	right: -100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 1;
+	height: calc(100vh - 72px);
+	width: 100%;
+}
+.menu__item {
+	color: $dark-bg;
+	font-size: $l-size;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.menu__login {
+	border: 1px transparent;
+	padding: $spacing;
+	color: $light-bg;
+	background: $dark-bg;
+	border-radius: $spacing;	
+}
+.menu__register {
+	font-size: $m-size;
+	background: none;
+	border: 1px transparent;
+	margin-top: -50px;
+}
