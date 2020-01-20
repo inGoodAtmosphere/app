@@ -1,11 +1,13 @@
 import React from 'react';
 import { articles } from '../data/articles.json';
 import ArticleThumbnail from './ArticleThumbnail';
+import '../styles/components/_campaign.scss';
 
 const Campaign = () => (
   <div>
     <h1>Nasze artykuły</h1>
     <h2>Tutaj przeczytasz wszystkie nasze artykuły</h2>
+    <div className="thumbnail-container">
     {articles.map((article) => {
       const link = `/kampania/${article.header}`;
       return (
@@ -18,6 +20,7 @@ const Campaign = () => (
         />
       );
     })}
+  </div>
   </div>
 );
 

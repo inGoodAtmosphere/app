@@ -1,0 +1,11 @@
+@import '../base/_settings.scss';
+
+h1 {
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  padding-left: 10px;
+  color: $light-accent;
+}
