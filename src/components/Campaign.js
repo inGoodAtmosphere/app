@@ -1,7 +1,6 @@
 import React from 'react';
 import { articles } from '../data/articles.json';
 import ArticleThumbnail from './ArticleThumbnail';
-import '../styles/components/_campaign.scss';
 
 const Campaign = () => (
   <div>
