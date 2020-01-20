@@ -1,0 +1,39 @@
+@import '../base/_settings.scss';
+
+.article-container {
+  margin: 10px;
+  background: $light-bg;
+  border-radius: 10px;
+  color: $text;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 135px auto;
+  grid-template-rows: 40px auto 30px;
+  align-items: start;
+  justify-items: start;
+}
+
+.article-container__miniaturka {
+  border-radius: 10px;
+  padding: 3px;
+  grid-row: 1 / span 3;
+}
+
+.article-container__header {
+  text-align: left;
+}
+
+.article-container__description {
+  font-size: 13px;
+}
+
+.article-container__link {
+  justify-self: center;
+  align-self: center;
+  border: 1px solid $dark-accent;
+  border-radius: 30px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}

@@ -15,7 +15,6 @@ const Marker = ({ title, data, isMobile }) => {
   };
   const handleClick = () => {
     switchWindow();
-    console.log(data);
     dispatch({ type: 'SET_SELECTED_SENSOR', data });
   };
   useEffect(() => {
