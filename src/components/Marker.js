@@ -1,24 +1,30 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { withGetScreen } from 'react-getscreen';
 import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
+import mapContext from '../contexts/map-context';
 
-const Marker = ({ title, data: { pm25, pm10 }, isMobile }) => {
+const Marker = ({ title, data, isMobile }) => {
   const [color, setColor] = useState('');
   const [show, setShow] = useState(false);
-  const handleClick = () => {
+  const { dispatch } = useContext(mapContext);
+  const switchWindow = () => {
     setShow(!show);
   };
+  const handleClick = () => {
+    switchWindow();
+    dispatch({ type: 'SET_SELECTED_SENSOR', data });
+  };
   useEffect(() => {
-    if (pm25 < 10) setColor('#44A368');
-    else if (pm25 < 20) setColor('#C1E080');
-    else if (pm25 < 50) setColor('#C19330');
-    else if (pm25 < 100) setColor('#E1625A');
-    else if (pm25 >= 100) setColor('#7C1D7A');
+    if (data.pm25 < 10) setColor('#44A368');
+    else if (data.pm25 < 20) setColor('#C1E080');
+    else if (data.pm25 < 50) setColor('#C19330');
+    else if (data.pm25 < 100) setColor('#E1625A');
+    else if (data.pm25 >= 100) setColor('#7C1D7A');
     else setColor('#999999');
-  }, [pm25]);
+  }, [data.pm25]);
   return (
     <>
       <div
@@ -38,7 +44,7 @@ const Marker = ({ title, data: { pm25, pm10 }, isMobile }) => {
         show && (
           <OutsideClickHandler
             onOutsideClick={() => {
-              handleClick();
+              switchWindow();
             }}
           >
             <div className="marker__info-window">
@@ -50,8 +56,8 @@ const Marker = ({ title, data: { pm25, pm10 }, isMobile }) => {
                 X
               </button>
               <h2>{title}</h2>
-              <p>{pm10}</p>
-              <p>{pm25}</p>
+              <p>{data.pm10}</p>
+              <p>{data.pm25}</p>
             </div>
           </OutsideClickHandler>
         )
