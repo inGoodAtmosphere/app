@@ -9,6 +9,7 @@ import Campaign from '../components/Campaign';
 import Partners from '../components/Partners';
 import Sensors from '../components/Sensors';
 import Contact from '../components/Contact';
+import NotFoundPage from '../components/NotFoundPage';
 
 const Routes = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const Routes = () => (
         <Route path="/partnerzy" component={Partners} />
         <Route path="/czujniki" component={Sensors} />
         <Route path="/kontakt" component={Contact} />
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer />
     </div>
