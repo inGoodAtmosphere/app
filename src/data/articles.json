@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "header": "Header1",
+      "description": "Lorem ipsum dolor sit amet",
+      "thumbnail": "https://picsum.photos/125/150"
+    },
+    {
+      "header": "Header2",
+      "description": "Lorem ipsum dolor sit amet",
+      "thumbnail": "https://picsum.photos/125/150"
+    },
+    {
+      "header": "Header3",
+      "description": "Lorem ipsum dolor sit amet",
+      "thumbnail": "https://picsum.photos/125/150"
+    }
+  ]
+}
