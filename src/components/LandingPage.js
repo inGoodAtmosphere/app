@@ -4,7 +4,7 @@ import { content } from '../data/landing-page.json';
 import Logo from '../img/logo/logo';
 
 const LandingPage = () => (
-  <main className="landing-page">
+  <>
     <Logo />
     <div className="air">
       <h1 className="air__motto">Feel the air</h1>
@@ -29,7 +29,7 @@ const LandingPage = () => (
         <p className="map__p">{content.p}</p>
       </div>
     </div>
-  </main>
+  </>
 );
 
 export default LandingPage;

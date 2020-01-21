@@ -15,16 +15,18 @@ const Routes = () => (
   <BrowserRouter>
     <div className="container">
       <Header />
-      <Switch>
-        <Route path="/" component={LandingPage} exact />
-        <Route path="/o-nas" component={AboutUs} />
-        <Route path="/mapa" component={MapPage} />
-        <Route path="/kampania" component={Campaign} exact />
-        <Route path="/partnerzy" component={Partners} />
-        <Route path="/czujniki" component={Sensors} />
-        <Route path="/kontakt" component={Contact} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <main className="content">
+        <Switch>
+          <Route path="/" component={LandingPage} exact />
+          <Route path="/o-nas" component={AboutUs} />
+          <Route path="/mapa" component={MapPage} />
+          <Route path="/kampania" component={Campaign} exact />
+          <Route path="/partnerzy" component={Partners} />
+          <Route path="/czujniki" component={Sensors} />
+          <Route path="/kontakt" component={Contact} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </main>
       <Footer />
     </div>
   </BrowserRouter>

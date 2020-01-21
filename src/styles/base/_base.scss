@@ -6,6 +6,7 @@ html {
   font-size: 62.5%;
   color: $light-bg;
   background: $dark-bg;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -19,8 +20,10 @@ main {
   padding: $spacing;
 }
 .container {
-  position: relative;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   font-size: $l-size;
@@ -42,4 +45,7 @@ p {
 .card {
   border-radius: $spacing;
   padding: $spacing;
+}
+.content {
+  flex: 1;
 }

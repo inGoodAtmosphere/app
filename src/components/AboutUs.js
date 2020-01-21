@@ -23,7 +23,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="slider">
+    <>
       <Slider {...settings}>
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
@@ -32,7 +32,7 @@ const AboutUs = () => {
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
       </Slider>
-    </div>
+    </>
   );
 };
 
