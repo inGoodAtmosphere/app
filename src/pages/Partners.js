@@ -1,6 +1,6 @@
 import React from 'react';
 import { partners } from '../data/partners.json';
-import CardWithThumbnail from './CardWithThumbnail';
+import CardWithThumbnail from '../components/CardWithThumbnail';
 
 const Partners = () => (
   <>

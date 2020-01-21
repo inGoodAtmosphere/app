@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import LandingPage from '../components/LandingPage';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import AboutUs from '../components/AboutUs';
-import MapPage from '../components/MapPage';
-import Campaign from '../components/Campaign';
-import Partners from '../components/Partners';
-import Sensors from '../components/Sensors';
-import Contact from '../components/Contact';
-import NotFoundPage from '../components/NotFoundPage';
+import LandingPage from '../pages/LandingPage';
+import AboutUs from '../pages/AboutUs';
+import Map from '../pages/Map';
+import Campaign from '../pages/Campaign';
+import Partners from '../pages/Partners';
+import Sensors from '../pages/Sensors';
+import Contact from '../pages/Contact';
+import NotFoundPage from '../pages/NotFound';
 
 const Routes = () => (
   <BrowserRouter>
@@ -19,7 +19,7 @@ const Routes = () => (
         <Switch>
           <Route path="/" component={LandingPage} exact />
           <Route path="/o-nas" component={AboutUs} />
-          <Route path="/mapa" component={MapPage} />
+          <Route path="/mapa" component={Map} />
           <Route path="/kampania" component={Campaign} exact />
           <Route path="/partnerzy" component={Partners} />
           <Route path="/czujniki" component={Sensors} />

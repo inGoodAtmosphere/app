@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from './InfoCard';
+import InfoCard from '../components/InfoCard';
 import { content } from '../data/landing-page.json';
 import Logo from '../img/logo/logo';
 
