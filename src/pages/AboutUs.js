@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Slider from 'react-slick';
-import AboutUsCard from './AboutUsCard';
+import AboutUsCard from '../components/AboutUsCard';
 import { content } from '../data/about-us.json';
 
 const AboutUs = () => {

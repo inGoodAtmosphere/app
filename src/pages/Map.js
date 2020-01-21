@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
-import Map from './Map';
-import Data from './MapData';
+import Map from '../components/Map';
+import Data from '../components/MapData';
 import MapContext from '../contexts/map-context';
 import mapReducer from '../reducers/map-reducer';
 

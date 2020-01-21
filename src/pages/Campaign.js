@@ -1,6 +1,6 @@
 import React from 'react';
 import { articles } from '../data/articles.json';
-import ArticleThumbnail from './ArticleThumbnail';
+import ArticleThumbnail from '../components/ArticleThumbnail';
 
 const Campaign = () => (
   <>
