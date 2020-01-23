@@ -39,21 +39,26 @@ const Menu = ({ isActive }) => {
       <a href="partnerzy" className="menu__item">
         Nasi partnerzy
       </a>
-      <button
-        type="button"
-        onClick={openLoginModal}
-        className="menu__item menu__login"
-      >
-        Zaloguj się
-      </button>
-      <LoginModal closeModal={closeLoginModal} modalIsOpen={loginModalIsOpen} />
-      <button
-        type="button"
-        onClick={openRegisterModal}
-        className="menu__item menu__register"
-      >
-        Zarejestruj się
-      </button>
+      <div className="log-reg">
+        <button
+          type="button"
+          onClick={openLoginModal}
+          className="menu__item menu__login"
+        >
+          Zaloguj się
+        </button>
+        <LoginModal
+          closeModal={closeLoginModal}
+          modalIsOpen={loginModalIsOpen}
+        />
+        <button
+          type="button"
+          onClick={openRegisterModal}
+          className="menu__item menu__register"
+        >
+          Zarejestruj się
+        </button>
+      </div>
       <RegisterModal
         closeModal={closeRegisterModal}
         modalIsOpen={registerModalIsOpen}

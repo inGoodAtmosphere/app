@@ -23,6 +23,7 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  transition: background-color 0.2s 0.2s ease-in-out;
 }
 .hamburger__line::before,
 .hamburger__line::after {
@@ -30,6 +31,7 @@
 
   content: '';
   left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
 }
 .hamburger__line::before {
   top: -11px;
@@ -37,4 +39,13 @@
 
 .hamburger__line::after {
   top: 11px;
+}
+.hamburger--isActive .hamburger__line {
+  background: transparent;
+}
+.hamburger--isActive .hamburger__line::before {
+  transform: translateY(11px) rotate(45deg);
+}
+.hamburger--isActive .hamburger__line::after {
+  transform: translateY(-11px) rotate(-45deg);
 }
