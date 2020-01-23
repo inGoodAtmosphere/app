@@ -1,38 +1,47 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import Slider from 'react-slick';
+import Carousel from 'nuka-carousel';
+
 import AboutUsCard from '../components/AboutUsCard';
 import { content } from '../data/about-us.json';
 
 const AboutUs = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    // lazyLoad: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
   return (
-    <>
-      <Slider {...settings}>
+    <div className="wrapper">
+      <Carousel
+        enableKeyboardControls
+        cellSpacing={0}
+        cellAlign="center"
+        slidesToShow={1}
+        // initialSlideWidth={66}
+        wrapAround
+        heightMode="current"
+        transitionMode="scroll3d"
+        // // framePadding="0 -30px"
+        SlideHeight="75%"
+        SlideWidth="66%"
+        width="80%"
+        style={{ margin: 'auto' }}
+        // opacityScale={0.5}
+        // withoutControls
+      >
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-      </Slider>
-    </>
+
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+
+        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+      </Carousel>
+    </div>
   );
 };
 

@@ -1,45 +1,40 @@
-// .slider {
-//     display: flex;
-//     justify-content: center;
-//     align-content: center;
-// }
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: relative;
-  top: 50px;
+  top: 45px;
   color: $dark-bg;
-  width: 24rem;
-  height: 48rem;
+  width: 200px;
+  height: 375px;
   border-radius: $spacing;
   background: $light-bg;
-  margin: $spacing;
+
   margin-bottom: 25%;
 }
 .card__image {
-  top: -9%;
+  top: -15%;
   position: absolute;
-  height: 55%;
   width: 80%;
   border-radius: $spacing;
   margin: 6%;
 }
 .card__us {
-  margin-top: 40%;
+  margin-top: 90% !important;
+  h2 {
+    margin-bottom: 0;
+  }
+  h3 {
+    margin-top: 0;
+  }
 }
-.card__faded {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  top: 50px;
-  color: $dark-bg;
-  width: 24rem;
-  height: 48rem;
-  border-radius: $spacing;
-  background: $light-bg;
-  margin: $spacing;
-  opacity: 60%;
-  scale: 80%;
-}
+
+// // .slider-frame {
+// // }
+
+// .slider-slide {
+//   width: 66px !important;
+// }
+// .slider-list {
+//   left: 5vw !important;
+// }
