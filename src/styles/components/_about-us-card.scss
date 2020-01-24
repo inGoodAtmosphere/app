@@ -5,10 +5,12 @@
   position: relative;
   top: 45px;
   color: $dark-bg;
-  width: 200px;
-  height: 375px;
+  width: 67vw;
+  height: calc(80vh - 72px);
   border-radius: $spacing;
   background: $light-bg;
+  max-width: 250px;
+  max-height: 460px;
 }
 .card__image {
   top: -15%;
@@ -16,6 +18,7 @@
   width: 80%;
   border-radius: $spacing;
   margin: 6%;
+  // max-width: 200px;
 }
 .card__us {
   margin-top: 90% !important;
@@ -36,3 +39,4 @@
 // .slider-list {
 //   left: 5vw !important;
 // }
+// @media screen and (min-width: );
