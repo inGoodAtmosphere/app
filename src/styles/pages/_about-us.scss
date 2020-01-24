@@ -1,13 +1,9 @@
-.slick-slider {
-  width: 80%;
-  display: flex;
+.slider-slide {
+  display: flex !important;
   justify-content: center;
-  align-items: center;
-}
-.slick-list {
-  height: 100px;
 }
 .wrapper {
   display: flex;
   justify-content: center;
+  height: calc(100vh - 72px);
 }
