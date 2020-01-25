@@ -9,15 +9,15 @@ const LoginModal = ({ modalIsOpen, closeModal }) => (
     contentLabel="Zaloguj się"
     onRequestClose={closeModal}
     closeTimeoutMS={100}
-    className="modal"
+    className="ReactModal__Overlay"
   >
-    <button type="button" onClick={closeModal}>
+    <button type="button" onClick={closeModal} className="close-button">
       X
     </button>
 
     <button type="button">FB</button>
     <button type="button">Google</button>
-    <p>lub</p>
+    <p className="modal__text">lub</p>
     <form action="">
       <input type="text" placeholder="Adres e-mail" />
       <input type="password" placeholder="Hasło" />
