@@ -9,21 +9,21 @@ const RegisterModal = ({ modalIsOpen, closeModal }) => (
     contentLabel="Zarejsetruj się"
     onRequestClose={closeModal}
     closeTimeoutMS={100}
-    className="modal"
+    className="ReactModal__Overlay"
   >
-    <button type="button" onClick={closeModal}>
+    <button type="button" onClick={closeModal} className="close-button">
       X
     </button>
 
     <h3>Zarejestruj się, a otrzymasz:</h3>
-    <br />
-    <p>Możliwość dodawania czujników do ulubionych</p>
-    <br />
-    <p>Dostęp do codygodniowego newslettera</p>
-    <br />
-    <p>Lorem ipsum dolor sit amet</p>
-    <br />
-    <button type="button">Masz już konto zaloguj się</button>
+    <ul>
+      <li>Możliwość dodawania czujników do ulubionych</li>
+      <li>Dostęp do codygodniowego newslettera</li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+    <a href="/login" className="modal__text">
+      Masz już konto? Zaloguj się
+    </a>
 
     <button type="button">FB</button>
     <button type="button">Google</button>
