@@ -1,6 +1,8 @@
-import React from 'react';
-import { articles } from '../data/articles.json';
+import React, { useReducer } from 'react';
+import { articleThumbnails } from '../data/article-thumbnails.json';
 import ArticleThumbnail from '../components/ArticleThumbnail';
+import ArticleContext from '../contexts/article-context';
+import articleReducer from '../reducers/article-reducer';
 
 const Campaign = () => (
   <main className="content">

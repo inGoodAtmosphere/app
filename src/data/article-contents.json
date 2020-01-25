@@ -1,0 +1,19 @@
+{
+  "article-contents": [
+    {
+      "header": "1",
+      "subHeaders": ["a", "A"],
+      "contents": ["x", "X"]
+    },
+    {
+      "header": "2",
+      "subHeaders": ["b"],
+      "contents": ["y"]
+    },
+    {
+      "header": "3",
+      "subHeaders": ["c", "C", "Ć"],
+      "contents": ["z", "Z", "Ź"]
+    }
+  ]
+}

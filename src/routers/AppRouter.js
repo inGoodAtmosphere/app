@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -10,11 +10,13 @@ import Sensors from '../pages/Sensors';
 import Contact from '../pages/Contact';
 import Encyclopedia from '../pages/Encyclopedia';
 import NotFoundPage from '../pages/NotFound';
+import Article from '../components/Article';
 
 const Routes = () => (
   <BrowserRouter>
     <div className="container">
       <Header />
+<<<<<<< HEAD
       <Switch>
         <Route path="/" component={LandingPage} exact />
         <Route path="/o-nas" component={AboutUs} />
@@ -25,6 +27,21 @@ const Routes = () => (
         <Route path="/encyklopedia" component={Encyclopedia} />
         <Route component={NotFoundPage} />
       </Switch>
+=======
+      <main className="content">
+        <Switch>
+          <Route path="/" component={LandingPage} exact />
+          <Route path="/o-nas" component={AboutUs} />
+          <Route path="/mapa" component={Map} />
+          <Route path="/kampania" component={Campaign} exact />
+          <Route path="/kampania/:article" component={Article} />
+          <Route path="/partnerzy" component={Partners} />
+          <Route path="/czujniki" component={Sensors} />
+          <Route path="/kontakt" component={Contact} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </main>
+>>>>>>> Create Article component and try link it to article thumbnail
       <Footer />
     </div>
   </BrowserRouter>
