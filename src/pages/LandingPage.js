@@ -13,13 +13,15 @@ const {
 } = content;
 const LandingPage = () => (
   <main className="landing-page__main">
-    <Logo />
-    <div className="air">
-      <h1 className="air__motto">{campaign.header}</h1>
-      <h2 className="air__h2">{campaign.description}</h2>
-      <a className="air__btn" href="/kampania">
-        Zobacz jak
-      </a>
+    <div className="landing-page__hero">
+      <Logo />
+      <div className="air">
+        <h1 className="air__motto">{campaign.header}</h1>
+        <h2 className="air__h2">{campaign.description}</h2>
+        <a className="air__btn" href="/kampania">
+          Zobacz jak
+        </a>
+      </div>
     </div>
     <div className="landing-page__cards">
       <InfoCard

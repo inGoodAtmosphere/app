@@ -6,7 +6,6 @@ import LoginModal from './LoginModal';
 const Menu = ({ isActive }) => {
   const [registerModalIsOpen, setRegisterIsOpen] = useState(false);
   const [loginModalIsOpen, setLoginIsOpen] = useState(false);
-
   const closeLoginModal = () => {
     setLoginIsOpen(false);
   };
@@ -21,22 +20,22 @@ const Menu = ({ isActive }) => {
   };
   return (
     <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
-      <a href="/mapa" className="menu__item">
+      <a href="/mapa" className="menu__item" tabIndex={isActive ? 0 : -1}>
         Mapa
       </a>
-      <a href="/kampania" className="menu__item">
+      <a href="/kampania" className="menu__item" tabIndex={isActive ? 0 : -1}>
         Kampania
       </a>
-      <a href="/o-nas" className="menu__item">
+      <a href="/o-nas" className="menu__item" tabIndex={isActive ? 0 : -1}>
         O nas
       </a>
-      <a href="/blog" className="menu__item">
+      <a href="/blog" className="menu__item" tabIndex={isActive ? 0 : -1}>
         Blog
       </a>
-      <a href="/czujniki" className="menu__item">
+      <a href="/czujniki" className="menu__item" tabIndex={isActive ? 0 : -1}>
         Nasze czujniki
       </a>
-      <a href="partnerzy" className="menu__item">
+      <a href="partnerzy" className="menu__item" tabIndex={isActive ? 0 : -1}>
         Nasi partnerzy
       </a>
       <div className="log-reg">
@@ -44,6 +43,7 @@ const Menu = ({ isActive }) => {
           type="button"
           onClick={openLoginModal}
           className="menu__item menu__login"
+          tabIndex={isActive ? 0 : -1}
         >
           Zaloguj się
         </button>
@@ -55,6 +55,7 @@ const Menu = ({ isActive }) => {
           type="button"
           onClick={openRegisterModal}
           className="menu__item menu__register"
+          tabIndex={isActive ? 0 : -1}
         >
           Zarejestruj się
         </button>

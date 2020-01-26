@@ -72,3 +72,9 @@
 //   right: $spacing;
 //   padding: $spacing;
 // }
+.landing-page__hero {
+  height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

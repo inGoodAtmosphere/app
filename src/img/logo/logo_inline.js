@@ -7,7 +7,7 @@ function SvgLogoInline(props) {
     <svg
       width={115358}
       height={35278}
-      viewBox="0 0 145358 35278"
+      viewBox="0 0 145358 39278"
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"
       imageRendering="optimizeQuality"
