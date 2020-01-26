@@ -3,7 +3,7 @@ import { articles } from '../data/articles.json';
 import ArticleThumbnail from '../components/ArticleThumbnail';
 
 const Campaign = () => (
-  <>
+  <main className="content">
     <h1>Nasze artykuły</h1>
     <h2 className="campaign__h2">Tutaj przeczytasz wszystkie nasze artykuły</h2>
     <div className="thumbnail-container">
@@ -20,7 +20,7 @@ const Campaign = () => (
         );
       })}
     </div>
-  </>
+  </main>
 );
 
 export default Campaign;

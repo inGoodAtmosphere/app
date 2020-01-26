@@ -12,7 +12,7 @@ const {
   campaign,
 } = content;
 const LandingPage = () => (
-  <main className="landing-page__main">
+  <main className="landing-page__main ">
     <div className="landing-page__hero">
       <Logo />
       <div className="air">

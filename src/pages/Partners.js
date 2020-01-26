@@ -3,7 +3,7 @@ import { partners } from '../data/partners.json';
 import CardWithThumbnail from '../components/CardWithThumbnail';
 
 const Partners = () => (
-  <>
+  <main className="content">
     <h1>Nasi Partnerzy</h1>
     {partners.map((partner) => (
       <CardWithThumbnail
@@ -14,7 +14,7 @@ const Partners = () => (
         env="partners"
       />
     ))}
-  </>
+  </main>
 );
 
 export default Partners;

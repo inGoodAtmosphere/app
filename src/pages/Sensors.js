@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Sensors = () => (
-  <>
+  <main className="content">
     <h1>Nasze czujniki</h1>
     <div className="sensor">
       <img src="https://picsum.photos/105/100" alt="Czujnik" />
@@ -29,7 +29,7 @@ const Sensors = () => (
         i wypełnij formularz kontaktowy
       </p>
     </div>
-  </>
+  </main>
 );
 
 export default Sensors;

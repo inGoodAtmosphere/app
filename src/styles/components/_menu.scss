@@ -2,12 +2,13 @@
   background: $light-bg;
   position: absolute;
   left: 0;
+  top: 72px;
   transform: translateX(100%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  z-index: 1;
+  z-index: 10;
   height: calc(100vh - 72px);
   transition: transform 0.4s ease-in;
   width: 100%;
@@ -40,6 +41,7 @@
 .menu--isActive {
   transform: translateX(0);
 }
+
 .log-reg {
   display: flex;
   flex-direction: column;

@@ -8,10 +8,10 @@ const MapPage = () => {
   const [state, dispatch] = useReducer(mapReducer, {});
   return (
     <MapContext.Provider value={{ state, dispatch }}>
-      <>
+      <main className="content">
         <Map />
         <Data />
-      </>
+      </main>
     </MapContext.Provider>
   );
 };

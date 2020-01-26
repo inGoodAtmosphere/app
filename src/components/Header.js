@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <a href="/">
+        <a href="/" className="header__a">
           <Logo />
         </a>
         <Hamburger isActive={isActive} setIsActive={setIsActive} />

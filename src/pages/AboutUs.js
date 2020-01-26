@@ -47,7 +47,7 @@ const AboutUs = () => {
     return breakpoints[3];
   };
   return (
-    <div className="wrapper">
+    <main className="wrapper content">
       <h1 className="about-us__header">O nas</h1>
       <Carousel
         enableKeyboardControls
@@ -76,7 +76,7 @@ const AboutUs = () => {
 
         <AboutUsCard image="https://picsum.photos/200/275" content={content} />
       </Carousel>
-    </div>
+    </main>
   );
 };
 export default AboutUs;
