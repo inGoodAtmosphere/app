@@ -45,3 +45,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (max-height: 550px) {
+  .menu__item {
+    font-size: $m-size;
+  }
+}

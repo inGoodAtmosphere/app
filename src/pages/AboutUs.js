@@ -48,7 +48,7 @@ const AboutUs = () => {
   };
   return (
     <div className="wrapper">
-      <h1>O nas</h1>
+      <h1 className="about-us__header">O nas</h1>
       <Carousel
         enableKeyboardControls
         cellSpacing={-40}

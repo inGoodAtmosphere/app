@@ -2,20 +2,20 @@
   position: relative;
   top: 45px;
   width: 67vw;
-  height: calc(80vh - 72px);
+  height: calc(74vh - 72px);
   max-width: 250px;
   max-height: 460px;
 }
 .about-us__card__image {
-  top: -10%;
+  top: -12%;
   position: absolute;
   width: 80%;
   border-radius: $spacing;
-  margin: 3%;
+  margin: 0 2%;
   // max-width: 200px;
 }
 .about-us__card__description {
-  margin-top: 90% !important;
+  margin-top: 95%;
   h2 {
     margin-bottom: 0;
   }
@@ -33,4 +33,24 @@
 // .slider-list {
 //   left: 5vw !important;
 // }
-// @media screen and (min-width: );
+
+@media screen and (max-height: 560px) {
+  .about-us__card__image {
+    width: 70%;
+    margin: 0 8%;
+    top: -17%;
+  }
+  .about-us__card__description {
+    margin-top: 60%;
+  }
+}
+@media screen and (max-height: 530px) {
+  .about-us__card__image {
+    width: 60%;
+    margin: 0 13%;
+    top: -17%;
+  }
+  .about-us__card__description {
+    margin-top: 60%;
+  }
+}
