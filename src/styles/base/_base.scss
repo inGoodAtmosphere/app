@@ -12,6 +12,7 @@ a {
   text-decoration: none;
   color: $dark-bg;
   font-size: $s-size;
+  border-radius: $spacing;
 }
 button:hover {
   cursor: pointer;
@@ -44,7 +45,13 @@ p {
 }
 .card {
   border-radius: $spacing;
-  padding: $spacing;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: $spacing;
+  color: $dark-bg;
+  background: $light-bg;
 }
 .content {
   flex: 1;

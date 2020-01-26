@@ -2,34 +2,58 @@ import React from 'react';
 import InfoCard from '../components/InfoCard';
 import { content } from '../data/landing-page.json';
 import Logo from '../img/logo/logo';
-
+// prettier-ignore
+const {
+  project,
+  map,
+  encyclopedia,
+  sensors,
+  newsletter,
+  campaign,
+} = content;
 const LandingPage = () => (
-  <>
+  <main className="landing-page__main">
     <Logo />
     <div className="air">
-      <h1 className="air__motto">Feel the air</h1>
-      <h2>{content.h2}</h2>
+      <h1 className="air__motto">{campaign.header}</h1>
+      <h2 className="air__h2">{campaign.description}</h2>
       <a className="air__btn" href="/kampania">
         Zobacz jak
       </a>
     </div>
-    <InfoCard
-      className="project"
-      header="Nasz projekt"
-      content={content.project}
-    />
-    <div className="map">
-      <div className="map__header">
-        <h2 className="map__h">Mapa z pomiarami z naszych czujników</h2>
-      </div>
-      <div className="map__img">
-        <img src="https://picsum.photos/100/130" alt="Mapa" />
-      </div>
-      <div className="map__content">
-        <p className="map__p">{content.p}</p>
-      </div>
+    <div className="landing-page__cards">
+      <InfoCard
+        className="project"
+        header={project.header}
+        content={project.description}
+        link={{ href: 'o-nas', text: 'Dowiedz się więcej' }}
+      />
+      <InfoCard
+        className="map"
+        header={map.header}
+        content={map.description}
+        link={{ href: 'mapa', text: 'Otwórz mapę' }}
+      />
+      <InfoCard
+        className="encyclopedia"
+        header={encyclopedia.header}
+        content={encyclopedia.description}
+        link={{ href: 'encyklopedia', text: 'Przeczytaj tutaj' }}
+      />
+      <InfoCard
+        className="sensors"
+        header={sensors.header}
+        content={sensors.description}
+        link={{ href: 'czujniki', text: 'Dowiedz się więcej' }}
+      />
+      <InfoCard
+        className="newsletter"
+        header={newsletter.header}
+        content={newsletter.description}
+        link={{ href: 'newsletter', text: 'Zapisz się teraz' }}
+      />
     </div>
-  </>
+  </main>
 );
 
 export default LandingPage;

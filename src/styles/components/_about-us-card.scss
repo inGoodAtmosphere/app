@@ -1,26 +1,20 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.about-us__card {
   position: relative;
   top: 45px;
-  color: $dark-bg;
   width: 67vw;
   height: calc(80vh - 72px);
-  border-radius: $spacing;
-  background: $light-bg;
   max-width: 250px;
   max-height: 460px;
 }
-.card__image {
-  top: -15%;
+.about-us__card__image {
+  top: -10%;
   position: absolute;
   width: 80%;
   border-radius: $spacing;
-  margin: 6%;
+  margin: 3%;
   // max-width: 200px;
 }
-.card__us {
+.about-us__card__description {
   margin-top: 90% !important;
   h2 {
     margin-bottom: 0;
