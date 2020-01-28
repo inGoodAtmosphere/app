@@ -1,26 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import ArticleContext from '../contexts/article-context';
 
-const Article = ({ header, subHeaders, contents }) => {
-  const { state, dispatch } = useContext(ArticleContext);
-  console.log(state);
-  return (
+const Article = ({
+  match: {
+    params: { header },
+  },
+}) => {
+  const [article, setArticle] = useState('');
+  useEffect(() => {
+    fetch(`/data/articles/${header}.json`)
+      .then((resp) => resp.json())
+      .then((json) => {
+        setArticle(json);
+      });
+  }, [header]);
+
+  return article ? (
     <div className="card">
-      {/* <h1 className="article__header">{header}</h1>
-      {subHeaders.map((subHeader, i) => (
-        <article>
+      <h1 className="article__header">{header}</h1>
+      {article.subHeaders.map((subHeader, i) => (
+        <section key={subHeader}>
           <h2>{subHeader}</h2>
-          <p>{contents[i]}</p>
-        </article>
-      ))} */}
+          <p>{article.contents[i]}</p>
+        </section>
+      ))}
     </div>
+  ) : (
+    'Ladowanie'
   );
 };
 
-// Article.propTypes = {
-//   header: PropTypes.string.isRequired,
-//   subHeaders: PropTypes.arrayOf(PropTypes.string).isRequired,
-//   contents: PropTypes.arrayOf(PropTypes.string).isRequired,
-// };
+Article.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({ header: PropTypes.string }),
+  }).isRequired,
+};
 export default Article;
