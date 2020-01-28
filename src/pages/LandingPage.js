@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoCard from '../components/InfoCard';
 import { content } from '../data/landing-page.json';
-import Logo from '../img/logo/logo';
+
 // prettier-ignore
 const {
   project,
@@ -14,7 +14,7 @@ const {
 const LandingPage = () => (
   <main className="landing-page__main ">
     <div className="landing-page__hero">
-      <Logo />
+      <h1>Tu cos bedzie </h1>
       <div className="air">
         <h1 className="air__motto">{campaign.header}</h1>
         <h2 className="air__h2">{campaign.description}</h2>
