@@ -1,14 +1,19 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faInstagram,
+  faFacebookSquare,
+} from '@fortawesome/free-brands-svg-icons';
 import partner1 from '../img/MSK-logo.png';
 
 const Footer = () => (
   <footer>
     <div className="footer__icons">
       <a href="https://facebook.com">
-        <i className="fab fa-facebook-square fa-4x" />
+        <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
       </a>
       <a href="https://instagram.com">
-        <i className="fab fa-instagram fa-4x" />
+        <FontAwesomeIcon icon={faInstagram} size="4x" />
       </a>
     </div>
     <div className="footer__links">

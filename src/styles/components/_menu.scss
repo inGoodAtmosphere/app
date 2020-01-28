@@ -20,10 +20,6 @@
   font-size: $l-size;
   font-weight: bold;
   text-transform: uppercase;
-  transition: transform 0.2s ease-in-out;
-}
-.menu__item:hover {
-  transform: scale(1.2);
 }
 .menu__login {
   border: 1px transparent;

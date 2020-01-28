@@ -2,6 +2,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Carousel from 'nuka-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import AboutUsCard from '../components/AboutUsCard';
 import { content } from '../data/about-us.json';
 import useWindowWidth from '../hooks/useWindowWidth';
@@ -28,14 +30,14 @@ const AboutUs = () => {
               className="slider__btn"
               onClick={previousSlide}
             >
-              <i className="fas fa-arrow-left" />
+              <FontAwesomeIcon icon={faArrowLeft} />
             </button>
           );
         },
         renderCenterRightControls({ nextSlide }) {
           return (
             <button type="button" className="slider__btn" onClick={nextSlide}>
-              <i className="fas fa-arrow-right" />
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           );
         },
