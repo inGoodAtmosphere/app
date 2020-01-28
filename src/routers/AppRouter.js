@@ -8,6 +8,7 @@ import Campaign from '../pages/Campaign';
 import Partners from '../pages/Partners';
 import Sensors from '../pages/Sensors';
 import Contact from '../pages/Contact';
+import Encyclopedia from '../pages/Encyclopedia';
 import NotFoundPage from '../pages/NotFound';
 
 const Routes = () => (
@@ -21,6 +22,7 @@ const Routes = () => (
         <Route path="/partnerzy" component={Partners} />
         <Route path="/czujniki" component={Sensors} />
         <Route path="/kontakt" component={Contact} />
+        <Route path="/encyklopedia" component={Encyclopedia} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

@@ -12,6 +12,9 @@ const Menu = ({ isActive }) => (
     <a href="/blog" className="menu__item">
       Blog
     </a>
+    <a href="encyklopedia" className="menu__item">
+      Encyklopedia
+    </a>
     <a href="/czujniki" className="menu__item">
       Nasze czujniki
     </a>

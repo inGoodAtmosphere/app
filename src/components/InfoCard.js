@@ -7,22 +7,28 @@ const InfoCard = ({
   content,
   link,
 }) => (
-  <div className={` card card__landing card__${className}`}>
-    <h1 className="card__landing__header">{header}</h1>
-    <p className="card__landing__description">{content}</p>
-    <a className="card__landing__btn" href={`/${link.href}`}>
-      {link.text}
-    </a>
+  <div className={` card ${className === 'encyclopedia__card' ? '' : 'card__landing'} card__${className}`}>
+    <h1 className={`${className === 'encyclopedia__card' ? '' : 'card__landing'}__header`}>{header}</h1>
+    <p className={`${className === 'encyclopedia__card' ? '' : 'card__landing'}__description`}>{content}</p>
+    {
+      // prettier-ignore
+    }
+    {link.text
+    && (
+      <a className="card__landing__btn" href={`/${link.href}`}>
+        {link.text}
+      </a>
+    )}
   </div>
 );
 InfoCard.defaultProps = {
   className: '',
+  link: {},
 };
 InfoCard.propTypes = {
   className: PropTypes.string,
   header: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  link: PropTypes.shape({ href: PropTypes.string, text: PropTypes.string })
-    .isRequired,
+  link: PropTypes.shape({ href: PropTypes.string, text: PropTypes.string }),
 };
 export default InfoCard;
