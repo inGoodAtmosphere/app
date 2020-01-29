@@ -6,12 +6,12 @@ import Footer from '../components/Footer';
 import LandingPage from '../pages/LandingPage';
 import AboutUs from '../pages/AboutUs';
 import Campaign from '../pages/Campaign';
+import Article from '../pages/Article';
 import Partners from '../pages/Partners';
 import Sensors from '../pages/Sensors';
 import Contact from '../pages/Contact';
 import Encyclopedia from '../pages/Encyclopedia';
 import NotFoundPage from '../pages/NotFound';
-import Article from '../components/Article';
 
 const Routes = () => (
   <BrowserRouter>

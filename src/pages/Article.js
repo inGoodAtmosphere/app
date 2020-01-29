@@ -16,17 +16,19 @@ const Article = ({
   }, [header]);
 
   return article ? (
-    <div className="card">
-      <h1 className="article__header">{header}</h1>
-      {article.subHeaders.map((subHeader, i) => (
-        <section key={subHeader}>
-          <h2>{subHeader}</h2>
-          <p>{article.contents[i]}</p>
-        </section>
-      ))}
-    </div>
+    <main className="content">
+      <article className="card">
+        <h1 className="article__header">{header}</h1>
+        {article.subHeaders.map((subHeader, i) => (
+          <section key={subHeader}>
+            <h2>{subHeader}</h2>
+            <p>{article.contents[i]}</p>
+          </section>
+        ))}
+      </article>
+    </main>
   ) : (
-    'Ladowanie'
+    <main className="content">Ładowanie...</main>
   );
 };
 
