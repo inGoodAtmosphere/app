@@ -1,41 +1,41 @@
-.card__landing__header {
+.landing-page__header {
   text-transform: none;
   padding: 0;
   margin: 5px 0;
 }
-.card__landing {
+.landing-page__card {
   width: 100%;
   height: 100%;
   margin: $spacing;
 }
-.card__landing__description {
+.landing-page__description {
   margin: 0;
   padding: 20px 0;
   font-size: $s-size;
 }
-.card__landing__btn {
+.landing-page__btn {
   padding: $spacing;
   border: 1px solid $light-bg;
   align-self: flex-end;
 }
-.card__landing {
+.landing-page__card {
   * {
     color: $light-bg;
   }
 }
-.card__newsletter {
+.landing-page__newsletter {
   background: $text;
 }
-.card__sensors {
+.landing-page__sensors {
   background: $dark-accent;
 }
-.card__encyclopedia {
+.landing-page__encyclopedia {
   background: $light-accent;
 }
-.card__map {
+.landing-page__map {
   background: $primary-accent;
 }
-.card__project {
+.landing-page__project {
   * {
     color: $text;
   }
@@ -44,12 +44,12 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .card__landing {
+  .landing-page__card {
     width: 40%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .card__landing {
+  .landing-page__card {
     width: 30%;
   }
 }

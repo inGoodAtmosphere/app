@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../components/InfoCard';
+import InfoCard from '../components/LandingPageCard';
 import { content } from '../data/landing-page.json';
 
 // prettier-ignore
@@ -25,31 +25,36 @@ const LandingPage = () => (
     </div>
     <div className="landing-page__cards">
       <InfoCard
-        className="project"
+        env="landing-page"
+        purpose="project"
         header={project.header}
         content={project.description}
         link={{ href: 'o-nas', text: 'Dowiedz się więcej' }}
       />
       <InfoCard
-        className="map"
+        env="landing-page"
+        purpose="map"
         header={map.header}
         content={map.description}
         link={{ href: 'mapa', text: 'Otwórz mapę' }}
       />
       <InfoCard
-        className="encyclopedia"
+        env="landing-page"
+        purpose="encyclopedia"
         header={encyclopedia.header}
         content={encyclopedia.description}
         link={{ href: 'encyklopedia', text: 'Przeczytaj tutaj' }}
       />
       <InfoCard
-        className="sensors"
+        env="landing-page"
+        purpose="sensors"
         header={sensors.header}
         content={sensors.description}
         link={{ href: 'czujniki', text: 'Dowiedz się więcej' }}
       />
       <InfoCard
-        className="newsletter"
+        env="landing-page"
+        purpose="newsletter"
         header={newsletter.header}
         content={newsletter.description}
         link={{ href: 'newsletter', text: 'Zapisz się teraz' }}

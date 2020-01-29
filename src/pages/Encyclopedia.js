@@ -7,17 +7,20 @@ const Encyclopedia = () => (
   <main className="content">
     <h1>Encyklopedia</h1>
     <InfoCard
-      className="encyclopedia__card"
+      env="encyclopedia"
+      purpose="caqi"
       header="CAQI"
       content={caqi.description}
     />
     <InfoCard
-      className="encyclopedia__card"
+      env="encyclopedia"
+      purpose="pm25"
       header="PM25"
       content={pm25.description}
     />
     <InfoCard
-      className="encyclopedia__card"
+      env="encyclopedia"
+      purpose="pm10"
       header="PM10"
       content={pm10.description}
     />
