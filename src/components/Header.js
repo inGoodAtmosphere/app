@@ -10,13 +10,15 @@ const Header = () => {
     <div>
       <Sticky>
         {({ style }) => (
-          <header style={style}>
-            <a href="/" className="header__a">
-              <Logo />
-            </a>
-            <Hamburger isActive={isActive} setIsActive={setIsActive} />
+          <div style={{ ...style, zIndex: 10 }}>
+            <header>
+              <a href="/" className="header__a">
+                <Logo />
+              </a>
+              <Hamburger isActive={isActive} setIsActive={setIsActive} />
+            </header>
             <Menu isActive={isActive} />
-          </header>
+          </div>
         )}
       </Sticky>
     </div>
