@@ -13,6 +13,7 @@ const Campaign = () => {
       <input
         type="text"
         placeholder="Wyszukaj artykuł"
+        className="campaign__search"
         onChange={(e) => {
           setTextFilter(e.target.value.toLowerCase());
         }}

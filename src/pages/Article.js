@@ -17,7 +17,7 @@ const Article = ({
 
   return article ? (
     <main className="content">
-      <article className="card">
+      <article className="card article__card">
         <h1 className="article__header">{header}</h1>
         {article.subHeaders.map((subHeader, i) => (
           <section key={subHeader}>

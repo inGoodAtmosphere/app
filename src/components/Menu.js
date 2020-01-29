@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 const Menu = ({ isActive }) => (
   <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
-    <a href="/kampania" className="menu__item">
+    <a href="/kampania" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Kampania
     </a>
-    <a href="/o-nas" className="menu__item">
+    <a href="/o-nas" className="menu__item" tabIndex={isActive ? 0 : -1}>
       O nas
     </a>
-    <a href="/blog" className="menu__item">
+    <a href="/blog" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Blog
     </a>
-    <a href="encyklopedia" className="menu__item">
+    <a href="/encyklopedia" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Encyklopedia
     </a>
-    <a href="/czujniki" className="menu__item">
+    <a href="/czujniki" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Nasze czujniki
     </a>
-    <a href="partnerzy" className="menu__item">
+    <a href="partnerzy" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Nasi partnerzy
     </a>
   </nav>
