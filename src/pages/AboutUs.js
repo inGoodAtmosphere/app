@@ -27,14 +27,14 @@ const AboutUs = () => {
               className="slider__btn"
               onClick={previousSlide}
             >
-              <FontAwesomeIcon icon={faArrowLeft} />
+              <FontAwesomeIcon size="2x" icon={faArrowLeft} />
             </button>
           );
         },
         renderCenterRightControls({ nextSlide }) {
           return (
             <button type="button" className="slider__btn" onClick={nextSlide}>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <FontAwesomeIcon size="2x" icon={faArrowRight} />
             </button>
           );
         },

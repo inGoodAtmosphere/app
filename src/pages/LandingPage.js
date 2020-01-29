@@ -23,7 +23,7 @@ const LandingPage = () => (
         </a>
       </div>
     </div>
-    <div className="landing-page__cards">
+    <div className="landing-page__cards wrapper__cards">
       <InfoCard
         env="landing-page"
         purpose="project"

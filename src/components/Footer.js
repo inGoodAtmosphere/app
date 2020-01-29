@@ -12,7 +12,7 @@ const Footer = () => (
       <a href="https://facebook.com">
         <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
       </a>
-      <a href="https://instagram.com">
+      <a href="https://www.instagram.com/in.good.atmosphere/">
         <FontAwesomeIcon icon={faInstagram} size="4x" />
       </a>
     </div>

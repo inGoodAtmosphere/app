@@ -30,12 +30,6 @@
   flex-direction: column;
   align-items: center;
 }
-.landing-page__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .landing-page__hero {
   height: calc(100vh - 72px);
   display: flex;

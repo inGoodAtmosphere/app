@@ -56,8 +56,16 @@ p {
   border-radius: $spacing;
   color: $dark-bg;
   background: $light-bg;
-}
+  p {
+    font-size: $s-size;      
+  }
+} 
 .content {
   flex: 1;
   min-height: calc(100vh - 72px);
+}
+.wrapper__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

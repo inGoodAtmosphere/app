@@ -1,0 +1,17 @@
+.encyclopedia__card {
+    margin: $spacing;
+}
+.encyclopedia__caqi {
+    background: $primary-accent;
+    color: $light-bg;
+}
+@media screen and (min-width: 768px) {
+    .encyclopedia__card {
+      width: 40%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .encyclopedia__card {
+      width: 30%;
+    }
+  }
