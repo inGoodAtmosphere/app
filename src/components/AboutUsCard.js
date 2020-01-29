@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const AboutUsCard = ({ image, content: { name, role, description } }) => (
+// prettier-ignore
+const AboutUsCard = ({
+  person: {
+    name, role, image, description,
+  },
+}) => (
   <div className="about-us__card__wrapper">
     <img className="about-us__card__image" src={image} alt={name} />
     <div className="card about-us__card" />
@@ -14,11 +18,11 @@ const AboutUsCard = ({ image, content: { name, role, description } }) => (
 );
 
 AboutUsCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  content: PropTypes.shape({
+  person: PropTypes.shape({
     name: PropTypes.string,
     role: PropTypes.string,
     description: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 export default AboutUsCard;

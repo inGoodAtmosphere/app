@@ -1,7 +1,52 @@
 {
-  "content": {
-    "name": "Anonim",
-    "role": "Programista, elektronik",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci"
-  }
+  "people": [
+    {
+      "name": "Michał",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "Olivier",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "KubaC",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "Julka",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "KubaT",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "Antek",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "Szymon",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    },
+    {
+      "name": "Mateusz",
+      "role": "Programista, elektronik",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci",
+      "image": "https://picsum.photos/200/275"
+    }
+  ]
 }

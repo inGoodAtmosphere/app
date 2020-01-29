@@ -5,7 +5,7 @@ import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import AboutUsCard from '../components/AboutUsCard';
-import { content } from '../data/about-us.json';
+import { people } from '../data/about-us.json';
 import useWindowWidth from '../hooks/useWindowWidth';
 
 const AboutUs = () => {
@@ -20,9 +20,6 @@ const AboutUs = () => {
       },
       {
         slidesToShow: 3,
-      },
-      {
-        slidesToShow: 4,
         renderCenterLeftControls({ previousSlide }) {
           return (
             <button
@@ -43,10 +40,9 @@ const AboutUs = () => {
         },
       },
     ];
-    if (width < 400) return breakpoints[0];
-    if (width < 600) return breakpoints[1];
-    if (width < 1000) return breakpoints[2];
-    return breakpoints[3];
+    if (width < 500) return breakpoints[0];
+    if (width < 1000) return breakpoints[1];
+    return breakpoints[2];
   };
   return (
     <main className="wrapper content">
@@ -62,21 +58,9 @@ const AboutUs = () => {
         renderBottomCenterControls={() => null}
         {...setBreakpoints()}
       >
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
-
-        <AboutUsCard image="https://picsum.photos/200/275" content={content} />
+        {people.map((person) => (
+          <AboutUsCard person={person} key={person.name} />
+        ))}
       </Carousel>
     </main>
   );
