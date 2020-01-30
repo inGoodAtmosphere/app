@@ -15,21 +15,32 @@ const Contact = () => (
     </h3>
     <ul className="contact__list">
       <li className="contact__list__item">
-        <a href="mailto:ingoodatmosphere@gmail.com">
+        <a
+          href="mailto:ingoodatmosphere@gmail.com"
+          className="contact__list__item__link"
+        >
           <FontAwesomeIcon icon={faEnvelope} size="2x" />
-          <p>ingoodatmosphere@gmail.com</p>
+          <p className="contact__list__item__link__text">
+            ingoodatmosphere@gmail.com
+          </p>
         </a>
       </li>
       <li className="contact__list__item">
-        <a href="https://facebook.com/ingoodatmosphere@gmail">
+        <a
+          href="https://facebook.com/ingoodatmosphere"
+          className="contact__list__item__link"
+        >
           <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
-          <p>inGoodAtmosphere</p>
+          <p className="contact__list__item__link__text">inGoodAtmosphere</p>
         </a>
       </li>
       <li className="contact__list__item">
-        <a href="https://instagram.com/in.good.atmosphere?igshid=1ehmhou6voq0s">
+        <a
+          href="https://instagram.com/in.good.atmosphere?igshid=1ehmhou6voq0s"
+          className="contact__list__item__link"
+        >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
-          <p>inGoodAtmosphere</p>
+          <p className="contact__list__item__link__text">inGoodAtmosphere</p>
         </a>
       </li>
     </ul>

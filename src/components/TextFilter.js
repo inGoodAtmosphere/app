@@ -8,7 +8,14 @@ const TextFilter = ({ setTextFilter }) => (
       placeholder="Wyszukaj artykuł"
       className="campaign__search"
       onChange={(e) => {
-        setTextFilter(e.target.value.toLowerCase());
+        setTextFilter(
+          e.target.value
+            .toLowerCase()
+            .trim()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/ł/g, 'l'),
+        );
       }}
     />
     <div

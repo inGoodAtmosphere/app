@@ -5,10 +5,10 @@
   margin: 0;
   display: inline-block;
   outline: none;
-}
-.hamburger:focus {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
+  &:focus {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
 }
 .hamburger__box {
   width: 32px;
@@ -29,21 +29,21 @@
   top: 50%;
   transform: translateY(-50%);
   transition: background-color 0.2s 0.2s ease-in-out;
-}
-.hamburger__line::before,
-.hamburger__line::after {
-  @include single-line;
+  &::before,
+  &::after {
+    @include single-line;
 
-  content: '';
-  left: 0;
-  transition: transform 0.2s 0.2s ease-in-out;
-}
-.hamburger__line::before {
-  top: -11px;
-}
+    content: '';
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+  &::before {
+    top: -11px;
+  }
 
-.hamburger__line::after {
-  top: 11px;
+  &::after {
+    top: 11px;
+  }
 }
 .hamburger--isActive .hamburger__line {
   background: transparent;
