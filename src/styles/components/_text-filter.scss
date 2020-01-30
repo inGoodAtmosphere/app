@@ -1,0 +1,7 @@
+.campaign__help:before {
+  content: attr(data-tooltip);
+  display: none;
+}
+.campaign__help:hover:before {
+  display: block;
+}
