@@ -1,0 +1,22 @@
+.contact__list {
+  list-style: none;
+}
+.contact__list__item {
+  a {
+    display: flex;
+    align-items: center;
+    color: $light-bg;
+
+    // padding: $spacing;
+  }
+  p {
+    padding: $spacing;
+    // display: inline;
+    font-size: $s-size;
+  }
+}
+.contact__h3 {
+  text-align: left;
+  padding-left: 20px;
+  color: $light-accent;
+}
