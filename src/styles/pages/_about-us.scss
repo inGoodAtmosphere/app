@@ -8,11 +8,21 @@
 .slider-frame {
   position: absolute;
 }
+
 .slider__btn {
-  color:  $light-bg;
+  color: $light-bg;
   width: 40px;
   height: 40px;
   background: none;
   border-radius: $spacing;
   border: 2px solid $light-bg;
+}
+@media screen and (min-width: 1000px) {
+  .slider {
+    display: flex !important;
+    justify-content: center;
+  }
+  .slider-frame {
+    width: 90%;
+  }
 }
