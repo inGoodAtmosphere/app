@@ -1,10 +1,32 @@
+<<<<<<< HEAD:src/components/TextFilter/text-filter.scss
 @import '../../styles/base/settings';
+=======
+.campaign__search {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+}
+>>>>>>> tooltip styled:src/styles/components/_text-filter.scss
 .campaign__help {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $light-bg;
+  border-radius: 50%;
+  font-weight: bolder;
+  text-align: center;
+  font-size: $xs-size;
   &::before {
     content: attr(data-tooltip);
     display: none;
   }
   &:hover::before {
+    position: absolute;
     display: block;
+    z-index: 1;
+    bottom: -5px;
+    left: $spacing;
+    font-weight: normal;
   }
 }

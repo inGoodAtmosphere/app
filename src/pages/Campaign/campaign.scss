@@ -4,7 +4,7 @@
   padding-left: $spacing;
   color: $light-accent;
 }
-.campaign__search {
+.campaign__searchbox {
   background: transparent;
   border: 1px solid $light-bg;
   border-radius: $spacing;
@@ -13,7 +13,7 @@
   margin: $spacing;
   color: $light-bg;
 }
-.campaign__search:focus {
+.campaign__searchbox:focus {
   outline: 1px solid $light-bg;
   -moz-outline-radius: $spacing;
 }
