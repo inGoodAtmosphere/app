@@ -25,7 +25,6 @@ main {
   padding: 0 $spacing;
 }
 .container {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,13 +52,12 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-radius: $spacing;
   color: $dark-bg;
   background: $light-bg;
   p {
-    font-size: $s-size;      
+    font-size: $s-size;
   }
-} 
+}
 .content {
   flex: 1;
   min-height: calc(100vh - 72px);

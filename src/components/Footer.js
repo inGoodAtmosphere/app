@@ -12,6 +12,8 @@ const Footer = () => (
     <div className="footer__icons">
       <a
         href="https://facebook.com"
+        target="_blank"
+        rel="noreferrer noopener"
         onClick={() => {
           ReactGA.event({
             category: 'Navigation',
@@ -23,6 +25,8 @@ const Footer = () => (
       </a>
       <a
         href="https://www.instagram.com/in.good.atmosphere/"
+        target="_blank"
+        rel="noreferrer noopener"
         onClick={() => {
           ReactGA.event({
             category: 'Navigation',
@@ -40,13 +44,25 @@ const Footer = () => (
     </div>
     <h3>Nasi partnerzy: </h3>
     <div className="footer__partner">
-      <a href="https://www.msk.earth/">
+      <a
+        href="https://www.msk.earth/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <img src={partner1} alt="MSK" />
       </a>
-      <a href="https://www.msk.earth/">
+      <a
+        href="https://www.msk.earth/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <img src={partner1} alt="MSK" />
       </a>
-      <a href="https://www.msk.earth/">
+      <a
+        href="https://www.msk.earth/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <img src={partner1} alt="MSK" />
       </a>
     </div>

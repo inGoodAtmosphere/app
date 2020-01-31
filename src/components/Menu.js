@@ -18,7 +18,7 @@ const Menu = ({ isActive }) => (
     <a href="/czujniki" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Nasze czujniki
     </a>
-    <a href="partnerzy" className="menu__item" tabIndex={isActive ? 0 : -1}>
+    <a href="/partnerzy" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Nasi partnerzy
     </a>
   </nav>
