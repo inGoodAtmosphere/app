@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
@@ -9,10 +10,26 @@ import partner1 from '../img/MSK-logo.png';
 const Footer = () => (
   <footer>
     <div className="footer__icons">
-      <a href="https://facebook.com">
+      <a
+        href="https://facebook.com"
+        onClick={() => {
+          ReactGA.event({
+            category: 'Navigation',
+            action: 'Redirect to Facebook',
+          });
+        }}
+      >
         <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
       </a>
-      <a href="https://www.instagram.com/in.good.atmosphere/">
+      <a
+        href="https://www.instagram.com/in.good.atmosphere/"
+        onClick={() => {
+          ReactGA.event({
+            category: 'Navigation',
+            action: 'Redirect to Instagram',
+          });
+        }}
+      >
         <FontAwesomeIcon icon={faInstagram} size="4x" />
       </a>
     </div>
