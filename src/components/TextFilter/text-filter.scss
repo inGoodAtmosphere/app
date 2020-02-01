@@ -1,32 +1,65 @@
-<<<<<<< HEAD:src/components/TextFilter/text-filter.scss
 @import '../../styles/base/settings';
-=======
-.campaign__search {
+
+.campaign__box {
   display: inline-flex;
   align-items: center;
   position: relative;
-  width: 100%;
-  margin-bottom: 5px;
 }
->>>>>>> tooltip styled:src/styles/components/_text-filter.scss
 .campaign__help {
-  width: 20px;
-  height: 20px;
-  border: 2px solid $light-bg;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: 0 transparent;
   border-radius: 50%;
+  color: $dark-bg;
+  background: $light-accent;
   font-weight: bolder;
-  text-align: center;
-  font-size: $xs-size;
+  font-size: $s-size;
   &::before {
     content: attr(data-tooltip);
     display: none;
   }
   &:hover::before {
+    white-space: nowrap;
+    display: flex;
     position: absolute;
-    display: block;
-    z-index: 1;
-    bottom: -5px;
-    left: $spacing;
+    left: 105%;
+    background: rgba(0,0,0, 0.3);
+    border-radius: $spacing;
+    color: $light-bg;
+    font-size: $xs-size;
     font-weight: normal;
+    padding: $spacing;
+  }
+  &:hover::after {
+    content: "";
+    position: absolute;
+    left: 98.39%;
+    top: 37%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent rgba(0,0,0, 0.3) transparent transparent;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .campaign__box {
+    width: 100%;
+    margin-bottom: 6vh;
+  }
+  .campaign__help {
+    &:hover::before {
+      margin: $spacing;
+      white-space: normal;
+      left: 0;
+      margin-top: 7.81vh;
+    }
+    &:hover::after {
+      transform: rotate(90deg);
+      left: 51vw;
+      top: 65%;
+    }
   }
 }

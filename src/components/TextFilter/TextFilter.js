@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './text-filter.scss';
 
 const TextFilter = ({ setTextFilter, textFilter }) => (
-  <>
+  <div className="campaign__box">
     <label htmlFor="filter" aria-label="Wyszukaj artykuł">
       <input
         id="filter"
@@ -29,7 +29,7 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
     >
       ?
     </div>
-  </>
+  </div>
 );
 TextFilter.propTypes = {
   setTextFilter: PropTypes.func.isRequired,
