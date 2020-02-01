@@ -1,33 +1,27 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import CardWithThumbnail from '../components/CardWithThumbnail';
 
 const Sensors = () => (
   <main className="content">
     <h1>Nasze czujniki</h1>
-    <div className="card sensor">
-      <img
-        src="https://picsum.photos/105/100"
-        alt="Czujnik"
-        className="sensor__img"
-      />
-      <div className=" sensor__label">
-        <p>
-          Enim consectetur id occaecat minim magna pariatur esse qui non veniam
-          consequat elit aute.
-        </p>
-      </div>
-    </div>
-    <div className="card sensor__info">
-      <h3 className="sensor__info__header">Lorem ipsum</h3>
-      <p className="sensor__info__paragraph">
+    <CardWithThumbnail
+      header="Czujnik do pomiaru pyłów PM2.5 i PM10"
+      description="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet"
+      thumbnail="https://picsum.photos/90/100"
+      env="sensors"
+    />
+    <div className="card sensors__info">
+      <h3 className="sensors__h3">Lorem ipsum</h3>
+      <p className="sensors__paragraph">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque veritatis
         architecto aliquam quia, dolorem quidem!
       </p>
     </div>
-    <div className="card sensor__ad">
-      <h3 className="sensor__ad__header">Zainteresowany kupnem?</h3>
-      <p className="sensor__ad__paragraph">
-        <a href="/kontakt" className="sensor__ad__link">
+    <div className="card sensors__ad">
+      <h3 className="sensors__h3">Zainteresowany kupnem?</h3>
+      <p className="sensors__paragraph">
+        <a href="/kontakt" className="sensors__ad__link">
           Kliknij tutaj
         </a>{' '}
         i wypełnij formularz kontaktowy

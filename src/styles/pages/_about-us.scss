@@ -17,7 +17,7 @@
   border-radius: $spacing;
   border: 2px solid $light-bg;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .slider {
     display: flex !important;
     justify-content: center;
