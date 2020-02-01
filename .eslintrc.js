@@ -16,5 +16,5 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  "ignorePatterns": ["serviceWorker.js", "build/"],
 };
