@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextFilter = ({ setTextFilter }) => (
+const TextFilter = ({ setTextFilter, textFilter }) => (
   <>
     <input
+      value={textFilter}
       type="text"
       placeholder="Wyszukaj artykuł"
       className="campaign__search"
@@ -28,5 +29,6 @@ const TextFilter = ({ setTextFilter }) => (
 );
 TextFilter.propTypes = {
   setTextFilter: PropTypes.func.isRequired,
+  textFilter: PropTypes.string.isRequired,
 };
 export default TextFilter;

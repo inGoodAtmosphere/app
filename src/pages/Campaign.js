@@ -7,16 +7,19 @@ import Warning from '../components/Warning';
 const Campaign = () => {
   const [textFilter, setTextFilter] = useState('');
   // prettier-ignore
-  const filteredArticles = articleThumbnails.filter((article) =>
-    // eslint-disable-next-line implicit-arrow-linebreak
-    article.keywords.find((keyword) => keyword.includes(textFilter)));
+  const filteredArticles = articleThumbnails.filter(
+    (article) =>
+      // eslint-disable-next-line implicit-arrow-linebreak
+      article.tags.find((tag) => tag.includes(textFilter))
+      || article.header.toLowerCase().includes(textFilter),
+  );
   return (
     <main className="content">
       <h1>Nasze artykuły</h1>
       <h2 className="campaign__h2">
         Tutaj przeczytasz wszystkie nasze artykuły
       </h2>
-      <TextFilter setTextFilter={setTextFilter} />
+      <TextFilter setTextFilter={setTextFilter} textFilter={textFilter} />
       {/*  prettier-ignore */}
       <div className="thumbnail-container">
         {
@@ -29,7 +32,9 @@ const Campaign = () => {
                   thumbnail={article.thumbnail}
                   header={article.header}
                   description={article.description}
+                  tags={article.tags}
                   link={link}
+                  setTextFilter={setTextFilter}
                 />
               );
             })) : <Warning />
