@@ -5,7 +5,7 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
   <>
     <input
       value={textFilter}
-      type="text"
+      type="search"
       placeholder="Wyszukaj artykuł"
       className="campaign__search"
       onChange={(e) => {

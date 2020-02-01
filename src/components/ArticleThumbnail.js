@@ -18,7 +18,15 @@ const ArticleThumbnail = ({
     <h3 className="article-container__header">{header}</h3>
     <p className="article-container__tags">
       {tags.map((tag) => (
-        <button key={tag} type="button" onClick={() => setTextFilter(tag)} className="article-container__tag">{`#${tag} `}</button>
+        <button
+          key={tag}
+          type="button"
+          onClick={() => setTextFilter(tag)}
+          className="article-container__tag"
+          aria-label="Znajdź inne artykuły z tym tagiem"
+        >
+          {`#${tag} `}
+        </button>
       ))}
     </p>
     <p className="article-container__description">{description}</p>

@@ -7,12 +7,14 @@
 }
 .partners__header,
 .sensors__header {
+  margin-top: 0;
   padding-left: 5px;
 }
 .partners__thumbnail,
 .sensors__thumbnail {
   height: 100%;
   width: 100%;
+  max-width: 150px;
   align-self: center;
   border-radius: $spacing;
 }

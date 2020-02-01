@@ -7,7 +7,7 @@ const Hamburger = ({ isActive, setIsActive }) => (
     className={`hamburger ${isActive ? 'hamburger--isActive' : ''}`}
     onClick={() => setIsActive(!isActive)}
     aria-hidden="true"
-    aria-label="Open the menu"
+    aria-label="Otwórz menu"
     aria-haspopup="true"
     aria-expanded="false"
     aria-controls="menu"
