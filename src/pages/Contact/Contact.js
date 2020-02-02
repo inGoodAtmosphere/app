@@ -28,6 +28,8 @@ const Contact = () => (
       </li>
       <li className="contact__list__item">
         <a
+          target="_blank"
+          rel="noreferrer noopener"
           href="https://facebook.com/ingoodatmosphere"
           className="contact__list__item__link"
         >
@@ -37,6 +39,8 @@ const Contact = () => (
       </li>
       <li className="contact__list__item">
         <a
+          target="_blank"
+          rel="noreferrer noopener"
           href="https://instagram.com/in.good.atmosphere?igshid=1ehmhou6voq0s"
           className="contact__list__item__link"
         >

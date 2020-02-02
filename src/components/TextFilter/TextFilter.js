@@ -15,7 +15,6 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
           setTextFilter(
             e.target.value
               .toLowerCase()
-              .trim()
               .normalize('NFD')
               .replace(/[\u0300-\u036f]/g, '')
               .replace(/ł/g, 'l'),
