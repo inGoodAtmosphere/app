@@ -1,0 +1,10 @@
+@import '../../styles/base/settings';
+.campaign__help {
+  &::before {
+    content: attr(data-tooltip);
+    display: none;
+  }
+  &:hover::before {
+    display: block;
+  }
+}

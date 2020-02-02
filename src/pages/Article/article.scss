@@ -1,0 +1,20 @@
+@import '../../styles/base/settings';
+;
+.article__header {
+  background: url('https://picsum.photos/330/160') no-repeat;
+  background-size: cover;
+  padding: 50px;
+  color: $light-bg;
+  border-radius: $spacing;
+  margin: 0;
+  text-align: center;
+}
+.article__card {
+  padding: $spacing;
+  * {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: $spacing;
+  }
+}

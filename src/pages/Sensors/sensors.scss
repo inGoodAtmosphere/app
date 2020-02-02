@@ -1,0 +1,21 @@
+@import '../../styles/base/settings';
+;
+.sensors__info {
+  background: $light-accent;
+  color: $light-bg;
+}
+.sensors__ad {
+  background: $dark-accent;
+  color: $light-bg;
+}
+.sensors__ad__link {
+  text-decoration: underline;
+  color: $light-bg;
+}
+.sensors__h3 {
+  margin: 0;
+}
+
+.sensors__paragraph {
+  margin-bottom: 0;
+}

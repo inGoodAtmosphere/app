@@ -1,0 +1,29 @@
+@import '../../styles/base/settings';
+.slider-slide {
+  display: flex !important;
+  justify-content: center;
+}
+.wrapper {
+  height: calc(100vh - 72px);
+}
+.slider-frame {
+  position: absolute;
+}
+
+.slider__btn {
+  color: $light-bg;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border-radius: $spacing;
+  border: 2px solid $light-bg;
+}
+@media screen and (min-width: 1024px) {
+  .slider {
+    display: flex !important;
+    justify-content: center;
+  }
+  .slider-frame {
+    width: 90%;
+  }
+}

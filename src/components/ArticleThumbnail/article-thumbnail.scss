@@ -1,0 +1,50 @@
+@import '../../styles/base/settings';
+.article-container {
+  margin: $spacing;
+  background: $light-bg;
+  border-radius: $spacing;
+  color: $text;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 135px auto;
+  grid-template-rows: auto auto auto auto;
+  align-items: start;
+  justify-items: start;
+}
+.article-container__header {
+  margin: 0;
+  padding-top: 5px;
+  align-self: center;
+}
+.article-container__thumbnail {
+  border-radius: $spacing;
+  padding: 3px;
+  grid-row: 1 / span 4;
+}
+
+.article-container__description {
+  margin: 0;
+  font-size: $xs-size;
+}
+
+.article-container__link {
+  justify-self: center;
+  align-self: center;
+  border: 1px solid $dark-accent;
+  border-radius: 30px;
+  padding: 3px;
+  padding-left: $spacing;
+  padding-right: $spacing;
+  margin-bottom: 5px;
+}
+.article-container__tags {
+  margin: 0;
+}
+.article-container__tag {
+  font-size: 10px;
+  color: #999;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 5px;
+}

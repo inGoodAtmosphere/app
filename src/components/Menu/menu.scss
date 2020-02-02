@@ -1,0 +1,52 @@
+@import '../../styles/base/settings';
+;
+.menu {
+  background: $light-bg;
+  position: absolute;
+  left: 0;
+  top: 72px;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+  height: calc(100vh - 72px);
+  transition: transform 0.4s ease-in;
+  width: 100%;
+}
+.menu__item {
+  color: $dark-bg;
+  padding: $spacing;
+  font-size: $l-size;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menu__login {
+  border: 1px transparent;
+  padding: $spacing;
+  color: $light-bg;
+  background: $dark-bg;
+  border-radius: $spacing;
+}
+.menu__register {
+  font-size: $m-size;
+  background: none;
+  border: 1px transparent;
+  padding: $spacing;
+}
+.menu--isActive {
+  transform: translateX(0);
+}
+
+.log-reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-height: 550px) {
+  .menu__item {
+    font-size: $m-size;
+  }
+}

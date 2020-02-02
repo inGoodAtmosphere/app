@@ -1,0 +1,21 @@
+@import '../../styles/base/settings';
+;
+.contact__h3 {
+  padding-left: 20px;
+  color: $light-accent;
+}
+.contact__list {
+  list-style: none;
+}
+.contact__list__item__link {
+  align-items: center;
+  color: $light-bg;
+  display: flex;
+  width: fit-content;
+  padding: $spacing;
+}
+.contact__list__item__link__text {
+  display: inline-block;
+  padding-left: $spacing;
+  font-size: $s-size;
+}

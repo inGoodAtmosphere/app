@@ -1,0 +1,58 @@
+@import '../../styles/base/settings';
+;
+.hamburger {
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  display: inline-block;
+  outline: none;
+  &:focus {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+.hamburger__box {
+  width: 32px;
+  height: 26px;
+  position: relative;
+  display: inline-block;
+}
+@mixin single-line {
+  width: 100%;
+  height: 5px;
+  background-color: $light-bg;
+  position: absolute;
+}
+.hamburger__line {
+  @include single-line;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s 0.2s ease-in-out;
+  &::before,
+  &::after {
+    @include single-line;
+
+    content: '';
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+  &::before {
+    top: -11px;
+  }
+
+  &::after {
+    top: 11px;
+  }
+}
+.hamburger--isActive .hamburger__line {
+  background: transparent;
+}
+.hamburger--isActive .hamburger__line::before {
+  transform: translateY(11px) rotate(45deg);
+}
+.hamburger--isActive .hamburger__line::after {
+  transform: translateY(-11px) rotate(-45deg);
+}
