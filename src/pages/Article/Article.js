@@ -15,7 +15,6 @@ const Article = ({
         setArticle(json);
       });
   }, [header]);
-  console.log(header);
   return article ? (
     <main className="content">
       <article className="card article__card">

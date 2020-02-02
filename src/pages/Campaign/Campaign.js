@@ -26,7 +26,7 @@ const Campaign = () => {
         {
           filteredArticles.length
             ? (filteredArticles.map((article) => {
-              const link = `/kampania/${article.header}`;
+              const link = `/kampania/${article.header.replace(/ /g, '-')}`;
               return (
                 <ArticleThumbnail
                   key={article.header}
@@ -34,7 +34,7 @@ const Campaign = () => {
                   header={article.header}
                   description={article.description}
                   tags={article.tags}
-                  link={link.replace(' ', '%20')}
+                  link={link}
                   setTextFilter={setTextFilter}
                 />
               );
