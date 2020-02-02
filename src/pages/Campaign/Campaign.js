@@ -34,7 +34,7 @@ const Campaign = () => {
                   header={article.header}
                   description={article.description}
                   tags={article.tags}
-                  link={link}
+                  link={link.replace(' ', '%20')}
                   setTextFilter={setTextFilter}
                 />
               );
