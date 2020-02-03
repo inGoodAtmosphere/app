@@ -10,7 +10,6 @@ const {
   map,
   encyclopedia,
   sensors,
-  newsletter,
   campaign,
 } = content;
 const LandingPage = () => (
@@ -45,7 +44,7 @@ const LandingPage = () => (
         purpose="encyclopedia"
         header={encyclopedia.header}
         content={encyclopedia.description}
-        link={{ href: 'encyklopedia', text: 'Przeczytaj tutaj' }}
+        link={{ href: 'encyklopedia', text: 'Zajrzyj w tą zakładkę!' }}
       />
       <InfoCard
         env="landing-page"
@@ -53,13 +52,6 @@ const LandingPage = () => (
         header={sensors.header}
         content={sensors.description}
         link={{ href: 'czujniki', text: 'Dowiedz się więcej' }}
-      />
-      <InfoCard
-        env="landing-page"
-        purpose="newsletter"
-        header={newsletter.header}
-        content={newsletter.description}
-        link={{ href: 'newsletter', text: 'Zapisz się teraz' }}
       />
     </div>
   </main>
