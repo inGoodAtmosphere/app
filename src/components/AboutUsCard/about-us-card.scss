@@ -2,7 +2,7 @@
 .about-us__card__wrapper {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 15% 45% 45%;
+  grid-auto-rows: 35px min-content min-content;
   width: 67vw;
   height: calc(74vh - 72px);
   max-width: 290px;
@@ -26,30 +26,38 @@
 .about-us__card__description {
   color: $dark-bg;
   grid-column: 2;
+  padding-bottom: $spacing;
   text-align: justify;
-  p {
-    font-size: $s-size;
-  }
   grid-row: 3;
-  h2 {
-    margin-bottom: 0;
-  }
-  h3 {
-    margin: 0;
-    padding-left: $spacing;
-  }
+}
+.about-us__card__description__description {
+  font-size: $s-size;
+}
+.about-us__card__description__name {
+  margin-bottom: 0;
+}
+.about-us__card__description__role {
+  margin: 0;
 }
 @media screen and (max-height: 550px) {
-  .about-us__card__description {
-    h2 {
-      margin-top: 5px;
-    }
+  .about-us__card__wrapper {
+    grid-auto-rows: 35px 45% min-content;
+  }
+  .about-us__card__image {
+    height: 100%;
+    width: 90%;
+  }
+  .about-us__card__description__name {
+    margin-top: 5px;
+  }
+  .about-us__card__description__role {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-height: 650px) {
   .about-us__card__description {
-    p {
-      font-size: 1.2rem;
-    }
+  }
+  .about-us__card__description__description {
+    font-size: 1.2rem;
   }
 }

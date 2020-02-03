@@ -45,22 +45,8 @@ const Footer = () => (
       <a href="/aplikacja">Aplikacja</a>
       <a href="/regulamin">Regulamin</a>
     </div>
-    <h3 className="footer__h3">Nasi partnerzy: </h3>
+    <h3 className="footer__h3">Nasi patroni: </h3>
     <div className="footer__partner">
-      <a
-        href="https://www.msk.earth/"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <img src={partner1} alt="MSK" />
-      </a>
-      <a
-        href="https://www.msk.earth/"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <img src={partner1} alt="MSK" />
-      </a>
       <a
         href="https://www.msk.earth/"
         target="_blank"

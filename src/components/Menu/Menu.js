@@ -10,9 +10,6 @@ const Menu = ({ isActive }) => (
     <a href="/o-nas" className="menu__item" tabIndex={isActive ? 0 : -1}>
       O nas
     </a>
-    <a href="/blog" className="menu__item" tabIndex={isActive ? 0 : -1}>
-      Blog
-    </a>
     <a href="/encyklopedia" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Encyklopedia
     </a>

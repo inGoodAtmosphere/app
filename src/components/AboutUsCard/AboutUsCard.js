@@ -4,16 +4,19 @@ import './about-us-card.scss';
 // prettier-ignore
 const AboutUsCard = ({
   person: {
-    name, role, image, description,
+    name,
+    role,
+    image,
+    description,
   },
 }) => (
   <div className="about-us__card__wrapper">
     <img className="about-us__card__image" src={image} alt={name} />
     <div className="card about-us__card" />
     <div className="about-us__card__description">
-      <h2>{name}</h2>
-      <h3>{role}</h3>
-      <p>{description}</p>
+      <h2 className="about-us__card__description__name">{name}</h2>
+      <h3 className="about-us__card__description__role">{role}</h3>
+      <p className="about-us__card__description__description">{description}</p>
     </div>
   </div>
 );

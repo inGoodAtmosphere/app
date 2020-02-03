@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { Router, Route, Switch } from 'react-router-dom';
 import { StickyContainer } from 'react-sticky';
+import history from '../history/history';
 
 import 'normalize.css';
 import '../styles/index.scss';
@@ -21,7 +21,6 @@ import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
 import NotFoundPage from '../pages/NotFound/NotFound';
 
 const Routes = () => {
-  const history = createBrowserHistory();
   history.listen((location) => {
     ReactGA.set({ page: location.pathname });
     ReactGA.pageview(location.pathname);
@@ -31,7 +30,7 @@ const Routes = () => {
     ReactGA.pageview(window.location.pathname);
   }, []);
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <StickyContainer>
         <div className="container">
           <Header />
@@ -49,7 +48,7 @@ const Routes = () => {
           <Footer />
         </div>
       </StickyContainer>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default Routes;

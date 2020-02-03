@@ -1,9 +1,9 @@
 @import '../../styles/base/settings';
-;
 .article__header {
   background: url('https://picsum.photos/330/160') no-repeat;
   background-size: cover;
-  padding: 50px;
+  padding: 50px 0;
+  text-align: center;
   color: $light-bg;
   border-radius: $spacing;
   margin: 0;
