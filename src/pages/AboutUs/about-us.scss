@@ -4,10 +4,12 @@
   justify-content: center;
 }
 .wrapper {
-  height: calc(100vh - 72px);
+  height: calc(100vh - 8vh);
 }
 .slider-frame {
   position: absolute;
+  display: flex !important;
+  align-items: center;
 }
 
 .slider__btn {

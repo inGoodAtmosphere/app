@@ -3,7 +3,7 @@
 }
 html {
   font-family: 'Lato', sans-serif;
-  font-size: 62.5%;
+  font-size: calc(10px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
   color: $light-bg;
   background: $dark-bg;
   overflow-x: hidden;
@@ -61,7 +61,7 @@ p {
 }
 .content {
   flex: 1;
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 8vh);
 }
 .wrapper__cards {
   display: flex;

@@ -2,19 +2,21 @@
 .about-us__card__wrapper {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-auto-rows: 35px min-content min-content;
+  grid-auto-rows: 5% 55% 40%;
   width: 67vw;
   height: calc(74vh - 72px);
-  max-width: 290px;
+  // max-width: 290px;
   padding: 0;
 }
 .about-us__card {
   grid-column: 1/4;
   grid-row: 2/4;
+  margin: 0;
 }
 .about-us__card__image {
   justify-self: center;
   object-fit: cover;
+  height: 100%;
   width: 100%;
 
   border-radius: $spacing;
