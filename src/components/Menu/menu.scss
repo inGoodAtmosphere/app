@@ -1,5 +1,4 @@
 @import '../../styles/base/settings';
-;
 .menu {
   background: $light-bg;
   position: absolute;
@@ -48,5 +47,21 @@
 @media screen and (max-height: 550px) {
   .menu__item {
     font-size: $m-size;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    background: none;
+    flex-direction: row;
+    height: auto;
+    position: static;
+    transform: translateX(0)
+  }
+  .menu__item {
+    color: $light-bg;
+    text-align: center;
+  }
+  .menu__item__about-us {
+    white-space: nowrap;
   }
 }

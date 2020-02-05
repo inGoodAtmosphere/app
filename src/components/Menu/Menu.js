@@ -7,7 +7,11 @@ const Menu = ({ isActive }) => (
     <a href="/kampania" className="menu__item" tabIndex={isActive ? 0 : -1}>
       Kampania
     </a>
-    <a href="/o-nas" className="menu__item" tabIndex={isActive ? 0 : -1}>
+    <a
+      href="/o-nas"
+      className="menu__item menu__item__about-us"
+      tabIndex={isActive ? 0 : -1}
+    >
       O nas
     </a>
     <a href="/encyklopedia" className="menu__item" tabIndex={isActive ? 0 : -1}>
@@ -21,7 +25,10 @@ const Menu = ({ isActive }) => (
     </a>
   </nav>
 );
+Menu.defaultProps = {
+  isActive: false,
+};
 Menu.propTypes = {
-  isActive: PropTypes.bool.isRequired,
+  isActive: PropTypes.bool,
 };
 export default Menu;
