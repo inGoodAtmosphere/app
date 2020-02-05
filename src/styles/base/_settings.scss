@@ -19,12 +19,14 @@ $xs-size: 0.75rem;
 $spacing: 0.625rem;
 $base-font-size: 1rem;
 $base-line-height: 1.5;
+$border: 0.0625rem;
 // Breakpoints:
-$breakpoint-s: 48em; // 768px
-$breakpoint-m: 64em; // 1024px
-$breakpoint-l: 85.375em; // 1366px
-$breakpoint-xl: 120em; // 1920px
-$breakpoint-xxl: 160em; // 2560px
+$breakpoint-s: 48rem; // 768px
+$breakpoint-m: 64rem; // 1024px
+$breakpoint-l: 85.375rem; // 1366px
+$breakpoint-xl: 120rem; // 1920px
+$breakpoint-xxl: 160rem; // 2560px
+$breakpoint-xxxl: 200rem; // 2560px
 
 // Media queries:
 $media-query-s: '(min-width: #{$breakpoint-s})';
@@ -32,4 +34,5 @@ $media-query-m: '(min-width: #{$breakpoint-m})';
 $media-query-l: '(min-width: #{$breakpoint-l})';
 $media-query-xl: '(min-width: #{$breakpoint-xl})';
 $media-query-xxl: '(min-width: #{$breakpoint-xxl})';
+$media-query-xxxl: '(min-width: #{$breakpoint-xxxl})';
 $media-query-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';

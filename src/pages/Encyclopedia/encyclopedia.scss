@@ -6,12 +6,12 @@
   background: $primary-accent;
   color: $light-bg;
 }
-@media screen and (min-width: 768px) {
+@media #{$media-query-s} {
   .encyclopedia__card {
     width: 40%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media #{$media-query-m} {
   .encyclopedia__card {
     width: 30%;
   }

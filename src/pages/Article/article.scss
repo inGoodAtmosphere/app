@@ -2,12 +2,13 @@
 .article__header {
   background: url('https://picsum.photos/330/160') no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: $spacing * 5 0;
   text-align: center;
   color: $light-bg;
   border-radius: $spacing;
   margin: 0;
   text-align: center;
+  overflow-wrap: break-word;
 }
 .article__card {
   padding: $spacing;

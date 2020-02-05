@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 ;
 .contact__h3 {
-  padding-left: 20px;
+  padding-left: $spacing * 2;
   color: $light-accent;
 }
 .contact__list {

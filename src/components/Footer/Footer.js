@@ -46,13 +46,18 @@ const Footer = () => (
       <a href="/regulamin">Regulamin</a>
     </div>
     <h3 className="footer__h3">Nasi patroni: </h3>
-    <div className="footer__partner">
+    <div className="footer__patrons">
       <a
         href="https://www.msk.earth/"
         target="_blank"
         rel="noreferrer noopener"
+        className="footer__patrons__item"
       >
-        <img src={partner1} alt="MSK" />
+        <img
+          src={partner1}
+          alt="MSK"
+          className="footer__patrons__item__image"
+        />
       </a>
     </div>
   </footer>

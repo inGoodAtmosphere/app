@@ -1,26 +1,26 @@
 @import '../../styles/base/settings';
-;
 .partners__card,
 .sensors__card {
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 30% calc(70% - 5px);
+  grid-gap: $spacing / 2;
+  grid-template-columns: min-content 70%;
+  justify-content: start;
   padding: $spacing;
 }
 .partners__header,
 .sensors__header {
   margin-top: 0;
-  padding-left: 5px;
+  padding-left: $spacing / 2;
 }
 .partners__thumbnail,
 .sensors__thumbnail {
-  width: 100%;
-  max-width: 150px;
+  height: 100%;
+  width: 6rem;
   align-self: center;
   border-radius: $spacing;
 }
 .partners__description,
 .sensors__description {
-  padding-left: 5px;
+  padding-left: $spacing / 2;
   margin-bottom: 0;
 }

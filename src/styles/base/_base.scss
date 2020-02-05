@@ -16,11 +16,14 @@ html {
   }
 
   @media #{$media-query-xl} {
-    font-size: $base-font-size * 1.4;
+    font-size: $base-font-size * 1.5;
   }
 
   @media #{$media-query-xxl} {
-    font-size: $base-font-size * 2;
+    font-size: $base-font-size * 2.3;
+  }
+  @media #{$media-query-xxxl} {
+    font-size: $base-font-size * 2.8;
   }
 }
 a {
@@ -43,7 +46,7 @@ main {
 }
 h1 {
   font-size: $l-size;
-  padding-left: 20px;
+  padding-left: $spacing * 2;
   text-transform: uppercase;
 }
 h2 {
@@ -60,7 +63,7 @@ p {
 }
 .card {
   border-radius: $spacing;
-  padding: 20px;
+  padding: $spacing * 2;
   margin: $spacing 0;
   display: flex;
   flex-direction: column;
@@ -73,14 +76,14 @@ p {
 }
 .content {
   flex: 1;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 5rem);
 }
 .wrapper__cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-@media screen and (min-width: 1024px) {
+@media #{$media-query-m} {
   .card {
     margin: $spacing;
   }

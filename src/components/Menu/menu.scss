@@ -22,7 +22,7 @@
   text-transform: uppercase;
 }
 .menu__login {
-  border: 1px transparent;
+  border: $border transparent;
   padding: $spacing;
   color: $light-bg;
   background: $dark-bg;
@@ -31,7 +31,7 @@
 .menu__register {
   font-size: $m-size;
   background: none;
-  border: 1px transparent;
+  border: $border transparent;
   padding: $spacing;
 }
 .menu--isActive {
@@ -49,7 +49,7 @@
     font-size: $m-size;
   }
 }
-@media screen and (min-width: 1024px) {
+@media #{$media-query-m} {
   .menu {
     background: none;
     flex-direction: row;

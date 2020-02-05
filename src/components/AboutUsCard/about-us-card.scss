@@ -5,7 +5,6 @@
   grid-auto-rows: 5% 55% 40%;
   width: 67vw;
   height: 74vh;
-  // max-width: 290px;
   padding: 0;
 }
 .about-us__card {
@@ -42,16 +41,16 @@
 .about-us__card__description__role {
   margin: 0;
 }
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 34.375rem) {
   .about-us__card__wrapper {
-    grid-auto-rows: 35px 45% min-content;
+    grid-auto-rows: 2rem 45% min-content;
   }
   .about-us__card__image {
     height: 100%;
     width: 90%;
   }
   .about-us__card__description__name {
-    margin-top: 5px;
+    margin-top: $spacing / 2;
   }
   .about-us__card__description__description {
     font-size: 0.8rem;

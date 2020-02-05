@@ -4,13 +4,14 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+  margin-bottom: 3rem;
 }
 .campaign__help {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: $m-size;
+  height: $m-size;
   border: 0 transparent;
   border-radius: 50%;
   color: $dark-bg;
@@ -22,44 +23,31 @@
     display: none;
   }
   &:hover::before {
-    white-space: nowrap;
     display: flex;
     position: absolute;
-    left: 105%;
     background: rgba(0, 0, 0, 0.3);
     border-radius: $spacing;
     color: $light-bg;
     font-size: $xs-size;
     font-weight: normal;
     padding: $spacing;
-  }
-  &:hover::after {
-    content: '';
-    position: absolute;
-    left: 98.39%;
-    top: 37%;
-    border-width: 8px;
-    border-style: solid;
-    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    left: 0;
+    white-space: normal;
+    top: 100%;
+    margin-left: $spacing;
   }
 }
 
-@media screen and (max-width: 675px) {
+@media #{$media-query-s} {
   .campaign__box {
     width: 100%;
-    margin-bottom: 6vh;
+    margin-bottom: 0;
   }
   .campaign__help {
     &:hover::before {
-      margin: $spacing;
-      white-space: normal;
-      left: 0;
-      margin-top: 7.81vh;
-    }
-    &:hover::after {
-      transform: rotate(90deg);
-      left: 51vw;
-      top: 65%;
+      left: 17rem;
+      top: 20%;
+      white-space: nowrap;
     }
   }
 }
