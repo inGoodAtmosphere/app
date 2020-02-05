@@ -11,7 +11,9 @@ const AboutUsCard = ({
   },
 }) => (
   <div className="about-us__card__wrapper">
-    <img className="about-us__card__image" src={image} alt={name} />
+    <div className="about-us__card__image">
+      <img src={image} alt={name} />
+    </div>
     <div className="card about-us__card" />
     <div className="about-us__card__description">
       <h2 className="about-us__card__description__name">{name}</h2>

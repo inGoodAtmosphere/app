@@ -42,7 +42,7 @@ const AboutUs = () => {
       },
     ];
     if (width < 500) return breakpoints[0];
-    if (width < 1000) return breakpoints[1];
+    if (width < 1024) return breakpoints[1];
     return breakpoints[2];
   };
   return (

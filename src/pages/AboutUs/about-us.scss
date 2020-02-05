@@ -2,16 +2,12 @@
 .slider-slide {
   display: flex !important;
   justify-content: center;
+  height: 100% !important;
 }
-.wrapper {
-  height: calc(100vh - 5rem);
+.slider-list{
+  display: flex;
+  height: calc(100vh - 5rem) !important;
 }
-.slider-frame {
-  position: absolute;
-  display: flex !important;
-  align-items: center;
-}
-
 .slider__btn {
   color: $light-bg;
   width: 3rem;
