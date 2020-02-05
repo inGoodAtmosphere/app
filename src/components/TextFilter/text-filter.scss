@@ -1,53 +1,8 @@
 @import '../../styles/base/settings';
 
-.campaign__box {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  margin-bottom: 3rem;
+.campaign__search{
+  width: 18.5rem;
 }
-.campaign__help {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: $m-size;
-  height: $m-size;
-  border: 0 transparent;
-  border-radius: 50%;
-  color: $dark-bg;
-  background: $light-accent;
-  font-weight: bolder;
-  font-size: $s-size;
-  &::before {
-    content: attr(data-tooltip);
-    display: none;
-  }
-  &:hover::before {
-    display: flex;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: $spacing;
-    color: $light-bg;
-    font-size: $xs-size;
-    font-weight: normal;
-    padding: $spacing;
-    left: 0;
-    white-space: normal;
-    top: 100%;
-    margin-left: $spacing;
-  }
-}
-
-@media #{$media-query-s} {
-  .campaign__box {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .campaign__help {
-    &:hover::before {
-      left: 17rem;
-      top: 20%;
-      white-space: nowrap;
-    }
-  }
+.campaign__tags{
+  display: inline-block;
 }

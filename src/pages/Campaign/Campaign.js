@@ -7,6 +7,7 @@ import './campaign.scss';
 
 const Campaign = () => {
   const [textFilter, setTextFilter] = useState('');
+  const tags = ['smog', 'lorem', 'ipsum', 'dolor'];
   // prettier-ignore
   const filteredArticles = articleThumbnails.filter(
     (article) =>
@@ -21,6 +22,18 @@ const Campaign = () => {
         Tutaj przeczytasz wszystkie nasze artykuły
       </h2>
       <TextFilter setTextFilter={setTextFilter} textFilter={textFilter} />
+      <div className="campaign__tags">
+        {tags.map((tag) => (
+          <button
+            className="campaign__tag__btn"
+            key={tag}
+            type="button"
+            onClick={() => setTextFilter(tag)}
+          >
+            {`#${tag}`}
+          </button>
+        ))}
+      </div>
       {/*  prettier-ignore */}
       <div className="thumbnail-container">
         {

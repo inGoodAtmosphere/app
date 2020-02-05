@@ -12,3 +12,11 @@
   margin: $spacing;
   color: $light-bg;
 }
+.campaign__tag__btn{
+  background: none;
+  border-radius: $spacing * 2;
+  border: $border solid $light-bg;
+  color: $light-bg;
+  padding: $spacing;
+  margin: $spacing / 2;
+}

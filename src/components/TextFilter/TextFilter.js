@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import './text-filter.scss';
 
 const TextFilter = ({ setTextFilter, textFilter }) => (
-  <div className="campaign__box">
-    <label htmlFor="filter" aria-label="Wyszukaj artykuł">
+  <>
+    <label htmlFor="filter" aria-label="Wyszukaj artykuł lub słowa kluczowe">
       <input
         id="filter"
         value={textFilter}
         type="search"
-        placeholder="Wyszukaj artykuł"
+        placeholder="Wyszukaj artykuł lub słowa kluczowe"
         className="campaign__search"
         onChange={(e) => {
           setTextFilter(
@@ -22,13 +22,8 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
         }}
       />
     </label>
-    <div
-      className="campaign__help"
-      data-tooltip='Możesz wyszukać tytuł artykułu lub słowa kluczowe. Spróbuj np. "smog"'
-    >
-      ?
-    </div>
-  </div>
+
+  </>
 );
 TextFilter.propTypes = {
   setTextFilter: PropTypes.func.isRequired,

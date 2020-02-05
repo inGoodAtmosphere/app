@@ -4,19 +4,19 @@
       "header": "Header1Header1 Header1 Header1 Header1",
       "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
       "thumbnail": "https://picsum.photos/125/150",
-      "tags": ["sad", "adwqe"]
+      "tags": ["sad", "adwqe", "smog"]
     },
     {
       "header": "Header2",
       "description": "Lorem ipsum dolor sit amet",
       "thumbnail": "https://picsum.photos/125/150",
-      "tags": ["sad", "sawe"]
+      "tags": ["sad", "sawe", "lorem","ipsum"]
     },
     {
       "header": "Header3",
       "description": "Lorem ipsum dolor sit amet",
       "thumbnail": "https://picsum.photos/125/150",
-      "tags": ["sad", "zcvcd"]
+      "tags": ["sad", "zcvcd","lorem"]
     }
   ]
 }
