@@ -13,7 +13,7 @@ const Footer = () => (
     <div className="footer__icons">
       <a
         aria-label="Facebook"
-        href="https://facebook.com"
+        href="https://www.facebook.com/inGoodAtmosphere-100599628162747"
         target="_blank"
         rel="noreferrer noopener"
         onClick={() => {

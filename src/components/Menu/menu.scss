@@ -3,21 +3,21 @@
   background: $light-bg;
   position: absolute;
   left: 0;
-  top: 8vh;
+  top: 5rem;
   transform: translateX(100%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   z-index: 10;
-  height: calc(100vh - 8vh);
+  height: calc(100vh - 5rem);
   transition: transform 0.4s ease-in;
   width: 100%;
 }
 .menu__item {
   color: $dark-bg;
   padding: $spacing;
-  font-size: $l-size;
+  font-size: $m-size;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -55,11 +55,12 @@
     flex-direction: row;
     height: auto;
     position: static;
-    transform: translateX(0)
+    transform: translateX(0);
   }
   .menu__item {
     color: $light-bg;
     text-align: center;
+    font-size: $m-size - 0.3;
   }
   .menu__item__about-us {
     white-space: nowrap;

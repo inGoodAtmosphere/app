@@ -30,7 +30,7 @@ const Contact = () => (
         <a
           target="_blank"
           rel="noreferrer noopener"
-          href="https://facebook.com/ingoodatmosphere"
+          href="https://www.facebook.com/inGoodAtmosphere-100599628162747"
           className="contact__list__item__link"
         >
           <FontAwesomeIcon icon={faFacebookSquare} size="2x" />

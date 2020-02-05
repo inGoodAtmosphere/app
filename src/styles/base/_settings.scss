@@ -1,4 +1,4 @@
-//Colors:
+// Colors:
 $primary-accent: #3088a1;
 $light-bg: #f9f9f9;
 $dark-bg: #1c233c;
@@ -11,9 +11,25 @@ $warning: #c19330;
 $bad: #e1625a;
 
 $text: #0c0f18;
-//Sizes:
-$l-size: 3.4rem;
-$m-size: 2.4rem;
-$s-size: 1.6rem;
-$xs-size: 1.2rem;
-$spacing: 1rem;
+// Sizes:
+$l-size: 2.125rem;
+$m-size: 1.5rem;
+$s-size: 1rem;
+$xs-size: 0.75rem;
+$spacing: 0.625rem;
+$base-font-size: 1rem;
+$base-line-height: 1.5;
+// Breakpoints:
+$breakpoint-s: 48em; // 768px
+$breakpoint-m: 64em; // 1024px
+$breakpoint-l: 85.375em; // 1366px
+$breakpoint-xl: 120em; // 1920px
+$breakpoint-xxl: 160em; // 2560px
+
+// Media queries:
+$media-query-s: '(min-width: #{$breakpoint-s})';
+$media-query-m: '(min-width: #{$breakpoint-m})';
+$media-query-l: '(min-width: #{$breakpoint-l})';
+$media-query-xl: '(min-width: #{$breakpoint-xl})';
+$media-query-xxl: '(min-width: #{$breakpoint-xxl})';
+$media-query-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';

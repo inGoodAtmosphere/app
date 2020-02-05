@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .wrapper {
-  height: calc(100vh - 8vh);
+  height: calc(100vh - 5rem);
 }
 .slider-frame {
   position: absolute;
@@ -14,8 +14,8 @@
 
 .slider__btn {
   color: $light-bg;
-  width: 40px;
-  height: 40px;
+  width: 3rem;
+  height: 3rem;
   background: none;
   border-radius: $spacing;
   border: 2px solid $light-bg;

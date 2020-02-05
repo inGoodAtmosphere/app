@@ -9,8 +9,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 0 transparent;
   border-radius: 50%;
   color: $dark-bg;
@@ -26,7 +26,7 @@
     display: flex;
     position: absolute;
     left: 105%;
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: $spacing;
     color: $light-bg;
     font-size: $xs-size;
@@ -34,13 +34,13 @@
     padding: $spacing;
   }
   &:hover::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 98.39%;
     top: 37%;
     border-width: 8px;
     border-style: solid;
-    border-color: transparent rgba(0,0,0, 0.3) transparent transparent;
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
   }
 }
 

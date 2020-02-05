@@ -4,7 +4,7 @@
   grid-template-columns: 10% 80% 10%;
   grid-auto-rows: 5% 55% 40%;
   width: 67vw;
-  height: calc(74vh - 72px);
+  height: 74vh;
   // max-width: 290px;
   padding: 0;
 }
@@ -33,6 +33,7 @@
   grid-row: 3;
 }
 .about-us__card__description__description {
+  margin-top: 0.5rem;
   font-size: $s-size;
 }
 .about-us__card__description__name {
@@ -52,14 +53,7 @@
   .about-us__card__description__name {
     margin-top: 5px;
   }
-  .about-us__card__description__role {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (max-height: 650px) {
-  .about-us__card__description {
-  }
   .about-us__card__description__description {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 }

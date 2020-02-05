@@ -1,5 +1,4 @@
 @import '../../styles/base/settings';
-;
 .campaign__h2 {
   padding-left: $spacing;
   color: $light-accent;
@@ -12,8 +11,4 @@
   padding: $spacing;
   margin: $spacing;
   color: $light-bg;
-}
-.campaign__search:focus {
-  outline: 1px solid $light-bg;
-  -moz-outline-radius: $spacing;
 }
