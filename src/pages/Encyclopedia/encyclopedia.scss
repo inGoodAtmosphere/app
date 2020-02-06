@@ -1,18 +1,6 @@
 @import '../../styles/base/settings';
-;
-.encyclopedia__card {
-}
+
 .encyclopedia__caqi {
   background: $primary-accent;
   color: $light-bg;
-}
-@media #{$media-query-s} {
-  .encyclopedia__card {
-    width: 40%;
-  }
-}
-@media #{$media-query-m} {
-  .encyclopedia__card {
-    width: 30%;
-  }
 }

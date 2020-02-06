@@ -43,7 +43,10 @@
 .about-us__card__description__role {
   margin: 0;
 }
-@media screen and (max-height: 34.375em) {
+@media screen and (max-height: 42.375em) {
+  .slider{
+    font-size: $base-font-size*0.95;
+  }
   .about-us__card__wrapper {
     grid-auto-rows: 2em 45% min-content;
   }

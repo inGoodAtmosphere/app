@@ -5,12 +5,12 @@ import CardWithThumbnail from '../../components/CardWithThumbnail/CardWithThumbn
 const Partners = () => (
   <main className="content">
     <h1>Nasi Partnerzy</h1>
-    {partners.map((partner) => (
+    {partners.map(({ name, description, thumbnail }) => (
       <CardWithThumbnail
-        key={partner.name}
-        header={partner.name}
-        description={partner.description}
-        thumbnail={partner.thumbnail}
+        key={name}
+        header={name}
+        description={description}
+        thumbnail={thumbnail}
         env="partners"
       />
     ))}
