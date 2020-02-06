@@ -22,7 +22,6 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
         }}
       />
     </label>
-
   </>
 );
 TextFilter.propTypes = {

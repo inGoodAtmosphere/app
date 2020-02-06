@@ -2,7 +2,7 @@
 .about-us__card__wrapper {
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-auto-rows: 2rem 17rem min-content;
+  grid-auto-rows: 2em 17em min-content;
   width: 67vw;
   padding: 0;
   align-self: center;
@@ -34,7 +34,7 @@
   grid-row: 3;
 }
 .about-us__card__description__description {
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
   font-size: $s-size;
 }
 .about-us__card__description__name {
@@ -43,9 +43,9 @@
 .about-us__card__description__role {
   margin: 0;
 }
-@media screen and (max-height: 34.375rem) {
+@media screen and (max-height: 34.375em) {
   .about-us__card__wrapper {
-    grid-auto-rows: 2rem 45% min-content;
+    grid-auto-rows: 2em 45% min-content;
   }
   .about-us__card__image {
     height: 100%;
@@ -54,6 +54,6 @@
     margin-top: $spacing / 2;
   }
   .about-us__card__description__description {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }

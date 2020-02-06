@@ -4,14 +4,14 @@
   justify-content: center;
   height: 100% !important;
 }
-.slider-list{
+.slider-list {
   display: flex;
   height: calc(100vh - 5rem) !important;
 }
 .slider__btn {
   color: $light-bg;
-  width: 3rem;
-  height: 3rem;
+  width: 3em;
+  height: 3em;
   background: none;
   border-radius: $spacing;
   border: $spacing / 5 solid $light-bg;
@@ -23,5 +23,13 @@
   }
   .slider-frame {
     width: 90%;
+  }
+}
+@media screen and (max-width: 1600px) and (min-aspect-ratio: 16 / 9),
+  (min-aspect-ratio: 21 / 9) and (max-width: 4000px) {
+  .slider {
+    * {
+      font-size: $base-font-size * 0.7;
+    }
   }
 }

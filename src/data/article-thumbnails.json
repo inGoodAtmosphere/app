@@ -10,13 +10,13 @@
       "header": "Header2",
       "description": "Lorem ipsum dolor sit amet",
       "thumbnail": "https://picsum.photos/125/150",
-      "tags": ["sad", "sawe", "lorem","ipsum"]
+      "tags": ["sad", "sawe", "lorem", "ipsum"]
     },
     {
       "header": "Header3",
       "description": "Lorem ipsum dolor sit amet",
       "thumbnail": "https://picsum.photos/125/150",
-      "tags": ["sad", "zcvcd","lorem"]
+      "tags": ["sad", "zcvcd", "lorem"]
     }
   ]
 }
