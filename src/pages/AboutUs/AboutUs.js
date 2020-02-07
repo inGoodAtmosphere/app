@@ -8,6 +8,27 @@ import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
 import { people } from '../../data/about-us.json';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import './about-us.scss';
+import michal from '../../img/michał.jpg';
+import olivier from '../../img/olivier.jpg';
+import kubaC from '../../img/kubaC.jpg';
+import julia from '../../img/julia.jpg';
+import kubaT from '../../img/kubaT.jpg';
+import antek from '../../img/antek.jpg';
+import szymon from '../../img/szymon.jpg';
+import rafal from '../../img/rafał.jpg';
+import mateusz from '../../img/mateusz.jpg';
+
+const portraits = [
+  michal,
+  olivier,
+  kubaC,
+  julia,
+  kubaT,
+  antek,
+  szymon,
+  rafal,
+  mateusz,
+];
 
 const AboutUs = () => {
   const width = useWindowWidth();
@@ -58,8 +79,11 @@ const AboutUs = () => {
         renderBottomCenterControls={() => null}
         {...setBreakpoints()}
       >
-        {people.map((person) => (
-          <AboutUsCard person={person} key={person.name} />
+        {people.map((person, i) => (
+          <AboutUsCard
+            person={{ ...person, image: portraits[i] }}
+            key={person.name}
+          />
         ))}
       </Carousel>
     </main>
