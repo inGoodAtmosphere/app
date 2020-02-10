@@ -21,7 +21,11 @@ const landingPageHOC = (WrappedComponent) => ({
         content={content}
         link={link.href}
       >
-        <a className="landing-page__btn" href={`/${link.href}`}>
+        <a
+          className="landing-page__btn"
+          aria-label={link.href}
+          href={`/${link.href}`}
+        >
           {link.text}
         </a>
         {width > 1024 && img}

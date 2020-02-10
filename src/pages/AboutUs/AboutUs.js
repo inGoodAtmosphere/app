@@ -21,8 +21,8 @@ import mateusz from '../../img/mateusz.jpg';
 const portraits = [
   michal,
   olivier,
-  kubaC,
   julia,
+  kubaC,
   kubaT,
   antek,
   szymon,

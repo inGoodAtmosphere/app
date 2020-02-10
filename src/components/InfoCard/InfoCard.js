@@ -10,7 +10,9 @@ const InfoCard = ({
       <p className={` ${env}__description`}>{content}</p>
       {children[0]}
     </div>
-    <a className="landing-page__svg__link" href={link}>{children[1]}</a>
+    <a className="landing-page__svg__link" aria-label={link} href={link}>
+      {children[1]}
+    </a>
   </div>
 );
 InfoCard.defaultProps = {
