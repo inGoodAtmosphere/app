@@ -10,6 +10,10 @@
     color: $light-bg;
   }
 }
+.landing-page__card__content {
+  display: flex;
+  flex-direction: column;
+}
 .landing-page__description {
   margin: 0;
   padding: $spacing * 2 0;
@@ -40,12 +44,12 @@
   .landing-page__card {
     flex-direction: row;
     justify-content: space-between;
-    &:nth-child(2n) {
+    &:nth-child(even) {
       flex-direction: row-reverse;
-      .landing-page__card__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+    }
+    &:nth-child(odd) {
+      .landing-page__btn {
+        align-self: flex-start;
       }
     }
   }

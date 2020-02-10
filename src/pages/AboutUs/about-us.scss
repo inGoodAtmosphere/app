@@ -2,7 +2,7 @@
 .slider-slide {
   display: flex !important;
   justify-content: center;
-  height: 100% !important;
+  height: calc(100% - 5rem) !important;
 }
 .slider-list {
   display: flex;
@@ -16,6 +16,11 @@
   border-radius: $spacing;
   border: $spacing / 5 solid $light-bg;
 }
+.slider {
+  * {
+    font-size: $base-font-size * 0.9;
+  }
+}
 @media #{$media-query-m} {
   .slider {
     display: flex !important;
@@ -24,12 +29,22 @@
   .slider-frame {
     width: 90%;
   }
+  .slider-slide {
+    height: 100% !important;
+  }
 }
 @media screen and (max-width: 1600px) and (min-aspect-ratio: 16 / 9),
   (min-aspect-ratio: 21 / 9) and (max-width: 4000px) {
   .slider {
     * {
       font-size: $base-font-size * 0.7;
+    }
+  }
+}
+@media screen and (max-height: 34rem) {
+  .slider {
+    * {
+      font-size: $base-font-size * 0.75;
     }
   }
 }
