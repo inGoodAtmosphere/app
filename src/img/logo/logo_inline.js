@@ -5,8 +5,6 @@ import './logo_inline.scss';
 function SvgLogoInline(props) {
   return (
     <svg
-      width={115358}
-      height={35278}
       viewBox="0 0 145358 39278"
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"

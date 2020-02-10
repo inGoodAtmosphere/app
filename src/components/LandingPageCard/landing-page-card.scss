@@ -6,6 +6,9 @@
 }
 .landing-page__card {
   width: 100%;
+  * {
+    color: $light-bg;
+  }
 }
 .landing-page__description {
   margin: 0;
@@ -15,14 +18,6 @@
   padding: $spacing;
   border: $border solid $light-bg;
   align-self: flex-end;
-}
-.landing-page__card {
-  * {
-    color: $light-bg;
-  }
-}
-.landing-page__newsletter {
-  background: $text;
 }
 .landing-page__sensors {
   background: $dark-accent;
@@ -41,13 +36,23 @@
     border: $border solid $text;
   }
 }
-@media #{$media-query-s} {
-  .landing-page__card {
-    width: 40%;
-  }
-}
 @media #{$media-query-m} {
   .landing-page__card {
-    width: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      .landing-page__card__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .landing-page__svg {
+    min-width: 15rem;
+  }
+  .landing-page__svg__link {
+    border: none !important;
   }
 }

@@ -2,8 +2,9 @@ import React from 'react';
 import InfoCard from '../../components/LandingPageCard/LandingPageCard';
 import { content } from '../../data/landing-page.json';
 import './landing-page.scss';
-import './landing-page-card.scss';
-
+import EncyclopediaSvg from '../../img/encyclopedia';
+import MapSvg from '../../img/map';
+import ProjectSvg from '../../img/project';
 // prettier-ignore
 const {
   project,
@@ -31,6 +32,7 @@ const LandingPage = () => (
         header={project.header}
         content={project.description}
         link={{ href: 'o-nas', text: 'Dowiedz się więcej' }}
+        img={<ProjectSvg />}
       />
       <InfoCard
         env="landing-page"
@@ -38,6 +40,7 @@ const LandingPage = () => (
         header={map.header}
         content={map.description}
         link={{ href: 'mapa', text: 'Otwórz mapę' }}
+        img={<MapSvg />}
       />
       <InfoCard
         env="landing-page"
@@ -45,6 +48,7 @@ const LandingPage = () => (
         header={encyclopedia.header}
         content={encyclopedia.description}
         link={{ href: 'encyklopedia', text: 'Zajrzyj w tą zakładkę!' }}
+        img={<EncyclopediaSvg />}
       />
       <InfoCard
         env="landing-page"
@@ -52,6 +56,7 @@ const LandingPage = () => (
         header={sensors.header}
         content={sensors.description}
         link={{ href: 'czujniki', text: 'Dowiedz się więcej' }}
+        img={<MapSvg />}
       />
     </div>
   </main>
