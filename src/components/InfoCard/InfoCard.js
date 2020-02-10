@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // prettier-ignore
 const InfoCard = ({
-  env, header, content, children, purpose, link,
+  env, header, content, children, purpose,
 }) => (
   <div className={` card ${env}__card ${env}__${purpose}`}>
     <div className="landing-page__card__content">
@@ -10,9 +10,7 @@ const InfoCard = ({
       <p className={` ${env}__description`}>{content}</p>
       {children[0]}
     </div>
-    <a className="landing-page__svg__link" aria-label={link} href={link}>
-      {children[1]}
-    </a>
+    {children[1]}
   </div>
 );
 InfoCard.defaultProps = {
@@ -23,7 +21,6 @@ InfoCard.propTypes = {
   header: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.element, PropTypes.bool]),
   ),

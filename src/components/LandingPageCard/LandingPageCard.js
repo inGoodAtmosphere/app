@@ -28,7 +28,15 @@ const landingPageHOC = (WrappedComponent) => ({
         >
           {link.text}
         </a>
-        {width > 1024 && img}
+        {width > 1024 && (
+          <a
+            className="landing-page__svg__link"
+            aria-label={link.href}
+            href={link.href}
+          >
+            {img}
+          </a>
+        )}
       </WrappedComponent>
     </>
   );
