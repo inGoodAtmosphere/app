@@ -1,5 +1,5 @@
 @import '../../styles/base/settings';
-.cookies-warning__wrapper {
+.cookies-banner__wrapper {
   position: fixed;
   bottom: 0;
   z-index: 10;
@@ -16,20 +16,20 @@
     display: none;
   }
 }
-.cookies-warning__link,
-.cookies-warning__text {
+.cookies-banner__link,
+.cookies-banner__text {
   font-size: 0.7rem;
   text-align: center;
   margin: 0;
 }
-.cookies-warning__link {
+.cookies-banner__link {
   text-decoration: underline;
   padding: $spacing / 2;
 }
-.cookies-warning__text {
+.cookies-banner__text {
   font-size: 0.7rem;
 }
-.cookies-warning__btn {
+.cookies-banner__btn {
   background: none;
   border: none;
   padding: $spacing / 2;
