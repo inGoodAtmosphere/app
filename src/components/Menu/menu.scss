@@ -1,10 +1,11 @@
 @import '../../styles/base/settings';
 .menu {
+  //! BUG: User can scroll on whole page about few pixels on X axis when menu and browser bar is visible
   background: $light-bg;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 5rem;
-  transform: translateX(101%);
+  transform: translateX(100%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -21,27 +22,8 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.menu__login {
-  border: $border transparent;
-  padding: $spacing;
-  color: $light-bg;
-  background: $dark-bg;
-  border-radius: $spacing;
-}
-.menu__register {
-  font-size: $m-size;
-  background: none;
-  border: $border transparent;
-  padding: $spacing;
-}
 .menu--isActive {
   transform: translateX(0);
-}
-
-.log-reg {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 @media screen and (max-height: 550px) {

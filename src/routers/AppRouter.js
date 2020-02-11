@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import { Router, Route, Switch } from 'react-router-dom';
-import { StickyContainer } from 'react-sticky';
 import history from '../history/history';
 
 import 'normalize.css';
@@ -19,6 +18,7 @@ import Sensors from '../pages/Sensors/Sensors';
 import Contact from '../pages/Contact/Contact';
 import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
 import NotFoundPage from '../pages/NotFound/NotFound';
+import CookiesWarning from '../components/CookiesWarning/CookiesWarning';
 
 const Routes = () => {
   history.listen((location) => {
@@ -31,23 +31,22 @@ const Routes = () => {
   }, []);
   return (
     <Router history={history}>
-      <StickyContainer>
-        <div className="container">
-          <Header />
-          <Switch>
-            <Route path="/" component={LandingPage} exact />
-            <Route path="/o-nas" component={AboutUs} />
-            <Route path="/kampania" component={Campaign} exact />
-            <Route path="/kampania/:header" component={Article} />
-            <Route path="/partnerzy" component={Partners} />
-            <Route path="/czujniki" component={Sensors} />
-            <Route path="/kontakt" component={Contact} />
-            <Route path="/encyklopedia" component={Encyclopedia} />
-            <Route component={NotFoundPage} />
-          </Switch>
-          <Footer />
-        </div>
-      </StickyContainer>
+      <div className="container">
+        <Header />
+        <Switch>
+          <Route path="/" component={LandingPage} exact />
+          <Route path="/o-nas" component={AboutUs} />
+          <Route path="/kampania" component={Campaign} exact />
+          <Route path="/kampania/:header" component={Article} />
+          <Route path="/partnerzy" component={Partners} />
+          <Route path="/czujniki" component={Sensors} />
+          <Route path="/kontakt" component={Contact} />
+          <Route path="/encyklopedia" component={Encyclopedia} />
+          <Route component={NotFoundPage} />
+        </Switch>
+        <CookiesWarning />
+        <Footer />
+      </div>
     </Router>
   );
 };
