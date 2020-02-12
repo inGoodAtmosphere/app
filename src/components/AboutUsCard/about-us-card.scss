@@ -53,10 +53,13 @@
 .about-us__card__description__role {
   margin: 0;
 }
-@media screen and (max-height: 42.375em) {
+@media screen and (max-height: 44rem) {
   .about-us__card__wrapper {
-    grid-auto-rows: 2em 12em -webkit-min-content;
-    grid-auto-rows: 2em 12em min-content;
+    grid-template-rows: 5% 40% auto;
+    height: 100%;
+  }
+  .about-us__card__description {
+    align-self: center;
   }
   .about-us__card__image {
     height: 100%;
