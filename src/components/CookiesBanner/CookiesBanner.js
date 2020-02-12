@@ -16,6 +16,7 @@ const CookiesBanner = () => {
     >
       <button
         type="button"
+        aria-label="Zaakceptuj cookies"
         className="cookies-banner__btn"
         // prettier-ignore
         onClick={() => setCookie('isOpenBanner', 'false', {

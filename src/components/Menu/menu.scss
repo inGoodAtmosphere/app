@@ -1,6 +1,5 @@
 @import '../../styles/base/settings';
 .menu {
-  //! BUG: User can scroll on whole page about few pixels on X axis when menu and browser bar is visible
   background: $light-bg;
   position: fixed;
   left: 0;
