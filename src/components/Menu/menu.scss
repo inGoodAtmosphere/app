@@ -5,15 +5,24 @@
   position: fixed;
   left: 0;
   top: 5rem;
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   justify-content: space-around;
+  -webkit-box-align: center;
   align-items: center;
   z-index: 10;
   height: calc(100vh - 5rem);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
   transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
   width: 100%;
+  overflow: hidden;
 }
 .menu__item {
   color: $dark-bg;
@@ -23,7 +32,11 @@
   text-transform: uppercase;
 }
 .menu--isActive {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
+  html {
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-height: 550px) {
@@ -34,9 +47,12 @@
 @media #{$media-query-m} {
   .menu {
     background: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     height: auto;
     position: static;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   .menu__item {

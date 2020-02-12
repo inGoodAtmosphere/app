@@ -11,7 +11,10 @@
   }
 }
 .landing-page__card__content {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 .landing-page__description {
@@ -42,9 +45,14 @@
 }
 @media #{$media-query-m} {
   .landing-page__card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     &:nth-child(even) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
       flex-direction: row-reverse;
     }
     &:nth-child(odd) {

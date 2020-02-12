@@ -41,7 +41,10 @@ main {
 }
 .container {
   min-height: 100vh;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 h1 {
@@ -65,7 +68,10 @@ p {
   border-radius: $spacing;
   padding: $spacing * 2;
   margin: $spacing 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   justify-content: space-around;
   color: $dark-bg;
@@ -75,12 +81,15 @@ p {
   }
 }
 .content {
+  -webkit-box-flex: 1;
   flex: 1;
   min-height: calc(100vh - 5rem);
 }
 .wrapper__cards {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
   justify-content: center;
 }
 @media #{$media-query-m} {

@@ -8,6 +8,7 @@
   grid-gap: $spacing / 2;
   grid-template-columns: 8.5rem auto;
   grid-template-rows: auto auto auto auto;
+  -webkit-box-align: start;
   align-items: start;
   justify-items: start;
 }

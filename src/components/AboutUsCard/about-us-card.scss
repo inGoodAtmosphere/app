@@ -2,6 +2,7 @@
 .about-us__card__wrapper {
   display: grid;
   grid-template-columns: 5% 90% 5%;
+  grid-auto-rows: 2em 17em -webkit-min-content;
   grid-auto-rows: 2em 17em min-content;
   width: 67vw;
   padding: 0;
@@ -23,13 +24,16 @@
 .about-us__card__image {
   border-radius: $spacing;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
 }
 .about-us__card__image__Michał {
+  -o-object-position: 50% 35%;
   object-position: 50% 35%;
 }
 .about-us__card__image__Julia {
+  -o-object-position: 50% 100%;
   object-position: 50% 100%;
 }
 .about-us__card__description {
@@ -51,6 +55,7 @@
 }
 @media screen and (max-height: 42.375em) {
   .about-us__card__wrapper {
+    grid-auto-rows: 2em 12em -webkit-min-content;
     grid-auto-rows: 2em 12em min-content;
   }
   .about-us__card__image {

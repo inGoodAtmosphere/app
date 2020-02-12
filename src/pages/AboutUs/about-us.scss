@@ -1,10 +1,13 @@
 @import '../../styles/base/settings';
 .slider-slide {
+  display: -webkit-box !important;
   display: flex !important;
+  -webkit-box-pack: center;
   justify-content: center;
   height: calc(100% - 5rem) !important;
 }
 .slider-list {
+  display: -webkit-box;
   display: flex;
   height: calc(100vh - 5rem) !important;
 }
@@ -23,7 +26,9 @@
 }
 @media #{$media-query-m} {
   .slider {
+    display: -webkit-box !important;
     display: flex !important;
+    -webkit-box-pack: center;
     justify-content: center;
   }
   .slider-frame {

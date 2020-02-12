@@ -20,6 +20,7 @@ i.fab {
 .footer__icons,
 .footer__links {
   margin: $spacing;
+  display: -webkit-box;
   display: flex;
   justify-content: space-around;
 }
@@ -28,7 +29,9 @@ i.fab {
 }
 .footer__partners,
 .footer__patrons {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   padding: $spacing;
 }

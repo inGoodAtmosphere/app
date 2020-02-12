@@ -3,7 +3,9 @@
 .sensors__card {
   display: grid;
   grid-gap: $spacing / 2;
+  grid-template-columns: -webkit-min-content 70%;
   grid-template-columns: min-content 70%;
+  -webkit-box-pack: start;
   justify-content: start;
   padding: $spacing;
 }
