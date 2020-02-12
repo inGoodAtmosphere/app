@@ -40,7 +40,7 @@ main {
   padding: 0 $spacing;
 }
 .container {
-  min-height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -83,7 +83,7 @@ p {
 .content {
   -webkit-box-flex: 1;
   flex: 1;
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100% - 5rem);
 }
 .wrapper__cards {
   display: -webkit-box;

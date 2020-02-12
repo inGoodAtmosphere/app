@@ -6,10 +6,13 @@
   justify-content: center;
   height: calc(100% - 5rem) !important;
 }
+.about-us__wrapper {
+  height: 100vh;
+}
 .slider-list {
   display: -webkit-box;
   display: flex;
-  height: calc(100vh - 5rem) !important;
+  height: calc(100% - 5rem) !important;
 }
 .slider__btn {
   color: $light-bg;

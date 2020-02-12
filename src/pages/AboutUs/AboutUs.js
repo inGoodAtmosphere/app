@@ -67,7 +67,7 @@ const AboutUs = () => {
     return breakpoints[2];
   };
   return (
-    <main className="wrapper content">
+    <main className="wrapper content about-us__wrapper">
       <Carousel
         enableKeyboardControls
         cellSpacing={-40}
