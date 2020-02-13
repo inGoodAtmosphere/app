@@ -6,13 +6,13 @@
   justify-content: center;
   height: calc(100% - 5rem) !important;
 }
-.about-us__wrapper {
-  height: 100vh;
+.about-us__wrapper{
+  height: calc(100vh - 5rem);
 }
 .slider-list {
   display: -webkit-box;
   display: flex;
-  height: calc(100% - 5rem) !important;
+  height: 100% !important;
 }
 .slider__btn {
   color: $light-bg;
@@ -36,9 +36,10 @@
   }
   .slider-frame {
     width: 90%;
+    height: 100% !important; 
   }
   .slider-slide {
-    height: 100% !important;
+    // height: 100% !important;
   }
 }
 @media screen and (max-width: 1600px) and (min-aspect-ratio: 16 / 9),
