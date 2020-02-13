@@ -16,10 +16,11 @@ $l-size: 2.125rem;
 $m-size: 1.5rem;
 $s-size: 1rem;
 $xs-size: 0.75rem;
-$spacing: 0.625rem;
+$spacing: 0.625em;
 $base-font-size: 1rem;
-$base-line-height: 1.5;
-$border: 0.0625rem;
+$base-line-height: 1.2;
+$border: 0.0625em;
+$header-height: 5rem;
 // Breakpoints:
 $breakpoint-s: 48rem; // 768px
 $breakpoint-m: 64rem; // 1024px
@@ -36,4 +37,3 @@ $media-query-xl: '(min-width: #{$breakpoint-xl})';
 $media-query-xxl: '(min-width: #{$breakpoint-xxl})';
 $media-query-xxxl: '(min-width: #{$breakpoint-xxxl})';
 $media-query-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
-//1440x900 1536x864

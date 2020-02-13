@@ -2,8 +2,7 @@
 .about-us__card__wrapper {
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-auto-rows: 2em 17em -webkit-min-content;
-  grid-auto-rows: 2em 17em min-content;
+  grid-template-rows: 2em 17em min-content;
   width: 67vw;
   padding: 0;
   align-self: center;
@@ -49,6 +48,7 @@
 }
 .about-us__card__description__name {
   margin-bottom: 0;
+  font-size: $base-font-size * 1.1 !important;
 }
 .about-us__card__description__role {
   margin: 0;
@@ -60,9 +60,6 @@
   }
   .about-us__card__description {
     align-self: center;
-  }
-  .about-us__card__image {
-    height: 100%;
   }
   .about-us__card__description__name {
     margin-top: $spacing / 2;

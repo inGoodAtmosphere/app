@@ -12,6 +12,6 @@
 }
 .svg__inline {
   margin-left: $spacing;
-  width: 10rem;
-  height: 5rem;
+  width: $header-height * 2;
+  height: $header-height;
 }

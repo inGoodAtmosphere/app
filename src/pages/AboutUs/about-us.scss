@@ -4,15 +4,15 @@
   display: flex !important;
   -webkit-box-pack: center;
   justify-content: center;
-  height: calc(100% - 5rem) !important;
+  height: calc(100% - #{$header-height}) !important;
 }
-.about-us__wrapper{
-  height: calc(100vh - 5rem);
+.about-us__wrapper {
+  height: 100vh;
 }
 .slider-list {
   display: -webkit-box;
   display: flex;
-  height: 100% !important;
+  height: calc(100% - #{$header-height}) !important;
 }
 .slider__btn {
   color: $light-bg;
@@ -20,14 +20,21 @@
   height: 3em;
   background: none;
   border-radius: $spacing;
-  border: $spacing / 5 solid $light-bg;
+  border: $border * 2 solid $light-bg;
 }
 .slider {
   * {
     font-size: $base-font-size * 0.9;
+    user-select: none;
   }
 }
 @media #{$media-query-m} {
+  .about-us__wrapper {
+    height: calc(100vh - #{$header-height});
+  }
+  .slider-list {
+    height: 100% !important;
+  }
   .slider {
     display: -webkit-box !important;
     display: flex !important;
@@ -36,17 +43,24 @@
   }
   .slider-frame {
     width: 90%;
-    height: 100% !important; 
   }
   .slider-slide {
-    // height: 100% !important;
+    height: calc(100% - 1rem) !important;
   }
 }
-@media screen and (max-width: 1600px) and (min-aspect-ratio: 16 / 9),
-  (min-aspect-ratio: 21 / 9) and (max-width: 4000px) {
+@media screen and (max-width: 93,75rem) and (min-aspect-ratio: 16/10),
+  (max-width: 100rem) and (min-aspect-ratio: 16/9),
+  (max-width: 250rem) and (min-aspect-ratio: 21 / 9) {
   .slider {
     * {
       font-size: $base-font-size * 0.7;
+    }
+  }
+}
+@media #{$media-query-m} and (min-aspect-ratio: 4/3) {
+  slider {
+    * {
+      font-size: $base-font-size * 0.9;
     }
   }
 }

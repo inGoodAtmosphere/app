@@ -3,7 +3,7 @@
   background: $light-bg;
   position: fixed;
   left: 0;
-  top: 5rem;
+  top: $header-height;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   display: -webkit-box;
@@ -15,7 +15,7 @@
   -webkit-box-align: center;
   align-items: center;
   z-index: 10;
-  height: calc(100% - 5rem);
+  height: calc(100% - #{$header-height});
   -webkit-transition: -webkit-transform 0.4s ease-in;
   transition: -webkit-transform 0.4s ease-in;
   transition: transform 0.4s ease-in;

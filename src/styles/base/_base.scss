@@ -6,6 +6,7 @@ html {
   color: $light-bg;
   background: $dark-bg;
   overflow-x: hidden;
+  line-height: $base-line-height;
   @media #{$media-query-m} {
     font-size: $base-font-size * 1.2;
     line-height: $base-line-height * 1.2;
@@ -83,7 +84,7 @@ p {
 .content {
   -webkit-box-flex: 1;
   flex: 1;
-  min-height: calc(100% - 5rem);
+  min-height: calc(100vh - #{$header-height});
 }
 .wrapper__cards {
   display: -webkit-box;

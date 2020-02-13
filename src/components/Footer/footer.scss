@@ -6,8 +6,8 @@ footer {
   padding: $spacing;
 }
 .footer__patrons__item {
-  width: 5rem;
-  height: 5rem;
+  width: $header-height;
+  height: $header-height;
 }
 .footer__patrons__item__image {
   width: 100%;
