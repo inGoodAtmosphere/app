@@ -14,7 +14,7 @@ const InfoCard = ({
   </div>
 );
 InfoCard.defaultProps = {
-  children: <></>,
+  children: [],
 };
 InfoCard.propTypes = {
   env: PropTypes.string.isRequired,

@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+.focus-visible {
+  outline: auto;
+}
 html {
   font-family: 'Lato', sans-serif;
   color: $light-bg;
@@ -50,7 +56,7 @@ main {
 }
 h1 {
   font-size: $l-size;
-  padding-left: $spacing * 2;
+  padding-left: $spacing;
   text-transform: uppercase;
 }
 h2 {
