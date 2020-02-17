@@ -1,28 +1,32 @@
 @import '../../styles/base/settings';
-.air {
+.landing-page__hero {
+  height: calc(100vh - #{$header-height});
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  width: calc(100% + #{$spacing} * 2);
   flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: space-around;
+  background: url('../../img/hero-image.jpg') no-repeat;
+  background-size: cover;
 }
-.air__btn {
+.landing-page__hero__btn {
   margin-bottom: $spacing;
-  font-weight: normal;
-  background: none;
+  font-weight: bold;
+  background: $dark-accent;
   color: $light-bg;
   border-radius: $spacing;
   padding: $spacing;
-  border: $border solid $light-bg;
-  align-self: flex-end;
+  align-self: center;
+  font-size: $m-size;
 }
 
-.air__motto {
+.landing-page__hero__text {
   text-transform: none;
-  padding: 0;
-}
-.air__h2 {
-  line-height: 1.4;
+  font-size: 2.3rem;
+  margin: 0;
 }
 .landing-page__main {
   display: -webkit-box;
@@ -33,13 +37,9 @@
   -webkit-box-align: center;
   align-items: center;
 }
-.landing-page__hero {
-  height: calc(100vh - #{$header-height});
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
+@media #{$media-query-s} {
+  .landing-page__hero__text {
+    font-size: 4rem;
+    max-width: 70rem;
+  }
 }

@@ -16,14 +16,10 @@ const {
 const LandingPage = () => (
   <main className="landing-page__main ">
     <div className="landing-page__hero">
-      <h1>Tu cos bedzie </h1>
-      <div className="air">
-        <h1 className="air__motto">{campaign.header}</h1>
-        <h2 className="air__h2">{campaign.description}</h2>
-        <a className="air__btn" href="/kampania">
-          Zobacz jak
-        </a>
-      </div>
+      <h1 className="landing-page__hero__text">{campaign.header}</h1>
+      <a className="landing-page__hero__btn" href="/kampania">
+        Zobacz jak
+      </a>
     </div>
     <div className="landing-page__cards wrapper__cards">
       <InfoCard
