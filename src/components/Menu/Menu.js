@@ -35,13 +35,6 @@ const Menu = ({ isActive }) => {
       >
         Nasze czujniki
       </a>
-      <a
-        href="/partnerzy"
-        className="menu__item"
-        tabIndex={isActive || width > 1024 ? 0 : -1}
-      >
-        Nasi partnerzy
-      </a>
     </nav>
   );
 };

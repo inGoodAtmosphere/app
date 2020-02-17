@@ -14,7 +14,6 @@ import LandingPage from '../pages/LandingPage/LandingPage';
 import AboutUs from '../pages/AboutUs/AboutUs';
 import Campaign from '../pages/Campaign/Campaign';
 import Article from '../pages/Article/Article';
-import Partners from '../pages/Partners/Partners';
 import Sensors from '../pages/Sensors/Sensors';
 import Contact from '../pages/Contact/Contact';
 import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
@@ -40,7 +39,6 @@ const Routes = () => {
             <Route path="/o-nas" component={AboutUs} />
             <Route path="/kampania" component={Campaign} exact />
             <Route path="/kampania/:header" component={Article} />
-            <Route path="/partnerzy" component={Partners} />
             <Route path="/czujniki" component={Sensors} />
             <Route path="/kontakt" component={Contact} />
             <Route path="/encyklopedia" component={Encyclopedia} />

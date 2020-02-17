@@ -24,15 +24,11 @@
   overflow: hidden;
 }
 .menu__item {
-  // outline: none;
   color: $dark-bg;
   padding: $spacing;
   font-size: $m-size;
   font-weight: bold;
   text-transform: uppercase;
-  // &:focus-visible {
-  //   outline: 1px solid red;
-  // }
 }
 .menu--isActive {
   -webkit-transform: translateX(0);
