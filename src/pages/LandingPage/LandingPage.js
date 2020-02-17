@@ -31,7 +31,7 @@ const LandingPage = () => (
         purpose="project"
         header={project.header}
         content={project.description}
-        link={{ href: 'o-nas', text: 'Dowiedz się więcej' }}
+        link={{ href: 'o-nas', text: 'Poznaj nasz zespół' }}
         img={<ProjectSvg />}
       />
       <InfoCard

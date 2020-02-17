@@ -6,7 +6,7 @@
     },
     "project": {
       "header": "Nasz projekt",
-      "description": "Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska. Wszystkie informacje na temat smogu oraz jak go zwalczać możecie tutaj znaleźć..."
+      "description": "Jesteśmy grupą uczniów szkół średnich startujących w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska"
     },
     "map": {
       "header": "Mapa z naszymi czujnikami!",
@@ -14,11 +14,11 @@
     },
     "encyclopedia": {
       "header": "Encyklopedia",
-      "description": "Chcesz dowiedzieć się więcej o zagadnieniach ekologicznych ? "
+      "description": "Chcesz dowiedzieć się więcej o zagadnieniach ekologicznych? "
     },
     "sensors": {
       "header": "Nasze czujniki",
-      "description": "Czujniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce ;)"
+      "description": "Czujniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce"
     }
   }
 }

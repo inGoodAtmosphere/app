@@ -2,7 +2,7 @@
   "people": [
     {
       "name": "Michał",
-      "role": "Programista, elektronik",
+      "role": "Lider, Public relations",
       "description": "W projekcie pełnię rolę głównego lidera zespołu, a także odpowiadam za kontakt mailowy, profil na Facebook'u oraz jestem fotografem. Moim największym hobby jest żeglarstwo i fotografia. Bardzo lubię spędzać czas ze znajomymi oraz podróżować!"
     },
     {
@@ -12,12 +12,12 @@
     },
     {
       "name": "Julia",
-      "role": "Programista, elektronik",
+      "role": "Public relations",
       "description": "W naszym projekcie zajmuję się graficzną oprawą naszych projektów, fotografią oraz marketingiem. Największą inspiracją są dla mnie podróże, które pozwalają mi odkrywać piękno wielu miast oraz nieokiełznaną naturę przyrody. Moją pasją jest fotografia dzięki, której łapie ulotne chwile w kadrze oraz muzyka."
     },
     {
       "name": "Kuba",
-      "role": "Programista, elektronik",
+      "role": "Programista",
       "description": "W projekcie pełnię rolę głównego programisty strony internetowej. Moją największą pasją jest właśnie programowanie. Interesuję się sportem, przede wszystkim piłką nożną, samochodami, nowymi technologiami i podróżami."
     },
     {
@@ -27,22 +27,22 @@
     },
     {
       "name": "Antek",
-      "role": "Programista, elektronik",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel rerum mollitia, in maiores deleniti eos quaerat animi ullam aut beatae vitae! Inci"
+      "role": "Programista",
+      "description": "W projekcie pęłnię rolę dodatkowego programisty - pomagam między innymi w tworzeniu strony internetowej. W wolnym czasie rozszerzam swoje umiejętności programowania czy gram na gitarze. Do moich zainteresowań należą również design gier komputerowych oraz drukowanie 3D."
     },
     {
       "name": "Szymon",
-      "role": "Programista, elektronik",
+      "role": "Elektronik, Public relations",
       "description": "W projekcie jestem odpowiedzialny za montaż układu sondy pomiarowej poziomu zanieczyszczenia powietrza Wolny czas najchętniej spędzam ze znajomymi, ale również na śledzeniu najnowszych wiadomości ze świata sportu, muzyki czy gastronomii."
     },
     {
       "name": "Rafał",
-      "role": "Programista, elektronik",
+      "role": "Elektronik, programista",
       "description": "W zespole pełnię rolę programisty naszego urządzenia pomiarowego, jak i pomagam przy pracach nad stroną internetową. Do moich zainteresowań należą: gamedev, akwarystyka i muzyka. W wolnych chwilach ćwiczę umiejętności gry na instrumentach i tworzenia prostych aplikacji komputerowych."
     },
     {
       "name": "Mateusz",
-      "role": "Programista, elektronik",
+      "role": "Public relations",
       "description": "W naszym projekcie zajmuję się marketingiem, pijarem oraz spotkaniami z potencjalnymi partnerami projketu. Interesuję się sportem, w szczególności piłką nożną oraz pływaniem. W wolnym czasie spotykam się z przyjaciółmi, słucham muzyki oraz oglądam seriale."
     }
   ]
