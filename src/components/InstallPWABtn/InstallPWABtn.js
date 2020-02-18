@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactGA from 'react-ga';
+import './install-pwa-btn.scss';
 
 const InstallPWABtn = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);

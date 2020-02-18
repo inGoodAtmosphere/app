@@ -1,17 +1,5 @@
 @import '../../styles/base/settings';
-.fil0 {
-  fill: $light-bg;
-}
-.fil2 {
-  fill: $light-bg;
-  fill-rule: nonzero;
-}
-.fil1 {
-  fill: $dark-bg;
-  fill-rule: nonzero;
-}
 .svg__inline {
   margin-left: $spacing;
-  width: $header-height * 2;
-  height: $header-height;
+  height: 3rem;
 }
