@@ -5,6 +5,10 @@ import './landing-page.scss';
 import EncyclopediaSvg from '../../img/encyclopedia';
 import MapSvg from '../../img/map';
 import ProjectSvg from '../../img/project';
+import HeroImage640 from '../../img/hero-images/hero-image-640.jpg';
+import HeroImage1280 from '../../img/hero-images/hero-image-1280.jpg';
+import HeroImage1920 from '../../img/hero-images/hero-image-1920.jpg';
+import HeroImage5266 from '../../img/hero-images/hero-image-5266.jpg';
 // prettier-ignore
 const {
   project,
@@ -16,6 +20,12 @@ const {
 const LandingPage = () => (
   <main className="landing-page__main ">
     <div className="landing-page__hero">
+      <img
+        className="landing-page__hero__image"
+        src={HeroImage1280}
+        srcSet={`${HeroImage640} 640w, ${HeroImage1280} 1280w,${HeroImage1920} 1920w,${HeroImage5266} 5266w`}
+        alt="Hero"
+      />
       <h1 className="landing-page__hero__text">{campaign.header}</h1>
       <a className="landing-page__hero__btn" href="/kampania">
         Zobacz jak
