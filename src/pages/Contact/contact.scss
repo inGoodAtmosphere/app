@@ -1,4 +1,8 @@
 @import '../../styles/base/settings';
+.contact__content {
+  display: flex;
+  flex-direction: column;
+}
 .contact__h3 {
   padding-left: $spacing * 2;
   color: $light-accent;
@@ -21,4 +25,17 @@
   display: inline-block;
   padding-left: $spacing;
   font-size: $s-size;
+}
+.contact__copied__info {
+  // display: none;
+  background: lighten($dark-bg, 5%);
+  color: $light-bg;
+  padding: $spacing;
+  border-radius: $spacing;
+  align-self: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.contact__copied__info--isActive {
+  opacity: 1;
 }
