@@ -1,28 +1,29 @@
 @import '../../styles/base/settings';
-.partners__card,
 .sensors__card {
   display: grid;
   grid-gap: $spacing / 2;
-  grid-template-columns: -webkit-min-content 70%;
-  grid-template-columns: min-content 70%;
+  // grid-template-columns: -webkit-min-content 70%;
+  grid-template-columns: 1fr 1.5fr;
   -webkit-box-pack: start;
   justify-content: start;
   padding: $spacing;
 }
-.partners__header,
 .sensors__header {
   margin-top: 0;
   padding-left: $spacing / 2;
 }
-.partners__thumbnail,
 .sensors__thumbnail {
-  height: 100%;
-  width: 6rem;
+  min-height: 10rem;
+  width: 100%;
   align-self: center;
   border-radius: $spacing;
 }
-.partners__description,
 .sensors__description {
   padding-left: $spacing / 2;
   margin-bottom: 0;
+}
+@media #{$media-query-s} {
+  .sensors__card {
+    grid-template-columns: 1fr 4fr;
+  }
 }

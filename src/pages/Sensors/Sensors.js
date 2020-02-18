@@ -7,16 +7,17 @@ const Sensors = () => (
   <main className="content">
     <h1>Nasze mierniki</h1>
     <CardWithThumbnail
-      header="miernik do pomiaru pyłów PM2.5 i PM10"
-      description="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet"
-      thumbnail="https://picsum.photos/90/100"
+      header="Nasze urządzenia"
+      description="Nasz zespół jest w trakcie projektowania układu dzięki któremu każdy będzie mógł poprzez naszą stonę lub aplikację zobaczyć jaki jest stan powietrza którym oddychamy."
+      thumbnail="https://picsum.photos/150/100"
       env="sensors"
     />
     <div className="card sensors__info">
-      <h3 className="sensors__h3">Lorem ipsum</h3>
+      <h3 className="sensors__h3">Kiedy będzie dostępny nasz miernik?</h3>
       <p className="sensors__paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque veritatis
-        architecto aliquam quia, dolorem quidem!
+        Już za niedługo nasz miernik będzie dostępny dla każdego i dane z
+        naszych urządzeń będą dostępne dla każdego na naszej stronie
+        internetowej oraz aplikacji.
       </p>
     </div>
     <div className="card sensors__ad">
@@ -25,7 +26,7 @@ const Sensors = () => (
         <a href="/kontakt" className="sensors__ad__link">
           Kliknij tutaj
         </a>{' '}
-        i wypełnij formularz kontaktowy
+        i skontaktuj się z nami
       </p>
     </div>
   </main>
