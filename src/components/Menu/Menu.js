@@ -35,6 +35,13 @@ const Menu = ({ isActive }) => {
       >
         Nasze mierniki
       </a>
+      <a
+        href="/kontakt"
+        className="menu__item"
+        tabIndex={isActive || width > 1024 ? 0 : -1}
+      >
+        Kontakt
+      </a>
     </nav>
   );
 };
