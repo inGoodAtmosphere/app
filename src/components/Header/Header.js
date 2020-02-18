@@ -4,6 +4,7 @@ import Menu from '../Menu/Menu';
 import Logo from '../../img/logo/logo_inline';
 import './header.scss';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import InstallPWABtn from '../InstallPWABtn/InstallPWABtn';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -16,6 +17,7 @@ const Header = () => {
         </a>
         {width < 1024 ? (
           <>
+            <InstallPWABtn />
             <Hamburger isActive={isActive} setIsActive={setIsActive} />
             <Menu isActive={isActive} />
           </>
