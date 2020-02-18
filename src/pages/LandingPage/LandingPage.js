@@ -51,7 +51,7 @@ const LandingPage = () => (
         purpose="sensors"
         header={sensors.header}
         content={sensors.description}
-        link={{ href: 'czujniki', text: 'Dowiedz się więcej' }}
+        link={{ href: 'mierniki', text: 'Dowiedz się więcej' }}
         img={<MapSvg />}
       />
     </div>

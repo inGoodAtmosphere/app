@@ -29,11 +29,11 @@ const Menu = ({ isActive }) => {
         Encyklopedia
       </a>
       <a
-        href="/czujniki"
+        href="/mierniki"
         className="menu__item"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
-        Nasze czujniki
+        Nasze mierniki
       </a>
     </nav>
   );

@@ -8,16 +8,16 @@
       "description": "Jesteśmy grupą uczniów szkół średnich startujących w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska"
     },
     "map": {
-      "header": "Mapa z naszymi czujnikami!",
-      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych czujników, pracę nad mapą trwają, ale już wkrótce będą dostępne."
+      "header": "Mapa z naszymi miernikami!",
+      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne."
     },
     "encyclopedia": {
       "header": "Encyklopedia",
       "description": "Chcesz dowiedzieć się więcej o zagadnieniach ekologicznych? "
     },
     "sensors": {
-      "header": "Nasze czujniki",
-      "description": "Czujniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce"
+      "header": "Nasze mierniki",
+      "description": "mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce"
     }
   }
 }

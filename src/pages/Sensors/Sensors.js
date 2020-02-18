@@ -5,9 +5,9 @@ import './sensors.scss';
 
 const Sensors = () => (
   <main className="content">
-    <h1>Nasze czujniki</h1>
+    <h1>Nasze mierniki</h1>
     <CardWithThumbnail
-      header="Czujnik do pomiaru pyłów PM2.5 i PM10"
+      header="miernik do pomiaru pyłów PM2.5 i PM10"
       description="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet"
       thumbnail="https://picsum.photos/90/100"
       env="sensors"

@@ -39,7 +39,7 @@ const Routes = () => {
             <Route path="/o-nas" component={AboutUs} />
             <Route path="/kampania" component={Campaign} exact />
             <Route path="/kampania/:header" component={Article} />
-            <Route path="/czujniki" component={Sensors} />
+            <Route path="/mierniki" component={Sensors} />
             <Route path="/kontakt" component={Contact} />
             <Route path="/encyklopedia" component={Encyclopedia} />
             <Route component={NotFoundPage} />
