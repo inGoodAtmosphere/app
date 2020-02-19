@@ -47,7 +47,6 @@ const LandingPage = () => (
         purpose="map"
         header={map.header}
         content={map.description}
-        link={{ text: 'Już wkrótce' }}
         img={<MapSvg />}
       />
       <InfoCard

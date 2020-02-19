@@ -19,7 +19,7 @@ const landingPageHOC = (WrappedComponent) => ({
         purpose={purpose}
         header={header}
         content={content}
-        link={link.href}
+        link={link && link.href}
       >
         {purpose !== 'map' ? (
           <a
@@ -37,8 +37,8 @@ const landingPageHOC = (WrappedComponent) => ({
         {width > 1024 && (
           <a
             className="landing-page__svg__link"
-            aria-label={link.href}
-            href={link.href}
+            aria-label={link && link.href}
+            href={link && link.href}
           >
             {img}
           </a>

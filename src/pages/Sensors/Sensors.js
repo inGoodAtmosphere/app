@@ -21,7 +21,7 @@ const Sensors = () => (
       </p>
     </div>
     <div className="card sensors__ad">
-      <h3 className="sensors__h3">Zainteresowany kupnem?</h3>
+      <h3 className="sensors__h3">Zainteresowany miernikiem?</h3>
       <p className="sensors__paragraph">
         <a href="/kontakt" className="sensors__ad__link">
           Kliknij tutaj
