@@ -21,13 +21,19 @@ const landingPageHOC = (WrappedComponent) => ({
         content={content}
         link={link.href}
       >
-        <a
-          className="landing-page__btn"
-          aria-label={link.href}
-          href={`/${link.href}`}
-        >
-          {link.text}
-        </a>
+        {purpose !== 'map' ? (
+          <a
+            className="landing-page__btn"
+            aria-label={link.href}
+            href={`/${link.href}`}
+          >
+            {link.text}
+          </a>
+        ) : (
+          <span className="landing-page__btn landing-page__btn__map">
+            Już wkrótce
+          </span>
+        )}
         {width > 1024 && (
           <a
             className="landing-page__svg__link"

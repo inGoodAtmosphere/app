@@ -26,6 +26,10 @@
   border: $border solid $light-bg;
   align-self: flex-end;
 }
+.landing-page__btn__map {
+  border-radius: 0.625rem;
+  opacity: 0.8;
+}
 .landing-page__sensors {
   background: $dark-accent;
 }
