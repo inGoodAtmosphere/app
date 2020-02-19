@@ -21,6 +21,8 @@
   border-radius: $spacing;
   padding: $spacing / 3;
   grid-row: 1 / span 4;
+  width: 100%;
+  height: 100%;
 }
 
 .article-container__description {
