@@ -17,8 +17,10 @@ const Header = () => {
         </a>
         {width < 1024 ? (
           <>
-            <InstallPWABtn />
-            <Hamburger isActive={isActive} setIsActive={setIsActive} />
+            <div className="header__hamburger-pwa-wrapper">
+              <InstallPWABtn />
+              <Hamburger isActive={isActive} setIsActive={setIsActive} />
+            </div>
             <Menu isActive={isActive} />
           </>
         ) : (

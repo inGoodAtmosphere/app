@@ -1,8 +1,9 @@
 @import '../../styles/base/settings';
 .header__pwa__btn {
   background: $dark-accent;
-  padding: $spacing;
+  padding: $spacing / 2;
   border-radius: $spacing;
   border: none;
   color: $light-bg;
+  font-size: $s-size * 0.75;
 }
