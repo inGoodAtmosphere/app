@@ -17,7 +17,7 @@ const Encyclopedia = () => (
       <InfoCard
         env="encyclopedia"
         purpose="pm25"
-        header="PM25"
+        header="PM2.5"
         content={pm25.description}
       />
       <InfoCard

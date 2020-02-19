@@ -6,7 +6,7 @@ const CardWithThumbnail = ({
   thumbnail, header, description, env,
 }) => (
   <div className={`card ${env}__card`}>
-    <img className={`${env}__thumbnail`} src={thumbnail} alt="Miniaturka" />
+    <img srcSet={`${thumbnail[0]} 300w, ${thumbnail[1]} 800w`} className={`${env}__thumbnail`} src={thumbnail[0]} alt="Miniaturka" />
     <div className={`${env}__content`}>
       <h3 className={`${env}__header`}>{header}</h3>
       <p className={`${env}__description`}>{description}</p>
@@ -14,7 +14,7 @@ const CardWithThumbnail = ({
   </div>
 );
 CardWithThumbnail.propTypes = {
-  thumbnail: PropTypes.string.isRequired,
+  thumbnail: PropTypes.arrayOf(PropTypes.string).isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   env: PropTypes.string.isRequired,

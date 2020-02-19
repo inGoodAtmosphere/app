@@ -2,6 +2,8 @@
 import React from 'react';
 import CardWithThumbnail from '../../components/CardWithThumbnail/CardWithThumbnail';
 import './sensors.scss';
+import sensor300 from '../../img/sensors/sensor-300.jpg';
+import sensor800 from '../../img/sensors/sensor-800.jpg';
 
 const Sensors = () => (
   <main className="content">
@@ -9,7 +11,7 @@ const Sensors = () => (
     <CardWithThumbnail
       header="Nasze urządzenia"
       description="Nasz zespół jest w trakcie projektowania układu dzięki któremu każdy będzie mógł poprzez naszą stonę lub aplikację zobaczyć jaki jest stan powietrza którym oddychamy."
-      thumbnail="https://picsum.photos/150/100"
+      thumbnail={[sensor300, sensor800]}
       env="sensors"
     />
     <div className="card sensors__info">
