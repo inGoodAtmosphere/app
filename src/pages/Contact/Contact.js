@@ -30,7 +30,7 @@ const Contact = () => {
           <li className="contact__list__item">
             <a
               href="mailto:ingoodatmosphere@gmail.com"
-              className="contact__list__item__link"
+              className="contact__list__item__link contact__list__item__link__mail"
             >
               <FontAwesomeIcon icon={faEnvelope} size="2x" />
               <p className="contact__list__item__link__text">
@@ -44,7 +44,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer noopener"
             href="https://www.facebook.com/inGoodAtmosphere-100599628162747"
-            className="contact__list__item__link"
+            className="contact__list__item__link contact__list__item__link__facebook"
           >
             <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
             <p className="contact__list__item__link__text">inGoodAtmosphere</p>
@@ -55,7 +55,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer noopener"
             href="https://instagram.com/in.good.atmosphere?igshid=1ehmhou6voq0s"
-            className="contact__list__item__link"
+            className="contact__list__item__link contact__list__item__link__instagram"
           >
             <FontAwesomeIcon icon={faInstagram} size="2x" />
             <p className="contact__list__item__link__text">inGoodAtmosphere</p>

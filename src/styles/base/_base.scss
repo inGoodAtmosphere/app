@@ -56,7 +56,6 @@ main {
 }
 h1 {
   font-size: $l-size;
-  padding-left: $spacing;
   text-transform: uppercase;
 }
 h2 {
@@ -74,7 +73,7 @@ p {
 .card {
   border-radius: $spacing;
   padding: $spacing * 2;
-  margin: $spacing 0;
+  margin-top: $spacing;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -85,6 +84,9 @@ p {
   background: $light-bg;
   p {
     font-size: $s-size;
+  }
+  &:last-child {
+    margin-bottom: $spacing;
   }
 }
 .content {
@@ -98,9 +100,4 @@ p {
   flex-wrap: wrap;
   -webkit-box-pack: center;
   justify-content: center;
-}
-@media #{$media-query-m} {
-  .card {
-    margin: $spacing;
-  }
 }

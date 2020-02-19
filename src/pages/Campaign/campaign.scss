@@ -1,6 +1,5 @@
 @import '../../styles/base/settings';
 .campaign__h2 {
-  padding-left: $spacing;
   color: $light-accent;
 }
 .campaign__search {
@@ -9,8 +8,9 @@
   border-radius: $spacing;
   font-size: $s-size;
   padding: $spacing;
-  margin: $spacing;
+  margin: 0 $spacing $spacing 0;
   color: $light-bg;
+  width: 18.5rem;
 }
 .campaign__tag__btn {
   background: none;
@@ -18,5 +18,8 @@
   border: $border solid $light-bg;
   color: $light-bg;
   padding: $spacing / 2 $spacing;
-  margin-right: $spacing / 2;
+  margin: 0 $spacing / 2 $spacing / 2 0;
+}
+.campaign__tags {
+  display: inline-block;
 }

@@ -42,7 +42,7 @@ const Footer = () => (
     </div>
     <div className="footer__links">
       <a href="/kontakt">Kontakt</a>
-      <a href="/aplikacja">Aplikacja</a>
+      <a href="/polityka-prywatnosci">Polityka prywatności</a>
       <a href="/regulamin">Regulamin</a>
     </div>
     <h3 className="footer__h3">Nasi patroni: </h3>

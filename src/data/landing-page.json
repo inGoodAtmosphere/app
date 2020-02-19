@@ -13,7 +13,7 @@
     },
     "encyclopedia": {
       "header": "Encyklopedia",
-      "description": "Chcesz dowiedzieć się więcej o zagadnieniach ekologicznych? "
+      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne."
     },
     "sensors": {
       "header": "Nasze mierniki",
@@ -21,7 +21,7 @@
     },
     "contact": {
       "header": "Kontakt",
-      "description": "Masz pomysł jak usprawnić działanie naszej strony? Chchaiłbyś zakupić nasz czujnik? Chcesz wspótworzyć naszego bloga Jeśli tak wypełnij formularz kontaktowy"
+      "description": "Masz pomysł jak usprawnić działanie naszej strony? Chchaiłbyś zakupić nasz czujnik? Chcesz wspótworzyć naszego bloga"
     }
   }
 }

@@ -4,7 +4,7 @@ import './install-pwa-btn.scss';
 
 const InstallPWABtn = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [display, setDisplay] = useState('block');
+  const [display, setDisplay] = useState('none');
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     setDeferredPrompt(e);
