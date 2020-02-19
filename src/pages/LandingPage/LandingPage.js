@@ -5,6 +5,7 @@ import './landing-page.scss';
 import EncyclopediaSvg from '../../img/encyclopedia';
 import MapSvg from '../../img/map';
 import ProjectSvg from '../../img/project';
+import ContactSvg from '../../img/contact';
 import HeroImage640 from '../../img/hero-images/hero-image-640.jpg';
 import HeroImage1280 from '../../img/hero-images/hero-image-1280.jpg';
 import HeroImage1920 from '../../img/hero-images/hero-image-1920.jpg';
@@ -16,6 +17,7 @@ const {
   encyclopedia,
   sensors,
   campaign,
+  contact,
 } = content;
 const LandingPage = () => (
   <main className="landing-page__main ">
@@ -63,6 +65,14 @@ const LandingPage = () => (
         content={sensors.description}
         link={{ href: 'mierniki', text: 'Dowiedz się więcej' }}
         img={<MapSvg />}
+      />
+      <InfoCard
+        env="landing-page"
+        purpose="contact"
+        header={contact.header}
+        content={contact.description}
+        link={{ href: 'kontakt', text: 'Napisz do nas' }}
+        img={<ContactSvg />}
       />
     </div>
   </main>

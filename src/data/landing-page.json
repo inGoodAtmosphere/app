@@ -18,6 +18,10 @@
     "sensors": {
       "header": "Nasze mierniki",
       "description": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce"
+    },
+    "contact": {
+      "header": "Kontakt",
+      "description": "Masz pomysł jak usprawnić działanie naszej strony? Chchaiłbyś zakupić nasz czujnik? Chcesz wspótworzyć naszego bloga Jeśli tak wypełnij formularz kontaktowy"
     }
   }
 }

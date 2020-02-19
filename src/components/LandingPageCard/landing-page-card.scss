@@ -35,6 +35,9 @@
 .landing-page__map {
   background: $primary-accent;
 }
+.landing-page__contact {
+  background-color: $text;
+}
 .landing-page__project {
   * {
     color: $text;
@@ -50,6 +53,7 @@
     flex-direction: row;
     -webkit-box-pack: justify;
     justify-content: space-between;
+    align-items: center;
     &:nth-child(even) {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
