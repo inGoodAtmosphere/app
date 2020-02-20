@@ -17,6 +17,7 @@ import Article from '../pages/Article/Article';
 import Sensors from '../pages/Sensors/Sensors';
 import Contact from '../pages/Contact/Contact';
 import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import NotFoundPage from '../pages/NotFound/NotFound';
 import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
 
@@ -42,6 +43,7 @@ const Routes = () => {
             <Route path="/mierniki" component={Sensors} />
             <Route path="/kontakt" component={Contact} />
             <Route path="/encyklopedia" component={Encyclopedia} />
+            <Route path="/polityka-prywatnosci" component={PrivacyPolicy} />
             <Route component={NotFoundPage} />
           </Switch>
           <CookiesBanner />

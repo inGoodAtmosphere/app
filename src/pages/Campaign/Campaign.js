@@ -13,7 +13,10 @@ const Campaign = () => {
     (article) =>
       // eslint-disable-next-line implicit-arrow-linebreak
       article.tags.find((tag) => tag.includes(textFilter))
-      || article.header.toLowerCase().includes(textFilter),
+      || article.header.toLowerCase().normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ł/g, 'l')
+        .includes(textFilter),
   );
   return (
     <main className="content campaign__content">

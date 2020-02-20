@@ -17,6 +17,7 @@
   width: 100%;
   align-self: center;
   border-radius: $spacing;
+  object-fit: cover;
 }
 .sensors__description {
   padding-left: $spacing / 2;
