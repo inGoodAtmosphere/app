@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactGA from 'react-ga';
+import PropTypes from 'prop-types';
 import './install-pwa-btn.scss';
 
-const InstallPWABtn = () => {
+const InstallPWABtn = ({ isFooter }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [display, setDisplay] = useState('none');
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -12,7 +13,7 @@ const InstallPWABtn = () => {
   });
   return (
     <button
-      className="header__pwa__btn"
+      className={`${isFooter ? 'footer__pwa__btn' : 'header__pwa__btn'}`}
       type="button"
       style={{ display }}
       onClick={() => {
@@ -38,4 +39,10 @@ const InstallPWABtn = () => {
   );
 };
 
+InstallPWABtn.defaultProps = {
+  isFooter: false,
+};
+InstallPWABtn.propTypes = {
+  isFooter: PropTypes.bool,
+};
 export default InstallPWABtn;

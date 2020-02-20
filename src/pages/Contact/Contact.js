@@ -14,8 +14,8 @@ const Contact = () => {
     <main className="content contact__content">
       <h1>Skontaktuj się z nami</h1>
       <h3 className="contact__h3">
-        Masz pomysł jak usprawnić działanie naszej strony? Chchaiłbyś
-        współtworzyć naszego bloga? Jeśli tak napisz tutaj:
+        Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany
+        naszym czujnikiem?
       </h3>
       <ul className="contact__list">
         <CopyToClipboard
