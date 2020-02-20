@@ -7,7 +7,7 @@ import './campaign.scss';
 
 const Campaign = () => {
   const [textFilter, setTextFilter] = useState('');
-  const tags = ['smog', 'lorem', 'ipsum', 'dolor'];
+  const tags = ['smog', 'natura'];
   // prettier-ignore
   const filteredArticles = articleThumbnails.filter(
     (article) =>

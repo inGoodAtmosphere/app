@@ -6,6 +6,7 @@ import EncyclopediaSvg from '../../img/encyclopedia';
 import MapSvg from '../../img/map';
 import ProjectSvg from '../../img/project';
 import ContactSvg from '../../img/contact';
+import SensorSvg from '../../img/sensor';
 import HeroImage640 from '../../img/hero-images/hero-image-640.jpg';
 import HeroImage1280 from '../../img/hero-images/hero-image-1280.jpg';
 import HeroImage1920 from '../../img/hero-images/hero-image-1920.jpg';
@@ -63,7 +64,7 @@ const LandingPage = () => (
         header={sensors.header}
         content={sensors.description}
         link={{ href: 'mierniki', text: 'Dowiedz się więcej' }}
-        img={<MapSvg />}
+        img={<SensorSvg />}
       />
       <InfoCard
         env="landing-page"
