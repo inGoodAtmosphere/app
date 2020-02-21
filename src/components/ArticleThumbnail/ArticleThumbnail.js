@@ -8,7 +8,6 @@ const ArticleThumbnail = ({
   description,
   link,
   tags,
-  setTextFilter,
 }) => (
   <div className="article-container">
     <img
@@ -19,15 +18,13 @@ const ArticleThumbnail = ({
     <h3 className="article-container__header">{header}</h3>
     <p className="article-container__tags">
       {tags.map((tag) => (
-        <button
+        <span
           key={tag}
-          type="button"
-          onClick={() => setTextFilter(tag)}
           className="article-container__tag"
           aria-label="Znajdź inne artykuły z tym tagiem"
         >
           {`#${tag} `}
-        </button>
+        </span>
       ))}
     </p>
     <p className="article-container__description">{description}</p>
@@ -41,7 +38,6 @@ ArticleThumbnail.propTypes = {
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  setTextFilter: PropTypes.func.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default ArticleThumbnail;
