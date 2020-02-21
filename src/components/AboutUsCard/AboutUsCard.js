@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './about-us-card.scss';
-// prettier-ignore
-const AboutUsCard = (
-  {
-    person: {
-      name, role, image, description,
-    },
-  },
-) => (
+
+const AboutUsCard = ({ person: { name, role, image, description } }) => (
   <div className="about-us__card__wrapper">
     <div className="about-us__card__image__wrapper">
       <img

@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// prettier-ignore
-const InfoCard = ({
-  env, header, content, children, purpose,
-}) => (
+
+const InfoCard = ({ env, header, content, children, purpose }) => (
   <div className={` card ${env}__card ${env}__${purpose}`}>
     <div className="landing-page__card__content">
       <h1 className={`${env}__header`}>{header}</h1>

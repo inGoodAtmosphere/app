@@ -62,10 +62,9 @@ const Contact = () => {
           </a>
         </li>
       </ul>
-      {/* prettier-ignore */}
       <span
-        className={`contact__copied__info ${copied
-        && 'contact__copied__info--isActive'}`}
+        className={`contact__copied__info ${copied &&
+          'contact__copied__info--isActive'}`}
       >
         Skopiowano do schowka
       </span>

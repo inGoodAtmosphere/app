@@ -8,6 +8,7 @@ import InstallPWABtn from '../InstallPWABtn/InstallPWABtn';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [display, setDisplay] = useState('none');
   const width = useWindowWidth();
   return (
     <div className="header__wrapper">
@@ -18,7 +19,7 @@ const Header = () => {
         {width < 1024 ? (
           <>
             <div className="header__hamburger-pwa-wrapper">
-              <InstallPWABtn />
+              <InstallPWABtn display={display} setDisplay={setDisplay} />
               <Hamburger isActive={isActive} setIsActive={setIsActive} />
             </div>
             <Menu isActive={isActive} />

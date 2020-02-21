@@ -3,9 +3,9 @@ import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 import './install-pwa-btn.scss';
 
-const InstallPWABtn = ({ isFooter }) => {
+const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [display, setDisplay] = useState('none');
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     setDeferredPrompt(e);
@@ -44,5 +44,7 @@ InstallPWABtn.defaultProps = {
 };
 InstallPWABtn.propTypes = {
   isFooter: PropTypes.bool,
+  display: PropTypes.string.isRequired,
+  setDisplay: PropTypes.func.isRequired,
 };
 export default InstallPWABtn;

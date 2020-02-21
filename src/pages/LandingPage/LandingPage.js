@@ -11,15 +11,8 @@ import HeroImage640 from '../../img/hero-images/hero-image-640.jpg';
 import HeroImage1280 from '../../img/hero-images/hero-image-1280.jpg';
 import HeroImage1920 from '../../img/hero-images/hero-image-1920.jpg';
 import HeroImage5266 from '../../img/hero-images/hero-image-5266.jpg';
-// prettier-ignore
-const {
-  project,
-  map,
-  encyclopedia,
-  sensors,
-  campaign,
-  contact,
-} = content;
+
+const { project, map, encyclopedia, sensors, campaign, contact } = content;
 const LandingPage = () => (
   <main className="landing-page__main ">
     <div className="landing-page__hero">

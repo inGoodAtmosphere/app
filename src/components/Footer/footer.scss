@@ -22,7 +22,7 @@ i.fab {
   margin: $spacing 0;
   display: -webkit-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .footer__icons {
   justify-content: space-around;
@@ -43,4 +43,13 @@ i.fab {
   border: none;
   color: $dark-bg;
   padding: 0;
+}
+.footer__links__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  &--hidden {
+    display: none;
+  }
 }

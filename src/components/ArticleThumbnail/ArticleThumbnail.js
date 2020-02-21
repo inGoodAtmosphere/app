@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './article-thumbnail.scss';
-// prettier-ignore
-const ArticleThumbnail = ({
-  thumbnail,
-  header,
-  description,
-  link,
-  tags,
-}) => (
+
+const ArticleThumbnail = ({ thumbnail, header, description, link, tags }) => (
   <div className="article-container">
     <img
       className="article-container__thumbnail"

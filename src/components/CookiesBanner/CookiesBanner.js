@@ -14,15 +14,16 @@ const CookiesBanner = () => {
           : 'cookies-banner__wrapper'
       }
     >
+      {/* prettier-ignore */}
       <button
         type="button"
         aria-label="Zaakceptuj cookies"
         className="cookies-banner__btn"
-        // prettier-ignore
-        onClick={() => setCookie('isOpenBanner', 'false', {
-          path: '/',
-          expires: new Date(2021, 1, 1),
-        })}
+        onClick={() =>
+          setCookie('isOpenBanner', 'false', {
+            path: '/',
+            expires: new Date(2021, 1, 1),
+          })}
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
