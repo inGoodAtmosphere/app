@@ -7,7 +7,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import partner1 from '../../img/MSK-logo.png';
 import './footer.scss';
-import InstallPWABtn from '../InstallPWABtn/InstallPWABtn';
+import InstallPWABtnFooter from '../InstallPWABtnFooter/InstallPWABtnFooter';
 
 const Footer = () => (
   <footer>
@@ -42,9 +42,14 @@ const Footer = () => (
       </a>
     </div>
     <div className="footer__links">
-      <a href="/kontakt">Kontakt</a>
-      <a href="/polityka-prywatnosci">Polityka prywatności</a>
-      <InstallPWABtn isFooter />
+      <div className="footer__links__item">
+        <a href="/kontakt">Kontakt</a>
+      </div>
+      <div className="footer__links__item">
+        <a href="/polityka-prywatnosci">Polityka prywatności</a>
+      </div>
+
+      <InstallPWABtnFooter />
     </div>
     <h3 className="footer__h3">Nasi patroni: </h3>
     <div className="footer__patrons">
