@@ -1,8 +1,10 @@
 import React from 'react';
+import './privacy-policy.scss';
 
 const PrivacyPolicy = () => (
   <main className="content">
-    <article className="card article__card">
+    <h1>Polityka prywatności</h1>
+    <article className="card">
       <ol>
         <li>
           Niniejsza Polityka Prywatności określa zasady przetwarzania danych
@@ -107,18 +109,74 @@ const PrivacyPolicy = () => (
           Poniżej przedstawiamy jak można zmienić ustawienia popularnych
           przeglądarek internetowych w zakresie stosowania plików cookies:
           <ol type="a">
-            <li>przeglądarka Internet Explorer</li>
-            <li>przeglądarka Microsoft EDGE</li>
-            <li>przeglądarka Mozilla Firefox</li>
-            <li>przeglądarka Chrome</li>
-            <li>przeglądarka Safari</li>
-            <li>przeglądarka Opera</li>
+            <li>
+              <a
+                href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=pl"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Chrome
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://support.mozilla.org/pl/kb/usuwanie-ciasteczek-i-danych-stron-firefox?redirectlocale=pl&redirectslug=usuwanie-ciasteczek"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Mozilla Firefox
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://help.opera.com/pl/latest/security-and-privacy/"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Opera
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Safari
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://support.microsoft.com/pl-pl/help/4027947/microsoft-edge-delete-cookies"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Microsoft EDGE
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies"
+                className="privacy-policy__link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                przeglądarka Internet Explorer
+              </a>
+            </li>
           </ol>
         </li>
         <li>
           Serwis Internetowy zawiera linki i odnośniki do innych stron
-          internetowych. RG nie ponosi odpowiedzialności za zasady ochrony
-          prywatności na nich obowiązujące.
+          internetowych. inGoodAtmosphere nie ponosi odpowiedzialności za zasady
+          ochrony prywatności na nich obowiązujące.
         </li>
       </ol>
       <b>§ 3 Zmiany Polityki Prywatności</b>
