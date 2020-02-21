@@ -34,7 +34,7 @@ const InstallPWABtn = ({ isFooter }) => {
         });
       }}
     >
-      Zainstaluj aplikację
+      {isFooter ? 'Aplikacja' : 'Zainstaluj aplikację'}
     </button>
   );
 };
