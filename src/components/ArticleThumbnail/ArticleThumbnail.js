@@ -4,11 +4,13 @@ import './article-thumbnail.scss';
 
 const ArticleThumbnail = ({ thumbnail, header, description, link, tags }) => (
   <div className="article-container">
-    <img
-      className="article-container__thumbnail"
-      src={thumbnail}
-      alt="Miniaturka"
-    />
+    <a href={link} className="article-container__thumbnail__link">
+      <img
+        className="article-container__thumbnail__image"
+        src={thumbnail}
+        alt="Miniaturka"
+      />
+    </a>
     <h3 className="article-container__header">{header}</h3>
     <p className="article-container__tags">
       {tags.map((tag) => (
