@@ -93,6 +93,8 @@ p {
   -webkit-box-flex: 1;
   flex: 1;
   min-height: calc(100vh - #{$header-height});
+  max-width: 54rem;
+  align-self: center;
 }
 .wrapper__cards {
   display: -webkit-box;

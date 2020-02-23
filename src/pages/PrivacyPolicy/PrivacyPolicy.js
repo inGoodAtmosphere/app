@@ -4,7 +4,7 @@ import './privacy-policy.scss';
 const PrivacyPolicy = () => (
   <main className="content">
     <h1>Polityka prywatności</h1>
-    <article className="card">
+    <article className="card article__card privacy-policy__article">
       <ol>
         <li>
           Niniejsza Polityka Prywatności określa zasady przetwarzania danych

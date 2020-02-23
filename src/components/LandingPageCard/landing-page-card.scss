@@ -4,6 +4,9 @@
   padding: 0;
   margin: $spacing / 2 0;
 }
+.landing-page__cards {
+  max-width: 54rem;
+}
 .landing-page__card {
   width: 100%;
   * {
@@ -32,6 +35,9 @@
 }
 .landing-page__sensors {
   background: $dark-accent;
+  .landing-page__card__content {
+    margin-left: $spacing;
+  }
 }
 .landing-page__encyclopedia {
   background: $light-accent;
