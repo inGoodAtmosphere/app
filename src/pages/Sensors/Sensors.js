@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CardWithThumbnail from '../../components/CardWithThumbnail/CardWithThumbnail';
 import './sensors.scss';
 import sensor300 from '../../img/sensors/sensor-300.jpg';
@@ -15,7 +16,7 @@ const Sensors = () => (
       env="sensors"
     />
     <div className="card sensors__info">
-      <h3 className="sensors__h3">Kiedy będzie dostępny nasz miernik?</h3>
+      <h2 className="sensors__h2">Kiedy będzie dostępny nasz miernik?</h2>
       <p className="sensors__paragraph">
         Już za niedługo nasz miernik będzie dostępny dla każdego i dane z
         naszych urządzeń będą dostępne dla każdego na naszej stronie
@@ -23,11 +24,11 @@ const Sensors = () => (
       </p>
     </div>
     <div className="card sensors__ad">
-      <h3 className="sensors__h3">Zainteresowany miernikiem?</h3>
+      <h2 className="sensors__h2">Zainteresowany miernikiem?</h2>
       <p className="sensors__paragraph">
-        <a href="/kontakt" className="sensors__ad__link">
+        <Link to="/kontakt" className="sensors__ad__link">
           Kliknij tutaj
-        </a>{' '}
+        </Link>{' '}
         i skontaktuj się z nami
       </p>
     </div>

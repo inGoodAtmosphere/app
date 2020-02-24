@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu/Menu';
 import Logo from '../../img/logo/logo_inline';
@@ -13,9 +14,9 @@ const Header = () => {
   return (
     <div className="header__wrapper">
       <header className="header">
-        <a href="/" className="header__a" aria-label="Strona główna">
+        <Link to="/" className="header__link" aria-label="Strona główna">
           <Logo />
-        </a>
+        </Link>
         {width < 1024 ? (
           <>
             <div className="header__hamburger-pwa-wrapper">

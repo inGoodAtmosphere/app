@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -45,10 +46,10 @@ const Footer = () => {
       </div>
       <div className="footer__links">
         <div className="footer__links__item">
-          <a href="/kontakt">Kontakt</a>
+          <Link to="/kontakt">Kontakt</Link>
         </div>
         <div className="footer__links__item">
-          <a href="/polityka-prywatnosci">Polityka prywatności</a>
+          <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
         </div>
         <div
           className={`footer__links__item ${display === 'none' &&
@@ -57,7 +58,7 @@ const Footer = () => {
           <InstallPWABtn isFooter setDisplay={setDisplay} display={display} />
         </div>
       </div>
-      <h3 className="footer__h3">Nasi patroni: </h3>
+      <h2 className="footer__h2">Nasi patroni: </h2>
       <div className="footer__patrons">
         <a
           href="https://www.msk.earth/"

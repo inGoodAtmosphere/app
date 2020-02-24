@@ -11,7 +11,7 @@ const CardWithThumbnail = ({ thumbnail, header, description, env }) => (
       alt="Miniaturka"
     />
     <div className={`${env}__content`}>
-      <h3 className={`${env}__header`}>{header}</h3>
+      <h2 className={`${env}__header`}>{header}</h2>
       <p className={`${env}__description`}>{description}</p>
     </div>
   </div>

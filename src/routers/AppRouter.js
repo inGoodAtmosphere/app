@@ -20,6 +20,7 @@ import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import NotFoundPage from '../pages/NotFound/NotFound';
 import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 const Routes = () => {
   history.listen((location) => {
@@ -32,6 +33,7 @@ const Routes = () => {
   }, []);
   return (
     <Router history={history}>
+      <ScrollToTop />
       <CookiesProvider>
         <div className="container">
           <Header />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import InfoCard from '../../components/LandingPageCard/LandingPageCard';
 import { content } from '../../data/landing-page.json';
 import './landing-page.scss';
@@ -23,9 +24,9 @@ const LandingPage = () => (
         alt="Hero"
       />
       <h1 className="landing-page__hero__text">{campaign.header}</h1>
-      <a className="landing-page__hero__btn" href="/kampania">
+      <Link to="/kampania" className="landing-page__hero__btn">
         Zobacz jak
-      </a>
+      </Link>
     </div>
     <div className="landing-page__cards wrapper__cards">
       <InfoCard

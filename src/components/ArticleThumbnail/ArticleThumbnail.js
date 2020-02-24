@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './article-thumbnail.scss';
 
 const ArticleThumbnail = ({ thumbnail, header, description, link, tags }) => (
   <div className="article-container">
-    <a href={link} className="article-container__thumbnail__link">
+    <Link to={link} className="article-container__thumbnail__link">
       <img
         className="article-container__thumbnail__image"
         src={thumbnail}
         alt="Miniaturka"
       />
-    </a>
-    <h3 className="article-container__header">{header}</h3>
+    </Link>
+    <h2 className="article-container__header">{header}</h2>
     <p className="article-container__tags">
       {tags.map((tag) => (
         <span
@@ -24,9 +25,9 @@ const ArticleThumbnail = ({ thumbnail, header, description, link, tags }) => (
       ))}
     </p>
     <p className="article-container__description">{description}</p>
-    <a href={link} className="article-container__link">
+    <Link to={link} className="article-container__link">
       Czytaj więcej
-    </a>
+    </Link>
   </div>
 );
 ArticleThumbnail.propTypes = {

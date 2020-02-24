@@ -13,10 +13,10 @@ const Contact = () => {
   return (
     <main className="content contact__content">
       <h1>Skontaktuj się z nami</h1>
-      <h3 className="contact__h3">
+      <h2 className="contact__h2">
         Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany
         naszym czujnikiem?
-      </h3>
+      </h2>
       <ul className="contact__list">
         <CopyToClipboard
           text="ingoodatmosphere@gmail.com"
