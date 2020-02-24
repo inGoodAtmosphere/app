@@ -5,15 +5,15 @@
     },
     "project": {
       "header": "Nasz projekt",
-      "description": "Jesteśmy grupą uczniów szkół średnich startujących w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska"
+      "description": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska"
     },
     "map": {
       "header": "Mapa z naszymi miernikami!",
-      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne."
+      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne"
     },
     "encyclopedia": {
       "header": "Encyklopedia",
-      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne."
+      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne"
     },
     "sensors": {
       "header": "Nasze mierniki",
@@ -21,7 +21,7 @@
     },
     "contact": {
       "header": "Kontakt",
-      "description": "Masz pomysł jak usprawnić działanie naszej strony? Chchaiłbyś zakupić nasz czujnik? Chcesz wspótworzyć naszego bloga"
+      "description": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?"
     }
   }
 }

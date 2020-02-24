@@ -48,7 +48,7 @@ const LandingPage = () => (
         purpose="encyclopedia"
         header={encyclopedia.header}
         content={encyclopedia.description}
-        link={{ href: 'encyklopedia', text: 'Zajrzyj w tą zakładkę!' }}
+        link={{ href: 'encyklopedia', text: 'Zajrzyj w tę zakładkę!' }}
         img={<EncyclopediaSvg />}
       />
       <InfoCard
