@@ -1,6 +1,6 @@
 import React from 'react';
-import ArticleThumbnail from '../components/ArticleThumbnail/ArticleThumbnail';
-import { articleThumbnails } from '../../public/data/article-thumbnails.json';
+import ArticleThumbnail from '../../components/ArticleThumbnail/ArticleThumbnail';
+import { articleThumbnails } from '../../../public/data/article-thumbnails.json';
 import './campaign.module.scss';
 
 const Campaign = () => (
@@ -16,7 +16,6 @@ const Campaign = () => (
             header={article.header}
             description={article.description}
             tags={article.tags}
-            link="/kampania/[header]"
           />
         );
       })}

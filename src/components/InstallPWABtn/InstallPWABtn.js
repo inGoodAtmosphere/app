@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 import './install-pwa-btn.scss';
+import { logEvent } from '../../utils/analytics';
 
 const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -20,15 +20,9 @@ const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
-            ReactGA.event({
-              category: 'PWA',
-              action: 'Install',
-            });
+            logEvent('PWA', 'Install');
           } else {
-            ReactGA.event({
-              category: 'PWA',
-              action: 'Dismiss',
-            });
+            logEvent('PWA', 'Dismiss');
           }
           setDeferredPrompt(null);
         });

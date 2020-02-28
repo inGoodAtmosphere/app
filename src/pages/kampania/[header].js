@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
-import ReactGA from 'react-ga';
-import '../article.module.scss';
-// import history from '../history/history';
+import './article.module.scss';
+import { logEvent } from '../../utils/analytics';
 
 // prettier-ignore
+// !BUG: When refresh browser move to 404 page
+// ?FIX: GA show single article
 const Article = () => {
   const router = useRouter()
-  const {header} = router.query
+  const { header } = router.query;
   const [article, setArticle] = useState('');
   useEffect(() => {
     fetch(`/data/articles/${header}.json`)
@@ -16,14 +16,11 @@ const Article = () => {
       .then((json) => {
         setArticle(json);
       })
-      // .catch(() => {
-      //   ReactGA.event({
-      //     category: 'Error',
-      //     action: 'Article crashed',
-      //   });
-      //   history.push('/404');
-      // });
-  }, [header]);
+      .catch(() => {
+        logEvent('Error', 'Article crashed');
+        router.push('/404');
+      });
+  }, []);
   return (
     article && (
       <main className="content">
@@ -58,9 +55,4 @@ const Article = () => {
   );
 };
 
-Article.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({ header: PropTypes.string }),
-  }).isRequired,
-};
 export default Article;

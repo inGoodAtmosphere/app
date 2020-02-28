@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
@@ -12,7 +13,10 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
   return (
     <div className="article-container">
       <Link href="/kampania/[header]" as={`/kampania/${link}`}>
-        <a className="article-container__thumbnail__link">
+        <a
+          // href={`/kampania/${link}`}
+          className="article-container__thumbnail__link"
+        >
           <img
             className="article-container__thumbnail__image"
             src={thumbnail}
@@ -33,9 +37,9 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
         ))}
       </p>
       <p className="article-container__description">{description}</p>
-      <a href={link} className="article-container__link">
-        Czytaj więcej
-      </a>
+      <Link href="/kampania/[header]" as={`/kampania/${link}`}>
+        <a className="article-container__link">Czytaj więcej</a>
+      </Link>
     </div>
   );
 };
@@ -43,7 +47,6 @@ ArticleThumbnail.propTypes = {
   thumbnail: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default ArticleThumbnail;

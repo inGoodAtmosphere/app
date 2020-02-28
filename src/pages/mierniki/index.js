@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import CardWithThumbnail from '../components/CardWithThumbnail/CardWithThumbnail';
+import CardWithThumbnail from '../../components/CardWithThumbnail/CardWithThumbnail';
 import './sensors.module.scss';
-import sensor300 from '../../public/img/sensors/sensor-300.jpg';
-import sensor800 from '../../public/img/sensors/sensor-800.jpg';
+import sensor300 from '../../../public/img/sensors/sensor-300.jpg';
+import sensor800 from '../../../public/img/sensors/sensor-800.jpg';
 
 const Sensors = () => (
   <main className="content">
     <h1>Nasze mierniki</h1>
     <CardWithThumbnail
       header="Nasze urządzenia"
-      description="Nasz zespół jest w trakcie projektowania układu dzięki któremu każdy będzie mógł poprzez naszą stonę lub aplikację zobaczyć jaki jest stan powietrza którym oddychamy."
+      description="Nasz zespół jest w trakcie projektowania układu, dzięki któremu każdy będzie mógł poprzez naszą stonę lub aplikację zobaczyć jaki jest stan powietrza którym oddychamy."
       thumbnail={[sensor300, sensor800]}
       env="sensors"
     />

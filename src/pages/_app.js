@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { CookiesProvider } from 'react-cookie';
-import ReactGA from 'react-ga';
-// import dynamic from 'next/dynamic';
 import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import { initGA, logPageView } from '../utils/analytics';
 import '../styles/index.scss';
 import 'normalize.css';
-// const serviceWorker = dynamic(() => import('../serviceWorker'));
 import 'focus-visible';
 
 const App = ({ Component }) => {
-  ReactGA.initialize('UA-156974442-1');
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }, []);
+  initGA();
   return (
     <>
       <CookiesProvider>
@@ -25,6 +31,7 @@ const App = ({ Component }) => {
     </>
   );
 };
-// serviceWorker.register();
-
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
+};
 export default App;

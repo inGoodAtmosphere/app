@@ -1,5 +1,5 @@
 import React from 'react';
-import NotFoundSvg from '../../public/img/not-found';
+import NotFoundSvg from '../../../public/img/not-found';
 import './not-found.module.scss';
 
 const NotFoundPage = () => (

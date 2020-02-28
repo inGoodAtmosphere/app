@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
+import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import partner1 from '../../../public/img/MSK-logo.png';
+import { logEvent } from '../../utils/analytics';
 import './footer.scss';
-import dynamic from 'next/dynamic';
 
 const InstallPWABtn = dynamic(() => import('../InstallPWABtn/InstallPWABtn'), {
   ssr: false,
@@ -23,10 +23,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer noopener"
           onClick={() => {
-            ReactGA.event({
-              category: 'Navigation',
-              action: 'Redirect to Facebook',
-            });
+            logEvent('Navigation', 'Redirect to Facebook');
           }}
         >
           <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
@@ -37,10 +34,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer noopener"
           onClick={() => {
-            ReactGA.event({
-              category: 'Navigation',
-              action: 'Redirect to Instagram',
-            });
+            logEvent('Navigation', 'Redirect to Instagram');
           }}
         >
           <FontAwesomeIcon icon={faInstagram} size="4x" />

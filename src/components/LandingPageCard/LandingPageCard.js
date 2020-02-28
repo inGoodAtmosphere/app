@@ -40,7 +40,7 @@ const landingPageHOC = (WrappedComponent) => ({
             className="landing-page__svg__link"
             aria-label={link && link.href}
           >
-            {<Img />}
+            <Img />
           </a>
         )}
       </WrappedComponent>
