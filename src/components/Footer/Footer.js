@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import partner1 from '../../img/MSK-logo.png';
+import partner1 from '../../../public/img/MSK-logo.png';
 import './footer.scss';
-import InstallPWABtn from '../InstallPWABtn/InstallPWABtn';
+import dynamic from 'next/dynamic';
 
+const InstallPWABtn = dynamic(() => import('../InstallPWABtn/InstallPWABtn'), {
+  ssr: false,
+});
 const Footer = () => {
   const [display, setDisplay] = useState('none');
   return (
@@ -46,10 +48,10 @@ const Footer = () => {
       </div>
       <div className="footer__links">
         <div className="footer__links__item">
-          <Link to="/kontakt">Kontakt</Link>
+          <a href="/kontakt">Kontakt</a>
         </div>
         <div className="footer__links__item">
-          <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
+          <a href="/polityka-prywatnosci">Polityka prywatności</a>
         </div>
         <div
           className={`footer__links__item ${display === 'none' &&

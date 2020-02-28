@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu/Menu';
-import Logo from '../../img/logo/logo_inline';
+import Logo from '../../../public/img/logo/logo_inline';
 import './header.scss';
 import useWindowWidth from '../../hooks/useWindowWidth';
-import InstallPWABtn from '../InstallPWABtn/InstallPWABtn';
+import dynamic from 'next/dynamic';
+const InstallPWABtn = dynamic(() => import('../InstallPWABtn/InstallPWABtn'), {
+  ssr: false,
+});
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -14,9 +16,9 @@ const Header = () => {
   return (
     <div className="header__wrapper">
       <header className="header">
-        <Link to="/" className="header__link" aria-label="Strona główna">
+        <a href="/" className="header__link" aria-label="Strona główna">
           <Logo />
-        </Link>
+        </a>
         {width < 1024 ? (
           <>
             <div className="header__hamburger-pwa-wrapper">

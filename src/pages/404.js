@@ -1,6 +1,6 @@
 import React from 'react';
-import NotFoundSvg from '../../img/not-found';
-import './not-found.scss';
+import NotFoundSvg from '../../public/img/not-found';
+import './not-found.module.scss';
 
 const NotFoundPage = () => (
   <main className="content not-found__content">

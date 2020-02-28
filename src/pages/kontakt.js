@@ -6,7 +6,7 @@ import {
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import './contact.scss';
+import './contact.module.scss';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);

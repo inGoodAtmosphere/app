@@ -4,30 +4,30 @@ import React from 'react';
 import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
-import { people } from '../../data/about-us.json';
-import useWindowWidth from '../../hooks/useWindowWidth';
-import './about-us.scss';
-import michal from '../../img/michał.jpg';
-import olivier from '../../img/olivier.jpg';
-import kubaC from '../../img/kubaC.jpg';
-import julia from '../../img/julia.jpg';
-import kubaT from '../../img/kubaT.jpg';
-import antek from '../../img/antek.jpg';
-import szymon from '../../img/szymon.jpg';
-import rafal from '../../img/rafał.jpg';
-import mateusz from '../../img/mateusz.jpg';
+import AboutUsCard from '../components/AboutUsCard/AboutUsCard';
+import { people } from '../../public/data/about-us.json';
+import useWindowWidth from '../hooks/useWindowWidth';
+import './about-us.module.scss';
+// import michal from '../../../public/img/michał.jpg';
+// import olivier from '../../../public/img/olivier.jpg';
+// import kubaC from '../../../public/img/kubaC.jpg';
+// import julia from '../../../public/img/julia.jpg';
+// import kubaT from '../../../public/img/kubaT.jpg';
+// import antek from '../../../public/img/antek.jpg';
+// import szymon from '../../../public/img/szymon.jpg';
+// import rafal from '../../../public/img/rafał.jpg';
+// import mateusz from '../../../public/img/mateusz.jpg';
 
 const portraits = [
-  michal,
-  olivier,
-  julia,
-  kubaC,
-  kubaT,
-  antek,
-  szymon,
-  rafal,
-  mateusz,
+  '/img/michał.jpg',
+  '/img/olivier.jpg',
+  '/img/kubaC.jpg',
+  '/img/julia.jpg',
+  '/img/kubaT.jpg',
+  '/img/antek.jpg',
+  '/img/szymon.jpg',
+  '/img/rafał.jpg',
+  '/img/mateusz.jpg',
 ];
 
 const AboutUs = () => {

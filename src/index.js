@@ -5,7 +5,7 @@ import AppRouter from './routers/AppRouter';
 import 'normalize.css';
 import * as serviceWorker from './serviceWorker';
 import 'focus-visible';
-import './styles/index.scss';
+// import './styles/index.scss';
 
 ReactGA.initialize('UA-156974442-1');
 ReactDOM.render(<AppRouter />, document.getElementById('root'));

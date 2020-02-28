@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CardWithThumbnail from '../../components/CardWithThumbnail/CardWithThumbnail';
-import './sensors.scss';
-import sensor300 from '../../img/sensors/sensor-300.jpg';
-import sensor800 from '../../img/sensors/sensor-800.jpg';
+import CardWithThumbnail from '../components/CardWithThumbnail/CardWithThumbnail';
+import './sensors.module.scss';
+import sensor300 from '../../public/img/sensors/sensor-300.jpg';
+import sensor800 from '../../public/img/sensors/sensor-800.jpg';
 
 const Sensors = () => (
   <main className="content">
@@ -26,9 +25,9 @@ const Sensors = () => (
     <div className="card sensors__ad">
       <h2 className="sensors__h2">Zainteresowany miernikiem?</h2>
       <p className="sensors__paragraph">
-        <Link to="/kontakt" className="sensors__ad__link">
+        <a href="/kontakt" className="sensors__ad__link">
           Kliknij tutaj
-        </Link>{' '}
+        </a>{' '}
         i skontaktuj się z nami
       </p>
     </div>

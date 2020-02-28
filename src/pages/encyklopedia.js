@@ -1,7 +1,7 @@
 import React from 'react';
-import InfoCard from '../../components/InfoCard/InfoCard';
-import { content } from '../../data/encyclopedia.json';
-import './encyclopedia.scss';
+import InfoCard from '../components/InfoCard/InfoCard';
+import { content } from '../../public/data/encyclopedia.json';
+import './encyclopedia.module.scss';
 
 const { caqi, pm25, pm10 } = content;
 const Encyclopedia = () => (

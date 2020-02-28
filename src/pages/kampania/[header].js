@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
-import './article.scss';
-import history from '../../history/history';
+import '../article.module.scss';
+// import history from '../history/history';
 
 // prettier-ignore
-const Article = ({
-  match: {
-    params: { header },
-  },
-}) => {
+const Article = () => {
+  const router = useRouter()
+  const {header} = router.query
   const [article, setArticle] = useState('');
   useEffect(() => {
     fetch(`/data/articles/${header}.json`)
@@ -17,13 +16,13 @@ const Article = ({
       .then((json) => {
         setArticle(json);
       })
-      .catch(() => {
-        ReactGA.event({
-          category: 'Error',
-          action: 'Article crashed',
-        });
-        history.push('/404');
-      });
+      // .catch(() => {
+      //   ReactGA.event({
+      //     category: 'Error',
+      //     action: 'Article crashed',
+      //   });
+      //   history.push('/404');
+      // });
   }, [header]);
   return (
     article && (

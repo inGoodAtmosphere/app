@@ -1,17 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import InfoCard from '../../components/LandingPageCard/LandingPageCard';
-import { content } from '../../data/landing-page.json';
-import './landing-page.scss';
-import EncyclopediaSvg from '../../img/encyclopedia';
-import MapSvg from '../../img/map';
-import ProjectSvg from '../../img/project';
-import ContactSvg from '../../img/contact';
-import SensorSvg from '../../img/sensor';
-import HeroImage640 from '../../img/hero-images/hero-image-640.jpg';
-import HeroImage1280 from '../../img/hero-images/hero-image-1280.jpg';
-import HeroImage1920 from '../../img/hero-images/hero-image-1920.jpg';
-import HeroImage5266 from '../../img/hero-images/hero-image-5266.jpg';
+import InfoCard from '../components/LandingPageCard/LandingPageCard';
+import { content } from '../../public/landing-page.json';
+import './landing-page.module.scss';
+import EncyclopediaSvg from '../../public/img/encyclopedia';
+import MapSvg from '../../public/img/map';
+import ProjectSvg from '../../public/img/project';
+import ContactSvg from '../../public/img/contact';
+import SensorSvg from '../../public/img/sensor';
 
 const { project, map, encyclopedia, sensors, campaign, contact } = content;
 const LandingPage = () => (
@@ -19,14 +14,14 @@ const LandingPage = () => (
     <div className="landing-page__hero">
       <img
         className="landing-page__hero__image"
-        src={HeroImage1280}
-        srcSet={`${HeroImage640} 640w, ${HeroImage1280} 1280w,${HeroImage1920} 1920w,${HeroImage5266} 5266w`}
+        src="../../public/img/hero-images/hero-image-1280.jpg"
+        srcSet="/img/hero-images/hero-image-640.jpg 640w, /img/hero-images/hero-image-1280.jpg 1280w,/img/hero-images/hero-image-1920.jpg 1920w,/img/hero-images/hero-image-5266.jpg 5266w"
         alt="Hero"
       />
       <h1 className="landing-page__hero__text">{campaign.header}</h1>
-      <Link to="/kampania" className="landing-page__hero__btn">
+      <a href="/kampania" className="landing-page__hero__btn">
         Zobacz jak
-      </Link>
+      </a>
     </div>
     <div className="landing-page__cards wrapper__cards">
       <InfoCard
@@ -35,14 +30,14 @@ const LandingPage = () => (
         header={project.header}
         content={project.description}
         link={{ href: 'o-nas', text: 'Poznaj nasz zespół' }}
-        img={<ProjectSvg />}
+        Img={ProjectSvg}
       />
       <InfoCard
         env="landing-page"
         purpose="map"
         header={map.header}
         content={map.description}
-        img={<MapSvg />}
+        Img={MapSvg}
       />
       <InfoCard
         env="landing-page"
@@ -50,7 +45,7 @@ const LandingPage = () => (
         header={encyclopedia.header}
         content={encyclopedia.description}
         link={{ href: 'encyklopedia', text: 'Zajrzyj w tę zakładkę!' }}
-        img={<EncyclopediaSvg />}
+        Img={EncyclopediaSvg}
       />
       <InfoCard
         env="landing-page"
@@ -58,7 +53,7 @@ const LandingPage = () => (
         header={sensors.header}
         content={sensors.description}
         link={{ href: 'mierniki', text: 'Dowiedz się więcej' }}
-        img={<SensorSvg />}
+        Img={SensorSvg}
       />
       <InfoCard
         env="landing-page"
@@ -66,7 +61,7 @@ const LandingPage = () => (
         header={contact.header}
         content={contact.description}
         link={{ href: 'kontakt', text: 'Napisz do nas' }}
-        img={<ContactSvg />}
+        Img={ContactSvg}
       />
     </div>
   </main>

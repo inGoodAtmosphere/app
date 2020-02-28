@@ -10,9 +10,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "eslint-plugin-prettier": "^3.1.2",
     "focus-visible": "^5.0.2",
     "history": "^4.10.1",
+    "next": "^9.2.2",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "nuka-carousel": "^4.6.1",
@@ -33,7 +36,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
+    "dev": "next",
+    "buildnext": "next build",
+    "startnext": "next start"
   },
   "eslintConfig": {
     "extends": "react-app"

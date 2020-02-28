@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import InfoCard from '../InfoCard/InfoCard';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import './landing-page-card.scss';
@@ -10,7 +9,7 @@ const landingPageHOC = (WrappedComponent) => ({
   purpose,
   header,
   content,
-  img,
+  Img,
 }) => {
   const width = useWindowWidth();
   return (
@@ -23,26 +22,26 @@ const landingPageHOC = (WrappedComponent) => ({
         link={link && link.href}
       >
         {purpose !== 'map' ? (
-          <Link
-            to={`/${link.href}`}
+          <a
+            href={`/${link.href}`}
             className="landing-page__btn"
             aria-label={link.href}
           >
             {link.text}
-          </Link>
+          </a>
         ) : (
           <span className="landing-page__btn landing-page__btn__map">
             Już wkrótce
           </span>
         )}
         {width > 1024 && (
-          <Link
-            to={link && link.href}
+          <a
+            href={link && link.href}
             className="landing-page__svg__link"
             aria-label={link && link.href}
           >
-            {img}
-          </Link>
+            {<Img />}
+          </a>
         )}
       </WrappedComponent>
     </>

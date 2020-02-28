@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './menu.scss';
 import useWindowWidth from '../../hooks/useWindowWidth';
@@ -8,41 +7,41 @@ const Menu = ({ isActive }) => {
   const width = useWindowWidth();
   return (
     <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
-      <Link
-        to="/kampania"
+      <a
+        href="/kampania"
         className="menu__item"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
         Kampania
-      </Link>
-      <Link
-        to="/o-nas"
+      </a>
+      <a
+        href="/o-nas"
         className="menu__item menu__item__about-us"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
         O nas
-      </Link>
-      <Link
-        to="/encyklopedia"
+      </a>
+      <a
+        href="/encyklopedia"
         className="menu__item"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
         Encyklopedia
-      </Link>
-      <Link
-        to="/mierniki"
+      </a>
+      <a
+        href="/mierniki"
         className="menu__item"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
         Nasze mierniki
-      </Link>
-      <Link
-        to="/kontakt"
+      </a>
+      <a
+        href="/kontakt"
         className="menu__item"
         tabIndex={isActive || width > 1024 ? 0 : -1}
       >
         Kontakt
-      </Link>
+      </a>
     </nav>
   );
 };

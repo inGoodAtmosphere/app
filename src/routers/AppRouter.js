@@ -1,58 +1,58 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import { Router, Route, Switch } from 'react-router-dom';
-import { CookiesProvider } from 'react-cookie';
-import history from '../history/history';
+// import React, { useEffect } from 'react';
+// import ReactGA from 'react-ga';
+// import { Router, Route, Switch } from 'react-router-dom';
+// import { CookiesProvider } from 'react-cookie';
+// import history from '../history/history';
 
-import 'normalize.css';
-import '../styles/index.scss';
+// import 'normalize.css';
+// import '../styles/index.scss';
 
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+// import Header from '../components/Header/Header';
+// import Footer from '../components/Footer/Footer';
 
-import LandingPage from '../pages/LandingPage/LandingPage';
-import AboutUs from '../pages/AboutUs/AboutUs';
-import Campaign from '../pages/Campaign/Campaign';
-import Article from '../pages/Article/Article';
-import Sensors from '../pages/Sensors/Sensors';
-import Contact from '../pages/Contact/Contact';
-import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
-import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
-import NotFoundPage from '../pages/NotFound/NotFound';
-import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
-import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
+// import LandingPage from '../pages/LandingPage/LandingPage';
+// import AboutUs from '../pages/AboutUs/AboutUs';
+// import Campaign from '../pages/Campaign/Campaign';
+// import Article from '../pages/Article/Article';
+// import Sensors from '../pages/Sensors/Sensors';
+// import Contact from '../pages/Contact/Contact';
+// import Encyclopedia from '../pages/Encyclopedia/Encyclopedia';
+// import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+// import NotFoundPage from '../pages/NotFound/NotFound';
+// import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
+// import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
-const Routes = () => {
-  history.listen((location) => {
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname);
-  });
+// const Routes = () => {
+//   history.listen((location) => {
+//     ReactGA.set({ page: location.pathname });
+//     ReactGA.pageview(location.pathname);
+//   });
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
-  return (
-    <Router history={history}>
-      <ScrollToTop />
-      <CookiesProvider>
-        <div className="container">
-          <Header />
-          <Switch>
-            <Route path="/" component={LandingPage} exact />
-            <Route path="/o-nas" component={AboutUs} />
-            <Route path="/kampania" component={Campaign} exact />
-            <Route path="/kampania/:header" component={Article} />
-            <Route path="/mierniki" component={Sensors} />
-            <Route path="/kontakt" component={Contact} />
-            <Route path="/encyklopedia" component={Encyclopedia} />
-            <Route path="/polityka-prywatnosci" component={PrivacyPolicy} />
-            <Route component={NotFoundPage} />
-          </Switch>
-          <CookiesBanner />
-          <Footer />
-        </div>
-      </CookiesProvider>
-    </Router>
-  );
-};
-export default Routes;
+//   useEffect(() => {
+//     ReactGA.pageview(window.location.pathname);
+//   }, []);
+//   return (
+//     <Router history={history}>
+//       <ScrollToTop />
+//       <CookiesProvider>
+//         <div className="container">
+//           <Header />
+//           <Switch>
+//             <Route path="/" component={LandingPage} exact />
+//             <Route path="/o-nas" component={AboutUs} />
+//             <Route path="/kampania" component={Campaign} exact />
+//             <Route path="/kampania/:header" component={Article} />
+//             <Route path="/mierniki" component={Sensors} />
+//             <Route path="/kontakt" component={Contact} />
+//             <Route path="/encyklopedia" component={Encyclopedia} />
+//             <Route path="/polityka-prywatnosci" component={PrivacyPolicy} />
+//             <Route component={NotFoundPage} />
+//           </Switch>
+//           <CookiesBanner />
+//           <Footer />
+//         </div>
+//       </CookiesProvider>
+//     </Router>
+//   );
+// };
+// export default Routes;
