@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import './article-thumbnail.scss';
 
 const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
@@ -12,18 +11,17 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
     .replace(/ł/g, 'l');
   return (
     <div className="article-container">
-      <Link href="/kampania/[header]" as={`/kampania/${link}`}>
-        <a
-          // href={`/kampania/${link}`}
-          className="article-container__thumbnail__link"
-        >
-          <img
-            className="article-container__thumbnail__image"
-            src={thumbnail}
-            alt="Miniaturka"
-          />
-        </a>
-      </Link>
+      <a
+        href={`/kampania/${link}`}
+        className="article-container__thumbnail__link"
+      >
+        <img
+          className="article-container__thumbnail__image"
+          src={thumbnail}
+          alt="Miniaturka"
+        />
+      </a>
+
       <h2 className="article-container__header">{header}</h2>
       <p className="article-container__tags">
         {tags.map((tag) => (
@@ -37,9 +35,10 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
         ))}
       </p>
       <p className="article-container__description">{description}</p>
-      <Link href="/kampania/[header]" as={`/kampania/${link}`}>
-        <a className="article-container__link">Czytaj więcej</a>
-      </Link>
+
+      <a href={`/kampania/${link}`} className="article-container__link">
+        Czytaj więcej
+      </a>
     </div>
   );
 };

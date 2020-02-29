@@ -4,11 +4,9 @@ import './article.module.scss';
 import { logEvent } from '../../utils/analytics';
 
 // prettier-ignore
-// !BUG: When refresh browser move to 404 page
-// ?FIX: GA show single article
 const Article = () => {
   const router = useRouter()
-  const { header } = router.query;
+  const header = router.pathname.replace('/kampania/', '');
   const [article, setArticle] = useState('');
   useEffect(() => {
     fetch(`/data/articles/${header}.json`)
