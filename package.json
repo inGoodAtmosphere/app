@@ -16,6 +16,8 @@
     "focus-visible": "^5.0.2",
     "history": "^4.10.1",
     "next": "^9.2.2",
+    "next-cookies": "^2.0.3",
+    "next-offline": "^5.0.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "nuka-carousel": "^4.6.1",

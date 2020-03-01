@@ -1,29 +1,31 @@
-import React from 'react';
-import { useCookies } from 'react-cookie';
-import './cookies-banner.scss';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import './cookies-banner.scss';
 
-const CookiesBanner = () => {
-  const [cookies, setCookie] = useCookies(['isOpenBanner']);
+const CookiesBanner = ({ isBannerOpen }) => {
+  const [display, setDisplay] = useState(isBannerOpen);
   return (
     <div
       className={
-        cookies.isOpenBanner === 'false'
+        display === 'false'
           ? 'cookies-banner__wrapper--hidden'
           : 'cookies-banner__wrapper'
       }
     >
-      {/* prettier-ignore */}
       <button
         type="button"
         aria-label="Zaakceptuj cookies"
         className="cookies-banner__btn"
-        onClick={() =>
-          setCookie('isOpenBanner', 'false', {
-            path: '/',
-            expires: new Date(2021, 1, 1),
-          })}
+        onClick={() => {
+          document.cookie = `isBannerOpen=false; path=/; expires=${new Date(
+            2021,
+            1,
+            1,
+          )}`;
+          setDisplay('false');
+        }}
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
@@ -42,5 +44,7 @@ const CookiesBanner = () => {
     </div>
   );
 };
-
+CookiesBanner.propTypes = {
+  isBannerOpen: PropTypes.string.isRequired,
+};
 export default CookiesBanner;

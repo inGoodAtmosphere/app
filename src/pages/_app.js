@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { CookiesProvider } from 'react-cookie';
+import cookies from 'next-cookies';
 import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -9,7 +9,7 @@ import '../styles/index.scss';
 import 'normalize.css';
 import 'focus-visible';
 
-const App = ({ Component }) => {
+const App = ({ Component, isBannerOpen }) => {
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -20,18 +20,22 @@ const App = ({ Component }) => {
   initGA();
   return (
     <>
-      <CookiesProvider>
-        <div className="container">
-          <Header />
-          <Component />
-          <CookiesBanner />
-          <Footer />
-        </div>
-      </CookiesProvider>
+      <div className="container">
+        <Header />
+        <Component />
+        <CookiesBanner isBannerOpen={isBannerOpen} />
+        <Footer />
+      </div>
     </>
   );
 };
+App.getInitialProps = ({ ctx }) => {
+  return {
+    isBannerOpen: cookies(ctx).isBannerOpen || '',
+  };
+};
 App.propTypes = {
   Component: PropTypes.func.isRequired,
+  isBannerOpen: PropTypes.string.isRequired,
 };
 export default App;
