@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu/Menu';
 import Logo from '../../../public/img/logo/logo_inline';
 import './header.scss';
 import useWindowWidth from '../../hooks/useWindowWidth';
-import dynamic from 'next/dynamic';
+
 const InstallPWABtn = dynamic(() => import('../InstallPWABtn/InstallPWABtn'), {
   ssr: false,
 });
