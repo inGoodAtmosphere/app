@@ -1,0 +1,16 @@
+@import '../../styles/base/settings';
+.about-us__card__wrapper {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 2em 17em min-content;
+  width: 67vw;
+  padding: 0;
+  align-self: center;
+}
+
+@media screen and (max-height: 44rem) {
+  .about-us__card__wrapper {
+    grid-template-rows: 5% 40% auto;
+    height: 100%;
+  }
+}

@@ -4,25 +4,17 @@ import React from 'react';
 import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
+import Card from '../../components/AboutUsCard';
+import CardContext from '../../components/AboutUsCard/Context';
 import { people } from '../../../public/data/about-us.json';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import './about-us.module.scss';
-// import michal from '../../../public/img/michał.jpg';
-// import olivier from '../../../public/img/olivier.jpg';
-// import kubaC from '../../../public/img/kubaC.jpg';
-// import julia from '../../../public/img/julia.jpg';
-// import kubaT from '../../../public/img/kubaT.jpg';
-// import antek from '../../../public/img/antek.jpg';
-// import szymon from '../../../public/img/szymon.jpg';
-// import rafal from '../../../public/img/rafał.jpg';
-// import mateusz from '../../../public/img/mateusz.jpg';
 
 const portraits = [
   '/img/michał.jpg',
   '/img/olivier.jpg',
-  '/img/kubaC.jpg',
   '/img/julia.jpg',
+  '/img/kubaC.jpg',
   '/img/kubaT.jpg',
   '/img/antek.jpg',
   '/img/szymon.jpg',
@@ -80,10 +72,9 @@ const AboutUs = () => {
         {...setBreakpoints()}
       >
         {people.map((person, i) => (
-          <AboutUsCard
-            person={{ ...person, image: portraits[i] }}
-            key={person.name}
-          />
+          <CardContext.Provider value={{ ...person, image: portraits[i] }}>
+            <Card key={person.name} />
+          </CardContext.Provider>
         ))}
       </Carousel>
     </main>
