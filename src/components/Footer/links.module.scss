@@ -1,0 +1,24 @@
+@import '../../styles/base/settings';
+
+.footer__links {
+  margin: $spacing 0;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__pwa__btn {
+  background: none;
+  border: none;
+  color: $dark-bg;
+  padding: 0;
+}
+
+.footer__links__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  &--hidden {
+    display: none;
+  }
+}
