@@ -10,14 +10,8 @@
   background: $dark-bg;
   color: $text;
   width: 100%;
-}
-.header__wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
-}
-.header__hamburger-pwa-wrapper {
-  display: flex;
-  align-items: center;
 }

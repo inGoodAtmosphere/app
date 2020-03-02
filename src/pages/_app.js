@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cookies from 'next-cookies';
 import Head from 'next/head';
 import CookiesBanner from '../components/CookiesBanner';
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { initGA, logPageView } from '../utils/analytics';
 import '../styles/index.scss';
