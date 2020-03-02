@@ -1,0 +1,11 @@
+@import '../../styles/base/settings';
+
+.sensors__header {
+  margin-top: 0;
+  padding-left: $spacing / 2;
+}
+
+.sensors__description {
+  padding-left: $spacing / 2;
+  margin-bottom: 0;
+}

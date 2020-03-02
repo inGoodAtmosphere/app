@@ -5,7 +5,6 @@ import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Card from '../../components/AboutUsCard';
-import CardContext from '../../components/AboutUsCard/Context';
 import { people } from '../../../public/data/about-us.json';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import './about-us.module.scss';
@@ -72,9 +71,7 @@ const AboutUs = () => {
         {...setBreakpoints()}
       >
         {people.map((person, i) => (
-          <CardContext.Provider value={{ ...person, image: portraits[i] }}>
-            <Card key={person.name} />
-          </CardContext.Provider>
+          <Card key={person.name} value={{ ...person, image: portraits[i] }} />
         ))}
       </Carousel>
     </main>

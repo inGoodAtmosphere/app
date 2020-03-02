@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import './index.module.scss';
 import Head from './Head';
 import Header from './Header';
-import Context from './Context';
+import withContext from '../../utils/withContext';
+import Context from '../../utils/Context';
 import Section from './Section';
 import Paragraph from './Paragraph';
 
@@ -31,4 +32,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default withContext(Article);

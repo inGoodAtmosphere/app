@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Context from './Context';
+import Context from '../../utils/Context';
 import './card.module.scss';
 
 const Card = () => {

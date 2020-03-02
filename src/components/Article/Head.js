@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Context from './Context';
+import Context from '../../utils/Context';
 
 const ArticleHead = () => {
   const {
