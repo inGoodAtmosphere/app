@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleThumbnail from '../../components/ArticleThumbnail/ArticleThumbnail';
+import ArticleThumbnail from '../../components/ArticleThumbnail';
 import { articleThumbnails } from '../../../public/data/article-thumbnails.json';
 import './campaign.module.scss';
 

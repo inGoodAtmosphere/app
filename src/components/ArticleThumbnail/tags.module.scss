@@ -1,0 +1,13 @@
+@import '../../styles/base/settings';
+
+.article-container__tags {
+  margin: 0;
+}
+.article-container__tag {
+  font-size: $spacing;
+  color: #999;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: $spacing / 2;
+}

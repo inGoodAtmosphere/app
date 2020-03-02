@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './article-thumbnail.scss';
+import './index.module.scss';
+import Thumbnail from './Thumbnail';
+import Tags from './Tags';
 
 const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
   const link = header
@@ -11,31 +13,10 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
     .replace(/ł/g, 'l');
   return (
     <div className="article-container">
-      <a
-        href={`/kampania/${link}`}
-        className="article-container__thumbnail__link"
-      >
-        <img
-          className="article-container__thumbnail__image"
-          src={thumbnail}
-          alt="Miniaturka"
-        />
-      </a>
-
+      <Thumbnail thumbnail={thumbnail} link={link} />
       <h2 className="article-container__header">{header}</h2>
-      <p className="article-container__tags">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="article-container__tag"
-            aria-label="Znajdź inne artykuły z tym tagiem"
-          >
-            {`#${tag} `}
-          </span>
-        ))}
-      </p>
+      <Tags tags={tags} />
       <p className="article-container__description">{description}</p>
-
       <a href={`/kampania/${link}`} className="article-container__link">
         Czytaj więcej
       </a>
@@ -48,4 +29,5 @@ ArticleThumbnail.propTypes = {
   description: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
 export default ArticleThumbnail;
