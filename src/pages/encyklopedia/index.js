@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../../components/InfoCard/InfoCard';
+import InfoCard from '../../components/InfoCard';
 import { content } from '../../../public/data/encyclopedia.json';
 import './encyclopedia.module.scss';
 
@@ -9,22 +9,28 @@ const Encyclopedia = () => (
     <h1>Encyklopedia</h1>
     <div className="wrapper__cards">
       <InfoCard
-        env="encyclopedia"
-        purpose="caqi"
-        header="CAQI"
-        content={caqi.description}
+        value={{
+          env: 'encyclopedia',
+          purpose: 'caqi',
+          header: 'CAQI',
+          content: caqi.description,
+        }}
       />
       <InfoCard
-        env="encyclopedia"
-        purpose="pm25"
-        header="PM2.5"
-        content={pm25.description}
+        value={{
+          env: 'encyclopedia',
+          purpose: 'pm25',
+          header: 'PM2.5',
+          content: pm25.description,
+        }}
       />
       <InfoCard
-        env="encyclopedia"
-        purpose="pm10"
-        header="PM10"
-        content={pm10.description}
+        value={{
+          env: 'encyclopedia',
+          purpose: 'pm10',
+          header: 'PM10',
+          content: pm10.description,
+        }}
       />
     </div>
   </main>

@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../components/LandingPageCard/LandingPageCard';
+import InfoCard from '../components/InfoCard';
 import { content } from '../../public/landing-page.json';
 import './landing-page.module.scss';
 import EncyclopediaSvg from '../../public/img/encyclopedia';
@@ -25,43 +25,53 @@ const LandingPage = () => (
     </div>
     <div className="landing-page__cards wrapper__cards">
       <InfoCard
-        env="landing-page"
-        purpose="project"
-        header={project.header}
-        content={project.description}
-        link={{ href: 'o-nas', text: 'Poznaj nasz zespół' }}
-        Img={ProjectSvg}
+        value={{
+          env: 'landing-page',
+          purpose: 'project',
+          header: project.header,
+          content: project.description,
+          Svg: ProjectSvg,
+          link: { href: 'o-nas', text: 'Poznaj nasz zespół' },
+        }}
       />
       <InfoCard
-        env="landing-page"
-        purpose="map"
-        header={map.header}
-        content={map.description}
-        Img={MapSvg}
+        value={{
+          env: 'landing-page',
+          purpose: 'map',
+          header: map.header,
+          content: map.description,
+          Svg: MapSvg,
+        }}
       />
       <InfoCard
-        env="landing-page"
-        purpose="encyclopedia"
-        header={encyclopedia.header}
-        content={encyclopedia.description}
-        link={{ href: 'encyklopedia', text: 'Zajrzyj w tę zakładkę!' }}
-        Img={EncyclopediaSvg}
+        value={{
+          env: 'landing-page',
+          purpose: 'encyclopedia',
+          header: encyclopedia.header,
+          content: encyclopedia.description,
+          Svg: EncyclopediaSvg,
+          link: { href: 'encyklopedia', text: 'Zajrzyj w tę zakładkę!' },
+        }}
       />
       <InfoCard
-        env="landing-page"
-        purpose="sensors"
-        header={sensors.header}
-        content={sensors.description}
-        link={{ href: 'mierniki', text: 'Dowiedz się więcej' }}
-        Img={SensorSvg}
+        value={{
+          env: 'landing-page',
+          purpose: 'sensors',
+          header: sensors.header,
+          content: sensors.description,
+          Svg: SensorSvg,
+          link: { href: 'mierniki', text: 'Dowiedz się więcej' },
+        }}
       />
       <InfoCard
-        env="landing-page"
-        purpose="contact"
-        header={contact.header}
-        content={contact.description}
-        link={{ href: 'kontakt', text: 'Napisz do nas' }}
-        Img={ContactSvg}
+        value={{
+          env: 'landing-page',
+          purpose: 'contact',
+          header: contact.header,
+          content: contact.description,
+          Svg: ContactSvg,
+          link: { href: 'kontakt', text: 'Napisz do nas' },
+        }}
       />
     </div>
   </main>

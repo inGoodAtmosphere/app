@@ -1,0 +1,18 @@
+@import '../../styles/base/settings';
+
+.landing-page__card__content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+.landing-page__header {
+  text-transform: none;
+  padding: 0;
+  margin: $spacing / 2 0;
+}
+.landing-page__description {
+  margin: 0;
+  padding: $spacing * 2 0;
+}
