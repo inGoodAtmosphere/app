@@ -3,10 +3,8 @@
 .menu {
   background: $light-bg;
   position: fixed;
-  left: 0;
+  left: 100%;
   top: $header-height;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -26,8 +24,8 @@
 }
 
 .menu--isActive {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
   html {
     overflow: hidden;
   }
