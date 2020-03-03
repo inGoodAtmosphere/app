@@ -16,5 +16,19 @@ module.exports = withCSS(
 
       return config;
     },
+    exportPathMap() {
+      return {
+        '/': { page: '/' },
+        '/kampania': { page: '/kampania' },
+        '/kampania/Naturalne-wskazniki-zanieczyszczenia-powietrza': {
+          page: '/kampania/Naturalne-wskazniki-zanieczyszczenia-powietrza',
+        },
+        '/o-nas': { page: '/o-nas' },
+        '/encyklopedia': { page: '/encyklopedia' },
+        '/mierniki': { page: '/mierniki' },
+        '/kontakt': { page: '/kontakt' },
+        '/polityka-prywatnosci': { page: '/polityka-prywatnosci' },
+      };
+    },
   }),
 );
