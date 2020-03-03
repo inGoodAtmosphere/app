@@ -5,19 +5,20 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './button.module.scss';
 
 const Button = ({ setDisplay }) => {
+  const handleClick = () => {
+    document.cookie = `isBannerOpen=false; path=/; expires=${new Date(
+      2021,
+      1,
+      1,
+    )}`;
+    setDisplay('false');
+  };
   return (
     <button
       type="button"
       aria-label="Zaakceptuj cookies"
       className="cookies-banner__btn"
-      onClick={() => {
-        document.cookie = `isBannerOpen=false; path=/; expires=${new Date(
-          2021,
-          1,
-          1,
-        )}`;
-        setDisplay('false');
-      }}
+      onClick={handleClick}
     >
       <FontAwesomeIcon icon={faTimes} />
     </button>

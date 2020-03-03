@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import './links.module.scss';
 
-const InstallPWABtn = dynamic(() => import('../InstallPWABtn/InstallPWABtn'), {
+const InstallPWABtn = dynamic(() => import('../InstallPWABtn'), {
   ssr: false,
 });
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './install-pwa-btn.scss';
+import './index.module.scss';
 import { logEvent } from '../../utils/analytics';
 
 const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
@@ -11,22 +11,24 @@ const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
     setDeferredPrompt(e);
     setDisplay('block');
   });
+
+  const handleClick = () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        logEvent('PWA', 'Install');
+      } else {
+        logEvent('PWA', 'Dismiss');
+      }
+      setDeferredPrompt(null);
+    });
+  };
   return (
     <button
       className={`${isFooter ? 'footer__pwa__btn' : 'header__pwa__btn'}`}
       type="button"
       style={{ display }}
-      onClick={() => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            logEvent('PWA', 'Install');
-          } else {
-            logEvent('PWA', 'Dismiss');
-          }
-          setDeferredPrompt(null);
-        });
-      }}
+      onClick={handleClick}
     >
       {isFooter ? 'Aplikacja' : 'Zainstaluj aplikację'}
     </button>
