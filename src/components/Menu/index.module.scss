@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+
 .menu {
   background: $light-bg;
   position: fixed;
@@ -23,13 +24,7 @@
   width: 100%;
   overflow: hidden;
 }
-.menu__item {
-  color: $dark-bg;
-  padding: $spacing;
-  font-size: $m-size;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+
 .menu--isActive {
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -38,11 +33,6 @@
   }
 }
 
-@media screen and (max-height: 550px) {
-  .menu__item {
-    font-size: $m-size;
-  }
-}
 @media #{$media-query-m} {
   .menu {
     background: none;
@@ -58,8 +48,5 @@
     color: $light-bg;
     text-align: center;
     font-size: $m-size - 0.3;
-  }
-  .menu__item__about-us {
-    white-space: nowrap;
   }
 }

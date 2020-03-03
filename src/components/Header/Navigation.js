@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Hamburger from '../Hamburger/Hamburger';
-import Menu from '../Menu/Menu';
+import Menu from '../Menu';
 import './navigation.module.scss';
 
 const InstallPWABtn = dynamic(() => import('../InstallPWABtn'), {
