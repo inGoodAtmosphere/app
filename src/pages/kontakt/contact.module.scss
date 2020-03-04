@@ -2,12 +2,8 @@
 .contact__content {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
 }
-.contact__h2 {
-  // padding-left: $spacing * 2;
-  color: $light-accent;
-}
+
 .contact__list {
   list-style: none;
   display: flex;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Article from '../../components/Article';
+import ArticleContent from '../../components/Article';
 import { logEvent } from '../../utils/analytics';
 
-const Bioindicators = () => {
+const Article = () => {
   const router = useRouter();
-  const header = router.pathname.replace('/kampania/', '');
+  const { header } = router.query;
   const [article, setArticle] = useState('');
   useEffect(() => {
     fetch(`/data/articles/${header}.json`)
@@ -18,7 +18,7 @@ const Bioindicators = () => {
         router.push('/404');
       });
   }, []);
-  return article && <Article value={article} />;
+  return article && <ArticleContent value={article} />;
 };
 
-export default Bioindicators;
+export default Article;
