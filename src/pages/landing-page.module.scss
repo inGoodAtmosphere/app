@@ -57,9 +57,7 @@
   -webkit-box-align: center;
   align-items: center;
 }
-.landing-page__cards {
-  max-width: 54rem;
-}
+
 @media #{$media-query-s} {
   .landing-page__hero__text {
     font-size: 3rem;

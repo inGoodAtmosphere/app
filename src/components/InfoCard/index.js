@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import Context from '../../utils/Context';
 import Image from './Image';
-import './index.module.scss';
+import './landing-page.module.scss';
+import './encyclopedia.module.scss';
 import Content from './Content';
 import withContext from '../../utils/withContext';
 
