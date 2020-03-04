@@ -16,14 +16,6 @@
   display: flex;
   height: calc(100% - #{$header-height}) !important;
 }
-.slider__btn {
-  color: $light-bg;
-  width: 3em;
-  height: 3em;
-  background: none;
-  border-radius: $spacing;
-  border: $border * 2 solid $light-bg;
-}
 .slider {
   * {
     font-size: $base-font-size * 0.9;
