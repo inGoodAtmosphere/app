@@ -7,7 +7,7 @@ import CookiesBanner from '../components/CookiesBanner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { initGA, logPageView } from '../utils/analytics';
-import '../styles/index.scss';
+import '../styles/base/_base.scss';
 import 'normalize.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'focus-visible';
