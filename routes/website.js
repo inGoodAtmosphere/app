@@ -1,7 +1,8 @@
 const express = require('express');
 const next = require('next');
+
 const app = next({ dev });
-const router = express.router
+const {router} = express;
 
 router.get('/', (req, res) => {
   return app.render(req, res, '/', req.query);
