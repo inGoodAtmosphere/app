@@ -1,11 +1,11 @@
-@import '../styles/base/settings';
+@import '../../styles/base/settings';
+
 .landing-page__hero {
   height: calc(100vh - #{$header-height});
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  width: calc(100% + #{$spacing} * 2);
   flex-direction: column;
   -webkit-box-pack: center;
   justify-content: space-around;
@@ -46,16 +46,6 @@
   text-transform: none;
   font-size: 2.3rem;
   margin: 0;
-  padding-left: $spacing;
-}
-.landing-page__main {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
 }
 
 @media #{$media-query-s} {

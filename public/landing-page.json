@@ -1,27 +1,49 @@
 {
-  "content": {
-    "campaign": {
-      "header": "Stwórzmy razem przyjazną atmosferę wolną od smogu w całej Polsce!"
-    },
-    "project": {
+  "content": [
+    {
       "header": "Nasz projekt",
-      "description": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska"
+      "purpose": "project",
+      "description": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska",
+      "link": {
+        "href": "o-nas",
+        "text": "Poznaj nasz zespół"
+      }
     },
-    "map": {
+    {
       "header": "Mapa z naszymi miernikami!",
-      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne"
+      "purpose": "map",
+      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
+      "link": {
+        "href": "",
+        "text": ""
+      }
     },
-    "encyclopedia": {
+    {
       "header": "Encyklopedia",
-      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne"
+      "purpose": "encyclopedia",
+      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne",
+      "link": {
+        "href": "encyklopedia",
+        "text": "Zajrzyj w tę zakładkę!"
+      }
     },
-    "sensors": {
+    {
       "header": "Nasze mierniki",
-      "description": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce"
+      "purpose": "sensors",
+      "description": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapce",
+      "link": {
+        "href": "mierniki",
+        "text": "Dowiedz się więcej"
+      }
     },
-    "contact": {
+    {
       "header": "Kontakt",
-      "description": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?"
+      "purpose": "contact",
+      "description": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?",
+      "link": {
+        "href": "kontakt",
+        "text": "Napisz do nas"
+      }
     }
-  }
+  ]
 }
