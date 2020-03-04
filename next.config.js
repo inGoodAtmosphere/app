@@ -30,5 +30,6 @@ module.exports = withCSS(
         '/polityka-prywatnosci': { page: '/polityka-prywatnosci' },
       };
     },
+    target: 'server',
   }),
 );

@@ -1,0 +1,16 @@
+@import '../../styles/base/settings';
+
+.contact__copied__info {
+  background: lighten($dark-bg, 5%);
+  color: $light-bg;
+  padding: $spacing;
+  position: fixed;
+  bottom: 10%;
+  border-radius: $spacing;
+  align-self: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.contact__copied__info--isActive {
+  opacity: 1;
+}

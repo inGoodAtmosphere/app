@@ -1,17 +1,5 @@
 @import '../../styles/base/settings';
-.contact__content {
-  display: flex;
-  flex-direction: column;
-}
 
-.contact__list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
 .contact__list__item__link {
   -webkit-box-align: center;
   align-items: center;
@@ -30,26 +18,15 @@
   padding-left: $spacing;
   font-size: $s-size;
 }
-.contact__copied__info {
-  background: lighten($dark-bg, 5%);
-  color: $light-bg;
-  padding: $spacing;
-  position: fixed;
-  bottom: 10%;
-  border-radius: $spacing;
-  align-self: center;
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
-}
-.contact__copied__info--isActive {
-  opacity: 1;
-}
+
 .contact__list__item__link__facebook {
   background: $dark-accent;
 }
-.contact__list__item__link__mail {
-  background: $text;
-}
+
 .contact__list__item__link__instagram {
   background: $light-accent;
+}
+.contact__list__item__link__mail {
+  background: $text;
+  margin: 0;
 }
