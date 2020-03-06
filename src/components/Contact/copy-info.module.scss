@@ -1,16 +1,18 @@
 @import '../../styles/base/settings';
 
 .contact__copied__info {
+  -webkit-transition: opacity 0.2s ease-out;
+  align-self: center;
   background: lighten($dark-bg, 5%);
+  border-radius: $spacing;
+  bottom: 10%;
   color: $light-bg;
+  opacity: 0;
   padding: $spacing;
   position: fixed;
-  bottom: 10%;
-  border-radius: $spacing;
-  align-self: center;
-  opacity: 0;
   transition: opacity 0.2s ease-out;
 }
+
 .contact__copied__info--isActive {
   opacity: 1;
 }

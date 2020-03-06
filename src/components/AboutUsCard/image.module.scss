@@ -6,6 +6,7 @@
   margin: 0;
   z-index: 1;
 }
+
 .about-us__card__image {
   -o-object-fit: cover;
   border-radius: $spacing;
@@ -13,10 +14,12 @@
   object-fit: cover;
   width: 100%;
 }
+
 .about-us__card__image__Michał {
   -o-object-position: 50% 35%;
   object-position: 50% 35%;
 }
+
 .about-us__card__image__Julia {
   -o-object-position: 50% 100%;
   object-position: 50% 100%;

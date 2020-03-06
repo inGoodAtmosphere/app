@@ -6,24 +6,27 @@
   height: 100%;
   margin: 0;
 }
+
 .about-us__card__content {
   color: $dark-bg;
   grid-column: 2;
   grid-row: 3;
-  padding-bottom: $spacing;
   text-align: justify;
 }
+
 .about-us__card__content__name {
   font-size: $base-font-size * 1.1 !important;
   margin-bottom: 0;
 }
+
 .about-us__card__content__role {
   margin: 0;
 }
+
 .about-us__card__content__description {
   font-size: $s-size;
-  margin-top: 0.5em;
 }
+
 @media screen and (max-height: 44rem) {
   .about-us__card__content {
     align-self: center;
