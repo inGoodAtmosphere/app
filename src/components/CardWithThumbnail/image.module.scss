@@ -1,9 +1,10 @@
 @import '../../styles/base/settings';
 
 .sensors__thumbnail {
-  min-height: 10rem;
-  width: 100%;
   align-self: center;
   border-radius: $spacing;
+  -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

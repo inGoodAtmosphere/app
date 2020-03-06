@@ -1,29 +1,14 @@
 @import '../../styles/base/settings';
 
 .sensors__card {
-  display: grid;
-  grid-gap: $spacing / 2;
-  // grid-template-columns: -webkit-min-content 70%;
-  grid-template-columns: 1fr 1.5fr;
   -webkit-box-pack: start;
+  display: grid;
+  grid-gap: $spacing;
+  grid-template-columns: 1fr 1.5fr;
   justify-content: start;
   padding: $spacing;
 }
-.sensors__header {
-  margin-top: 0;
-  padding-left: $spacing / 2;
-}
-.sensors__thumbnail {
-  min-height: 10rem;
-  width: 100%;
-  align-self: center;
-  border-radius: $spacing;
-  object-fit: cover;
-}
-.sensors__description {
-  padding-left: $spacing / 2;
-  margin-bottom: 0;
-}
+
 @media #{$media-query-s} {
   .sensors__card {
     grid-template-columns: 1fr 4fr;
