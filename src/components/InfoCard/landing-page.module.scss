@@ -9,19 +9,20 @@
 
 .landing-page__sensors {
   background: $dark-accent;
-  .landing-page__card__content {
-    margin-left: $spacing;
-  }
 }
+
 .landing-page__encyclopedia {
   background: $light-accent;
 }
+
 .landing-page__map {
   background: $primary-accent;
 }
+
 .landing-page__contact {
   background-color: $text;
 }
+
 .landing-page__project {
   * {
     color: $text;
@@ -30,14 +31,16 @@
     border: $border solid $text;
   }
 }
+
 @media #{$media-query-m} {
   .landing-page__card {
-    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
     -webkit-box-direction: normal;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
     -webkit-box-pack: justify;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     &:nth-child(even) {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;

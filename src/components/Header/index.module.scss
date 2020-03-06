@@ -1,15 +1,14 @@
 @import '../../styles/base/settings';
 .header {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-box-pack: justify;
   align-items: center;
-  height: $header-height;
   background: $dark-bg;
   color: $text;
-  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

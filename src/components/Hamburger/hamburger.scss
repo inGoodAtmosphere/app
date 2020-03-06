@@ -1,26 +1,28 @@
 @import '../../styles/base/settings';
 .hamburger {
-  padding: $spacing;
   background-color: transparent;
   border: 0;
-  margin: 0;
   display: inline-block;
+  margin: 0;
+  padding: $spacing;
 }
 .hamburger__box {
-  width: 32px;
+  display: inline-block;
   height: 26px;
   position: relative;
-  display: inline-block;
+  width: 32px;
 }
 @mixin single-line {
-  width: 100%;
-  height: 5px;
   background-color: $light-bg;
+  height: 5px;
   position: absolute;
+  width: 100%;
 }
 .hamburger__line {
   @include single-line;
 
+  -webkit-transform: translateY(-50%);
+  -webkit-transition: background-color 0.2s 0.2s ease-in-out;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -29,8 +31,12 @@
   &::after {
     @include single-line;
 
+    -webkit-transition: -webkit-transform 0.2s 0.2s ease-in-out;
     content: '';
     left: 0;
+    transition: -webkit-transform 0.2s 0.2s ease-in-out;
+    transition: transform 0.2s 0.2s ease-in-out,
+      -webkit-transform 0.2s 0.2s ease-in-out;
     transition: transform 0.2s 0.2s ease-in-out;
   }
   &::before {
@@ -45,8 +51,10 @@
   background: transparent;
 }
 .hamburger--isActive .hamburger__line::before {
+  -webkit-transform: translateY(11px) rotate(45deg);
   transform: translateY(11px) rotate(45deg);
 }
 .hamburger--isActive .hamburger__line::after {
+  -webkit-transform: translateY(-11px) rotate(-45deg);
   transform: translateY(-11px) rotate(-45deg);
 }

@@ -1,10 +1,11 @@
 @import '../../styles/base/settings';
 
 .landing-page__btn {
-  padding: $spacing;
-  border: $border solid $light-bg;
   align-self: flex-end;
+  border: $border solid $light-bg;
+  padding: $spacing;
 }
+
 .landing-page__btn__map {
   border-radius: 0.625rem;
   opacity: 0.8;

@@ -4,11 +4,13 @@
   background: $primary-accent;
   color: $light-bg;
 }
-.encyclopedia__pm10 {
-  background: $light-accent;
-  color: $light-bg;
-}
+
 .encyclopedia__pm25 {
   background: $dark-accent;
+  color: $light-bg;
+}
+
+.encyclopedia__pm10 {
+  background: $light-accent;
   color: $light-bg;
 }
