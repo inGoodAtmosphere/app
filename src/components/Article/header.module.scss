@@ -1,37 +1,37 @@
 @import '../../styles/base/settings';
 
 .article__header {
+  margin: 0;
   padding: 0;
   position: relative;
-  margin: 0;
   &::after {
     content: '';
+    background: rgba(28, 35, 60, 0.5);
     border-radius: $spacing;
-    width: 100%;
     height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: -1;
-    background: rgba(28, 35, 60, 0.5);
   }
 }
 .article__header__text {
+  border-radius: $spacing;
+  color: $light-bg;
+  font-size: $l-size * 0.8;
+  margin: 0;
   padding: $spacing * 5 0;
   text-align: center;
-  color: $light-bg;
-  border-radius: $spacing;
-  margin: 0;
-  z-index: 1;
-  font-size: $l-size * 0.8;
   text-align: center;
+  z-index: 1;
 }
 .article__header__img {
-  width: 100%;
-  height: 100%;
   border-radius: $spacing;
-  z-index: -1;
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  width: 100%;
+  z-index: -1;
 }

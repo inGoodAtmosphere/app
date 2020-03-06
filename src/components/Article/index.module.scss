@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 
 .article__card {
-  z-index: -2;
-  position: relative;
   padding: $spacing;
+  position: relative;
+  z-index: -2;
 }

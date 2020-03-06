@@ -1,10 +1,10 @@
 @import '../../styles/base/settings';
 
 .slider__btn {
-  color: $light-bg;
-  width: 3em;
-  height: 3em;
   background: none;
   border-radius: $spacing;
   border: $border * 2 solid $light-bg;
+  color: $light-bg;
+  height: 3em;
+  width: 3em;
 }
