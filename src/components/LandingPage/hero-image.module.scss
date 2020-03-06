@@ -20,10 +20,9 @@
     background: rgba(28, 35, 60, 0.8);
   }
 }
+
 .landing-page__hero__image {
   position: absolute;
-
-  top: $header-height;
   left: 0;
   z-index: -1;
   -o-object-fit: cover;
@@ -31,8 +30,14 @@
   width: 100%;
   height: calc(100vh - #{$header-height});
 }
+
+.landing-page__hero__text {
+  text-transform: none;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
 .landing-page__hero__btn {
-  margin-bottom: $spacing;
   font-weight: bold;
   background: $dark-accent;
   color: $light-bg;
@@ -40,12 +45,6 @@
   padding: $spacing;
   align-self: center;
   font-size: $m-size;
-}
-
-.landing-page__hero__text {
-  text-transform: none;
-  font-size: 2.3rem;
-  margin: 0;
 }
 
 @media #{$media-query-s} {
