@@ -1,5 +1,6 @@
 import React from 'react';
 import partner1 from '../../../public/img/MSK-logo.png';
+import './patron.module.scss';
 
 const Patron = () => {
   return (

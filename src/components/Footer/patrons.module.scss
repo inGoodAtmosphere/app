@@ -1,20 +1,12 @@
 @import '../../styles/base/settings';
 
-.footer__patrons__item {
-  width: $header-height;
-  height: $header-height;
-}
-.footer__patrons__item__image {
-  width: 100%;
-  height: 100%;
-}
 .footer__h2 {
   text-align: center;
 }
 .footer__patrons {
+  -webkit-box-pack: space-evenly;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   padding: $spacing;
 }

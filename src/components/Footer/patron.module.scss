@@ -1,0 +1,11 @@
+@import '../../styles/base/settings';
+
+.footer__patrons__item {
+  height: $header-height;
+  width: $header-height;
+}
+
+.footer__patrons__item__image {
+  height: 100%;
+  width: 100%;
+}

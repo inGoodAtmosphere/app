@@ -1,11 +1,13 @@
 @import '../../styles/base/settings';
 
 .footer__links {
-  margin: $spacing 0;
+  -webkit-box-pack: justify;
   display: -webkit-box;
   display: flex;
   justify-content: space-between;
+  margin: $spacing 0;
 }
+
 .footer__pwa__btn {
   background: none;
   border: none;
@@ -14,10 +16,12 @@
 }
 
 .footer__links__item {
-  width: 100%;
+  -webkit-box-pack: center;
+  display: -webkit-box;
   display: flex;
   justify-content: center;
   white-space: nowrap;
+  width: 100%;
   &--hidden {
     display: none;
   }
