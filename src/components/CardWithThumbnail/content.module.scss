@@ -1,5 +1,18 @@
 @import '../../styles/base/settings';
 
+.sensors__content {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  align-self: center;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+}
+
 .sensors__header {
   margin: 0;
+}
+
+.sensors__description {
+  margin-bottom: 0;
 }

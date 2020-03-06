@@ -2,16 +2,16 @@
 
 .menu__item {
   color: $dark-bg;
-  padding: $spacing;
   font-size: $m-size;
   font-weight: bold;
+  padding: $spacing;
   text-transform: uppercase;
 }
 
 @media #{$media-query-m} {
   .menu__item {
     color: $light-bg;
-    text-align: center;
     font-size: $m-size - 0.3;
+    text-align: center;
   }
 }

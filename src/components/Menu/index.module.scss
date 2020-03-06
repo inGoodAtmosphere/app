@@ -1,50 +1,46 @@
 @import '../../styles/base/settings';
 
 .menu {
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  align-items: center;
   background: $light-bg;
-  position: fixed;
-  left: 100%;
-  top: $header-height;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  align-items: center;
-  z-index: 10;
   height: calc(100% - #{$header-height});
-  -webkit-transition: -webkit-transform 0.4s ease-in;
-  transition: -webkit-transform 0.4s ease-in;
-  transition: transform 0.4s ease-in;
-  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
-  width: 100%;
+  justify-content: space-around;
+  left: 100%;
   overflow: hidden;
-}
-
-.menu--isActive {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  html {
-    overflow: hidden;
+  position: fixed;
+  top: $header-height;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  width: 100%;
+  z-index: 10;
+  &--isActive {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 @media #{$media-query-m} {
   .menu {
-    background: none;
-    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-transform: translateX(0);
+    background: none;
     flex-direction: row;
     height: auto;
     position: static;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   .menu__item {
     color: $light-bg;
-    text-align: center;
     font-size: $m-size - 0.3;
+    text-align: center;
   }
 }
