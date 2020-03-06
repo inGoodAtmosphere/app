@@ -2,21 +2,24 @@
 * {
   box-sizing: border-box;
 }
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
 .focus-visible {
   outline: auto;
 }
+
 html {
-  font-family: 'Lato', sans-serif;
-  color: $light-bg;
   background: $dark-bg;
+  color: $light-bg;
+  font-family: 'Lato', sans-serif;
+  line-height: $base-line-height !important;
   overflow-x: hidden;
-  line-height: $base-line-height;
   @media #{$media-query-m} {
     font-size: $base-font-size * 1.2;
-    line-height: $base-line-height * 1.2;
+    line-height: $base-line-height * 1.2 !important;
   }
 
   @media #{$media-query-l} {
@@ -30,31 +33,34 @@ html {
   @media #{$media-query-xxl} {
     font-size: $base-font-size * 2.3;
   }
+
   @media #{$media-query-xxxl} {
     font-size: $base-font-size * 2.8;
   }
 }
-a {
-  text-decoration: none;
-  color: $dark-bg;
-  font-size: $s-size;
-  border-radius: $spacing;
-}
 
-button:hover {
-  cursor: pointer;
-}
-main {
-  padding: 0 $spacing;
-}
 .container {
-  min-height: 100%;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
+  min-height: 100%;
 }
+
+.content {
+  -webkit-box-flex: 1;
+  align-self: center;
+  flex: 1;
+  max-width: 54rem;
+  min-height: calc(100vh - #{$header-height});
+  padding: 0 $spacing;
+}
+
+.content > h2 {
+  color: $light-accent;
+}
+
 h1 {
   font-size: $l-size;
   text-transform: uppercase;
@@ -67,32 +73,34 @@ h2 {
 p {
   font-size: $xs-size;
 }
-.card {
+
+a {
   border-radius: $spacing;
-  padding: $spacing * 2;
-  margin-top: $spacing;
+  color: $dark-bg;
+  font-size: $s-size;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.card {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  background: $light-bg;
+  border-radius: $spacing;
+  color: $dark-bg;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
   justify-content: space-around;
-  color: $dark-bg;
-  background: $light-bg;
+  margin-top: $spacing;
+  padding: $spacing * 2;
   p {
     font-size: $s-size;
   }
   &:last-child {
     margin-bottom: $spacing;
   }
-}
-.content {
-  -webkit-box-flex: 1;
-  flex: 1;
-  min-height: calc(100vh - #{$header-height});
-  max-width: 54rem;
-  align-self: center;
-}
-.content > h2 {
-  color: $light-accent;
 }
