@@ -7,12 +7,10 @@ const Card = () => {
   return (
     <>
       <div className="card about-us__card" />
-      <div className="about-us__card__description">
-        <h2 className="about-us__card__description__name">{name}</h2>
-        <h3 className="about-us__card__description__role">{role}</h3>
-        <p className="about-us__card__description__description">
-          {description}
-        </p>
+      <div className="about-us__card__content">
+        <h2 className="about-us__card__content__name">{name}</h2>
+        <h3 className="about-us__card__content__role">{role}</h3>
+        <p className="about-us__card__content__description">{description}</p>
       </div>
     </>
   );

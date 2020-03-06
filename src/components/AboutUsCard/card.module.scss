@@ -6,33 +6,32 @@
   margin: 0;
   height: 100%;
 }
-
-.about-us__card__description {
+.about-us__card__content {
   color: $dark-bg;
   grid-column: 2;
   padding-bottom: $spacing;
   text-align: justify;
   grid-row: 3;
 }
-.about-us__card__description__description {
-  margin-top: 0.5em;
-  font-size: $s-size;
-}
-.about-us__card__description__name {
+.about-us__card__content__name {
   margin-bottom: 0;
   font-size: $base-font-size * 1.1 !important;
 }
-.about-us__card__description__role {
+.about-us__card__content__role {
   margin: 0;
 }
+.about-us__card__content__description {
+  margin-top: 0.5em;
+  font-size: $s-size;
+}
 @media screen and (max-height: 44rem) {
-  .about-us__card__description {
+  .about-us__card__content {
     align-self: center;
   }
-  .about-us__card__description__name {
+  .about-us__card__content__name {
     margin-top: $spacing / 2;
   }
-  .about-us__card__description__description {
+  .about-us__card__content__description {
     font-size: 0.8em;
   }
 }
