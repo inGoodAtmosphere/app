@@ -1,4 +1,5 @@
 import React from 'react';
+import './content.module.scss';
 
 const Content = () => {
   return (

@@ -8,11 +8,11 @@
   bottom: 10%;
   color: $light-bg;
   opacity: 0;
+  z-index: 10;
   padding: $spacing;
   position: fixed;
   transition: opacity 0.2s ease-out;
-}
-
-.contact__copied__info--isActive {
-  opacity: 1;
+  &--isActive {
+    opacity: 1;
+  }
 }
