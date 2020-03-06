@@ -18,5 +18,5 @@ module.exports = {
     allowImportExportEverywhere: true
   },
   plugins: ['react'],
-  "ignorePatterns": ["serviceWorker.js", "build/", "out/"],
+  "ignorePatterns": ["service-worker.js", "build/", "out/"],
 };
