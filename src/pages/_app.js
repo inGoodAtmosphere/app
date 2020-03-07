@@ -70,11 +70,6 @@ const App = ({ Component, isBannerOpen }) => {
           content="https://ingoodatmosphere.com/img/opengraph-homepage.jpg"
         />
         <title>inGoodAtmosphere</title>
-        <script
-          data-ad-client="ca-pub-5654573345392434"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
       </Head>
       <div className="container">
         <Header />
