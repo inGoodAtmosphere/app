@@ -1,18 +1,23 @@
 import React from 'react';
-import partner1 from '../../../public/img/MSK-logo.png';
+import PropTypes from 'prop-types';
 import './patron.module.scss';
 
-const Patron = () => {
+const Patron = ({ name, link, img }) => {
   return (
     <a
-      href="https://www.msk.earth/"
+      href={link}
       target="_blank"
       rel="noreferrer noopener"
       className="footer__patrons__item"
     >
-      <img src={partner1} alt="MSK" className="footer__patrons__item__image" />
+      <img src={img} alt={name} className="footer__patrons__item__image" />
     </a>
   );
 };
 
+Patron.propTypes = {
+  name: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 export default Patron;

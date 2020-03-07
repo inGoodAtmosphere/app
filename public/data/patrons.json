@@ -1,0 +1,14 @@
+{
+  "patrons": [
+    {
+      "name": "Młodzieżowy Strajk Klimatyczny",
+      "link": "https://www.msk.earth/",
+      "img": "/img/MSK.png"
+    },
+    {
+      "name": "Gliwice",
+      "link": "https://gliwice.eu/",
+      "img": "/img/Gliwice.png"
+    }
+  ]
+}

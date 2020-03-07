@@ -24,7 +24,7 @@ const Article = () => {
             : contents[0]
                 .split('\n')
                 .map((content) => (
-                  <Paragraph content={content} key={content.substring(1, 12)} />
+                  <Paragraph key={content.substring(1, 12)} content={content} />
                 ))}
         </article>
       </main>

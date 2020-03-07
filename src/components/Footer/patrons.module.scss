@@ -1,12 +1,15 @@
 @import '../../styles/base/settings';
 
-.footer__h2 {
-  text-align: center;
-}
 .footer__patrons {
-  -webkit-box-pack: space-evenly;
+  -webkit-box-pack: space-around;
   display: -webkit-box;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: $spacing;
+}
+
+.footer__headers {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
 }

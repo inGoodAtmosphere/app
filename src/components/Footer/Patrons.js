@@ -1,13 +1,19 @@
 import React from 'react';
-import './patrons.module.scss';
 import Patron from './Patron';
+import { patrons } from '../../../public/data/patrons.json';
+import './patrons.module.scss';
 
 const Patrons = () => {
   return (
     <>
-      <h2 className="footer__h2">Nasi patroni: </h2>
+      <div className="footer__headers">
+        <h3>Nasi patroni: </h3>
+        <h3>Patronat honorowy: </h3>
+      </div>
       <div className="footer__patrons">
-        <Patron />
+        {patrons.map(({ name, link, img }) => (
+          <Patron key={name} name={name} link={link} img={img} />
+        ))}
       </div>
     </>
   );

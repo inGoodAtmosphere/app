@@ -8,8 +8,8 @@ const Encyclopedia = () => {
       <h1>Encyklopedia</h1>
       {definitions.map((definition) => (
         <InfoCard
-          value={{ env: 'encyclopedia', ...definition }}
           key={definition.purpose}
+          value={{ env: 'encyclopedia', ...definition }}
         />
       ))}
     </main>

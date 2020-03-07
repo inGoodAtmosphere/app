@@ -8,7 +8,7 @@ const Menu = ({ isActive }) => {
   return (
     <nav className={`menu ${isActive ? 'menu--isActive' : ''}`}>
       {anchors.map((anchor) => (
-        <Item anchor={anchor} key={anchor} isActive={isActive} />
+        <Item key={anchor} anchor={anchor} isActive={isActive} />
       ))}
     </nav>
   );
