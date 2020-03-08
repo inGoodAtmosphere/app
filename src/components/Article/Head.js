@@ -44,6 +44,12 @@ const ArticleHead = () => {
         property="og:image"
         content={`https://ingoodatmosphere.com/${imageOG}`}
       />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content="inGoodAtmosphere" />
+      <meta
+        name="twitter:image"
+        content={`https://ingoodatmosphere.com/${imageOG}`}
+      />
     </Head>
   );
 };
