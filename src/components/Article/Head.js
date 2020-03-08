@@ -10,15 +10,16 @@ const ArticleHead = () => {
     section,
     header,
     description,
-    image,
+    imageOG,
   } = useContext(Context);
   const router = useRouter();
   return (
     <Head>
+      <meta name="robots" content="max-snippet:-1, max-image-preview:large" />
       <meta
         key="og:url"
         property="og:url"
-        content={`https://www.ingoodatmosphere.com/kampania/${router.pathname}`}
+        content={`https://ingoodatmosphere.com${router.asPath}`}
       />
       <meta key="og:type" property="og:type" content="article" />
       <meta
@@ -41,7 +42,7 @@ const ArticleHead = () => {
       <meta
         key="og:image"
         property="og:image"
-        content={`https://ingoodatmosphere.com/${image[1]}`}
+        content={`https://ingoodatmosphere.com/${imageOG}`}
       />
     </Head>
   );

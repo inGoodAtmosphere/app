@@ -3,6 +3,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import PropTypes from 'prop-types';
 import cookies from 'next-cookies';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import CookiesBanner from '../components/CookiesBanner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,6 +16,7 @@ import 'focus-visible';
 config.autoAddCss = false;
 
 const App = ({ Component, isBannerOpen }) => {
+  const router = useRouter();
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -43,6 +45,11 @@ const App = ({ Component, isBannerOpen }) => {
           name="description"
           content="inGoodAtmosphere ma na celu stworzenie przyjaznej atmosfery wolnej od smogu w całej Polsce!"
         />
+        <meta name="robots" content="index" />
+        <link
+          rel="canonical"
+          href={`https://ingoodatmosphere.com${router.asPath}`}
+        />
         <link rel="icon" href="/icons/favicon-32.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="icons/favicon-180.png" />
@@ -55,7 +62,7 @@ const App = ({ Component, isBannerOpen }) => {
         <meta
           key="og:url"
           property="og:url"
-          content="https://www.ingoodatmosphere.com/"
+          content={`https://ingoodatmosphere.com${router.asPath}`}
         />
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:title" property="og:title" content="inGoodAtmosphere" />
@@ -67,7 +74,17 @@ const App = ({ Component, isBannerOpen }) => {
         <meta
           key="og:image"
           property="og:image"
-          content="https://ingoodatmosphere.com/img/opengraph-homepage.jpg"
+          content="https://ingoodatmosphere.com/img/opengraph-icon.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:description"
+          content='Realizujemy projekt w ramach olimpiady "Zwolnieni z Teorii". Celem naszego projektu, jest uświadomienie ludz o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska.'
+        />
+        <meta name="twitter:title" content="inGoodAtmosphere" />
+        <meta
+          name="twitter:image"
+          content="https://ingoodatmosphere.com/img/opengraph-icon.png"
         />
         <title>inGoodAtmosphere</title>
       </Head>

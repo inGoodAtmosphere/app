@@ -5,7 +5,7 @@ import MapSvg from '../../../public/img/map';
 import EncyclopediaSvg from '../../../public/img/encyclopedia';
 import SensorSvg from '../../../public/img/sensor';
 import ContactSvg from '../../../public/img/contact';
-import { content } from '../../../public/landing-page.json';
+import { content } from '../../../public/data/landing-page.json';
 
 const Cards = () => {
   const SVGs = [ProjectSvg, MapSvg, EncyclopediaSvg, SensorSvg, ContactSvg];
