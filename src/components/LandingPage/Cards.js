@@ -1,10 +1,10 @@
 import React from 'react';
 import InfoCard from '../InfoCard';
-import ProjectSvg from '../../../public/img/project';
-import MapSvg from '../../../public/img/map';
-import EncyclopediaSvg from '../../../public/img/encyclopedia';
-import SensorSvg from '../../../public/img/sensor';
-import ContactSvg from '../../../public/img/contact';
+import ProjectSvg from './svg/project';
+import MapSvg from './svg/map';
+import EncyclopediaSvg from './svg/encyclopedia';
+import SensorSvg from './svg/sensor';
+import ContactSvg from './svg/contact';
 import { content } from '../../../public/data/landing-page.json';
 
 const Cards = () => {

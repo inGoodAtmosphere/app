@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-function SvgMap(props) {
+function SvgMap() {
   return (
     <svg
       className="landing-page__svg landing-page__svg__map"
       viewBox="0 0 326 266"
       fill="none"
-      {...props}
     >
       <g clipPath="url(#map_svg__clip0)">
         <path

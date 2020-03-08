@@ -1,14 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-function SvgNotFound(props) {
+function SvgNotFound() {
   return (
-    <svg
-      className="not-found__svg"
-      viewBox="0 0 326 130"
-      fill="none"
-      {...props}
-    >
+    <svg className="not-found__svg" viewBox="0 0 326 130" fill="none">
       <path
         d="M164.039 130c87.856 0 159.076-4.71 159.076-10.52s-71.22-10.52-159.076-10.52c-87.855 0-159.076 4.71-159.076 10.52S76.184 130 164.04 130z"
         fill="#F2F2F2"

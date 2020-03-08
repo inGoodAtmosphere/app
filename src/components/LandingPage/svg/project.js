@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-function SvgProject(props) {
+function SvgProject() {
   return (
     <svg
       className="landing-page__svg landing-page__svg__project"
       viewBox="0 0 364 271"
       fill="none"
-      {...props}
     >
       <g clipPath="url(#project_svg__clip0)">
         <path
