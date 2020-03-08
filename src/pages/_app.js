@@ -16,7 +16,18 @@ import 'focus-visible';
 config.autoAddCss = false;
 
 const App = ({ Component, isBannerOpen }) => {
+  const convertTitle = (title) => {
+    if (title === '/') return 'inGoodAtmosphere';
+    return (
+      title.charAt(1).toUpperCase() +
+      title
+        .slice(2)
+        .replace('/', '')
+        .replace('-', ' ')
+    );
+  };
   const router = useRouter();
+  const title = convertTitle(router.pathname);
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -86,7 +97,7 @@ const App = ({ Component, isBannerOpen }) => {
           name="twitter:image"
           content="https://ingoodatmosphere.com/img/opengraph-icon.png"
         />
-        <title>inGoodAtmosphere</title>
+        <title key="title">{title}</title>
       </Head>
       <div className="container">
         <Header />
