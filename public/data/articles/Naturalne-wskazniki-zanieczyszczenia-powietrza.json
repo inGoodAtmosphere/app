@@ -1,18 +1,20 @@
 {
-  "header": "Naturalne wskaźniki zanieczyszczenia powietrza",
-  "contents": [
-    "Żyjemy w czasach promujących technologie, które coraz bardziej oddalają nas od naturalnego środowiska. Ofiarą takiego egoistycznego podejścia ludzkości do natury jest nasza planeta, którą coraz rzadziej dostrzegamy. \nPoważnej degradacji uległ również stan powietrza, którego wynikiem jest smog. Szczególnie w miesiącach zimowych powoduje on wiele niedogodności dla mieszkańców miast. Pomimo wielu alertów ogłaszanych w miastach i działań wielu organizacji ekologicznych, wciąż jest to znaczący problem zdrowotny. \nJesteśmy otoczeni nowoczesnymi i coraz to bardziej innowacyjnymi technologiami, które nie zawsze są proekologiczne. Inspiracją dla wielu projektów technologicznych powinny być naturalne odpowiedniki, takie jak np. bioindykatory, czyli organizmy posiadające zdolność do wskazywania zanieczyszczeń środowiska. \n Najpopularniejszym przedstawicielem tej grupy są porosty, charakteryzujące się wrażliwością na zanieczyszczenia powietrza, głównie tlenki siarki, które powodują zakwaszanie opadów. W oparciu o te organizmy powstała nawet skala porostowa, która mówi nam o stopniu zanieczyszczenia powietrza, czy też jego braku. Ze względu na budowę morfologiczną u porostów wyróżniono trzy główne rodzaje plech : skorupiaste, listkowate oraz krzaczkowate (najwrażliwsi przedstawiciele). \nJako organizmy są one połączeniem strzępek grzybów oraz zielenic/sinic. Skalę zanieczyszczeń możemy określać na podstawie obecności ich gatunków na danym terenie (co oznacza dobrą jakość powietrza) lub ich braku, który świadczy o dużym zanieczyszczeniu i jednocześnie złym środowisku życia dla tych organizmów."
-  ],
-  "subHeaders": [],
-  "image": [
-    "/data/articles/bioindicators/bioindicators-768.jpg",
-    "/data/articles/bioindicators/bioindicators-1280.jpg",
-    "/data/articles/bioindicators/bioindicators-1920.jpg",
-    "/data/articles/bioindicators/bioindicators-5319.jpg"
-  ],
-  "imageOG": "data/articles/bioindicators/bioindicatorsOG.jpg",
-  "publishDate": "2020-02-19",
-  "author": "Julia Papée",
-  "section": "Ekologia",
-  "description": "Aby mierzyć zanieczyszczenie powietrza wcale nie potrzebujemy sprzętu za duże pieniądze. Dowiedz się czym są bioindykatory i jak można dzięki nim określić jakość powietrza w okolicy"
+  "article": {
+    "header": "Naturalne wskaźniki zanieczyszczenia powietrza",
+    "contents": [
+      "Żyjemy w czasach promujących technologie, które coraz bardziej oddalają nas od naturalnego środowiska. Ofiarą takiego egoistycznego podejścia ludzkości do natury jest nasza planeta, którą coraz rzadziej dostrzegamy. \nPoważnej degradacji uległ również stan powietrza, którego wynikiem jest smog. Szczególnie w miesiącach zimowych powoduje on wiele niedogodności dla mieszkańców miast. Pomimo wielu alertów ogłaszanych w miastach i działań wielu organizacji ekologicznych, wciąż jest to znaczący problem zdrowotny. \nJesteśmy otoczeni nowoczesnymi i coraz to bardziej innowacyjnymi technologiami, które nie zawsze są proekologiczne. Inspiracją dla wielu projektów technologicznych powinny być naturalne odpowiedniki, takie jak np. bioindykatory, czyli organizmy posiadające zdolność do wskazywania zanieczyszczeń środowiska. \n Najpopularniejszym przedstawicielem tej grupy są porosty, charakteryzujące się wrażliwością na zanieczyszczenia powietrza, głównie tlenki siarki, które powodują zakwaszanie opadów. W oparciu o te organizmy powstała nawet skala porostowa, która mówi nam o stopniu zanieczyszczenia powietrza, czy też jego braku. Ze względu na budowę morfologiczną u porostów wyróżniono trzy główne rodzaje plech : skorupiaste, listkowate oraz krzaczkowate (najwrażliwsi przedstawiciele). \nJako organizmy są one połączeniem strzępek grzybów oraz zielenic/sinic. Skalę zanieczyszczeń możemy określać na podstawie obecności ich gatunków na danym terenie (co oznacza dobrą jakość powietrza) lub ich braku, który świadczy o dużym zanieczyszczeniu i jednocześnie złym środowisku życia dla tych organizmów."
+    ],
+    "subHeaders": [],
+    "image": [
+      "/data/articles/bioindicators/bioindicators-768.jpg",
+      "/data/articles/bioindicators/bioindicators-1280.jpg",
+      "/data/articles/bioindicators/bioindicators-1920.jpg",
+      "/data/articles/bioindicators/bioindicators-5319.jpg"
+    ],
+    "imageOG": "data/articles/bioindicators/bioindicatorsOG.jpg",
+    "publishDate": "2020-02-19",
+    "author": "Julia Papée",
+    "section": "Ekologia",
+    "description": "Aby mierzyć zanieczyszczenie powietrza wcale nie potrzebujemy sprzętu za duże pieniądze. Dowiedz się czym są bioindykatory i jak można dzięki nim określić jakość powietrza w okolicy"
+  }
 }
