@@ -1,0 +1,6 @@
+@import '../../styles/base/settings';
+
+.map {
+  height: calc(50vh - #{$header-height});
+  width: 100%;
+}
