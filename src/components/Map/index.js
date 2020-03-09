@@ -9,23 +9,13 @@ import './map.module.scss';
 const Map = () => (
   <div className="map">
     <GoogleMap
-      defaultCenter={{ lat: 50.264593, lng: 19.01524 }}
-      defaultZoom={17}
+      defaultCenter={{ lat: sensors[0].lat, lng: sensors[0].lng }}
+      defaultZoom={15}
       bootstrapURLKeys={{ key }}
     >
-      {sensors.map((sensor) => {
-        const data = measurements.find(
-          (measurement) => measurement.id === sensor.id,
-        );
-        return (
-          <Marker
-            key={sensor.id}
-            lat={sensor.lat}
-            lng={sensor.lng}
-            title={sensor.title}
-            data={data}
-          />
-        );
+      {sensors.map(({ id, lat, lng }) => {
+        const data = measurements.find((measurement) => measurement.id === id);
+        return <Marker value={{ data }} key={id} lat={lat} lng={lng} />;
       })}
     </GoogleMap>
   </div>

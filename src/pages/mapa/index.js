@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
-import Map from '../../components/Map/Map';
+import Map from '../../components/Map';
 import Data from '../../components/Map/Data';
-import MapContext from '../../contexts/map-context';
+import MapContext from '../../utils/map-context';
 import mapReducer from '../../reducers/map-reducer';
 import { measurements } from '../../../public/data/measurements.json';
 

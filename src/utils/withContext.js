@@ -15,6 +15,9 @@ export default (WrappedComponent) => {
         PropTypes.arrayOf(PropTypes.string),
         PropTypes.elementType,
         PropTypes.objectOf(PropTypes.string),
+        PropTypes.objectOf(
+          PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        ),
       ]),
     ).isRequired,
   };

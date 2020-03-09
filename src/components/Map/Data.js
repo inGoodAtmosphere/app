@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import mapContext from '../../contexts/map-context';
+import mapContext from '../../utils/map-context';
 import Chart from './Chart';
 import Weather from './Weather';
 import AboutDevice from './AboutDevice';
