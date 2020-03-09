@@ -4,6 +4,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
 import mapContext from '../../contexts/map-context';
+import './marker.module.scss';
 
 const Marker = ({ title, data }) => {
   const [color, setColor] = useState('');

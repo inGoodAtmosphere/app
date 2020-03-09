@@ -1,4 +1,4 @@
-const mapReducer = (state, action) => {
+export default (state, action) => {
   switch (action.type) {
     case 'SET_SELECTED_SENSOR':
       return { ...action.data };
@@ -6,5 +6,3 @@ const mapReducer = (state, action) => {
       return state;
   }
 };
-
-export default mapReducer;

@@ -3,11 +3,18 @@ import Map from '../../components/Map/Map';
 import Data from '../../components/Map/Data';
 import MapContext from '../../contexts/map-context';
 import mapReducer from '../../reducers/map-reducer';
+import { measurements } from '../../../public/data/measurements.json';
+
+const defaultSensor = measurements[0];
+
+// TODO: defaultState from gps/cookies
 
 const MapPage = () => {
-  const [state, dispatch] = useReducer(mapReducer, {});
+  const [activeSensor, dispatch] = useReducer(mapReducer, {
+    ...defaultSensor,
+  });
   return (
-    <MapContext.Provider value={{ state, dispatch }}>
+    <MapContext.Provider value={{ activeSensor, dispatch }}>
       <Map />
       <main className="content">
         <Data />
