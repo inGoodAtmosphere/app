@@ -15,8 +15,8 @@ const MapPage = () => {
   });
   return (
     <MapContext.Provider value={{ activeSensor, dispatch }}>
-      <Map />
       <main className="content">
+        <Map />
         <Data />
       </main>
     </MapContext.Provider>
