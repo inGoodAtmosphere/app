@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   LineChart,
   CartesianGrid,
@@ -10,55 +10,65 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import './chart.module.scss';
+import Checkbox from './Checkbox';
 
 const Chart = () => {
+  const [units, setUnits] = useState({
+    pm25: true,
+    pm10: true,
+    caqi: true,
+  });
+  console.log(units);
   const data = [
     {
       name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
+      PM25: 4000,
+      PM10: 2400,
+      CAQI: 3000,
     },
     {
       name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
+      PM25: 3000,
+      PM10: 1398,
+      CAQI: 3000,
     },
     {
       name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
+      PM25: 2000,
+      PM10: 9800,
+      CAQI: 3000,
     },
     {
       name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
+      PM25: 2780,
+      PM10: 3908,
+      CAQI: 3000,
     },
     {
       name: 'Page E',
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
+      PM25: 1890,
+      PM10: 4800,
+      CAQI: 3000,
     },
     {
       name: 'Page F',
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
+      PM25: 2390,
+      PM10: 3800,
+      CAQI: 3000,
     },
     {
       name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
+      PM25: 3490,
+      PM10: 4300,
+      CAQI: 3000,
     },
   ];
 
   return (
     <div className="card chart__card">
+      <Checkbox unit="pm25" units={units} setUnits={setUnits} />
+      <Checkbox unit="pm10" units={units} setUnits={setUnits} />
+      <Checkbox unit="caqi" units={units} setUnits={setUnits} />
       <ResponsiveContainer>
         <LineChart data={data} margin={0}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -66,8 +76,13 @@ const Chart = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          {units.pm25 && (
+            <Line type="monotone" dataKey="PM25" stroke="#82ca9d" />
+          )}
+          {units.pm10 && (
+            <Line type="monotone" dataKey="PM10" stroke="#8884d8" />
+          )}
+          {units.caqi && <Line type="monotone" dataKey="CAQI" stroke="#1cf" />}
         </LineChart>
       </ResponsiveContainer>
     </div>
