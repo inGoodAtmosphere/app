@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import {
   LineChart,
-  CartesianGrid,
+  Area,
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   Line,
   ResponsiveContainer,
+  Brush,
+  ReferenceLine,
 } from 'recharts';
 import './chart.module.scss';
 import Checkbox from './Checkbox';
@@ -18,7 +19,6 @@ const Chart = () => {
     pm10: true,
     caqi: true,
   });
-  console.log(units);
   const data = [
     {
       name: 'Page A',
@@ -66,16 +66,24 @@ const Chart = () => {
 
   return (
     <div className="card chart__card">
-      <Checkbox unit="pm25" units={units} setUnits={setUnits} />
-      <Checkbox unit="pm10" units={units} setUnits={setUnits} />
-      <Checkbox unit="caqi" units={units} setUnits={setUnits} />
+      <div className="chart__checkboxes">
+        <Checkbox unit="pm25" units={units} setUnits={setUnits} />
+        <Checkbox unit="pm10" units={units} setUnits={setUnits} />
+        <Checkbox unit="caqi" units={units} setUnits={setUnits} />
+      </div>
       <ResponsiveContainer>
         <LineChart data={data} margin={0}>
-          <CartesianGrid strokeDasharray="3 3" />
+          <Area strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Legend />
+          <Brush data={data} height={20} />
+          <ReferenceLine
+            y={9000}
+            label="100%"
+            stroke="red"
+            strokeDasharray="3 3"
+          />
           {units.pm25 && (
             <Line type="monotone" dataKey="PM25" stroke="#82ca9d" />
           )}

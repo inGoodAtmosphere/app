@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './checkbox.module.scss';
 
 const Checkbox = ({ unit, units, setUnits }) => {
   const [isSelected, setIsSelected] = useState(true);
   return (
-    <label htmlFor={unit}>
+    <label htmlFor={unit} className="chart__checkbox__label">
       {unit.toUpperCase()}
       <input
+        className="chart__checkbox"
         type="checkbox"
         name={unit}
         id={unit}
