@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './checkbox.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Checkbox = ({ unit, units, setUnits }) => {
   const [isSelected, setIsSelected] = useState(true);
   return (
-    <label htmlFor={unit} className="chart__checkbox__label">
+    <div className="chart__checkbox">
       {unit.toUpperCase()}
-      <input
-        className="chart__checkbox"
-        type="checkbox"
-        name={unit}
-        id={unit}
-        checked={isSelected}
-        onChange={() => {
+      <button
+        type="button"
+        className={`chart__checkbox__btn chart__checkbox__btn__${unit}`}
+        onClick={() => {
           setIsSelected(!isSelected);
           setUnits({ ...units, [unit]: !isSelected });
         }}
-      />
-    </label>
+      >
+        {isSelected && <FontAwesomeIcon icon={faCheck} />}
+      </button>
+    </div>
   );
 };
 Checkbox.propTypes = {

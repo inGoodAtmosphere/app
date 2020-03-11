@@ -1,1 +1,35 @@
 @import '../../styles/base/settings';
+
+.chart__checkbox {
+  display: flex;
+  align-items: center;
+}
+.chart__checkbox__btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: $spacing / 2;
+  border-radius: $spacing;
+  border: $border * 2 solid;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  background: none;
+}
+.chart__checkbox__btn__pm25 {
+  border-color: #29bd38;
+  svg path {
+    fill: #29bd38;
+  }
+}
+.chart__checkbox__btn__pm10 {
+  border-color: #bd2929;
+  svg path {
+    fill: #bd2929;
+  }
+}
+.chart__checkbox__btn__caqi {
+  border-color: #2988bd;
+  svg path {
+    fill: #2988bd;
+  }
+}
