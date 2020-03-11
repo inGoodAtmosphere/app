@@ -6,8 +6,8 @@ const app = next({ dev: process.env.NODE_ENV !== 'production' });
 const handle = app.getRequestHandler();
 
 // ROUTERS
-const apiRouter = require("./src/pages/api/api.js"); // API
-const websiteRouter = require("./routes/website.js"); // Router of next.js
+const apiRouter = require('./src/pages/api/api.js'); // API
+const websiteRouter = require('./routes/website.js'); // Router of next.js
 
 app.prepare().then(() => {
   const server = express();

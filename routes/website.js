@@ -3,7 +3,7 @@ const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
-const {router} = express;
+const { router } = express;
 
 router.get('/', (req, res) => {
   return app.render(req, res, '/', req.query);
