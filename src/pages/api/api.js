@@ -2,7 +2,9 @@
 
 // const {router} = express;
 
+const requests = [];
+
 export default (req, res) => {
-  res.send(req.body);
-  // res.send('xD');
+    requests.push(req.body);
+  res.send(requests);
 };
