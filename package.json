@@ -35,7 +35,7 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "start": "next start",
     "build": "next build",
     "dev": "next",
     "export": "next export",

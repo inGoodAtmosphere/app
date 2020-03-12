@@ -10,6 +10,7 @@ export default (req, res) => {
     requests.slice(0,requests.length);
     emptyRequests=0;
   }
-  else if(req.body==="") requests.push(req.body);
-  else res.send(requests);
+  else if(req.body==="") emptyRequests+=1;
+  else requests.push(req.body)
+  res.send(`${emptyRequests}\r\n${requests}`);
 };
