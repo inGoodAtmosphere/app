@@ -5,7 +5,7 @@ import './index.module.scss';
 import Thumbnail from './Thumbnail';
 import Tags from './Tags';
 
-const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
+const ArticleThumbnail = ({ imagesFolder, header, description, tags }) => {
   const link = header
     .replace(/ /g, '-')
     .normalize('NFD')
@@ -13,7 +13,7 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
     .replace(/ł/g, 'l');
   return (
     <div className="article-container">
-      <Thumbnail thumbnail={thumbnail} link={link} />
+      <Thumbnail imagesFolder={imagesFolder} link={link} />
       <h2 className="article-container__header">{header}</h2>
       <Tags tags={tags} />
       <p className="article-container__description">{description}</p>
@@ -24,7 +24,7 @@ const ArticleThumbnail = ({ thumbnail, header, description, tags }) => {
   );
 };
 ArticleThumbnail.propTypes = {
-  thumbnail: PropTypes.string.isRequired,
+  imagesFolder: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,

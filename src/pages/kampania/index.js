@@ -11,7 +11,7 @@ const Campaign = () => (
         return (
           <ArticleThumbnail
             key={article.header}
-            thumbnail={article.thumbnail}
+            imagesFolder={article.imagesFolder}
             header={article.header}
             description={article.description}
             tags={article.tags}

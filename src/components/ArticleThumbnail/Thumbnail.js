@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './thumbnail.module.scss';
 
-const Thumbnail = ({ link, thumbnail }) => {
+const Thumbnail = ({ link, imagesFolder }) => {
   return (
     <a
       href={`/kampania/${link}`}
@@ -10,7 +10,7 @@ const Thumbnail = ({ link, thumbnail }) => {
     >
       <img
         className="article-container__thumbnail__image"
-        src={thumbnail}
+        src={`/data/articles/${imagesFolder}/thumbnail.jpg`}
         alt="Miniaturka"
       />
     </a>
@@ -19,7 +19,7 @@ const Thumbnail = ({ link, thumbnail }) => {
 
 Thumbnail.propTypes = {
   link: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
+  imagesFolder: PropTypes.string.isRequired,
 };
 
 export default Thumbnail;
