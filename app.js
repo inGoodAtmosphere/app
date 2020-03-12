@@ -6,7 +6,6 @@ const app = next({ dev: process.env.NODE_ENV !== 'production' });
 const handle = app.getRequestHandler();
 
 // ROUTERS
-const apiRouter = require('./src/pages/api/api.js'); // API
 const websiteRouter = require('./routes/website.js'); // Router of next.js
 
 app.prepare().then(() => {
@@ -14,7 +13,6 @@ app.prepare().then(() => {
 
   // Routers as middleware
   server.use('/routes', websiteRouter);
-  server.use('/pages/api', apiRouter);
 
   server.all('*', (req, res) => {
     return handle(req, res);
