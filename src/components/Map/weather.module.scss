@@ -1,0 +1,14 @@
+@import '../../styles/base/settings';
+
+.map__weather {
+  background-color: $dark-accent;
+  color: $light-bg;
+}
+
+.map__weather__data {
+  display: -webkit-box;
+  display: flex;
+  font-size: $m-size;
+  justify-content: space-around;
+  padding: $spacing / 2;
+}
