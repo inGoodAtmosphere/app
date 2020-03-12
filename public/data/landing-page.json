@@ -14,8 +14,8 @@
       "purpose": "map",
       "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
       "link": {
-        "href": "",
-        "text": ""
+        "href": "mapa",
+        "text": "Zobacz aktualny stan powietrza"
       }
     },
     {
