@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowSize from '../../hooks/useWindowSize';
 import Context from '../../utils/Context';
 import './image.module.scss';
 
 const Image = () => {
   const { link, Svg } = useContext(Context);
-  const width = useWindowWidth();
+  const { width } = useWindowSize();
   return (
     width > 1024 && (
       <a

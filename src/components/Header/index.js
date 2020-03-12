@@ -2,11 +2,11 @@ import React from 'react';
 import Navigation from './Navigation';
 import Menu from '../Menu';
 import Logo from './Logo';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowSize from '../../hooks/useWindowSize';
 import './index.module.scss';
 
 const Header = () => {
-  const width = useWindowWidth();
+  const { width } = useWindowSize();
   return (
     <header className="header">
       <Logo />

@@ -12,16 +12,16 @@ import {
 } from 'recharts';
 import './index.module.scss';
 import Button from './Button';
-import useWindowWidth from '../../../hooks/useWindowWidth';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 const Chart = () => {
-  const width = useWindowWidth();
+  const { width, height } = useWindowSize();
   const [activeChart, setActiveChart] = useState('pm');
   const setMargin = () => {
-    if (width < 1024) return { top: 0, right: 0, bottom: 0, left: -5 };
-    if (width < 2560) return { top: 0, right: 15, bottom: 0, left: 15 };
-    if (width < 3200) return { top: 0, right: 50, bottom: 0, left: 50 };
-    return { top: 0, right: 80, bottom: 0, left: 80 };
+    if (width < 1024) return { top: 5, right: 0, bottom: 0, left: -5 };
+    if (width < 2560) return { top: 5, right: 15, bottom: 0, left: 15 };
+    if (width < 3200) return { top: 5, right: 50, bottom: 0, left: 50 };
+    return { top: 5, right: 80, bottom: 0, left: 80 };
   };
   const margin = setMargin();
   const data = [
@@ -118,7 +118,7 @@ const Chart = () => {
             // TODO: startIndex set to last 7 days
           }
           <Brush
-            height={20}
+            height={width < 1440 ? height / 25 : height / 40}
             travellerWidth={7}
             dataKey="name"
             stroke="#0E364F"
