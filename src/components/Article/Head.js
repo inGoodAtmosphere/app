@@ -10,7 +10,7 @@ const ArticleHead = () => {
     section,
     header,
     description,
-    imageOG,
+    imagesFolder,
   } = useContext(Context);
   const router = useRouter();
   return (
@@ -42,13 +42,13 @@ const ArticleHead = () => {
       <meta
         key="og:image"
         property="og:image"
-        content={`https://ingoodatmosphere.com/${imageOG}`}
+        content={`https://ingoodatmosphere.com/data/articles/${imagesFolder}/og.jpg`}
       />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:title" content="inGoodAtmosphere" />
       <meta
         name="twitter:image"
-        content={`https://ingoodatmosphere.com/${imageOG}`}
+        content={`https://ingoodatmosphere.com/data/articles/${imagesFolder}/og.jpg`}
       />
       <title key="title">{header}</title>
     </Head>
