@@ -1,4 +1,4 @@
-@import '../../styles/base/settings';
+@import '../../../styles/base/settings';
 
 .chart__card {
   width: calc(100vw - #{$spacing} * 2);
@@ -7,7 +7,7 @@
   padding: $spacing;
 }
 
-.chart__checkboxes {
+.chart__buttons {
   margin-bottom: $spacing;
   display: flex;
   justify-content: space-around;

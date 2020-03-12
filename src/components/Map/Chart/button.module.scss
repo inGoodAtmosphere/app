@@ -1,0 +1,19 @@
+@import '../../../styles/base/settings';
+
+.chart__btn {
+  margin-left: $spacing;
+  border-radius: $spacing;
+  padding: $spacing / 2;
+  width: 100%;
+  border: $border * 2 solid $dark-accent;
+  background: none;
+  font-size: $xs-size;
+  color: $dark-accent;
+}
+.chart__btn:first-child {
+  margin-left: 0;
+}
+.chart__btn--isActive {
+  background-color: $dark-accent;
+  color: $light-bg;
+}
