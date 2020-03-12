@@ -6,15 +6,23 @@
   justify-content: space-around;
   border-radius: $spacing;
   padding: $spacing;
-  h3 {font-size: $s-size;}
-  h2 {font-size: $m-size;}
-  h2, h3 { 
-    margin: $spacing/2 0; 
-    text-align: center;
-  }
+  color: $light-bg;
+}
+.map__data__caqi__measurement,
+.map__data__caqi__title {
+  margin: $spacing / 2 0;
+  text-align: center;
+}
+.map__data__caqi__wrapper {
+  padding: 0 $spacing * 2 0 $spacing;
+}
+.map__data__caqi__measurement {
+  font-size: $l-size;
+}
+.map__data__caqi__title {
+  font-size: $m-size;
 }
 .map__data__status {
   font-size: $s-size;
-  width: 75%;
   margin: 0;
 }

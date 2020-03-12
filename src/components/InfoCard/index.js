@@ -9,7 +9,7 @@ import withContext from '../../utils/withContext';
 const InfoCard = () => {
   const { env, purpose } = useContext(Context);
   return (
-    <div className={` card ${env}__card ${env}__${purpose}`}>
+    <div id={purpose} className={` card ${env}__card ${env}__${purpose}`}>
       <Content />
       {env === 'landing-page' && <Image />}
     </div>

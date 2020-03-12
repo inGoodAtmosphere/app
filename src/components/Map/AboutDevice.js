@@ -11,7 +11,11 @@ const AboutDevice = () => {
     thumbnail: [sensor300, sensor800],
     env: 'map',
   };
-  return <CardWithThumbnail value={value} />;
+  return (
+    <a href="/mierniki">
+      <CardWithThumbnail value={value} />
+    </a>
+  );
 };
 
 export default AboutDevice;
