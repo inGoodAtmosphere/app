@@ -5,6 +5,6 @@
 const requests = [];
 
 export default (req, res) => {
-    requests.push(req.body);
+  requests.push(req.body);
   res.send(requests);
 };
