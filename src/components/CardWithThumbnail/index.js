@@ -8,7 +8,9 @@ import './index.module.scss';
 const CardWithThumbnail = () => {
   const { env } = useContext(Context);
   return (
-    <div className={`card ${env}__card`}>
+    <div
+      className={`card ${env}__card-with-thumbnail card-with-thumbnail__card`}
+    >
       <Image />
       <Content />
     </div>

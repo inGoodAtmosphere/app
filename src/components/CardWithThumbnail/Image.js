@@ -7,7 +7,7 @@ const Image = () => {
   return (
     <img
       srcSet={`${thumbnail[0]} 300w, ${thumbnail[1]} 800w`}
-      className={`${env}__thumbnail`}
+      className={`${env}__card-with-thumbnail__thumbnail card-with-thumbnail__thumbnail`}
       src={thumbnail[0]}
       alt="Miniaturka"
     />

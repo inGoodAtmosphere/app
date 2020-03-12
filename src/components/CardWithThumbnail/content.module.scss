@@ -1,6 +1,6 @@
 @import '../../styles/base/settings';
 
-.sensors__content {
+.card-with-thumbnail__content {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   align-self: center;
@@ -9,10 +9,10 @@
   flex-direction: column;
 }
 
-.sensors__header {
+.card-with-thumbnail__header {
   margin: 0;
 }
 
-.sensors__description {
+.card-with-thumbnail__description {
   margin-bottom: 0;
 }

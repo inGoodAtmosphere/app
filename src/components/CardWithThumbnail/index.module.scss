@@ -1,6 +1,6 @@
 @import '../../styles/base/settings';
 
-.sensors__card {
+.card-with-thumbnail__card {
   -webkit-box-pack: start;
   display: grid;
   grid-gap: $spacing;
@@ -10,7 +10,7 @@
 }
 
 @media #{$media-query-s} {
-  .sensors__card {
+  .card-with-thumbnail__card {
     grid-template-columns: 1fr 4fr;
   }
 }

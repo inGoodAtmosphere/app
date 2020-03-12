@@ -1,0 +1,10 @@
+@import '../../styles/base/settings';
+
+.map__card-with-thumbnail {
+  background-color: $primary-accent;
+  color: $light-bg;
+}
+
+.map__card-with-thumbnail__description {
+  margin: 0;
+}
