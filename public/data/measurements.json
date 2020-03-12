@@ -2,8 +2,9 @@
   "measurements": [
     {
       "title": "Katowice",
-      "pm25": 4.32,
+      "pm2.5": 4.32,
       "pm10": 43.21,
+      "caqi": 25,
       "id": 1000000000001
     }
   ]

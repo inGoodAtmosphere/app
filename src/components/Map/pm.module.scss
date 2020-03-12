@@ -1,0 +1,16 @@
+@import '../../styles/base/settings';
+
+.map__data__pm {
+    width: calc(50% - 5px);
+    border-radius: $spacing;
+    background-color: $light-accent;
+    padding: $spacing;
+    margin-top: $spacing;
+    h2, h3 {margin: $spacing/2 0;}
+    h2 {font-size: 24px;}
+    h3 {font-size: 16px;}
+    text-align: center;
+}
+.map__data__percent {
+    color: $dark-bg;
+}

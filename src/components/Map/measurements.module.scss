@@ -1,0 +1,14 @@
+@import '../../styles/base/settings';
+
+.map__city {
+    text-align: center;
+    background-color: $dark-accent;
+    margin: 0 0 $spacing;
+    padding: $spacing;
+    text-transform: none;
+    border-radius: 0 0 $spacing $spacing;
+}
+.map__pm {
+    display: flex;
+    justify-content: space-between;
+}

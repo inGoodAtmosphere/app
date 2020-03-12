@@ -16,7 +16,7 @@ const InfoPopup = ({ switchWindow }) => {
         <CloseButton switchWindow={switchWindow} />
         <h2>{data.title}</h2>
         <p>{data.pm10}</p>
-        <p>{data.pm25}</p>
+        <p>{data['pm2.5']}</p>
       </div>
     </OutsideClickHandler>
   );
