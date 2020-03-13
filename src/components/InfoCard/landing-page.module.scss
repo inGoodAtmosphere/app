@@ -1,0 +1,56 @@
+@import '../../styles/base/settings';
+
+.landing-page__card {
+  width: 100%;
+  * {
+    color: $light-bg;
+  }
+}
+
+.landing-page__sensors {
+  background: $dark-accent;
+}
+
+.landing-page__encyclopedia {
+  background: $light-accent;
+}
+
+.landing-page__map {
+  background: $primary-accent;
+}
+
+.landing-page__contact {
+  background-color: $bright-accent;
+}
+
+.landing-page__support {
+  background-color: #2988bd;
+}
+
+.landing-page__project {
+  * {
+    color: $text;
+  }
+}
+
+@media #{$media-query-m} {
+  .landing-page__card {
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    &:nth-child(even) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      flex-direction: row-reverse;
+    }
+    &:nth-child(odd) {
+      .landing-page__btn {
+        align-self: flex-start;
+      }
+    }
+  }
+}

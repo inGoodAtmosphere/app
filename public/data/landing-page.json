@@ -44,6 +44,15 @@
         "href": "kontakt",
         "text": "Napisz do nas"
       }
+    },
+    {
+      "header": "Wsparcie",
+      "purpose": "support",
+      "description": "Lorem ipsum dolor sit amet",
+      "link": {
+        "href": "wsparcie",
+        "text": "Wesprzyj nas"
+      }
     }
   ]
 }
