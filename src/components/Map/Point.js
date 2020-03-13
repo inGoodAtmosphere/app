@@ -10,7 +10,7 @@ const Point = ({ switchWindow }) => {
   const color = useColor(data);
   const handleClick = () => {
     switchWindow();
-    dispatch({ type: 'SET_SELECTED_SENSOR', data });
+    dispatch({ type: 'SET_ACTIVE_SENSOR', data });
   };
   return (
     <button
