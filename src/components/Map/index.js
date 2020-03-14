@@ -1,54 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import GoogleMap from 'google-map-react';
 import Marker from './Marker';
 import key from '../../../key';
+import useFetch from '../../hooks/useFetch';
 import './map.module.scss';
 
 const Map = () => {
-  const [sensors, setSensors] = useState([]);
-  const [measurements, setMeasurements] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(true);
-  const [isLoadedMeasurements, setIsLoadedMeasurements] = useState(true);
-  const [isError, setIsError] = useState(false);
-  useEffect(() => {
-    fetch('/api/markers')
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setSensors(result);
-          setIsLoaded(false);
-        },
-        () => {
-          setIsError(true);
-        },
-      )
-      .then(() =>
-        fetch('/api/measurements').then((res) =>
-          res.json().then(
-            (result) => {
-              setMeasurements(result);
-              setIsLoadedMeasurements(false);
-            },
-            () => {
-              setIsError(true);
-            },
-          ),
-        ),
-      );
-  }, []);
-  if (isLoaded) return <p>Ładowanie</p>;
-  if (isError) return <p>Błąd</p>;
+  const fetchedMarkers = useFetch('/api/markers');
+  const fetchedMeasurements = useFetch('/api/measurements');
+  if (fetchedMarkers.isLoaded) return <p>Ładowanie</p>;
+  if (fetchedMarkers.isError) return <p>Błąd</p>;
 
   return (
     <div className="map">
       <GoogleMap
-        defaultCenter={{ lat: sensors[0].lat, lng: sensors[0].lng }}
+        defaultCenter={{
+          lat: fetchedMarkers.data[0].lat,
+          lng: fetchedMarkers.data[0].lng,
+        }}
         defaultZoom={15}
         bootstrapURLKeys={{ key }}
       >
-        {!isLoadedMeasurements &&
-          sensors.map(({ id, lat, lng }) => {
-            const data = measurements.find(
+        {!fetchedMeasurements.isLoaded &&
+          fetchedMarkers.data.map(({ id, lat, lng }) => {
+            const data = fetchedMeasurements.data.find(
               (measurement) => measurement.id === id,
             );
             return <Marker value={{ data }} key={id} lat={lat} lng={lng} />;

@@ -1,9 +1,11 @@
 import React from 'react';
 import ArticleContent from '../../components/Article';
-import { article } from '../../../public/data/articles/Naturalne-wskazniki-zanieczyszczenia-powietrza.json';
+import useFetch from '../../hooks/useFetch';
 
 const Article = () => {
-  return article && <ArticleContent value={article} />;
+  const { data, isLoaded, error } = useFetch('/api/articles/bioindicators');
+  if (error) return <p>{error}</p>;
+  return isLoaded ? <p>Ładowanie</p> : <ArticleContent value={data} />;
 };
 
 export default Article;
