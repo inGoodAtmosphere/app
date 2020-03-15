@@ -17,7 +17,7 @@ Elements that our Backend consists of:
     - **[id]** (GET, POST)
       - (GET) dynamic endpoint returning measurments array of device of given(by endpoint) id
       - (POST) dynamic endpoint for adding new measurments for device of given(by endpoint) id
-  - **api/api** - testing enviroment, nevermind _cringe xD_
+  - **api/api** - testing enviroment, nevermind *cringe xD*
   - **api/devices** (GET, POST) TO DO: PUT
     - (GET) endpoint returning array of devices and informations about'em
     - (POST) endpoint adding new device to db and initializing communication between server and new device
