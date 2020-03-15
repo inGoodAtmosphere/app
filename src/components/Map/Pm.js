@@ -6,7 +6,6 @@ import './pm.module.scss';
 
 const Caqi = ({ purpose }) => {
   const { activeSensor } = useContext(mapContext);
-
   return (
     <a className="map__data__pm" href={`/encyklopedia#${purpose}`}>
       <h3 className="map__data__pm__title">{purpose.toUpperCase()}</h3>
