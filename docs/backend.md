@@ -13,7 +13,7 @@ Elements that our Backend consists of:
       - (POST) On this endpoint you are able to add new article content
     - **api/articles/thumbnails** (GET)
       - (GET) endpoint which returns shortened content of every article
-  - **api/measurments** - folder handling results of measurments from our every device, furthermore this endpoint **returns latest data from every device in db**
+  - **api/measurements** - folder handling results of measurments from our every device, furthermore this endpoint **returns latest data from every device in db**
     - **[id]** (GET, POST)
       - (GET) dynamic endpoint returning measurments array of device of given(by endpoint) id
       - (POST) dynamic endpoint for adding new measurments for device of given(by endpoint) id
