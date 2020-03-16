@@ -29,7 +29,4 @@ export default (req, res) => {
       res.send(result);
     }
   });
-  db.end((err) => {
-    if (err) console.log(err);
-  });
 };
