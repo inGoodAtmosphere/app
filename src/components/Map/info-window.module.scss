@@ -1,0 +1,8 @@
+@import '../../styles/base/settings';
+
+.marker__info-window {
+  background: $dark-bg;
+  position: absolute;
+  transform: translate(-50%, -120%);
+  z-index: 1;
+}

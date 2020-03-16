@@ -17,7 +17,7 @@ const MapPage = () => {
       try {
         const res = await Promise.all([
           fetch('/api/measurements'),
-          fetch('/api/markers'),
+          fetch('/api/locations'),
         ]);
         const measurementsJson = await res[0].json();
         const markersJson = await res[1].json();

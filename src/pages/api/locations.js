@@ -17,7 +17,7 @@ db.connect((err) => {
 
 export default (req, res) => {
   const queryContent =
-    'SELECT `ID`,`Location_Latitude`,`Location_Longitude` from devices';
+    'SELECT `id`,`Location_Latitude` as lat,`Location_Longitude` as lng from devices limit 50';
   db.query(queryContent, (err, result) => {
     if (err) {
       res.json({

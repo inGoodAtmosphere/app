@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import mapContext from '../../utils/map-context';
 import Context from '../../utils/Context';
 import useColor from '../../hooks/useColor';
+import './point.module.scss';
 
 const Point = ({ switchWindow }) => {
   const { dispatch } = useContext(mapContext);

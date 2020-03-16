@@ -22,11 +22,9 @@ const Map = () => {
           const data = measurements.find(
             (measurement) => measurement.device_id === id,
           );
-          if (data)
-            return <Marker value={{ data }} key={id} lat={lat} lng={lng} />;
           return (
             <Marker
-              value={{ error: 'Coś poszło nie tak' }}
+              value={data ? { data } : { error: 'Coś poszło nie tak' }}
               key={id}
               lat={lat}
               lng={lng}

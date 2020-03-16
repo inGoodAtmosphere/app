@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
 import CloseButton from './CloseButton';
 import Context from '../../utils/Context';
+import './info-window.module.scss';
 
-const InfoPopup = ({ switchWindow }) => {
+const InfoWindow = ({ switchWindow }) => {
   const { data, error } = useContext(Context);
   return (
     <OutsideClickHandler
@@ -28,8 +29,8 @@ const InfoPopup = ({ switchWindow }) => {
   );
 };
 
-InfoPopup.propTypes = {
+InfoWindow.propTypes = {
   switchWindow: PropTypes.func.isRequired,
 };
 
-export default InfoPopup;
+export default InfoWindow;
