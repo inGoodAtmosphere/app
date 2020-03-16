@@ -16,9 +16,10 @@ db.connect((err) => {
 });
 
 export default (req, res) => {
-    const {query: {id}} =req;
-  const queryContent =
-    `SELECT ID, measurement_datetime , humidity ,temperature ,pm1 , pm25 ,pm10  FROM measurements WHERE device_id=${id};`;
+  const {
+    query: { id },
+  } = req;
+  const queryContent = `SELECT ID, measurement_datetime , humidity ,temperature ,pm1 , pm25 ,pm10  FROM measurements WHERE device_id=${id};`;
   db.query(queryContent, (err, result) => {
     if (err) {
       res.json({
@@ -28,8 +29,5 @@ export default (req, res) => {
     } else {
       res.send(result);
     }
-  });
-  db.end((err) => {
-    if (err) console.log(err);
   });
 };
