@@ -4,11 +4,12 @@
   -webkit-box-pack: space-around;
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: $spacing;
 }
 
-.footer__headers {
+.footer__patron {
   display: -webkit-box;
   display: flex;
   justify-content: space-around;

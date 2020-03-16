@@ -1,19 +1,35 @@
 import React from 'react';
 import Patron from './Patron';
-import { patrons } from '../../../public/data/patrons.json';
 import './patrons.module.scss';
 
 const Patrons = () => {
   return (
     <>
-      <div className="footer__headers">
-        <h3>Nasi patroni: </h3>
-        <h3>Patronat honorowy: </h3>
-      </div>
       <div className="footer__patrons">
-        {patrons.map(({ name, link, img }) => (
-          <Patron key={name} name={name} link={link} img={img} />
-        ))}
+        <div className="footer__patron">
+          <h3>Patronat honorowy: </h3>
+          <Patron
+            name="Gliwice"
+            link="https://gliwice.eu/"
+            img="/img/Gliwice.png"
+          />
+        </div>
+        <div className="footer__patron">
+          <h3>Patron medialny: </h3>
+          <Patron
+            name="TVP"
+            link="https://katowice.tvp.pl/"
+            img="/img/TVP.png"
+          />
+        </div>
+        <div className="footer__patron">
+          <h3>Patroni: </h3>
+          <Patron
+            name="Młodzieżowy Strajk Klimatyczny"
+            link="https://www.msk.earth/"
+            img="/img/MSK.png"
+          />
+        </div>
       </div>
     </>
   );
