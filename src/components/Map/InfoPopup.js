@@ -5,9 +5,7 @@ import CloseButton from './CloseButton';
 import Context from '../../utils/Context';
 
 const InfoPopup = ({ switchWindow }) => {
-  const {
-    data: { pm25, pm10 },
-  } = useContext(Context);
+  const { data, error } = useContext(Context);
   return (
     <OutsideClickHandler
       onOutsideClick={() => {
@@ -17,8 +15,14 @@ const InfoPopup = ({ switchWindow }) => {
       <div className="marker__info-window">
         <CloseButton switchWindow={switchWindow} />
         {/* <h2>{data.title}</h2> */}
-        <p>{pm10}</p>
-        <p>{pm25}</p>
+        {error ? (
+          <p>{error}</p>
+        ) : (
+          <>
+            <p>{data.pm10}</p>
+            <p>{data.pm25}</p>
+          </>
+        )}
       </div>
     </OutsideClickHandler>
   );
