@@ -20,7 +20,7 @@ const Map = () => {
       >
         {markers.map(({ id, lat, lng }) => {
           const data = measurements.find(
-            (measurement) => measurement.id === id,
+            (measurement) => measurement.device_id === id,
           );
           return <Marker value={{ data }} key={id} lat={lat} lng={lng} />;
         })}

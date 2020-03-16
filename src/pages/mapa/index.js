@@ -22,6 +22,7 @@ const MapPage = () => {
         const measurementsJson = await res[0].json();
         const markersJson = await res[1].json();
         setMeasurements(measurementsJson);
+        console.log(measurementsJson);
         dispatch({ type: 'SET_ACTIVE_SENSOR', data: measurementsJson[0] });
         setMarkers(markersJson);
         setIsLoaded(false);
@@ -34,6 +35,7 @@ const MapPage = () => {
   }, []);
   if (isLoaded) return <p>Ładowanie</p>;
   if (error) return <p>{error}</p>;
+  if (measurements.message) return <p>Baza padła</p>;
   return (
     <MapContext.Provider
       value={{ activeSensor, dispatch, measurements, markers }}
