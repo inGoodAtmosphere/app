@@ -23,7 +23,8 @@ const Point = ({ switchWindow }) => {
         boxShadow: ` 0px 0px ${color !== '#999999' &&
           '1.5rem 1.5rem'} ${color}`,
       }}
-      title={data.title}
+      // title={data.title}
+      asd
     />
   );
 };
