@@ -13,6 +13,7 @@ const MapPage = () => {
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
   useEffect(() => {
+    const deviceId = parseInt(localStorage.getItem('activeSensor'), 10);
     const fetchData = async () => {
       try {
         const res = await Promise.all([
@@ -22,7 +23,14 @@ const MapPage = () => {
         const measurementsJson = await res[0].json();
         const markersJson = await res[1].json();
         setMeasurements(measurementsJson);
-        dispatch({ type: 'SET_ACTIVE_SENSOR', data: measurementsJson[0] });
+        dispatch({
+          type: 'SET_ACTIVE_SENSOR',
+          data: deviceId
+            ? measurementsJson.find(
+                (measurement) => measurement.device_id === deviceId,
+              )
+            : measurementsJson[0],
+        });
         setMarkers(markersJson);
         setIsLoaded(false);
       } catch (err) {

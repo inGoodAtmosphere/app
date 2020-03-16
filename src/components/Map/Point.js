@@ -13,6 +13,7 @@ const Point = ({ switchWindow }) => {
     switchWindow();
     if (!error) {
       dispatch({ type: 'SET_ACTIVE_SENSOR', data });
+      localStorage.setItem('activeSensor', JSON.stringify(data.device_id));
     }
   };
   return (

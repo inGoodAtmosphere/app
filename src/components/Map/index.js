@@ -6,14 +6,17 @@ import MapContext from '../../utils/map-context';
 import './map.module.scss';
 
 const Map = () => {
-  const { measurements, markers } = useContext(MapContext);
+  const { measurements, markers, activeSensor } = useContext(MapContext);
+  const activeMarker = markers.find(
+    (marker) => marker.id === activeSensor.device_id,
+  );
   return (
     <div className="map">
       <GoogleMap
         // TODO: Default center to active marker
         defaultCenter={{
-          lat: markers[0].lat,
-          lng: markers[0].lng,
+          lat: activeMarker.lat,
+          lng: activeMarker.lng,
         }}
         defaultZoom={15}
         bootstrapURLKeys={{ key }}
