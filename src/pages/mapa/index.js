@@ -41,8 +41,9 @@ const MapPage = () => {
     fetchData();
   }, []);
   if (isLoaded) return <p>Ładowanie</p>;
-  if (error) return <p>{error}</p>;
-  if (measurements.message) return <p>Baza padła</p>;
+  if (error) {
+    return <p>{error.message}</p>;
+  }
   return (
     <MapContext.Provider
       value={{ activeSensor, dispatch, measurements, markers }}
