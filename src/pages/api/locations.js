@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require('mysql');
 
 const db = mysql.createConnection({
   host: 'mysql39.mydevil.net',
@@ -7,28 +7,28 @@ const db = mysql.createConnection({
   database: 'm1307_test',
 });
 
-db.connect((err)=>{
-    if(err){
-        console.log(err)        
-    }
-    else {
-        console.log("connected");
-    }
-})
+db.connect((err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('connected');
+  }
+});
 
 export default (req, res) => {
-    const queryContent = "SELECT `ID`,`Location_Latitude`,`Location_Longitude` from devices";
-    db.query(queryContent, (err,result)=>{
-        if(err){
-            res.json({
-                message: "error while making a query"
-            });
-            console.log(err);
-        } else {
-            res.send(result);
-        }
-    })
-    db.end((err)=>{
-        if(err) console.log(err);
-    });
+  const queryContent =
+    'SELECT `ID`,`Location_Latitude`,`Location_Longitude` from devices';
+  db.query(queryContent, (err, result) => {
+    if (err) {
+      res.json({
+        message: 'error while making a query',
+      });
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+  db.end((err) => {
+    if (err) console.log(err);
+  });
 };
