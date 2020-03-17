@@ -13,17 +13,24 @@ const MapPage = () => {
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
   useEffect(() => {
+    const deviceId = parseInt(localStorage.getItem('activeSensor'), 10);
     const fetchData = async () => {
       try {
         const res = await Promise.all([
           fetch('/api/measurements'),
-          fetch('/api/markers'),
+          fetch('/api/locations'),
         ]);
         const measurementsJson = await res[0].json();
         const markersJson = await res[1].json();
         setMeasurements(measurementsJson);
-        console.log(measurementsJson);
-        dispatch({ type: 'SET_ACTIVE_SENSOR', data: measurementsJson[0] });
+        dispatch({
+          type: 'SET_ACTIVE_SENSOR',
+          data: deviceId
+            ? measurementsJson.find(
+                (measurement) => measurement.device_id === deviceId,
+              )
+            : measurementsJson[0],
+        });
         setMarkers(markersJson);
         setIsLoaded(false);
       } catch (err) {
@@ -34,8 +41,9 @@ const MapPage = () => {
     fetchData();
   }, []);
   if (isLoaded) return <p>Ładowanie</p>;
-  if (error) return <p>{error}</p>;
-  if (measurements.message) return <p>Baza padła</p>;
+  if (error) {
+    return <p>{error.message}</p>;
+  }
   return (
     <MapContext.Provider
       value={{ activeSensor, dispatch, measurements, markers }}

@@ -11,7 +11,7 @@ const Campaign = () => {
         Tutaj przeczytasz wszystkie nasze artykuły
       </h2>
 
-      {error && <p>{error}</p>}
+      {error && <p>{error.message}</p>}
       {isLoaded ? (
         <p>Ładowanie</p>
       ) : (

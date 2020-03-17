@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import OutsideClickHandler from 'react-outside-click-handler';
 import CloseButton from './CloseButton';
 import Context from '../../utils/Context';
+import './info-window.module.scss';
 
-const InfoPopup = ({ switchWindow }) => {
-  const {
-    data: { pm25, pm10 },
-  } = useContext(Context);
+const InfoWindow = ({ switchWindow }) => {
+  const { data, error } = useContext(Context);
   return (
     <OutsideClickHandler
       onOutsideClick={() => {
@@ -17,15 +16,21 @@ const InfoPopup = ({ switchWindow }) => {
       <div className="marker__info-window">
         <CloseButton switchWindow={switchWindow} />
         {/* <h2>{data.title}</h2> */}
-        <p>{pm10}</p>
-        <p>{pm25}</p>
+        {error ? (
+          <p>{error}</p>
+        ) : (
+          <>
+            <p>{data.pm10}</p>
+            <p>{data.pm25}</p>
+          </>
+        )}
       </div>
     </OutsideClickHandler>
   );
 };
 
-InfoPopup.propTypes = {
+InfoWindow.propTypes = {
   switchWindow: PropTypes.func.isRequired,
 };
 
-export default InfoPopup;
+export default InfoWindow;

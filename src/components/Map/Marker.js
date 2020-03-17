@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import InfoPopup from './InfoPopup';
+import InfoWindow from './InfoWindow';
 import Point from './Point';
 import withContext from '../../utils/withContext';
-import './marker.module.scss';
 
 const Marker = () => {
   const [show, setShow] = useState(false);
@@ -12,7 +11,7 @@ const Marker = () => {
   return (
     <>
       <Point switchWindow={switchWindow} />
-      {show && <InfoPopup switchWindow={switchWindow} />}
+      {show && <InfoWindow switchWindow={switchWindow} />}
     </>
   );
 };
