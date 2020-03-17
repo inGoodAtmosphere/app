@@ -1,0 +1,9 @@
+@import '../../styles/base/settings';
+
+.loading__cloud {
+  height: $header-height / 2;
+  margin-right: $spacing;
+  &:last-child {
+    margin-right: 0;
+  }
+}

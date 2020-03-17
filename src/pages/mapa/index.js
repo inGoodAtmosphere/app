@@ -3,6 +3,7 @@ import Map from '../../components/Map';
 import Data from '../../components/Map/Data';
 import MapContext from '../../utils/map-context';
 import mapReducer from '../../reducers/map-reducer';
+import Loading from '../../components/Loading';
 
 // TODO: defaultState from gps/cookies
 
@@ -40,7 +41,7 @@ const MapPage = () => {
     };
     fetchData();
   }, []);
-  if (isLoaded) return <p>Ładowanie</p>;
+  if (isLoaded) return <Loading />;
   if (error) {
     return <p>{error.message}</p>;
   }
