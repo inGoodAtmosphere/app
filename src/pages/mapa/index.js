@@ -4,6 +4,7 @@ import Data from '../../components/Map/Data';
 import MapContext from '../../utils/map-context';
 import mapReducer from '../../reducers/map-reducer';
 import Loading from '../../components/Loading';
+import Error from '../../components/Error';
 
 // TODO: defaultState from gps/cookies
 
@@ -43,7 +44,7 @@ const MapPage = () => {
   }, []);
   if (isLoaded) return <Loading />;
   if (error) {
-    return <p>{error.message}</p>;
+    return <Error />;
   }
   return (
     <MapContext.Provider

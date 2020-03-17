@@ -2,6 +2,7 @@ import React from 'react';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
 import useFetch from '../../hooks/useFetch';
 import Loading from '../../components/Loading';
+import Error from '../../components/Error';
 
 const Campaign = () => {
   const { data, isLoaded, error } = useFetch('/api/article-thumbnails');
@@ -12,7 +13,7 @@ const Campaign = () => {
         Tutaj przeczytasz wszystkie nasze artykuły
       </h2>
 
-      {error && <p>{error.message}</p>}
+      {error && <Error />}
       {isLoaded ? (
         <Loading />
       ) : (
