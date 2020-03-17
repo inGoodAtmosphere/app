@@ -10,6 +10,11 @@
 .footer__patrons__item__image {
   height: $header-height;
   width: $header-height;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
 }
 .footer__patrons__item__image__TVP {
   width: auto;

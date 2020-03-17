@@ -11,7 +11,7 @@ const Patrons = () => {
           <Patron
             name="Gliwice"
             link="https://gliwice.eu/"
-            img="/img/Gliwice.png"
+            img="/img/gliwice.png"
           />
         </div>
         <div className="footer__patron">
@@ -19,7 +19,7 @@ const Patrons = () => {
           <Patron
             name="TVP"
             link="https://katowice.tvp.pl/"
-            img="/img/TVP.png"
+            img="/img/tvp.png"
           />
         </div>
         <div className="footer__patron">
@@ -27,7 +27,7 @@ const Patrons = () => {
           <Patron
             name="Młodzieżowy Strajk Klimatyczny"
             link="https://www.msk.earth/"
-            img="/img/MSK.png"
+            img="/img/msk.png"
           />
         </div>
       </div>
