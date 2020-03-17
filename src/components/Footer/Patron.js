@@ -8,9 +8,13 @@ const Patron = ({ name, link, img }) => {
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className="footer__patrons__item"
+      className={`footer__patrons__item footer__patrons__item__${name}`}
     >
-      <img src={img} alt={name} className="footer__patrons__item__image" />
+      <img
+        src={img}
+        alt={name}
+        className={`footer__patrons__item__image footer__patrons__item__image__${name}`}
+      />
     </a>
   );
 };
