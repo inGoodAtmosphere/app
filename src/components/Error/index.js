@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Illustration from './Illustration';
+import { logEvent } from '../../utils/analytics';
 import './index.module.scss';
 
-const Error = () => {
+const Error = ({ message }) => {
+  useEffect(() => {
+    logEvent('Error', message);
+  }, []);
   const refreshPage = () => {
     window.location.reload(false);
   };
@@ -20,5 +25,7 @@ const Error = () => {
     </div>
   );
 };
-
+Error.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 export default Error;

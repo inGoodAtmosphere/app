@@ -44,7 +44,7 @@ const MapPage = () => {
   }, []);
   if (isLoaded) return <Loading />;
   if (error) {
-    return <Error />;
+    return <Error message={error.message} />;
   }
   return (
     <MapContext.Provider

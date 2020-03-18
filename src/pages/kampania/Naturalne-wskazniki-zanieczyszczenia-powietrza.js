@@ -6,7 +6,7 @@ import Error from '../../components/Error';
 
 const Article = () => {
   const { data, isLoaded, error } = useFetch('/api/articles/bioindicators');
-  if (error) return <Error />;
+  if (error) return <Error message={error.message} />;
   return isLoaded ? <Loading /> : <ArticleContent value={data} />;
 };
 

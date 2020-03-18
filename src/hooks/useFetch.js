@@ -13,6 +13,7 @@ export default (api) => {
         setIsLoaded(false);
       } catch (err) {
         setError(err);
+        setIsLoaded(false);
       }
     };
     fetchData();

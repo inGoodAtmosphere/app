@@ -6,18 +6,15 @@ import Error from '../../components/Error';
 
 const Campaign = () => {
   const { data, isLoaded, error } = useFetch('/api/article-thumbnails');
+  if (isLoaded) return <Loading />;
+  if (error) return <Error message={error.message} />;
   return (
     <main className="content campaign__content">
       <h1>Nasze artykuły</h1>
       <h2 className="campaign__h2">
         Tutaj przeczytasz wszystkie nasze artykuły
       </h2>
-
-      {error && <Error />}
-      {isLoaded ? (
-        <Loading />
-      ) : (
-        data.length &&
+      {data.length &&
         data.map((article) => {
           return (
             <ArticleThumbnail
@@ -28,8 +25,7 @@ const Campaign = () => {
               tags={article.tags}
             />
           );
-        })
-      )}
+        })}
     </main>
   );
 };
