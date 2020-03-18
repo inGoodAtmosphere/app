@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .landing-page__btn {
   align-self: flex-end;
@@ -20,38 +21,27 @@
     transform: none;
   }
 }
+
 .landing-page__sensors {
   .landing-page__btn {
-    box-shadow: 0 1rem 1.5rem -0.33rem darken($dark-accent, 30%);
-    &:active {
-      box-shadow: 0px 0.25rem 0.5rem darken($dark-accent, 10%);
-    }
+    @include button($dark-accent);
   }
 }
 
 .landing-page__encyclopedia {
   .landing-page__btn {
-    box-shadow: 0 1rem 1.5rem -0.33rem darken($light-accent, 30%);
-    &:active {
-      box-shadow: 0px 0.25rem 0.5rem darken($light-accent, 10%);
-    }
+    @include button($light-accent);
   }
 }
 
 .landing-page__contact {
   .landing-page__btn {
-    box-shadow: 0 1rem 1.5rem -0.33rem darken($text, 30%);
-    &:active {
-      box-shadow: 0px 0.25rem 0.5rem darken($text, 10%);
-    }
+    @include button($text);
   }
 }
 
 .landing-page__project {
   .landing-page__btn {
-    box-shadow: 0 1rem 1.5rem -0.33rem darken($light-bg, 30%);
-    &:active {
-      box-shadow: 0px 0.25rem 0.5rem darken($light-bg, 10%);
-    }
+    @include button($light-bg);
   }
 }
