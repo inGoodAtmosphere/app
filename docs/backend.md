@@ -47,4 +47,3 @@ Elements that our Backend consists of:
     - (PUT) - Endpoint for updating data about current user
   - **/api/time** - (GET)
     - (GET) - Endpoint returning server time in json for dummies (Sorry Rafał)
-
