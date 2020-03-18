@@ -1,7 +1,7 @@
 export default (state, action) => {
   switch (action.type) {
     case 'SET_ACTIVE_SENSOR':
-      return { ...action.data };
+      return action.id;
     default:
       return state;
   }

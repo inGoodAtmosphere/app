@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   LineChart,
   XAxis,
@@ -10,13 +10,27 @@ import {
   ReferenceLine,
   Legend,
 } from 'recharts';
+import moment from 'moment';
+import 'moment/locale/pl';
+import MapContext from '../../../utils/map-context';
 import './index.module.scss';
 import Button from './Button';
 import useWindowSize from '../../../hooks/useWindowSize';
 
 const Chart = () => {
+  const { sensorMeasurement } = useContext(MapContext);
   const { width, height } = useWindowSize();
   const [activeChart, setActiveChart] = useState('pm');
+  const formatDate = (day) => moment(day).format('dddd');
+  const formattedData = sensorMeasurement.map((day) => ({
+    name: formatDate(day.measurementDate),
+    'PM2.5': day['pm2.5'],
+    PM10: day.pm10,
+    PM1: day.pm1,
+    CAQI: day.caqi,
+    Temperatura: day.temperature,
+    Wilgotność: day.humidity,
+  }));
   const setMargin = () => {
     if (width < 1024) return { top: 5, right: 0, bottom: 0, left: -5 };
     if (width < 2560) return { top: 5, right: 15, bottom: 0, left: 15 };
@@ -24,71 +38,6 @@ const Chart = () => {
     return { top: 5, right: 80, bottom: 0, left: 80 };
   };
   const margin = setMargin();
-  const data = [
-    {
-      name: 'Poniedziałek',
-      'PM2.5': 4000,
-      PM10: 2400,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Wtorek',
-      'PM2.5': 3000,
-      PM10: 1398,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Środa',
-      'PM2.5': 2000,
-      PM10: 9800,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Czwartek',
-      'PM2.5': 2780,
-      PM10: 3908,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Piątek',
-      'PM2.5': 1890,
-      PM10: 4800,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Sobota',
-      'PM2.5': 2390,
-      PM10: 3800,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-    {
-      name: 'Niedziela',
-      'PM2.5': 3490,
-      PM10: 4300,
-      PM1: 3000,
-      CAQI: 21,
-      Temperatura: 12,
-      Wilgotność: 65,
-    },
-  ];
 
   return (
     <div className="card chart__card">
@@ -110,7 +59,7 @@ const Chart = () => {
         />
       </div>
       <ResponsiveContainer>
-        <LineChart data={data} margin={margin}>
+        <LineChart data={formattedData} margin={margin}>
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />

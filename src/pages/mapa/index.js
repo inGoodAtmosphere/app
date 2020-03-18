@@ -9,6 +9,7 @@ import Error from '../../components/Error';
 const MapPage = () => {
   const [measurements, setMeasurements] = useState([]);
   const [markers, setMarkers] = useState([]);
+  const [sensorMeasurement, setSensorMeasurement] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
@@ -24,16 +25,17 @@ const MapPage = () => {
         const deviceId =
           parseInt(localStorage.getItem('activeSensor'), 10) ||
           measurementsJson[0].device_id;
-        const deviceMeasurementRes = await fetch(
-          `/api/measurements/${deviceId}`,
-        );
-        const deviceMeasurementJson = await deviceMeasurementRes.json();
-        setMeasurements(measurementsJson);
+        setMarkers(markersJson);
         dispatch({
           type: 'SET_ACTIVE_SENSOR',
-          data: { ...deviceMeasurementJson, id: deviceId },
+          id: deviceId,
         });
-        setMarkers(markersJson);
+        const sensorMeasurementRes = await fetch(
+          `/api/measurements/${deviceId}`,
+        );
+        const sensorMeasurementJson = await sensorMeasurementRes.json();
+        setMeasurements(measurementsJson);
+        setSensorMeasurement(sensorMeasurementJson);
         setIsLoaded(false);
       } catch (err) {
         setError(err);
@@ -48,7 +50,13 @@ const MapPage = () => {
   }
   return (
     <MapContext.Provider
-      value={{ activeSensor, dispatch, measurements, markers }}
+      value={{
+        activeSensor,
+        dispatch,
+        measurements,
+        markers,
+        sensorMeasurement,
+      }}
     >
       <main className="content">
         <Map />

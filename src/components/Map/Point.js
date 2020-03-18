@@ -6,7 +6,7 @@ import useColor from '../../hooks/useColor';
 import './point.module.scss';
 
 const Point = ({ switchWindow }) => {
-  const { dispatch } = useContext(mapContext);
+  const { dispatch, activeSensor } = useContext(mapContext);
   const { data, error } = useContext(Context);
   const color = error ? '#999999' : useColor(data);
   const handleClick = () => {
@@ -14,9 +14,9 @@ const Point = ({ switchWindow }) => {
     if (!error) {
       dispatch({
         type: 'SET_ACTIVE_SENSOR',
-        data: { ...data, id: data.device_id },
+        id: activeSensor,
       });
-      localStorage.setItem('activeSensor', JSON.stringify(data.device_id));
+      localStorage.setItem('activeSensor', JSON.stringify(activeSensor));
     }
   };
   return (

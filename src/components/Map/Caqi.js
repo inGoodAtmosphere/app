@@ -4,9 +4,13 @@ import { descriptions } from '../../../public/data/caqi-descriptions.json';
 import './caqi.module.scss';
 
 const Caqi = () => {
-  const {
-    activeSensor: { caqi },
-  } = useContext(mapContext);
+  const { sensorMeasurement } = useContext(mapContext);
+  const [currentMeasurement] = sensorMeasurement;
+  const countCaqi = (measurement) => {
+    console.log(measurement);
+    return 21;
+  };
+  const caqi = countCaqi(currentMeasurement);
   const [bad, medium, good, veryGood] = descriptions;
   const setStatus = (caqiValue) => {
     if (caqiValue < 20) return { backgroundColor: '#44a368', status: veryGood };

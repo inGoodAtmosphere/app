@@ -6,16 +6,17 @@ import './pm.module.scss';
 
 const Caqi = ({ purpose }) => {
   // TODO: activeSensor is an array so data doesn't display properly (add to endpoint current measurement)
-  const { activeSensor } = useContext(mapContext);
+  const { sensorMeasurement } = useContext(mapContext);
+  const [currentMeasurement] = sensorMeasurement;
   return (
     <a className="map__data__pm" href={`/encyklopedia#${purpose}`}>
       <h3 className="map__data__pm__title">{purpose.toUpperCase()}</h3>
       <h2 className="map__data__pm__measurement">
-        {activeSensor[purpose]} µg/m³
+        {currentMeasurement[purpose]} µg/m³
       </h2>
       <h2 className="map__data__percent map__data__pm__measurement">
         {Math.round(
-          (activeSensor[purpose] / (purpose === 'pm2.5' ? 25 : 50)) * 100,
+          (currentMeasurement[purpose] / (purpose === 'pm2.5' ? 25 : 50)) * 100,
         )}
         %
       </h2>
