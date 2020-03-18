@@ -48,7 +48,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
-    "install": "npm i & npm audit fix"
+    "fckin_install": "npm i & npm audit fix"
   },
   "eslintConfig": {
     "extends": "react-app"
