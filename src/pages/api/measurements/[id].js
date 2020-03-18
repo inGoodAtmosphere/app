@@ -4,8 +4,7 @@ export default async (req, res) => {
   const {
     query: { id },
   } = req;
-  const query =
-  `SELECT ID, measurement_datetime , humidity ,temperature ,pm1 , pm25 ,pm10  FROM measurements WHERE device_id=${id};`;
+  const query = `SELECT ID, measurement_date, measurement_time , humidity ,temperature ,pm1 , pm25 ,pm10  FROM measurements WHERE device_id=${id};`;
   const result = await dbQuery(query);
-  res.send(result);  
+  res.send(result);
 };

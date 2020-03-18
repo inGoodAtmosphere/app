@@ -6,4 +6,3 @@ export default async (req, res) => {
   const result = await dbQuery(query);
   res.send(result);
 };
-
