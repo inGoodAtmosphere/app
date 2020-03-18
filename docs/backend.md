@@ -4,6 +4,20 @@ Our backend is rather tiny, it coworks with next.js which connects our rendering
 
 Elements that our Backend consists of:
 
+## Modules
+
+### **api_modules** 
+- folder containing file selectQuery.js which is used for establishing connection between server and database by making poolConnection.
+
+#### requires/exports
+
+- **requires:**
+    - mysql
+- **exports**
+    - query function - async function returning Promise which returns result of given query on resolve or query error on reject
+
+## Files
+
 **app.js** - our main server file, contains routing to every website on our domain(react things)
 
 - **api** - our whole api is in the path /src/pages/api - here we can find all of our api endpoints. Description of every api endpoint:
