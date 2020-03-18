@@ -21,7 +21,7 @@ const InfoWindow = ({ switchWindow }) => {
         ) : (
           <>
             <p>{data.pm10}</p>
-            <p>{data.pm25}</p>
+            <p>{data['pm2.5']}</p>
           </>
         )}
       </div>

@@ -14,7 +14,7 @@ const Caqi = ({ purpose }) => {
       </h2>
       <h2 className="map__data__percent map__data__pm__measurement">
         {Math.round(
-          (activeSensor[purpose] / (purpose === 'pm25' ? 25 : 50)) * 100,
+          (activeSensor[purpose] / (purpose === 'pm2.5' ? 25 : 50)) * 100,
         )}
         %
       </h2>
