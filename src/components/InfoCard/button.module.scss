@@ -4,9 +4,54 @@
   align-self: flex-end;
   border: $border solid $light-bg;
   padding: $spacing;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .landing-page__btn__map {
   border-radius: 0.625rem;
   opacity: 0.8;
+  &:hover {
+    transform: none;
+  }
+}
+.landing-page__sensors {
+  .landing-page__btn {
+    box-shadow: 0 1rem 1.5rem -0.33rem darken($dark-accent, 30%);
+    &:active {
+      box-shadow: 0px 0.25rem 0.5rem darken($dark-accent, 10%);
+    }
+  }
+}
+
+.landing-page__encyclopedia {
+  .landing-page__btn {
+    box-shadow: 0 1rem 1.5rem -0.33rem darken($light-accent, 30%);
+    &:active {
+      box-shadow: 0px 0.25rem 0.5rem darken($light-accent, 10%);
+    }
+  }
+}
+
+.landing-page__contact {
+  .landing-page__btn {
+    box-shadow: 0 1rem 1.5rem -0.33rem darken($text, 30%);
+    &:active {
+      box-shadow: 0px 0.25rem 0.5rem darken($text, 10%);
+    }
+  }
+}
+
+.landing-page__project {
+  .landing-page__btn {
+    box-shadow: 0 1rem 1.5rem -0.33rem darken($light-bg, 30%);
+    &:active {
+      box-shadow: 0px 0.25rem 0.5rem darken($light-bg, 10%);
+    }
+  }
 }

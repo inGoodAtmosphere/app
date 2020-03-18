@@ -2,10 +2,29 @@
 
 .menu__item {
   color: $dark-bg;
+  position: relative;
   font-size: $m-size;
   font-weight: bold;
   padding: $spacing;
   text-transform: uppercase;
+  &::before {
+    transform: translateX(-50%);
+    content: '';
+    width: 10%;
+    height: $spacing / 4;
+    position: absolute;
+    left: 50%;
+    bottom: $spacing / 2;
+    opacity: 0;
+    background: $light-bg;
+    transition: transform 0.2s ease-out;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transform: scaleX(6) translateX(-5%);
+    }
+  }
 }
 
 @media #{$media-query-m} {

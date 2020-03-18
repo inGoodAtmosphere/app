@@ -33,5 +33,12 @@
   border-radius: $spacing * 3;
   border: $border solid $dark-accent;
   justify-self: center;
+  transition: transform 0.3s;
   padding: $spacing / 3 $spacing;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 }

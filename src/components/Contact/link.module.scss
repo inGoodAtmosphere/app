@@ -12,6 +12,16 @@
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
+  box-shadow: 0 1rem 1.5rem -0.33rem darken($dark-bg, 30%);
+  transition: transform 0.2s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+  &:active {
+    box-shadow: 0px 0.25rem 0.5rem darken($dark-bg, 10%);
+    transform: scale(0.98);
+  }
 }
 
 .contact__list__item__link__facebook {
