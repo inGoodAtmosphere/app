@@ -6,8 +6,6 @@ import mapReducer from '../../reducers/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
-// TODO: defaultState from gps/cookies
-
 const MapPage = () => {
   const [measurements, setMeasurements] = useState([]);
   const [markers, setMarkers] = useState([]);
@@ -15,7 +13,6 @@ const MapPage = () => {
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
   useEffect(() => {
-    const deviceId = parseInt(localStorage.getItem('activeSensor'), 10);
     const fetchData = async () => {
       try {
         const res = await Promise.all([
@@ -24,14 +21,17 @@ const MapPage = () => {
         ]);
         const measurementsJson = await res[0].json();
         const markersJson = await res[1].json();
+        const deviceId =
+          parseInt(localStorage.getItem('activeSensor'), 10) ||
+          measurementsJson[0].device_id;
+        const deviceMeasurementRes = await fetch(
+          `/api/measurements/${deviceId}`,
+        );
+        const deviceMeasurementJson = await deviceMeasurementRes.json();
         setMeasurements(measurementsJson);
         dispatch({
           type: 'SET_ACTIVE_SENSOR',
-          data: deviceId
-            ? measurementsJson.find(
-                (measurement) => measurement.device_id === deviceId,
-              )
-            : measurementsJson[0],
+          data: { ...deviceMeasurementJson, id: deviceId },
         });
         setMarkers(markersJson);
         setIsLoaded(false);

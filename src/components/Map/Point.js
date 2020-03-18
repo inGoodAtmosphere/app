@@ -12,7 +12,10 @@ const Point = ({ switchWindow }) => {
   const handleClick = () => {
     switchWindow();
     if (!error) {
-      dispatch({ type: 'SET_ACTIVE_SENSOR', data });
+      dispatch({
+        type: 'SET_ACTIVE_SENSOR',
+        data: { ...data, id: data.device_id },
+      });
       localStorage.setItem('activeSensor', JSON.stringify(data.device_id));
     }
   };

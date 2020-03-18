@@ -7,13 +7,10 @@ import './map.module.scss';
 
 const Map = () => {
   const { measurements, markers, activeSensor } = useContext(MapContext);
-  const activeMarker = markers.find(
-    (marker) => marker.id === activeSensor.device_id,
-  );
+  const activeMarker = markers.find((marker) => marker.id === activeSensor.id);
   return (
     <div className="map">
       <GoogleMap
-        // TODO: Default center to active marker
         defaultCenter={{
           lat: activeMarker.lat,
           lng: activeMarker.lng,

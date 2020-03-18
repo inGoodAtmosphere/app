@@ -5,6 +5,7 @@ import mapContext from '../../utils/map-context';
 import './pm.module.scss';
 
 const Caqi = ({ purpose }) => {
+  // TODO: activeSensor is an array so data doesn't display properly (add to endpoint current measurement)
   const { activeSensor } = useContext(mapContext);
   return (
     <a className="map__data__pm" href={`/encyklopedia#${purpose}`}>
