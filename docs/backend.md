@@ -6,15 +6,16 @@ Elements that our Backend consists of:
 
 ## Modules
 
-### **api_modules** 
+### **api_modules**
+
 - folder containing file selectQuery.js which is used for establishing connection between server and database by making poolConnection.
 
 #### requires/exports
 
 - **requires:**
-    - mysql
+  - mysql
 - **exports**
-    - query function - async function returning Promise which returns result of given query on resolve or query error on reject
+  - query function - async function returning Promise which returns result of given query on resolve or query error on reject
 
 ## Files
 

@@ -1,10 +1,12 @@
 const mysql = require('mysql');
+require('dotenv').config();
 
 const pool = mysql.createPool({
-  host: 'mysql39.mydevil.net',
-  user: 'm1307_test',
-  password: 'G00Dgood2137',
-  database: 'm1307_test',
+  connectionLimit: 20,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 const query = (queryContent) =>
