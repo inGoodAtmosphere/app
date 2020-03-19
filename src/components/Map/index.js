@@ -7,8 +7,9 @@ import './map.module.scss';
 
 const Map = () => {
   const { measurements, markers, activeSensor } = useContext(MapContext);
-  console.log(activeSensor);
-  const activeMarker = markers.find((marker) => marker.id === activeSensor);
+  const activeMarker = markers.find(
+    (marker) => marker.id === activeSensor.current.device_id,
+  );
   return (
     <div className="map">
       <GoogleMap

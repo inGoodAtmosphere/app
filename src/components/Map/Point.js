@@ -6,17 +6,23 @@ import useColor from '../../hooks/useColor';
 import './point.module.scss';
 
 const Point = ({ switchWindow }) => {
-  const { dispatch, activeSensor } = useContext(mapContext);
+  const { dispatch } = useContext(mapContext);
   const { data, error } = useContext(Context);
   const color = error ? '#999999' : useColor(data);
-  const handleClick = () => {
+  const handleClick = async () => {
     switchWindow();
     if (!error) {
+      const sensorMeasurementRes = await fetch(
+        `/api/measurements/${data.device_id}`,
+      );
+      const sensorMeasurementJson = await sensorMeasurementRes.json();
+
       dispatch({
         type: 'SET_ACTIVE_SENSOR',
-        id: activeSensor,
+        current: data,
+        avg: sensorMeasurementJson,
       });
-      localStorage.setItem('activeSensor', JSON.stringify(activeSensor));
+      localStorage.setItem('activeSensor', JSON.stringify(data.device_id));
     }
   };
   return (
