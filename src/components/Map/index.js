@@ -8,7 +8,7 @@ import './map.module.scss';
 const Map = () => {
   const { measurements, markers, activeSensor } = useContext(MapContext);
   const activeMarker = markers.find(
-    (marker) => marker.id === activeSensor.current.device_id,
+    (marker) => marker.id === activeSensor.current.deviceId,
   );
   return (
     <div className="map">
@@ -22,7 +22,7 @@ const Map = () => {
       >
         {markers.map(({ id, lat, lng }) => {
           const data = measurements.find(
-            (measurement) => measurement.device_id === id,
+            (measurement) => measurement.deviceId === id,
           );
           return (
             <Marker

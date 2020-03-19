@@ -10,7 +10,7 @@ const Marker = ({ data: { data, error } }) => {
   const handleClick = async () => {
     if (!error) {
       const sensorMeasurementRes = await fetch(
-        `/api/measurements/${data.device_id}`,
+        `/api/measurements/${data.deviceId}`,
       );
       const sensorMeasurementJson = await sensorMeasurementRes.json();
 
@@ -19,7 +19,7 @@ const Marker = ({ data: { data, error } }) => {
         current: data,
         avg: sensorMeasurementJson,
       });
-      localStorage.setItem('activeSensor', JSON.stringify(data.device_id));
+      localStorage.setItem('activeSensor', JSON.stringify(data.deviceId));
     }
   };
   return (
@@ -40,7 +40,7 @@ Marker.propTypes = {
   data: PropTypes.shape({
     data: PropTypes.shape({
       id: PropTypes.number,
-      device_id: PropTypes.number,
+      deviceId: PropTypes.number,
       humidity: PropTypes.number,
       temperature: PropTypes.number,
       pm1: PropTypes.number,
