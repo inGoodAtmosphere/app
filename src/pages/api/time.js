@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 export default async (req, res) => {
-  if(req.method==="GET"){
+  if (req.method === 'GET') {
     res.json({
       seconds: parseInt(moment().format('s'), 10),
       minutes: parseInt(moment().format('m'), 10),
@@ -10,8 +10,7 @@ export default async (req, res) => {
       month: parseInt(moment().format('M'), 10),
       year: parseInt(moment().format('YYYY'), 10),
     });
-
-  } else{
+  } else {
     res.status(403);
     res.end();
   }
