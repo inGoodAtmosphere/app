@@ -26,7 +26,7 @@ const Map = () => {
           );
           return (
             <Marker
-              value={data ? { data } : { error: 'Coś poszło nie tak' }}
+              data={data ? { data } : { error: 'Coś poszło nie tak' }}
               key={id}
               lat={lat}
               lng={lng}
