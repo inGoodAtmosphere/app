@@ -61,7 +61,7 @@ const MapPage = () => {
         sensorMeasurement,
       }}
     >
-      <main className="content">
+      <main className="content map__content">
         <Map />
         <Data />
       </main>

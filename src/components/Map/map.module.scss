@@ -4,3 +4,19 @@
   height: calc(50vh - #{$header-height});
   width: 100%;
 }
+
+@media #{$media-query-m} {
+  .map__content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: calc(40% - #{$spacing}) 60%;
+    max-width: none;
+    padding-bottom: $spacing;
+    padding-right: 0;
+  }
+  .map {
+    width: 100%;
+    height: calc(100vh - #{$header-height});
+    grid-column: 1;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/base/settings';
+
+@media #{$media-query-m} {
+  .data {
+    width: 100%;
+    grid-column: 2;
+    height: calc(100vh - #{$header-height});
+    overflow-y: scroll;
+    padding: 0 $spacing;
+  }
+}

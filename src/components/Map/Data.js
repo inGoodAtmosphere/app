@@ -4,6 +4,7 @@ import Chart from './Chart';
 import Weather from './Weather';
 import AboutDevice from './AboutDevice';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import './data.module.scss';
 
 const Data = () => {
   const width = useWindowWidth();

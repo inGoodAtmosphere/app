@@ -13,3 +13,8 @@
   justify-content: space-between;
   margin-top: $spacing;
 }
+@media #{$media-query-m} {
+  .map__city {
+    border-radius: $spacing;
+  }
+}
