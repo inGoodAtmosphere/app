@@ -24,16 +24,19 @@ const MapPage = () => {
         const markersJson = await res[1].json();
         const deviceId =
           parseInt(localStorage.getItem('activeSensor'), 10) ||
-          measurementsJson[0].device_id;
+          measurementsJson[0].deviceId;
         setMarkers(markersJson);
-        dispatch({
-          type: 'SET_ACTIVE_SENSOR',
-          id: deviceId,
-        });
         const sensorMeasurementRes = await fetch(
           `/api/measurements/${deviceId}`,
         );
         const sensorMeasurementJson = await sensorMeasurementRes.json();
+        dispatch({
+          type: 'SET_ACTIVE_SENSOR',
+          current: measurementsJson.find(
+            (measurement) => measurement.deviceId === deviceId,
+          ),
+          avg: sensorMeasurementJson,
+        });
         setMeasurements(measurementsJson);
         setSensorMeasurement(sensorMeasurementJson);
         setIsLoaded(false);

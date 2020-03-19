@@ -4,11 +4,11 @@ import mapContext from '../../utils/map-context';
 import './weather.module.scss';
 
 const Weather = () => {
-  const { sensorMeasurement } = useContext(mapContext);
-  const [currentMeasurement] = sensorMeasurement;
+  const {
+    activeSensor: { avg },
+  } = useContext(mapContext);
+  const [currentMeasurement] = avg;
   const { temperature, humidity } = currentMeasurement;
-  console.log(currentMeasurement);
-  // const { temperature, humidity } = currentMeasurement;
   return (
     <div className="card map__weather">
       <div className="map__weather__temperature map__weather__data">

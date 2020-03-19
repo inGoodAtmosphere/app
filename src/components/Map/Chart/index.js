@@ -16,21 +16,26 @@ import MapContext from '../../../utils/map-context';
 import './index.module.scss';
 import Button from './Button';
 import useWindowSize from '../../../hooks/useWindowSize';
+import countCaqi from '../countCaqi';
 
 const Chart = () => {
-  const { sensorMeasurement } = useContext(MapContext);
+  const {
+    activeSensor: { avg },
+  } = useContext(MapContext);
   const { width, height } = useWindowSize();
   const [activeChart, setActiveChart] = useState('pm');
   const formatDate = (day) => moment(day).format('dddd');
-  const formattedData = sensorMeasurement.map((day) => ({
-    name: formatDate(day.measurementDate),
-    'PM2.5': day['pm2.5'],
-    PM10: day.pm10,
-    PM1: day.pm1,
-    CAQI: day.caqi,
-    Temperatura: day.temperature,
-    Wilgotność: day.humidity,
-  }));
+  const formattedData = avg.map((day) => {
+    return {
+      name: formatDate(day.measurementDate),
+      'PM2.5': day['pm2.5'],
+      PM10: day.pm10,
+      PM1: day.pm1,
+      CAQI: countCaqi(day['pm2.5'], day.pm10),
+      Temperatura: day.temperature,
+      Wilgotność: day.humidity,
+    };
+  });
   const setMargin = () => {
     if (width < 1024) return { top: 5, right: 0, bottom: 0, left: -5 };
     if (width < 2560) return { top: 5, right: 15, bottom: 0, left: 15 };

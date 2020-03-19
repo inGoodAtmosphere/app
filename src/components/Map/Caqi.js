@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
 import mapContext from '../../utils/map-context';
 import { descriptions } from '../../../public/data/caqi-descriptions.json';
+import countCaqi from './countCaqi';
 import './caqi.module.scss';
 
 const Caqi = () => {
-  const { sensorMeasurement } = useContext(mapContext);
-  const [currentMeasurement] = sensorMeasurement;
-  const countCaqi = (measurement) => {
-    console.log(measurement);
-    return 21;
-  };
-  const caqi = countCaqi(currentMeasurement);
+  const {
+    activeSensor: { avg },
+  } = useContext(mapContext);
+  const [currentMeasurement] = avg;
+  const caqi = countCaqi(currentMeasurement['pm2.5'], currentMeasurement.pm10);
   const [bad, medium, good, veryGood] = descriptions;
   const setStatus = (caqiValue) => {
     if (caqiValue < 20) return { backgroundColor: '#44a368', status: veryGood };
