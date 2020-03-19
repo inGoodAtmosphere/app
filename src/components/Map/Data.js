@@ -3,12 +3,14 @@ import Measurements from './Measurements';
 import Chart from './Chart';
 import Weather from './Weather';
 import AboutDevice from './AboutDevice';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 const Data = () => {
+  const width = useWindowWidth();
   return (
     <div className="data">
       <Measurements />
-      <Chart />
+      <Chart width={width} />
       <Weather />
       <AboutDevice />
     </div>

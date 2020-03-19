@@ -11,6 +11,7 @@ import './icon.module.scss';
 const Icon = ({ socialMedia, link }) => {
   return (
     <a
+      className="footer__icon"
       aria-label={socialMedia}
       href={link}
       target="_blank"

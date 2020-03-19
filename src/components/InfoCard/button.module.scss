@@ -14,11 +14,9 @@
   }
 }
 
-.landing-page__btn__map {
-  border-radius: 0.625rem;
-  opacity: 0.8;
-  &:hover {
-    transform: none;
+.landing-page__map {
+  .landing-page__btn {
+    @include button($primary-accent);
   }
 }
 

@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .error__content {
   display: flex;
@@ -17,4 +18,5 @@
   padding: $spacing;
   font-size: $m-size;
   border: none;
+  @include button($dark-bg);
 }

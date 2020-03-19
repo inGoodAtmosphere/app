@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import {
   LineChart,
   XAxis,
@@ -15,14 +16,13 @@ import 'moment/locale/pl';
 import MapContext from '../../../utils/map-context';
 import './index.module.scss';
 import Button from './Button';
-import useWindowSize from '../../../hooks/useWindowSize';
+
 import countCaqi from '../countCaqi';
 
-const Chart = () => {
+const Chart = ({ width }) => {
   const {
     activeSensor: { avg },
   } = useContext(MapContext);
-  const { width, height } = useWindowSize();
   const [activeChart, setActiveChart] = useState('pm');
   const formatDate = (day) => moment(day).format('dddd');
   const formattedData = avg.map((day) => {
@@ -37,13 +37,13 @@ const Chart = () => {
     };
   });
   const setMargin = () => {
-    if (width < 1024) return { top: 5, right: 0, bottom: 0, left: -5 };
-    if (width < 2560) return { top: 5, right: 15, bottom: 0, left: 15 };
-    if (width < 3200) return { top: 5, right: 50, bottom: 0, left: 50 };
-    return { top: 5, right: 80, bottom: 0, left: 80 };
+    const constMargin = { top: 5, bottom: 0 };
+    if (width < 1024) return { right: 5, left: -5, ...constMargin };
+    if (width < 2560) return { right: 15, left: 15, ...constMargin };
+    if (width < 3200) return { right: 50, left: 50, ...constMargin };
+    return { right: 80, left: 80, ...constMargin };
   };
   const margin = setMargin();
-
   return (
     <div className="card chart__card">
       <div className="chart__buttons">
@@ -72,7 +72,7 @@ const Chart = () => {
             // TODO: startIndex set to last 7 days
           }
           <Brush
-            height={width < 1440 ? height / 25 : height / 40}
+            height={30}
             travellerWidth={7}
             dataKey="name"
             stroke="#0E364F"
@@ -147,6 +147,10 @@ const Chart = () => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+Chart.propTypes = {
+  width: PropTypes.number.isRequired,
 };
 
 export default Chart;

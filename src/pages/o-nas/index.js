@@ -3,12 +3,12 @@ import Carousel from 'nuka-carousel';
 import Card from '../../components/AboutUsCard';
 import breakpoints from '../../components/AboutUs/breakpoints';
 import portraits from '../../components/AboutUs/portraits';
-import useWindowSize from '../../hooks/useWindowSize';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import { people } from '../../../public/data/about-us.json';
 import './about-us.module.scss';
 
 const AboutUs = () => {
-  const { width } = useWindowSize();
+  const width = useWindowWidth();
   const setBreakpoints = () => {
     if (width < 500) return breakpoints[0];
     if (width < 1024) return breakpoints[1];

@@ -9,3 +9,24 @@
     transform: scale(0.98);
   }
 }
+@mixin link($color) {
+  position: relative;
+  &::before {
+    transform: translateX(-50%);
+    content: '';
+    width: 10%;
+    height: $spacing / 4;
+    position: absolute;
+    left: 50%;
+    bottom: $spacing;
+    opacity: 0;
+    background: $color;
+    transition: transform 0.2s ease-out;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transform: scaleX(6) translateX(-5%) translateY(100%);
+    }
+  }
+}

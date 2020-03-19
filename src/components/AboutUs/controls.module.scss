@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .slider__btn {
   background: none;
@@ -7,4 +8,5 @@
   color: $light-bg;
   height: 3em;
   width: 3em;
+  @include button($dark-bg);
 }
