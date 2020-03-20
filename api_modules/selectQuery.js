@@ -22,3 +22,5 @@ const query = (queryContent) =>
   });
 
 module.exports = query;
+module.exports.escape = mysql.escape;
+// module.exports.escape = (anything) => anything;
