@@ -2,8 +2,12 @@
 
 .article__header {
   margin: 0;
-  padding: 0;
+  padding: $spacing * 5 $spacing;
   position: relative;
+  min-height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &::after {
     content: '';
     background: rgba(28, 35, 60, 0.5);
@@ -22,7 +26,6 @@
   color: $light-bg;
   font-size: $l-size * 0.8;
   margin: 0;
-  padding: $spacing * 5 0;
   text-align: center;
   text-align: center;
   z-index: 1;
