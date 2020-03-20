@@ -8,7 +8,9 @@ export default async (req, res) => {
   } = req;
   switch (req.method) {
     case 'GET':
-      query = `SELECT id, header, Contents, subheaders as subHeaders, images, publish_date as publishDate, author, section, description from articles where section=${dbQuery.escape(name)};`;
+      query = `SELECT id, header, Contents, subheaders as subHeaders, images, publish_date as publishDate, author, section, description from articles where link=${dbQuery.escape(
+        name,
+      )};`;
       result = await dbQuery(query);
       break;
     default:
