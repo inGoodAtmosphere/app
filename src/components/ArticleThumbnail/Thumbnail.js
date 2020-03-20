@@ -13,6 +13,9 @@ const Thumbnail = ({ link, imagesFolder }) => {
         src={`/data/articles/${imagesFolder}/thumbnail.jpg`}
         alt="Miniaturka"
       />
+      <span className="article-container__thumbnail__link__text">
+        Czytaj więcej
+      </span>
     </a>
   );
 };
