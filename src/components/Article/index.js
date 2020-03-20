@@ -9,6 +9,7 @@ import Paragraph from './Paragraph';
 
 const Article = () => {
   const { subHeaders, contents } = useContext(Context);
+  const contentArray = contents.split('okoń');
   return (
     <>
       <Head />
@@ -16,15 +17,18 @@ const Article = () => {
         <article className="card article__card">
           <Header />
 
-          {subHeaders.length
+          {subHeaders
             ? // prettier-ignore
               subHeaders.map((subHeader, i) => (
-                <Section subHeader={subHeader} content={contents[i]} />
+                <Section subHeader={subHeader} content={contentArray[i]} />
               ))
             : contents[0]
                 .split('\n')
                 .map((content) => (
-                  <Paragraph key={content.substring(1, 12)} content={content} />
+                  <Paragraph
+                    key={content.substring(1, 12)}
+                    content={contentArray[0]}
+                  />
                 ))}
         </article>
       </main>

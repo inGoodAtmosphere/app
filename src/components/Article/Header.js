@@ -3,8 +3,8 @@ import Context from '../../utils/Context';
 import './header.module.scss';
 
 const ArticleTitle = () => {
-  const { header, imagesFolder } = useContext(Context);
-  const imagesPath = `/data/articles/${imagesFolder}/`;
+  const { header, images } = useContext(Context);
+  const imagesPath = `/data/articles/${images}/`;
   return (
     <div className="article__header">
       <h1 className="article__header__text">{header}</h1>

@@ -11,11 +11,9 @@ const Section = ({ subHeader, content }) => {
   );
 };
 
-Section.defaultProps = {
-  subHeader: '',
-};
 Section.propTypes = {
-  subHeader: PropTypes.string,
+  subHeader: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };
+
 export default Section;

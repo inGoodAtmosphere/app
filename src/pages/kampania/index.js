@@ -5,7 +5,7 @@ import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
 const Campaign = () => {
-  const { data, isLoaded, error } = useFetch('/api/article-thumbnails');
+  const { data, isLoaded, error } = useFetch('/api/articles/thumbnails');
   if (isLoaded) return <Loading />;
   if (error) return <Error message={error.message} />;
   return (
@@ -16,13 +16,14 @@ const Campaign = () => {
       </h2>
       {data.length &&
         data.map((article) => {
+          const tags = article.tags.split(', ');
           return (
             <ArticleThumbnail
-              key={article.header}
-              imagesFolder={article.imagesFolder}
+              key={article.id}
+              imagesFolder={article.images}
               header={article.header}
               description={article.description}
-              tags={article.tags}
+              tags={tags}
             />
           );
         })}
