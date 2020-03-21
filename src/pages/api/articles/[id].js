@@ -4,12 +4,12 @@ export default async (req, res) => {
   let query = '';
   let result = '';
   const {
-    query: { name },
+    query: { id },
   } = req;
   switch (req.method) {
     case 'GET':
-      query = `SELECT id, header, contents, subheaders as subHeaders, images, publish_date as publishDate, author, section, description from articles where link=${dbQuery.escape(
-        name,
+      query = `SELECT id, header, contents, subheaders as subHeaders, images, publish_date as publishDate, author, section, description from articles where id=${dbQuery.escape(
+        id,
       )};`;
       result = await dbQuery(query);
       break;
