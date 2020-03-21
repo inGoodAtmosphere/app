@@ -7,7 +7,7 @@ const Article = ({ data }) => {
   return <ArticleContent value={data[0]} />;
 };
 export async function getStaticPaths() {
-  const res = await fetch('http://localhost:3000/api/articles/thumbnails');
+  const res = await fetch('http://localhost:3000/api/articles');
   const thumbnails = await res.json();
   const paths = thumbnails.map((thumbnail) => ({
     params: { header: thumbnail.link },
