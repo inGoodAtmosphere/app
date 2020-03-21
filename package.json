@@ -20,6 +20,7 @@
     "google-map-react": "^1.1.6",
     "gsap": "^3.2.4",
     "history": "^4.10.1",
+    "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",
     "mysql": "^2.18.1",
     "next": "^9.3.0",
