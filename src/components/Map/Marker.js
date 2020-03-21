@@ -30,8 +30,7 @@ const Marker = ({ data: { data, error } }) => {
       className="marker"
       style={{
         backgroundColor: color,
-        boxShadow: ` 0px 0px ${color !== '#999999' &&
-          '1.5rem 1.5rem'} ${color}`,
+        boxShadow: ` 0px 0px ${color !== '#999999' && '1rem 1rem'} ${color}`,
       }}
     />
   );

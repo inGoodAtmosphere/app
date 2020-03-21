@@ -1,0 +1,58 @@
+@import '../../styles/base/settings';
+
+.sensors__image__bg {
+  display: flex;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(170deg, rgb(197, 197, 197) 0%, $light-bg 60%);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before,
+  &::after {
+    opacity: 0;
+    content: '';
+    background-color: $dark-bg;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    transition: all 0.4s ease-out;
+  }
+  &::before {
+    bottom: 0;
+    transform-origin: bottom;
+  }
+  &::after {
+    top: 0;
+    transform-origin: top;
+  }
+  &:hover {
+    .sensors__image__text {
+      transition: opacity 0.2s 0.4s ease-out;
+      opacity: 1;
+    }
+    &::before,
+    &::after {
+      // transition: transform 0.4s ease-out;
+      transform: scaleY(15);
+      opacity: 0.5;
+    }
+  }
+}
+
+.sensors__image {
+  width: 100%;
+  max-width: 20rem;
+}
+.sensors__image__text {
+  opacity: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  text-align: center;
+  transition: opacity 0.2s 0s ease-out;
+  position: absolute;
+  top: 50%;
+  color: $light-bg;
+  font-size: $m-size;
+  transform: translateY(-50%);
+}
