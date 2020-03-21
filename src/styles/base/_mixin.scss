@@ -9,6 +9,7 @@
     transform: scale(0.98);
   }
 }
+
 @mixin link($color) {
   position: relative;
   &::before {

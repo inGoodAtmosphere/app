@@ -17,7 +17,7 @@ const Map = () => {
           lat: activeMarker.lat,
           lng: activeMarker.lng,
         }}
-        defaultZoom={15}
+        defaultZoom={14}
         bootstrapURLKeys={{ key }}
       >
         {markers.map(({ id, lat, lng }) => {
