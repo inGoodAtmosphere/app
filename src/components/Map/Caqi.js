@@ -6,10 +6,9 @@ import './caqi.module.scss';
 
 const Caqi = () => {
   const {
-    activeSensor: { avg },
+    activeSensor: { current },
   } = useContext(mapContext);
-  const [currentMeasurement] = avg;
-  const caqi = countCaqi(currentMeasurement['pm2.5'], currentMeasurement.pm10);
+  const caqi = countCaqi(current['pm2.5'], current.pm10);
   const [veryBad, bad, medium, good, veryGood] = descriptions;
   const setStatus = (caqiValue) => {
     if (caqiValue < 25) return { backgroundColor: '#44a368', status: veryGood };
