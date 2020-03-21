@@ -23,8 +23,8 @@ Elements that our Backend consists of:
 
 - **api** - our whole api is in the path /src/pages/api - here we can find all of our api endpoints. Description of every api endpoint:
   - **api/articles** - folder handling all of our articles, this endpoint returns no data
-    - **api/articles/[id]** (GET, POST) - TO DO: PUT, DELETE
-      - (GET) endpoint which returns whole content of article of given id
+    - **api/articles/[name]** (GET, POST) - TO DO: PUT, DELETE
+      - (GET) endpoint which returns whole content of article of given name
       - (POST) On this endpoint you are able to add new article content
     - **api/articles/thumbnails** (GET)
       - (GET) endpoint which returns shortened content of every article
