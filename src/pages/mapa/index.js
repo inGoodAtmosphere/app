@@ -63,8 +63,8 @@ const MapPage = ({ measurements, markers }) => {
 
 export async function getServerSideProps() {
   const res = await Promise.all([
-    fetch('http://localhost:3000/api/measurements'),
-    fetch('http://localhost:3000/api/locations'),
+    fetch('https://obx88.usermd.net/api/measurements'),
+    fetch('https://obx88.usermd.net/api/locations'),
   ]);
   const measurements = await res[0].json();
   const markers = await res[1].json();

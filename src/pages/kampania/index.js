@@ -28,7 +28,7 @@ const Campaign = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/articles/thumbnails');
+  const res = await fetch('https://obx88.usermd.net/api/articles/thumbnails');
   const data = await res.json();
   return { props: { data } };
 }
