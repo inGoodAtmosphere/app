@@ -12,6 +12,7 @@ export default (WrappedComponent) => {
     value: PropTypes.objectOf(
       PropTypes.oneOfType([
         PropTypes.string,
+        PropTypes.number,
         PropTypes.arrayOf(PropTypes.string),
         PropTypes.elementType,
         PropTypes.objectOf(PropTypes.string),

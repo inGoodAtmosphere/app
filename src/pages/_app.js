@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import PropTypes from 'prop-types';
@@ -15,7 +17,7 @@ import 'focus-visible';
 
 config.autoAddCss = false;
 
-const App = ({ Component, isBannerOpen }) => {
+const App = ({ Component, pageProps, isBannerOpen }) => {
   const convertTitle = (title) => {
     if (title === '/') return 'inGoodAtmosphere';
     return (
@@ -101,13 +103,14 @@ const App = ({ Component, isBannerOpen }) => {
       </Head>
       <div className="container">
         <Header />
-        <Component />
+        <Component {...pageProps} />
         <CookiesBanner isBannerOpen={isBannerOpen} />
         <Footer />
       </div>
     </>
   );
 };
+
 App.getInitialProps = ({ ctx }) => {
   return {
     isBannerOpen: cookies(ctx).isBannerOpen || '',

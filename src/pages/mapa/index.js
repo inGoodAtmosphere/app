@@ -1,4 +1,6 @@
 import React, { useReducer, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
 import Data from '../../components/Map/Data';
 import MapContext from '../../utils/map-context';
@@ -6,9 +8,7 @@ import mapReducer from '../../reducers/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
-const MapPage = () => {
-  const [measurements, setMeasurements] = useState([]);
-  const [markers, setMarkers] = useState([]);
+const MapPage = ({ measurements, markers }) => {
   const [sensorMeasurement, setSensorMeasurement] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
@@ -16,28 +16,20 @@ const MapPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await Promise.all([
-          fetch('/api/measurements'),
-          fetch('/api/locations'),
-        ]);
-        const measurementsJson = await res[0].json();
-        const markersJson = await res[1].json();
         const deviceId =
           parseInt(localStorage.getItem('activeSensor'), 10) ||
-          measurementsJson[0].deviceId;
-        setMarkers(markersJson);
+          measurements[0].deviceId;
         const sensorMeasurementRes = await fetch(
           `/api/measurements/${deviceId}`,
         );
         const sensorMeasurementJson = await sensorMeasurementRes.json();
         dispatch({
           type: 'SET_ACTIVE_SENSOR',
-          current: measurementsJson.find(
+          current: measurements.find(
             (measurement) => measurement.deviceId === deviceId,
           ),
           avg: sensorMeasurementJson,
         });
-        setMeasurements(measurementsJson);
         setSensorMeasurement(sensorMeasurementJson);
         setIsLoaded(false);
       } catch (err) {
@@ -67,6 +59,25 @@ const MapPage = () => {
       </main>
     </MapContext.Provider>
   );
+};
+
+export async function getServerSideProps() {
+  const res = await Promise.all([
+    fetch('http://localhost:3000/api/measurements'),
+    fetch('http://localhost:3000/api/locations'),
+  ]);
+  const measurements = await res[0].json();
+  const markers = await res[1].json();
+  return { props: { measurements, markers } };
+}
+
+MapPage.propTypes = {
+  measurements: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ),
+  ).isRequired,
+  markers: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
 };
 
 export default MapPage;

@@ -1,16 +1,31 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
+import fetch from 'isomorphic-unfetch';
 import ArticleContent from '../../components/Article';
-import useFetch from '../../hooks/useFetch';
-import Loading from '../../components/Loading';
-import Error from '../../components/Error';
 
-const Article = () => {
-  const router = useRouter();
-  const { header } = router.query;
-  const { data, isLoaded, error } = useFetch(`/api/articles/${header}`);
-  if (error) return <Error message={error.message} />;
-  return isLoaded ? <Loading /> : <ArticleContent value={data[0]} />;
+const Article = ({ data }) => {
+  return <ArticleContent value={data[0]} />;
 };
-
+export async function getStaticPaths() {
+  const res = await fetch('http://localhost:3000/api/articles');
+  const thumbnails = await res.json();
+  const paths = thumbnails.map((thumbnail) => ({
+    params: { header: thumbnail.link },
+  }));
+  return { paths, fallback: false };
+}
+export async function getStaticProps({ params }) {
+  const res = await fetch(
+    `http://localhost:3000/api/articles/${params.header}`,
+  );
+  const data = await res.json();
+  return { props: { data } };
+}
+Article.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ),
+  ).isRequired,
+};
 export default Article;
