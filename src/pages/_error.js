@@ -1,15 +1,6 @@
 import React from 'react';
-import NotFoundSvg from '../components/NotFound/svg/not-found';
-import Content from '../components/NotFound/Content';
-import './not-found.module.scss';
+import Error from '../components/NotFound';
 
-const NotFound = () => {
-  return (
-    <main className="content not-found__content">
-      <NotFoundSvg />
-      <Content />
-    </main>
-  );
-};
+const NotFound = () => <Error />;
 
 export default NotFound;
