@@ -38,7 +38,7 @@ Elements that our Backend consists of:
     - (POST) endpoint adding new device to db and initializing communication between server and new device
   - **api/location** - (GET) TO DO: PUT, (location of only one device?)
     - (GET) endpoint returning location of every device
-  - **/api/signIn** - (POST)
+  - **/api/sPignIn** - (POST)
     - (POST) - endpoint for users to sign in
   - **/api/singUp** - (POST)
     - (POST) - sign up new user
