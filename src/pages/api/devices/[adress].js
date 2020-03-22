@@ -20,14 +20,14 @@ export default async (req, res) => {
       )}`;
       checkIfAdressRegistered = await dbQuery(query);
       if (checkIfAdressRegistered.length === 0) {
-        query = `insert into devices(Macadress, Location_Latitude, Location_Longitude) values(${adress}, ${req.body.locationLatitude}, ${req.body.locationLongitude})`;
+        query = `insert into devices(Macadress, Location_Latitude, Location_Longitude) values(${dbQuery.escape(adress)}, ${dbQuery.escape(req.body.locationLatitude)}, ${dbQuery.escape(req.body.locationLongitude)})`;
         result = await dbQuery(query);
         res.send(result);
       } else if (checkIfAdressRegistered.length === 1) {
         result = checkIfAdressRegistered;
         res.send(result);
       } else {
-        res.json({ message: 'Data error' });
+        res.json({ error: 'Data error' });
       }
       break;
     default:
