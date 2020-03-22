@@ -1,17 +1,14 @@
 import React from 'react';
+import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './button.module.scss';
 
-const Button = ({ setDisplay }) => {
+const Button = ({ setIsBannerOpen }) => {
   const handleClick = () => {
-    document.cookie = `isBannerOpen=false; path=/; expires=${new Date(
-      2021,
-      1,
-      1,
-    )}`;
-    setDisplay('false');
+    Cookies.set('isBannerOpen', 'false', { expires: new Date(2021, 1, 1) });
+    setIsBannerOpen('false');
   };
   return (
     <button
@@ -26,6 +23,6 @@ const Button = ({ setDisplay }) => {
 };
 
 Button.propTypes = {
-  setDisplay: PropTypes.func.isRequired,
+  setIsBannerOpen: PropTypes.func.isRequired,
 };
 export default Button;

@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import PropTypes from 'prop-types';
-import cookies from 'next-cookies';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import CookiesBanner from '../components/CookiesBanner';
@@ -17,7 +17,8 @@ import 'focus-visible';
 
 config.autoAddCss = false;
 
-const App = ({ Component, pageProps, isBannerOpen }) => {
+const App = ({ Component, pageProps }) => {
+  const [isBannerOpen, setIsBannerOpen] = useState(Cookies.get('isBannerOpen'));
   const convertTitle = (title) => {
     if (title === '/') return 'inGoodAtmosphere';
     return (
@@ -104,20 +105,15 @@ const App = ({ Component, pageProps, isBannerOpen }) => {
       <div className="container">
         <Header />
         <Component {...pageProps} />
-        <CookiesBanner isBannerOpen={isBannerOpen} />
+        {isBannerOpen === 'false' ? null : (
+          <CookiesBanner setIsBannerOpen={setIsBannerOpen} />
+        )}
         <Footer />
       </div>
     </>
   );
 };
-
-App.getInitialProps = ({ ctx }) => {
-  return {
-    isBannerOpen: cookies(ctx).isBannerOpen || '',
-  };
-};
 App.propTypes = {
   Component: PropTypes.func.isRequired,
-  isBannerOpen: PropTypes.string.isRequired,
 };
 export default App;
