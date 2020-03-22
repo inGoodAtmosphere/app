@@ -27,6 +27,7 @@
     "next-offline": "^5.0.0",
     "node-loader": "^0.6.0",
     "node-sass": "^4.13.1",
+    "nodemailer": "^6.4.6",
     "normalize.css": "^8.0.1",
     "nuka-carousel": "^4.6.6",
     "prettier": "^1.19.1",
