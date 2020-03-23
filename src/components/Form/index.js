@@ -77,6 +77,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
     verifyCaptcha();
     performAction();
   };
+
   return (
     <form
       method="post"
