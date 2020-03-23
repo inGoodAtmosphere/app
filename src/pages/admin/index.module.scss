@@ -1,0 +1,9 @@
+@import '../../styles/base/settings';
+
+.admin__content {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 2fr;
+}
