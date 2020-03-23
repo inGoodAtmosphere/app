@@ -10,11 +10,9 @@ export default async (req, res) => {
   } = req;
   switch (req.method) {
     case 'POST':
-      if(adress.length!=17)
-      {
-        res.json({error:"wrong input"});
-      }
-      else {
+      if (adress.length !== 17) {
+        res.json({ error: 'wrong input' });
+      } else {
         query = `select id from devices where Macadress=${dbQuery.escape(
           adress
             .replace('U', 'F')
@@ -22,12 +20,17 @@ export default async (req, res) => {
             .replace('W', 'D')
             .replace('X', 'C')
             .replace('Y', 'B')
-            .replace('Z', 'A'),
-        )}`;
-        checkIfAdressRegistered = await dbQuery(query);
+            .replace('Z', 'A'))}`;
+        checkIfAdressRegistered = await dbQuery(query).then(async ()=>{
         if (checkIfAdressRegistered.length === 0) {
           queryTest = `insert into devices(Macadress, Location_Latitude, Location_Longitude) values(${dbQuery.escape(
-            adress,
+            adress
+              .replace('U', 'F')
+              .replace('V', 'E')
+              .replace('W', 'D')
+              .replace('X', 'C')
+              .replace('Y', 'B')
+              .replace('Z', 'A')
           )}, ${dbQuery.escape(req.body.locationLatitude)}, ${dbQuery.escape(
             req.body.locationLongitude,
           )})`;
@@ -39,7 +42,7 @@ export default async (req, res) => {
         } else {
           res.json({ error: 'Data error' });
         }
-      }
+      });};
       break;
     default:
       res.status(403);
