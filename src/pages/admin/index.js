@@ -35,10 +35,9 @@ export async function getServerSideProps() {
   const fetchData = async (endpoint) =>
     fetch(`http://localhost:3000/api/${endpoint}`).then((res) => res.json());
   const res = await Promise.all(endpoints.map(fetchData));
-  const notifications = await res[0];
-  const users = await res[1];
-  const locations = await res[2];
-  const articles = await res[3];
+  const slicedRes = res.map((endpoint) => endpoint.slice(0, 3));
+  const [notifications, users, locations, articles] = slicedRes;
+
   return { props: { notifications, users, locations, articles } };
 }
 

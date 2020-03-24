@@ -10,9 +10,6 @@
   grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
   align-items: start;
-  * {
-    color: $light-bg;
-  }
 }
 .admin__wrapper {
   display: flex;

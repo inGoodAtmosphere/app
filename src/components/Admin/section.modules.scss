@@ -21,6 +21,7 @@
 }
 .admin__section__header {
   margin: 0;
+  color: $light-bg;
 }
 .admin__section__link {
   background-color: rgba(0, 0, 0, 0.3);
@@ -28,6 +29,7 @@
   padding: $spacing / 2;
   margin-top: $spacing;
   align-self: flex-end;
+  color: $light-bg;
 }
 @media #{$media-query-s} {
   .admin__section__uzytkownicy {
@@ -45,13 +47,11 @@
   }
   .admin__section__artykuly {
     grid-row: 2;
-    // grid-column: 2 span;
     .admin__section__link {
       @include button($light-accent);
     }
   }
   .admin__section__powiadomienia {
-    // grid-column: 2 span;
     .admin__section__link {
       @include button($primary-accent);
     }
