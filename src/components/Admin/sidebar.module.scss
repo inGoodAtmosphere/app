@@ -3,5 +3,10 @@
 .admin__sidebar {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing;
+  grid-row: 1 / 4;
   background-color: $light-bg;
 }

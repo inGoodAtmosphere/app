@@ -1,0 +1,15 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.admin__sidebar__link {
+  padding: $spacing;
+  background-color: $dark-bg;
+  color: $light-bg;
+  width: 100%;
+  height: calc(#{$header-height} - #{$spacing * 2});
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $spacing;
+  @include button($light-bg);
+}
