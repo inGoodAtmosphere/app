@@ -106,7 +106,10 @@ const App = ({ Component, pageProps }) => {
         <Header />
         <Component {...pageProps} />
         {isBannerOpen === 'false' ? null : (
-          <CookiesBanner setIsBannerOpen={setIsBannerOpen} />
+          <CookiesBanner
+            setIsBannerOpen={setIsBannerOpen}
+            isBannerOpen={isBannerOpen}
+          />
         )}
         <Footer />
       </div>
