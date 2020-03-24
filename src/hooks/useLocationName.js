@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { logEvent } from '../utils/analytics';
+// require('dotenv').config();
 
 export default (markers, deviceId) => {
   const [title, setTitle] = useState('');
@@ -18,7 +19,7 @@ export default (markers, deviceId) => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}5&key=1d2ffa7c477b4f74a270d58298b257aa`,
+          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}5&key=${process.env.GEOCODING_API_KEY}`,
         );
         const json = await res.json();
         const key = setKey(json.results[0].components);

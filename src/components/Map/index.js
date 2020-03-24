@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import GoogleMap from 'google-map-react';
 import Marker from './Marker';
-import key from '../../../key';
 import MapContext from '../../utils/map-context';
 import './map.module.scss';
 
@@ -18,7 +17,7 @@ const Map = () => {
           lng: activeMarker.lng,
         }}
         defaultZoom={14}
-        bootstrapURLKeys={{ key }}
+        bootstrapURLKeys={{ key: process.env.MAP_API_KEY }}
       >
         {markers.map(({ id, lat, lng }) => {
           const data = measurements.find(

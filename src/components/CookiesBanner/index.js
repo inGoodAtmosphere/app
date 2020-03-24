@@ -16,8 +16,13 @@ const CookiesBanner = ({ isBannerOpen, setIsBannerOpen }) => {
     </div>
   );
 };
+
+CookiesBanner.defaultProps = {
+  isBannerOpen: '',
+};
+
 CookiesBanner.propTypes = {
-  isBannerOpen: PropTypes.bool.isRequired,
+  isBannerOpen: PropTypes.string,
   setIsBannerOpen: PropTypes.func.isRequired,
 };
 export default CookiesBanner;
