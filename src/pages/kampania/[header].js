@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
+import { useRouter } from 'next/router';
 import ArticleContent from '../../components/Article';
+import Loading from '../../components/Loading';
 
 const Article = ({ data }) => {
+  const router = useRouter();
+  if (router.isFallback) return <Loading />;
   return <ArticleContent value={data[0]} />;
 };
 export async function getStaticPaths() {

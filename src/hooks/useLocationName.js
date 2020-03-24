@@ -18,7 +18,7 @@ export default (markers, deviceId) => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}5&key=db5e35877d884689bf8e15ed95b49fba`,
+          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}5&key=1d2ffa7c477b4f74a270d58298b257aa`,
         );
         const json = await res.json();
         const key = setKey(json.results[0].components);

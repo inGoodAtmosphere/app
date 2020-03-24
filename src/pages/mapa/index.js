@@ -1,5 +1,6 @@
 import React, { useReducer, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
 import Data from '../../components/Map/Data';
@@ -39,6 +40,8 @@ const MapPage = ({ measurements, markers }) => {
     };
     fetchData();
   }, []);
+  const router = useRouter();
+  if (router.isFallback) return <Loading />;
   if (isLoaded) return <Loading />;
   if (error) {
     return <Error message={error.message} />;

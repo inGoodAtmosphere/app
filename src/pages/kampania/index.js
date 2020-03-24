@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes, { oneOfType } from 'prop-types';
+import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
+import Loading from '../../components/Loading';
 
 const Campaign = ({ data }) => {
+  const router = useRouter();
+  if (router.isFallback) return <Loading />;
   return (
     <main className="content campaign__content">
       <h1>Nasze artykuły</h1>
