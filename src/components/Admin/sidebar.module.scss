@@ -1,12 +1,22 @@
 @import '../../styles/base/settings';
 
 .admin__sidebar {
-  height: 100%;
   width: 100%;
+  height: $header-height;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   padding: $spacing;
-  grid-row: 1 / 4;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
   background-color: $light-bg;
+}
+@media #{$media-query-s}{
+  .admin__sidebar{
+    flex-direction: column;
+    height: 100%;
+    width: $header-height;
+    position: static;
+  }
 }

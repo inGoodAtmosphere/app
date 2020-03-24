@@ -7,19 +7,27 @@ import './index.module.scss';
 
 const Admin = ({ notifications, users, locations, articles }) => {
   return (
-    <main className="content admin__content">
+    <div className="admin__wrapper">
       <Sidebar />
-      <Section
-        link="powiadomienia"
-        value={{ data: notifications, title: 'Powiadomienia' }}
-      />
-      <Section
-        link="uzytkownicy"
-        value={{ data: users, title: 'Użytkownicy' }}
-      />
-      <Section link="mierniki" value={{ data: locations, title: 'Mierniki' }} />
-      <Section link="artykuly" value={{ data: articles, title: 'Artykuły' }} />
-    </main>
+      <main className="content admin__content">
+        <Section
+          link="powiadomienia"
+          value={{ data: notifications, title: 'Powiadomienia' }}
+        />
+        <Section
+          link="uzytkownicy"
+          value={{ data: users, title: 'Użytkownicy' }}
+        />
+        <Section
+          link="mierniki"
+          value={{ data: locations, title: 'Mierniki' }}
+        />
+        <Section
+          link="artykuly"
+          value={{ data: articles, title: 'Artykuły' }}
+        />
+      </main>
+    </div>
   );
 };
 export async function getServerSideProps() {

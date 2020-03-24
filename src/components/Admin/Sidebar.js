@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   faBell,
+  faHome,
   faNewspaper,
   faUsers,
   faSmog,
@@ -11,10 +12,11 @@ import './sidebar.module.scss';
 const Sidebar = () => {
   return (
     <nav className="admin__sidebar">
-      <Link href="/powiadomienia" icon={faBell} />
-      <Link href="/uzytkownicy" icon={faUsers} />
-      <Link href="/artykuly" icon={faNewspaper} />
-      <Link href="/mierniki" icon={faSmog} />
+      <Link href="/admin" icon={faHome} />
+      <Link href="/admin/uzytkownicy" icon={faUsers} />
+      <Link href="/admin/artykuly" icon={faNewspaper} />
+      <Link href="/admin/mierniki" icon={faSmog} />
+      <Link href="/admin/powiadomienia" icon={faBell} />
     </nav>
   );
 };

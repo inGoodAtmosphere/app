@@ -5,11 +5,14 @@
   padding: $spacing;
   background-color: $dark-bg;
   color: $light-bg;
-  width: 100%;
-  height: calc(#{$header-height} - #{$spacing * 2});
   display: flex;
+  font-size: $m-size;
   justify-content: center;
   align-items: center;
-  margin-bottom: $spacing;
   @include button($light-bg);
+}
+@media #{$media-query-s} {
+  .admin__sidebar__link {
+    margin-bottom: $spacing;
+  }
 }

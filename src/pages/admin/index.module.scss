@@ -2,14 +2,28 @@
 
 .admin__content {
   max-width: none;
-  width: 100%;
   padding-left: 0;
   display: grid;
+  height: 100%;
+  margin-left: $spacing;
+  grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
+  grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
-  grid-template-columns: $header-height 3fr 2fr;
-  grid-template-rows: 5fr 1fr 5fr;
-  height: calc(100vh - #{$header-height});
+  align-items: start;
   * {
     color: $light-bg;
+  }
+}
+.admin__wrapper {
+  display: flex;
+}
+@media #{$media-query-s} {
+  .admin__wrapper {
+    height: calc(100vh - #{$header-height});
+  }
+}
+@media screen and (max-width: 369px) {
+  .admin__content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

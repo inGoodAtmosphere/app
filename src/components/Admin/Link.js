@@ -5,8 +5,8 @@ import './link.module.scss';
 
 const Link = ({ href, icon }) => {
   return (
-    <a href={`/admin${href}`} className="admin__sidebar__link">
-      <FontAwesomeIcon icon={icon} size="2x" />
+    <a href={href} className="admin__sidebar__link">
+      <FontAwesomeIcon icon={icon} />
     </a>
   );
 };
