@@ -7,4 +7,10 @@
 
 .landing-page__svg__link {
   border: none !important;
+  &:hover {
+    .landing-page__svg__sensor__text {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
 }
