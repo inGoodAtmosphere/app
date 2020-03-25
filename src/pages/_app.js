@@ -13,8 +13,15 @@ import '../styles/base.scss';
 import 'normalize.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'focus-visible';
+import Sidebar from '../components/Admin/Sidebar';
 
 const App = ({ Component, pageProps }) => {
+  const checkProps = () =>
+    'notifications' in pageProps ||
+    'articles' in pageProps ||
+    'users' in pageProps ||
+    'sensors' in pageProps;
+  const isAdminPanel = checkProps();
   const [isBannerOpen, setIsBannerOpen] = useState(Cookies.get('isBannerOpen'));
   const convertTitle = (title) => {
     if (title === '/') return 'inGoodAtmosphere';
@@ -107,9 +114,16 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <div className="container">
         <Header />
-        <Component {...pageProps} />
-        {!('offline' in pageProps) && <Footer />}
-        {isBannerOpen !== 'false' && !('offline' in pageProps) && (
+        {isAdminPanel ? (
+          <div className="admin__wrapper">
+            <Sidebar />
+            <Component {...pageProps} />
+          </div>
+        ) : (
+          <Component {...pageProps} />
+        )}
+        {!('offline' in pageProps) && !isAdminPanel && <Footer />}
+        {isBannerOpen === 'false' && !('offline' in pageProps) && (
           <CookiesBanner
             setIsBannerOpen={setIsBannerOpen}
             isBannerOpen={isBannerOpen}

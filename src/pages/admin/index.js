@@ -1,33 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
-import Sidebar from '../../components/Admin/Sidebar';
 import Section from '../../components/Admin/Section';
 import './index.module.scss';
 
 const Admin = ({ notifications, users, locations, articles }) => {
   return (
-    <div className="admin__wrapper">
-      <Sidebar />
-      <main className="content admin__content">
-        <Section
-          link="powiadomienia"
-          value={{ data: notifications, title: 'Powiadomienia' }}
-        />
-        <Section
-          link="uzytkownicy"
-          value={{ data: users, title: 'Użytkownicy' }}
-        />
-        <Section
-          link="mierniki"
-          value={{ data: locations, title: 'Mierniki' }}
-        />
-        <Section
-          link="artykuly"
-          value={{ data: articles, title: 'Artykuły' }}
-        />
-      </main>
-    </div>
+    <main className="content admin__content">
+      <Section
+        link="powiadomienia"
+        value={{ data: notifications, title: 'Powiadomienia' }}
+      />
+      <Section
+        link="uzytkownicy"
+        value={{ data: users, title: 'Użytkownicy' }}
+      />
+      <Section link="mierniki" value={{ data: locations, title: 'Mierniki' }} />
+      <Section link="artykuly" value={{ data: articles, title: 'Artykuły' }} />
+    </main>
   );
 };
 export async function getServerSideProps() {

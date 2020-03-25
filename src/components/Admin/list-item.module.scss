@@ -1,7 +1,16 @@
 @import '../../styles/base/settings';
 
 .admin__list__card {
-  * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    font-size: $xs-size;
+  }
+  padding: $spacing / 2;
+  h2 {
+    font-size: $xs-size;
     color: $text;
+    margin: 0;
   }
 }

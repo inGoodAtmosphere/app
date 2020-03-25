@@ -6,18 +6,49 @@
   height: 100%;
   overflow: hidden;
   margin: 0;
+  &:last-child {
+    margin: 0;
+  }
 }
 .admin__section__powiadomienia {
   background-color: $primary-accent;
+  .admin__list {
+    &::-webkit-scrollbar {
+      &-thumb {
+        background-color: $light-accent;
+      }
+    }
+  }
 }
 .admin__section__uzytkownicy {
   background-color: $dark-accent;
+  .admin__list {
+    &::-webkit-scrollbar {
+      &-thumb {
+        background-color: $light-accent;
+      }
+    }
+  }
 }
 .admin__section__artykuly {
   background-color: $light-accent;
+  .admin__list {
+    &::-webkit-scrollbar {
+      &-thumb {
+        background-color: $primary-accent;
+      }
+    }
+  }
 }
 .admin__section__mierniki {
   background-color: $bright-accent;
+  .admin__list {
+    &::-webkit-scrollbar {
+      &-thumb {
+        background-color: $light-accent;
+      }
+    }
+  }
 }
 .admin__section__header {
   margin: 0;

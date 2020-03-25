@@ -1,15 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import './notification.module.scss';
 
-const Notification = ({ id }) => {
+const Notification = () => {
   return (
     <>
-      <h2>{id}</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>time</p>
+      <p>Artykuł</p>
+      <p className="admin__notifications__description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam.
+      </p>
     </>
   );
 };
 
-Notification.propTypes = {
-  id: PropTypes.number.isRequired,
-};
 export default Notification;

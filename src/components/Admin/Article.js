@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EditBtn from './EditBtn';
 
 const Article = ({ data }) => {
   return (
     <>
       <h2>{data.header}</h2>
+      <EditBtn />
     </>
   );
 };
