@@ -12,5 +12,19 @@
       opacity: 1;
       transform: scale(1.02);
     }
+    .landing-page__svg__map__marker {
+      animation: jump 0.22s 2 linear;
+    }
+  }
+}
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-$spacing);
+  }
+  to {
+    transform: translateY(0);
   }
 }

@@ -1,0 +1,30 @@
+@import '../../../styles/base/settings';
+
+.landing-page__svg__contact {
+  width: 20rem;
+}
+
+.landing-page__svg__contact__icon {
+  #facebook,
+  #instagram {
+    transition: fill 0.2s ease-out;
+  }
+  #mail {
+    * {
+      transition: fill 0.2s ease-out;
+    }
+  }
+  &:hover {
+    #instagram {
+      fill: #dd2a7b;
+    }
+    #facebook {
+      fill: #2e77f2;
+    }
+    #mail {
+      path {
+        fill: #ffd77c;
+      }
+    }
+  }
+}

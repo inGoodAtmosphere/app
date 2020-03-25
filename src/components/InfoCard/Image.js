@@ -6,6 +6,7 @@ import './image.module.scss';
 const Image = () => {
   const { link, Svg } = useContext(Context);
   const width = useWindowWidth();
+  if (width > 1024 && link.href === 'kontakt') return <Svg />;
   return (
     width > 1024 && (
       <a
