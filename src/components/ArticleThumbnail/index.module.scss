@@ -7,12 +7,7 @@
   border-radius: $spacing;
   color: $text;
   display: grid;
-  grid-gap: $spacing / 2;
   grid-template-columns: 8.5rem auto;
-  grid-template-rows: repeat(4, fit-content(minmax(10rem)));
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
   justify-items: start;
   margin: $spacing 0;
 }
@@ -21,19 +16,18 @@
   align-self: center;
   font-size: $s-size * 0.9;
   margin: 0;
-  padding: $spacing 0;
+  padding: $spacing $spacing / 2;
 }
 
 .article-container__description {
   font-size: $xs-size;
   margin: 0;
-  padding: $spacing * 2 0;
-  // max-width: 30rem;
+  padding: $spacing * 2 $spacing / 2;
 }
 
 .article-container__link {
   align-self: center;
-  margin-bottom: $spacing;
+  margin-bottom: $spacing / 3;
   border-radius: $spacing * 3;
   border: $border solid $dark-accent;
   justify-self: center;
