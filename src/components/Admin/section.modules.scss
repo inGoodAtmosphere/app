@@ -19,6 +19,9 @@
       }
     }
   }
+  .admin__section__link {
+    @include button($primary-accent);
+  }
 }
 .admin__section__uzytkownicy {
   background-color: $dark-accent;
@@ -28,6 +31,9 @@
         background-color: $light-accent;
       }
     }
+  }
+  .admin__section__link {
+    @include button($dark-accent);
   }
 }
 .admin__section__artykuly {
@@ -39,6 +45,9 @@
       }
     }
   }
+  .admin__section__link {
+    @include button($light-accent);
+  }
 }
 .admin__section__mierniki {
   background-color: $bright-accent;
@@ -48,6 +57,9 @@
         background-color: $light-accent;
       }
     }
+  }
+  .admin__section__link {
+    @include button($bright-accent);
   }
 }
 .admin__section__header {
@@ -65,26 +77,12 @@
 @media #{$media-query-s} {
   .admin__section__uzytkownicy {
     grid-column: 2 span;
-    .admin__section__link {
-      @include button($dark-accent);
-    }
   }
   .admin__section__mierniki {
     grid-column: 2 span;
     grid-row: 2;
-    .admin__section__link {
-      @include button($bright-accent);
-    }
   }
   .admin__section__artykuly {
     grid-row: 2;
-    .admin__section__link {
-      @include button($light-accent);
-    }
-  }
-  .admin__section__powiadomienia {
-    .admin__section__link {
-      @include button($primary-accent);
-    }
   }
 }

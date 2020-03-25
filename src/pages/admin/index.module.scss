@@ -10,11 +10,15 @@
   grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
   align-items: start;
+  margin-bottom: calc(#{$header-height} + #{$spacing});
 }
 .admin__wrapper {
   display: flex;
 }
 @media #{$media-query-s} {
+  .admin__content {
+    margin-bottom: 0;
+  }
   .admin__wrapper {
     height: calc(100vh - #{$header-height});
   }
