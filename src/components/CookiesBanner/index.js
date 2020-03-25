@@ -4,25 +4,16 @@ import './index.module.scss';
 import Button from './Button';
 import Content from './Content';
 
-const CookiesBanner = ({ isBannerOpen, setIsBannerOpen }) => {
+const CookiesBanner = ({ setIsBannerOpen }) => {
   return (
-    <div
-      className={`cookies-banner__wrapper ${
-        isBannerOpen ? 'cookies-banner__wrapper--hidden' : ''
-      }`}
-    >
+    <div className="cookies-banner__wrapper">
       <Button setIsBannerOpen={setIsBannerOpen} />
       <Content />
     </div>
   );
 };
 
-CookiesBanner.defaultProps = {
-  isBannerOpen: '',
-};
-
 CookiesBanner.propTypes = {
-  isBannerOpen: PropTypes.string,
   setIsBannerOpen: PropTypes.func.isRequired,
 };
 export default CookiesBanner;
