@@ -9,7 +9,7 @@
   display: grid;
   grid-gap: $spacing / 2;
   grid-template-columns: 8.5rem auto;
-  grid-template-rows: 3.5rem 1.2rem 6rem 2.4rem;
+  grid-template-rows: repeat(4, fit-content(minmax(10rem)));
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -21,24 +21,33 @@
   align-self: center;
   font-size: $s-size * 0.9;
   margin: 0;
+  padding: $spacing 0;
 }
 
 .article-container__description {
   font-size: $xs-size;
   margin: 0;
+  padding: $spacing * 2 0;
+  // max-width: 30rem;
 }
 
 .article-container__link {
   align-self: center;
+  margin-bottom: $spacing;
   border-radius: $spacing * 3;
   border: $border solid $dark-accent;
   justify-self: center;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   padding: $spacing / 3 $spacing;
   &:hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
   &:active {
+    -webkit-transform: scale(0.98);
     transform: scale(0.98);
   }
 }
