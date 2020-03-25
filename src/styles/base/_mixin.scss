@@ -31,3 +31,21 @@
     }
   }
 }
+@mixin scroll($color) {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: $spacing;
+    border-radius: $spacing;
+    background-color: $light-bg;
+    &-thumb {
+      background-color: $color;
+      border-radius: $spacing * 10;
+      box-shadow: inset 0 0 $spacing / 2 rgba(0, 0, 0, 0.5);
+    }
+    &-track {
+      border-radius: $spacing;
+      box-shadow: inset 0 0 $spacing / 2 rgba(0, 0, 0, 0.5);
+      background-color: $light-bg;
+    }
+  }
+}

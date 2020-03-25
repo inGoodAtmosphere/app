@@ -19,18 +19,17 @@ config.autoAddCss = false;
 
 const App = ({ Component, pageProps }) => {
   const [isBannerOpen, setIsBannerOpen] = useState(Cookies.get('isBannerOpen'));
+  // slice to last segment url
   const convertTitle = (title) => {
     if (title === '/') return 'inGoodAtmosphere';
+    const slicedTitle = title.slice(title.lastIndexOf('/') + 1);
     return (
-      title.charAt(1).toUpperCase() +
-      title
-        .slice(2)
-        .replace('/', '')
-        .replace('-', ' ')
+      slicedTitle.charAt(0).toUpperCase() +
+      slicedTitle.slice(1).replace(/-/g, ' ')
     );
   };
   const router = useRouter();
-  const title = convertTitle(router.pathname);
+  const title = convertTitle(router.asPath);
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -78,6 +77,7 @@ const App = ({ Component, pageProps }) => {
           property="og:url"
           content={`https://ingoodatmosphere.com${router.asPath}`}
         />
+        <meta key="fb:app_id" property="fb:app_id" content="695313747961456" />
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:title" property="og:title" content="inGoodAtmosphere" />
         <meta

@@ -50,7 +50,6 @@ const ArticleHead = () => {
         name="twitter:image"
         content={`https://ingoodatmosphere.com/data/articles/${imagesFolder}/og.jpg`}
       />
-      <title key="title">{header}</title>
     </Head>
   );
 };
