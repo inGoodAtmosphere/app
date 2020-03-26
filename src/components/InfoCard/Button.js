@@ -4,6 +4,8 @@ import './button.module.scss';
 
 const Button = () => {
   const { link } = useContext(Context);
+  if (link.href === 'mapa')
+    return <span className="landing-page__btn__map">Już wkrótce</span>;
   return (
     <a
       href={`/${link.href}`}

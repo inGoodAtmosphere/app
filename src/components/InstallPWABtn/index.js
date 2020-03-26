@@ -7,6 +7,7 @@ const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
 
   window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
     setDeferredPrompt(e);
     setDisplay('block');
   });

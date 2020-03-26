@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import dynamic from 'next/dynamic';
 import Hamburger from '../Hamburger/Hamburger';
 import Menu from '../Menu';
 import './navigation.module.scss';
 
+const InstallPWABtn = dynamic(() => import('../InstallPWABtn'), {
+  ssr: false,
+});
+
 const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
+  const [display, setDisplay] = useState('none');
   return (
     <>
       <div className="header__navigation">
-        <a href="/mapa" className="header__navigation__btn">
-          Mapa
-          <FontAwesomeIcon icon={faMapMarkedAlt} />
-        </a>
+        <InstallPWABtn display={display} setDisplay={setDisplay} />
         <Hamburger isActive={isActive} setIsActive={setIsActive} />
       </div>
       <Menu isActive={isActive} />
