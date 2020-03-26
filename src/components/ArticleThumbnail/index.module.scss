@@ -23,6 +23,11 @@
   font-size: $xs-size;
   margin: 0;
   padding: $spacing * 2 $spacing / 2;
+  min-height: 6rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 .article-container__link {

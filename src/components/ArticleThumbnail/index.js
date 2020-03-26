@@ -5,16 +5,10 @@ import './index.module.scss';
 import Thumbnail from './Thumbnail';
 import Tags from './Tags';
 
-const ArticleThumbnail = ({
-  imagesFolder,
-  header,
-  description,
-  tags,
-  link,
-}) => {
+const ArticleThumbnail = ({ images, header, description, tags, link }) => {
   return (
     <div className="article-container">
-      <Thumbnail imagesFolder={imagesFolder} link={link} />
+      <Thumbnail images={images} link={link} />
       <h2 className="article-container__header">{header}</h2>
       <Tags tags={tags} />
       <p className="article-container__description">{description}</p>
@@ -25,7 +19,7 @@ const ArticleThumbnail = ({
   );
 };
 ArticleThumbnail.propTypes = {
-  imagesFolder: PropTypes.string.isRequired,
+  images: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,

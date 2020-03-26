@@ -20,7 +20,7 @@ const Campaign = ({ data }) => {
           return (
             <ArticleThumbnail
               key={article.id}
-              imagesFolder={article.images}
+              images={article.images}
               header={article.header}
               description={article.description}
               tags={tags}
