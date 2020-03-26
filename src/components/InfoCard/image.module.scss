@@ -15,6 +15,11 @@
     .landing-page__svg__map__marker {
       animation: jump 0.22s 2 linear;
     }
+    .hand,
+    .hand2,
+    #balloon {
+      animation: move 0.22s 2 linear;
+    }
   }
 }
 @keyframes jump {
@@ -26,5 +31,16 @@
   }
   to {
     transform: translateY(0);
+  }
+}
+@keyframes move {
+  from {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(22deg);
+  }
+  to {
+    transform: rotateX(0);
   }
 }

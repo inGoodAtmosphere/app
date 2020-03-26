@@ -1,0 +1,10 @@
+@import '../../../styles/base/settings';
+
+.hand,
+#balloon {
+  transform-origin: -30% 0%;
+  transition: transform 0.1s linear;
+}
+.hand2 {
+  transform-origin: bottom;
+}
