@@ -24,6 +24,7 @@ const Campaign = ({ data }) => {
               header={article.header}
               description={article.description}
               tags={tags}
+              link={article.link}
             />
           );
         })}
@@ -32,7 +33,7 @@ const Campaign = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch('https://obx88.usermd.net/api/articles/thumbnails');
+  const res = await fetch('https://obx88.usermd.net/api/articles');
   const data = await res.json();
   return { props: { data } };
 }

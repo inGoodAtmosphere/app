@@ -5,12 +5,13 @@ import './index.module.scss';
 import Thumbnail from './Thumbnail';
 import Tags from './Tags';
 
-const ArticleThumbnail = ({ imagesFolder, header, description, tags }) => {
-  const link = header
-    .replace(/ /g, '-')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/ł/g, 'l');
+const ArticleThumbnail = ({
+  imagesFolder,
+  header,
+  description,
+  tags,
+  link,
+}) => {
   return (
     <div className="article-container">
       <Thumbnail imagesFolder={imagesFolder} link={link} />
@@ -27,6 +28,7 @@ ArticleThumbnail.propTypes = {
   imagesFolder: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
