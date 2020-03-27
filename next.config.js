@@ -6,6 +6,7 @@ require('dotenv').config();
 module.exports = withOffline(
   withCSS(
     withSass({
+        poweredByHeader: false,
       webpack(config) {
         config.module.rules.push({
           test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
