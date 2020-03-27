@@ -28,7 +28,7 @@ export default async (req, res) => {
           res.send(result.insertId);
         } else if (checkIfAdressRegistered.length === 1) {
           result = checkIfAdressRegistered;
-          res.send(result.id);
+          res.send(result);
         } else {
           res.json({ error: 'Data error' });
         }
