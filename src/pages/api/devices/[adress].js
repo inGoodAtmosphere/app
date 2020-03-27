@@ -25,7 +25,7 @@ export default async (req, res) => {
             req.body.locationLongitude,
           )})`;
           result = await dbQuery(queryTest);
-          res.send(result.insertId);
+          res.json({id: result.insertId});
         } else if (checkIfAdressRegistered.length === 1) {
           result = checkIfAdressRegistered;
           res.send(result);
