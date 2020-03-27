@@ -19,11 +19,11 @@
     transition: all 0.4s ease-out;
   }
   &::before {
-    bottom: 0;
+    bottom: -5%;
     transform-origin: bottom;
   }
   &::after {
-    top: 0;
+    top: -5%;
     transform-origin: top;
   }
   &:hover {
@@ -33,8 +33,7 @@
     }
     &::before,
     &::after {
-      // transition: transform 0.4s ease-out;
-      transform: scaleY(15);
+      transform: scaleY(16);
       opacity: 0.5;
     }
   }
@@ -48,12 +47,11 @@
 .sensors__image__text {
   opacity: 0;
   z-index: 1;
-  text-transform: uppercase;
   text-align: center;
   transition: opacity 0.2s 0s ease-out;
   position: absolute;
   top: 50%;
   color: $light-bg;
-  font-size: $m-size;
+  font-size: $s-size;
   transform: translateY(-50%);
 }

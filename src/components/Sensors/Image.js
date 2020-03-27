@@ -13,7 +13,9 @@ const Image = ({ className }) => {
         className="sensors__image"
       />
       <span className="sensors__image__text">
-        Nasz czujnik pozwala mierzyć pył zawieszony w powietrzu
+        Nasze urządzenie mierzy stężenie pyłów zawieszonych PM1, PM2,5 oraz
+        PM10, a następnie wysyła dane do naszej strony aby każdy mógł się
+        cieszyć pomiarami z naszych urządzeń.
         <br />
         {className && 'Kliknij i dowiedz się więcej'}
       </span>
