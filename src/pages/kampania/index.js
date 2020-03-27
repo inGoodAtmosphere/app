@@ -33,7 +33,7 @@ const Campaign = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch('https://obx88.usermd.net/api/articles');
+  const res = await fetch('https://ingoodatmosphere.com/api/articles');
   const data = await res.json();
   return { props: { data } };
 }
