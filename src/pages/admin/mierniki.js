@@ -1,15 +1,16 @@
 import React from 'react';
+import SubPage from '../../components/Admin/SubPage';
+import adminPropTypes from '../../utils/admin-prop-types';
 
-const Sensors = ({ sensors }) => {
-  return sensors.map((sensor) => (
-    <div className="card" key={sensor.id}>
-      {sensor.id}
-    </div>
-  ));
+const Sensors = ({ data }) => {
+  return <SubPage data={data} />;
 };
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/locations');
-  const sensors = await res.json();
-  return { props: { sensors } };
+  const data = await res.json();
+  return { props: { data } };
 }
+
+Sensors.propTypes = adminPropTypes;
+
 export default Sensors;
