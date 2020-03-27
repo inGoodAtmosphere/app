@@ -6,7 +6,7 @@ const Paragraph = ({ content }) => {
   const splittedContent = content.split('stencel');
   const createList = () => {
     const list = [];
-    for (let i = 1; i < splittedContent.length - 1; i += 1) {
+    for (let i = 1; i < splittedContent.length; i += 1) {
       list.push(splittedContent[i]);
     }
     return list;
@@ -16,12 +16,11 @@ const Paragraph = ({ content }) => {
     return (
       <>
         <p className="article__paragraph">{splittedContent[0]}</p>
-        <ul>
+        <ul className="article__paragraph__list">
           {list.map((listItem) => (
             <li>{listItem}</li>
           ))}
         </ul>
-        <p>{splittedContent[splittedContent.length - 2]}</p>
       </>
     );
   }

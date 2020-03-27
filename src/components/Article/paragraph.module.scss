@@ -4,3 +4,16 @@
   margin: $spacing / 2 0 0 0;
   text-indent: $spacing;
 }
+.article__paragraph__list {
+  list-style: none;
+  li {
+    margin-bottom: $spacing;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: '- ';
+      text-indent: -$spacing;
+    }
+  }
+}

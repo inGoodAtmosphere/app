@@ -42,6 +42,7 @@
 
 .sensors__image {
   width: 100%;
+  user-select: none;
   max-width: 20rem;
 }
 .sensors__image__text {
