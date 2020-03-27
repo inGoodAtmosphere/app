@@ -22,8 +22,8 @@
 .article-container__description {
   font-size: $xs-size;
   margin: 0;
-  padding: $spacing * 2 $spacing / 2;
-  min-height: 6rem;
+  padding: $spacing $spacing / 2;
+  min-height: 9rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -48,5 +48,10 @@
   &:active {
     -webkit-transform: scale(0.98);
     transform: scale(0.98);
+  }
+}
+@media screen and (min-width: 389px) {
+  .article-container__description {
+    min-height: 6.3rem;
   }
 }

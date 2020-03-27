@@ -4,6 +4,7 @@
   margin: 0;
   padding: $spacing * 5 $spacing;
   position: relative;
+  z-index: 1;
   min-height: 12rem;
   display: flex;
   justify-content: center;
