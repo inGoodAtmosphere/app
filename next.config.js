@@ -5,7 +5,7 @@ const withOffline = require('next-offline');
 module.exports = withOffline(
   withCSS(
     withSass({
-        poweredByHeader: false,
+      poweredByHeader: false,
       webpack(config) {
         config.module.rules.push({
           test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
