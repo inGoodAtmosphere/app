@@ -10,7 +10,6 @@ app.prepare().then(() => {
   const server = express();
   server.use(helmet());
 
-
   server.get('/', (req, res) => {
     return app.render(req, res, '/', req.query);
   });
