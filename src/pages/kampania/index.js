@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { oneOfType } from 'prop-types';
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
@@ -40,7 +40,9 @@ export async function getStaticProps() {
 
 Campaign.propTypes = {
   data: PropTypes.arrayOf(
-    PropTypes.objectOf(oneOfType([PropTypes.string, PropTypes.number])),
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ),
   ).isRequired,
 };
 

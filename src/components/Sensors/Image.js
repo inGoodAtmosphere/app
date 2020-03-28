@@ -8,6 +8,7 @@ const Image = ({ className }) => {
     <div className={`card sensors__image__bg ${className}`}>
       <img
         srcSet={`${imgPath}420.png 420w, ${imgPath}640.png 640w, ${imgPath}1280.png 1280w, ${imgPath}1920.png 1920w`}
+        sizes="50vw"
         src={`${imgPath}640.png`}
         alt="Sensor"
         className="sensors__image"

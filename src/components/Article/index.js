@@ -23,7 +23,7 @@ const Article = () => {
                 <Section subHeader={subHeader} content={contentArray[i]} />
               ))
             : contents
-                .split('\\n')
+                .split('\r\n')
                 .map((content) => (
                   <Paragraph key={content.substring(1, 12)} content={content} />
                 ))}
