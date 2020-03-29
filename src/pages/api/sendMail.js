@@ -2,29 +2,46 @@ const sendMail = require('../../../api_modules/mailSender.js');
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    // TODO check if subject is set
-    // TODO check if name is set
-    // TODO check if content is set
-    // TODO check if email adress is set
+    // TODO translate to Polish
+    // TODO apply regex
+    // TODO update docs
+
+    // validation shit here
+    const errors = [];
+    if(!req.body.email){
+      errors.push("You must fill an email field");
+    }
+    if(!req.body.name){
+      errors.push("You must fill your name field");
+    }
+    if(!req.body.content){
+      errors.push("Message cannot be empty");
+    } else if(req.body.content.length<10){
+      errors.push("Message content too short")
+    }
+    const subject = req.body.subject || "brak tematu";
+
+
     const recipient = 'ingoodatmosphere@gmail.com';
     // let recipient;
     const plainContent = `Od:${req.body.name} adres email: ${req.body.email} ${req.body.content}`;
-    const errors = await sendMail(
+    errors.concat(await sendMail(
       recipient,
-      `Kontakt: ${req.body.subject}`,
+      `Kontakt: ${subject}`,
       plainContent,
       `${req.body.name} do`,
     ).catch((error) => {
-      res.json({ mesage: 'We have encountered an error', error });
-    });
+      console.log(error);
+      res.status(500);
+      res.end();
+    }));
     console.log(errors);
-    if (!errors || errors.length > 0) {
+    if (!errors) {
       res.json({
         message: 'Napotkaliśmy jakiś problem, spróbuj ponownie później',
-        errors,
       });
     } else {
-      res.json({ message: 'Your email has been sent succesfully' });
+      res.json({ message: 'Twój email został wysłany pomyślnie', errors });
     }
   } else {
     res.status(403);
