@@ -1,0 +1,51 @@
+@import '../../styles/base/settings';
+
+.form__remember {
+  font-size: $s-size;
+  align-self: flex-end;
+  margin-bottom: $spacing;
+  display: flex;
+  align-items: center;
+}
+
+.form__remember__container {
+  position: relative;
+  width: $m-size;
+  height: $m-size;
+  margin-right: $spacing;
+}
+
+.form__remember__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &:checked ~ &--styled {
+    * {
+      opacity: 1;
+    }
+  }
+
+  &--styled {
+    * {
+      opacity: 0;
+      transition: opacity 0.15s ease-in;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light-bg;
+    background: none;
+    border: $border solid $light-bg;
+    border-radius: $spacing;
+  }
+}

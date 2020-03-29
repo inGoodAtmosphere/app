@@ -1,0 +1,85 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.admin__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: $m-size;
+}
+
+.form__input {
+  width: 100%;
+  &::placeholder {
+    color: rgba($light-bg, 0.6);
+  }
+  margin-bottom: $spacing;
+  border: $border solid $light-bg;
+  color: $light-bg;
+  padding: $spacing;
+  background: none;
+  border-radius: $spacing;
+}
+
+.form__btn {
+  background-color: $light-bg;
+  padding: $spacing;
+  border: none;
+  border-radius: $spacing;
+  @include button($dark-bg);
+}
+
+.form__label {
+  width: 100%;
+  margin-bottom: $spacing;
+}
+
+.form__checkbox {
+  width: $s-size;
+  height: $s-size;
+  margin-right: $spacing;
+}
+
+.form__facebook__btn {
+  margin-bottom: $spacing;
+  background-color: #1877f2;
+  border-radius: $spacing;
+  color: $light-bg;
+  border: none;
+  padding: $spacing;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: $l-size;
+    margin-right: $spacing;
+  }
+  @include button($dark-bg);
+}
+
+.form__google__btn {
+  span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+  color: $dark-bg !important;
+  border-radius: $spacing !important;
+  border: none !important;
+  font-size: $m-size !important;
+  width: 100% !important;
+  padding: $spacing !important;
+  @include button($dark-bg);
+}
+
+.form__text {
+  font-size: $s-size;
+}
