@@ -7,7 +7,7 @@ const Patrons = () => {
     <>
       <div className="footer__patrons">
         <div className="footer__patron">
-          <h3>Patronat honorowy: </h3>
+          <h3>Patron honorowy: </h3>
           <Patron
             name="Gliwice"
             link="https://gliwice.eu/"
