@@ -1,0 +1,18 @@
+@import '../../styles/base/settings';
+
+.form__input {
+  width: 100%;
+  &::placeholder {
+    color: rgba($light-bg, 0.6);
+  }
+  margin-bottom: $spacing;
+  border: $border solid $light-bg;
+  color: $light-bg;
+  padding: $spacing;
+  background: none;
+  border-radius: $spacing;
+}
+.form__label {
+  width: 100%;
+  margin-bottom: $spacing;
+}

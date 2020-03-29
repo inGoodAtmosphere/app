@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './index.moudle.scss';
-import Input from './Input';
 
-const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [content, setContent] = useState('');
-  const data = { name, email, subject, content };
+const Form = ({ children, data, endpoint }) => {
   const [message, setMessage] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/sendMail', {
+    const res = await fetch(endpoint, {
       method: 'post',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -20,8 +15,11 @@ const Form = () => {
       body: JSON.stringify(data),
     });
     const json = await res.json();
-    // TODO uncomment this when Olivier adds errors if (json.errors.length) setMessage(json.errors);
-    setMessage(json.message);
+    if (json.errors.length) {
+      setMessage(json.errors);
+    } else {
+      setMessage(json.message);
+    }
   };
   return (
     <form
@@ -29,36 +27,19 @@ const Form = () => {
       className="form admin__form"
       onSubmit={(e) => handleSubmit(e)}
     >
-      <p>{message}</p>
-      <Input
-        name="name"
-        label="Imię i Nazwisko"
-        value={name}
-        onChange={setName}
-      />
-      <Input
-        name="email"
-        label="Adres e-mail"
-        value={email}
-        onChange={setEmail}
-      />
-      <Input
-        name="subject"
-        label="Temat"
-        value={subject}
-        onChange={setSubject}
-      />
-      <Input
-        name="content"
-        label="Treść"
-        value={content}
-        onChange={setContent}
-      />
-      <button type="submit" className="form__btn admin__form__btn ">
+      <p className="form__message">{message}</p>
+      {children}
+      <button type="submit" className="form__btn">
         Zaloguj się
       </button>
     </form>
   );
+};
+
+Form.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  endpoint: PropTypes.string.isRequired,
 };
 
 export default Form;

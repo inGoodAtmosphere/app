@@ -1,30 +1,26 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import './remember-user.module.scss';
+import './checkbox.module.scss';
 
-const RememberUser = () => {
+const Checkbox = ({ name }) => {
   const [isChecked, setIsChecked] = useState(false);
   const handleClick = () => {
     setIsChecked(!isChecked);
   };
   return (
     <>
-      <label
-        htmlFor="remember"
-        className="form__remember admin__form__remember"
-      >
-        <div className="form__remember__container">
+      <label htmlFor="checkbox" className="form__checkbox">
+        <div className="form__checkbox__container">
           <input
             type="checkbox"
-            aria-label="Zapamiętaj mnie"
-            id="remember"
-            name="remember"
-            className="form__remember__checkbox"
+            name={name}
+            className="form__checkbox__check"
             onClick={handleClick}
           />
-          <div className="form__remember__checkbox--styled">
+          <div className="form__checkbox__check--styled">
             <FontAwesomeIcon icon={faCheck} />
           </div>
         </div>
@@ -34,4 +30,8 @@ const RememberUser = () => {
   );
 };
 
-export default RememberUser;
+Checkbox.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+export default Checkbox;

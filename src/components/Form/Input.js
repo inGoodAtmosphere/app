@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './input.module.scss';
 
-const Input = ({ name, placeholder, value, onChange }) => {
+const Input = ({ name, type, placeholder, value, onChange, label }) => {
   return (
     <label htmlFor={name}>
+      {label}
       <input
         name={name}
-        type="text"
+        type={type}
         placeholder={placeholder}
-        className="form__input admin__form__input"
+        className="form__input"
         value={value}
         onChange={(e) => onChange(e.target.value)}
       />
@@ -17,10 +19,13 @@ const Input = ({ name, placeholder, value, onChange }) => {
 };
 Input.defaultProps = {
   placeholder: '',
+  type: 'text',
 };
 Input.propTypes = {
   placeholder: PropTypes.string,
+  type: PropTypes.string,
   name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
