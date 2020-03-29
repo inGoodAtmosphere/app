@@ -12,7 +12,7 @@ const ArticleTitle = () => {
         className="article__header__img"
         src={`${imagesPath}1280.jpg`}
         alt="Miniaturka artykułu"
-        srcSet={`${imagesPath}768.jpg 768w, ${imagesPath}1280.jpg 1280w, ${imagesPath}1920.jpg 1920w, ${imagesPath}5319.jpg 5319w`}
+        srcSet={`${imagesPath}768.jpg 768w, ${imagesPath}1280.jpg 1280w, ${imagesPath}1920.jpg 1920w`}
       />
     </div>
   );

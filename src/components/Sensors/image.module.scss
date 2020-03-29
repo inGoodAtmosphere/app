@@ -1,10 +1,13 @@
 @import '../../styles/base/settings';
 
 .sensors__image__bg {
+  display: -webkit-box;
   display: flex;
   background: rgb(255, 255, 255);
   background: linear-gradient(170deg, rgb(197, 197, 197) 0%, $light-bg 60%);
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   position: relative;
   &::before,
@@ -16,25 +19,29 @@
     left: 0;
     width: 100%;
     height: 5%;
+    -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
   }
   &::before {
-    bottom: 0;
+    bottom: -5%;
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
   }
   &::after {
-    top: 0;
+    top: -5%;
+    -webkit-transform-origin: top;
     transform-origin: top;
   }
   &:hover {
     .sensors__image__text {
+      -webkit-transition: opacity 0.2s 0.4s ease-out;
       transition: opacity 0.2s 0.4s ease-out;
       opacity: 1;
     }
     &::before,
     &::after {
-      // transition: transform 0.4s ease-out;
-      transform: scaleY(15);
+      -webkit-transform: scaleY(16);
+      transform: scaleY(16);
       opacity: 0.5;
     }
   }
@@ -42,17 +49,23 @@
 
 .sensors__image {
   width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   max-width: 20rem;
 }
 .sensors__image__text {
   opacity: 0;
   z-index: 1;
-  text-transform: uppercase;
+  padding-right: $spacing; // TODO: Check what is wrong with centralize text
   text-align: center;
+  -webkit-transition: opacity 0.2s 0s ease-out;
   transition: opacity 0.2s 0s ease-out;
   position: absolute;
   top: 50%;
   color: $light-bg;
-  font-size: $m-size;
+  font-size: $s-size;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }

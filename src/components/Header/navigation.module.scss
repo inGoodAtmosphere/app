@@ -1,6 +1,19 @@
+@import '../../styles/base/settings';
+
 .header__navigation {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
   display: flex;
+}
+.header__navigation__btn {
+  background-color: $dark-accent;
+  color: $light-bg;
+  padding: $spacing;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    margin-left: $spacing;
+  }
 }

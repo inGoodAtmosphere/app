@@ -1,9 +1,13 @@
 import React from 'react';
-import PropTypes, { oneOfType } from 'prop-types';
+import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
+import Loading from '../../components/Loading';
 
 const Campaign = ({ data }) => {
+  const router = useRouter();
+  if (router.isFallback) return <Loading />;
   return (
     <main className="content campaign__content">
       <h1>Nasze artykuły</h1>
@@ -16,10 +20,11 @@ const Campaign = ({ data }) => {
           return (
             <ArticleThumbnail
               key={article.id}
-              imagesFolder={article.images}
+              images={article.images}
               header={article.header}
               description={article.description}
               tags={tags}
+              link={article.link}
             />
           );
         })}
@@ -28,14 +33,16 @@ const Campaign = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/articles/thumbnails');
+  const res = await fetch('https://ingoodatmosphere.com/api/articles');
   const data = await res.json();
   return { props: { data } };
 }
 
 Campaign.propTypes = {
   data: PropTypes.arrayOf(
-    PropTypes.objectOf(oneOfType([PropTypes.string, PropTypes.number])),
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ),
   ).isRequired,
 };
 

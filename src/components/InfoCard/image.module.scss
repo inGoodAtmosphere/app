@@ -7,4 +7,40 @@
 
 .landing-page__svg__link {
   border: none !important;
+  &:hover {
+    .landing-page__svg__sensor__text {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+    .landing-page__svg__map__marker {
+      animation: jump 0.22s 2 linear;
+    }
+    .hand,
+    .hand2,
+    #balloon {
+      animation: move 0.22s 2 linear;
+    }
+  }
+}
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-$spacing);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes move {
+  from {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(22deg);
+  }
+  to {
+    transform: rotateX(0);
+  }
 }

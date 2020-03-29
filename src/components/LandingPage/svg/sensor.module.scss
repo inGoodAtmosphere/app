@@ -1,0 +1,10 @@
+@import '../../../styles/base/settings';
+
+.landing-page__svg__sensor__text {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out,
+    -webkit-transform 0.2s ease-out;
+}

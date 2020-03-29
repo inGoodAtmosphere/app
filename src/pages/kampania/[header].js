@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
+import { useRouter } from 'next/router';
 import ArticleContent from '../../components/Article';
+import Loading from '../../components/Loading';
 
 const Article = ({ data }) => {
+  const router = useRouter();
+  if (router.isFallback) return <Loading />;
   return <ArticleContent value={data[0]} />;
 };
 export async function getStaticPaths() {
-  const res = await fetch('http://localhost:3000/api/articles');
+  const res = await fetch('https://ingoodatmosphere.com/api/articles');
   const thumbnails = await res.json();
   const paths = thumbnails.map((thumbnail) => ({
     params: { header: thumbnail.link },
@@ -16,7 +20,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params }) {
   const res = await fetch(
-    `http://localhost:3000/api/articles/${params.header}`,
+    `https://ingoodatmosphere.com/api/articles/${params.header}`,
   );
   const data = await res.json();
   return { props: { data } };

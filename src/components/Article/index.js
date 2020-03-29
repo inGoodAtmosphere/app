@@ -22,13 +22,10 @@ const Article = () => {
               subHeaders.map((subHeader, i) => (
                 <Section subHeader={subHeader} content={contentArray[i]} />
               ))
-            : contents[0]
-                .split('\n')
+            : contents
+                .split('\r\n')
                 .map((content) => (
-                  <Paragraph
-                    key={content.substring(1, 12)}
-                    content={contentArray[0]}
-                  />
+                  <Paragraph key={content.substring(1, 12)} content={content} />
                 ))}
         </article>
       </main>

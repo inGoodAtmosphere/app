@@ -14,9 +14,15 @@
   }
 }
 
-.landing-page__map {
-  .landing-page__btn {
-    @include button($primary-accent);
+.landing-page__btn__map {
+  border: $border solid $light-bg;
+  border-radius: $spacing;
+  padding: $spacing;
+  width: fit-content;
+  align-self: flex-end;
+  opacity: 0.7;
+  @media #{$media-query-m} {
+    align-self: flex-start;
   }
 }
 

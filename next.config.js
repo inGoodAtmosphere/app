@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
 const withOffline = require('next-offline');
+require('dotenv').config();
 
 module.exports = withOffline(
   withCSS(
