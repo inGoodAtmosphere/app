@@ -2,11 +2,14 @@
 
 .form__input__wrapper {
   position: relative;
-  margin-bottom: $spacing * 3;
+  margin-bottom: $spacing * 1.5;
+  width: 100%;
 }
 .form__input {
+  width: 100%;
   border: $border solid $light-bg;
   color: $light-bg;
+  outline: none;
   padding: $spacing;
   background: none;
   border-radius: $spacing;
@@ -15,11 +18,11 @@
   &:valid ~ .form__label {
     transform: translateY(-150%) scale(0.8);
     transform-origin: left;
-    background: $dark-bg;
     z-index: 0;
   }
 }
 .form__label {
+  background-color: $dark-bg;
   position: absolute;
   cursor: text;
   z-index: -1;

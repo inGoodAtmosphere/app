@@ -1,0 +1,14 @@
+@import '../../styles/base/settings';
+
+.form__input__textarea {
+  resize: none;
+  height: 8rem;
+  &:focus ~ .form__label__textarea,
+  &:valid ~ .form__label__textarea {
+    transform: translateY(-50%) scale(0.8);
+  }
+}
+.form__label__textarea {
+  top: 0;
+  transform: translateY(50%);
+}

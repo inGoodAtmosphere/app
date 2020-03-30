@@ -37,6 +37,7 @@ const Contact = () => {
           label="Treść"
           value={content}
           onChange={setContent}
+          type="textarea"
         />
       </Form>
     </main>

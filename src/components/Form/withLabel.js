@@ -18,7 +18,11 @@ export default (WrappedComponent) => ({
         value={value}
         onChange={onChange}
       />
-      <label className="form__label" htmlFor={name}>
+      <label
+        className={`form__label ${type === 'textarea' &&
+          'form__label__textarea'}`}
+        htmlFor={name}
+      >
         {label}
       </label>
     </div>
