@@ -26,7 +26,7 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
     // Checking if every argument is set
     if (!recipient) {
       const error = new Error(
-        "Odbiorca nie został ustawiony, jeśli widzisz ten błąd daj nam znać ;)",
+        'Odbiorca nie został ustawiony, jeśli widzisz ten błąd daj nam znać ;)',
       ); // creating an error to reject a promise,pssst eslint is my best friend at using good practices
       reject(error);
     }
