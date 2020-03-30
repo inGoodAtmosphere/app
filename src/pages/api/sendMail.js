@@ -6,7 +6,6 @@ export default async (req, res) => {
     // TODO CHECK why names doesnt appears on gmail
     // TODO to add captcha or something like this
     // TODO to add <br>s to emails
-    // TODO translate to Polish
     // TODO apply regex
     // TODO update docs
     // TODO try domain with git clone
@@ -32,7 +31,7 @@ export default async (req, res) => {
       errors.push('Tresć wiadomości jest zbyt krótka');
     }
     const subject = req.body.subject || 'brak tematu';
-    if (errors.length > 0) {
+    if (errors.length === 0) {
       const recipient = 'ingoodatmosphere@gmail.com';
       // let recipient;
       const plainContent = `Od:${req.body.name} adres email: ${req.body.email} ${req.body.content}`;
