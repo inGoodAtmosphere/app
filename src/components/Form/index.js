@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './index.moudle.scss';
 
-const Form = ({ children, data, endpoint }) => {
+const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const Form = ({ children, data, endpoint }) => {
       <p className="form__message">{message}</p>
       {children}
       <button type="submit" className="form__btn">
-        Zaloguj się
+        {submitText}
       </button>
     </form>
   );
@@ -41,6 +41,7 @@ Form.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
   data: PropTypes.objectOf(PropTypes.string).isRequired,
   endpoint: PropTypes.string.isRequired,
+  submitText: PropTypes.string.isRequired,
 };
 
 export default Form;

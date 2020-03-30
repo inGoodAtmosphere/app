@@ -8,7 +8,9 @@
   padding: $spacing / 3;
   overflow: hidden;
   width: 100%;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     .article-container__thumbnail__image {
       transform: scale(1.2);
     }

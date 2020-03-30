@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <main className="content contact__content">
       <ContactHeaders />
-      <Form data={data} endpoint="/api/sendMail">
+      <Form data={data} endpoint="/api/sendMail" submitText="Wyślij">
         <Input
           name="name"
           label="Imię i Nazwisko"

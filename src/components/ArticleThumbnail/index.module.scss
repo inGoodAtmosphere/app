@@ -40,8 +40,10 @@
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  outline: none;
   padding: $spacing / 3 $spacing;
-  &:hover {
+  &:hover,
+  &:focus {
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }

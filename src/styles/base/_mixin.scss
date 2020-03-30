@@ -1,7 +1,9 @@
 @mixin button($color) {
   box-shadow: 0 1rem 1.5rem -0.33rem darken($color, 30%);
   transition: transform 0.2s;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     transform: scale(1.03);
   }
   &:active {
@@ -12,6 +14,7 @@
 
 @mixin link($color) {
   position: relative;
+  outline: none !important;
   &::before {
     transform: translateX(-50%);
     content: '';
@@ -24,7 +27,8 @@
     background: $color;
     transition: transform 0.2s ease-out;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     &::before {
       opacity: 1;
       transform: scaleX(6) translateX(-7%) translateY(100%);

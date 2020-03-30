@@ -6,7 +6,9 @@
   border: $border solid $light-bg;
   padding: $spacing;
   transition: transform 0.2s;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     transform: scale(1.03);
   }
   &:active {

@@ -7,7 +7,9 @@
 
 .landing-page__svg__link {
   border: none !important;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     .landing-page__svg__sensor__text {
       opacity: 1;
       transform: scale(1.02);

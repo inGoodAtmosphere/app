@@ -7,15 +7,19 @@
   margin: 0 $spacing;
   white-space: nowrap;
 }
+.footer__patrons__item {
+  transition: opacity 0.3s;
+  opacity: 0.6;
+  outline: none !important;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
 
 .footer__patrons__item__image {
   height: $header-height;
   max-width: 100%;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  &:hover {
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 547px) {
   .footer__patron {
