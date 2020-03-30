@@ -5,12 +5,11 @@ import './index.module.scss';
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors([]);
     setMessage('');
-    setIsLoaded(true);
+    setMessage('Wysyłanie');
     const res = await fetch(endpoint, {
       method: 'post',
       headers: {
@@ -20,10 +19,9 @@ const Form = ({ children, data, endpoint, submitText }) => {
       body: JSON.stringify(data),
     });
     const json = await res.json();
-    setIsLoaded(false);
-    if (isLoaded) setMessage('Proszę czekać');
     if (json.errors.length) {
       setErrors(json.errors);
+      setMessage('');
     } else {
       setMessage(json.message);
     }
@@ -35,18 +33,23 @@ const Form = ({ children, data, endpoint, submitText }) => {
       onSubmit={(e) => handleSubmit(e)}
       noValidate
     >
-      {errors.length ? (
+      {errors.length > 0 &&
         errors.map((error) => (
           <p key={error} className="form__error">
             {error}
           </p>
-        ))
-      ) : (
-        <p className="form__message">{isLoaded ? 'Proszę czekać' : message}</p>
-      )}
+        ))}
       {children}
-      <button type="submit" className="form__btn">
-        {submitText}
+      <button
+        type="submit"
+        className={`${
+          message === 'Twój email został wysłany pomyślnie'
+            ? 'form__btn--success'
+            : 'form__btn'
+        }`}
+        disabled={!!message}
+      >
+        {message || submitText}
       </button>
     </form>
   );

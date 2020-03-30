@@ -14,7 +14,19 @@
   padding: $spacing;
   border: none;
   border-radius: $spacing;
+  &:disabled {
+    color: #000;
+  }
   @include button($dark-bg);
+  &--success {
+    padding: $spacing;
+    border: none;
+    border-radius: $spacing;
+    background-color: $very-good;
+    &:disabled {
+      color: $light-bg;
+    }
+  }
 }
 
 .form__error {
