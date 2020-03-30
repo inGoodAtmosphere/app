@@ -17,6 +17,7 @@
   @include button($dark-bg);
 }
 
-.form__text {
-  font-size: $s-size;
+.form__error {
+  color: $bad;
+  margin: $spacing;
 }

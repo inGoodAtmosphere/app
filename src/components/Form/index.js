@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './index.moudle.scss';
+import './index.module.scss';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors([]);
+    setMessage('');
+    setIsLoaded(true);
     const res = await fetch(endpoint, {
       method: 'post',
       headers: {
@@ -15,8 +20,10 @@ const Form = ({ children, data, endpoint, submitText }) => {
       body: JSON.stringify(data),
     });
     const json = await res.json();
+    setIsLoaded(false);
+    if (isLoaded) setMessage('Proszę czekać');
     if (json.errors.length) {
-      setMessage(json.errors);
+      setErrors(json.errors);
     } else {
       setMessage(json.message);
     }
@@ -24,11 +31,19 @@ const Form = ({ children, data, endpoint, submitText }) => {
   return (
     <form
       method="post"
-      className="form admin__form"
+      className="form"
       onSubmit={(e) => handleSubmit(e)}
       noValidate
     >
-      <p className="form__message">{message}</p>
+      {errors.length ? (
+        errors.map((error) => (
+          <p key={error} className="form__error">
+            {error}
+          </p>
+        ))
+      ) : (
+        <p className="form__message">{isLoaded ? 'Proszę czekać' : message}</p>
+      )}
       {children}
       <button type="submit" className="form__btn">
         {submitText}
