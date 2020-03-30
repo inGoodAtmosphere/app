@@ -16,20 +16,20 @@ export default async (req, res) => {
 
     // checking if email is set
     if (!req.body.email) {
-      errors.push('You must fill an email field');
+      errors.push('Musisz wypełnić pole z twoim adresem email');
     }
     // checking if name is set or is too short
     if (!req.body.name) {
-      errors.push('You must fill your name field');
+      errors.push('Musisz wypełnić pole z twoim imieniem');
     }
     if (req.body.name.length < 2) {
-      errors.push('Your name must be at least 2 characters long');
+      errors.push('Twoje imię musi zawierać co najmniej 2 znaki');
     }
     // checking if content is set or is too short
     if (!req.body.content) {
-      errors.push('Message cannot be empty');
+      errors.push('Treść wiadomości nie może być pusta');
     } else if (req.body.content.length < 10) {
-      errors.push('Message content too short');
+      errors.push('Tresć wiadomości jest zbyt krótka');
     }
     const subject = req.body.subject || 'brak tematu';
     if (errors.length > 0) {

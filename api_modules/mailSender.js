@@ -26,15 +26,15 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
     // Checking if every argument is set
     if (!recipient) {
       const error = new Error(
-        "Recipient isn't set, if you see this error, let us know that we could fix this error",
+        "Odbiorca nie został ustawiony, jeśli widzisz ten błąd daj nam znać ;)",
       ); // creating an error to reject a promise,pssst eslint is my best friend at using good practices
       reject(error);
     }
     if (!subject) {
-      errors.push('You must type the subject of an email');
+      errors.push('Musisz wpisać temat wiadomości');
     }
     if (!htmlContent) {
-      errors.push('Email content cannot be empty');
+      errors.push('Treść emaila nie może być pusta');
     }
     if (!prefix || !suffix) {
       fromPrefix = '';
