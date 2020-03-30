@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './input.module.scss';
 import withLabel from './withLabel';
 
-const Input = ({ name, type, placeholder, value, onChange }) => {
+const TextArea = ({ name, placeholder, value, onChange }) => {
   return (
-    <input
+    <textarea
       name={name}
-      type={type}
       placeholder={placeholder}
       className="form__input"
       value={value}
@@ -16,15 +14,15 @@ const Input = ({ name, type, placeholder, value, onChange }) => {
     />
   );
 };
-Input.defaultProps = {
+
+TextArea.defaultProps = {
   placeholder: '',
-  type: 'text',
 };
-Input.propTypes = {
+TextArea.propTypes = {
   placeholder: PropTypes.string,
-  type: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
-export default withLabel(Input);
+
+export default withLabel(TextArea);

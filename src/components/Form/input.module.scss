@@ -1,18 +1,32 @@
 @import '../../styles/base/settings';
 
+.form__input__wrapper {
+  position: relative;
+  margin-bottom: $spacing * 3;
+}
 .form__input {
-  width: 100%;
-  &::placeholder {
-    color: rgba($light-bg, 0.6);
-  }
-  margin-bottom: $spacing;
   border: $border solid $light-bg;
   color: $light-bg;
   padding: $spacing;
   background: none;
   border-radius: $spacing;
+  font-size: $s-size;
+  &:focus ~ .form__label,
+  &:valid ~ .form__label {
+    transform: translateY(-150%) scale(0.8);
+    transform-origin: left;
+    background: $dark-bg;
+    z-index: 0;
+  }
 }
 .form__label {
-  width: 100%;
+  position: absolute;
+  cursor: text;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: $spacing;
+  font-size: $s-size;
   margin-bottom: $spacing;
+  transition: transform 0.2s;
 }

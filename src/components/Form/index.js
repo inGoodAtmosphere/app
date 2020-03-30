@@ -26,6 +26,7 @@ const Form = ({ children, data, endpoint }) => {
       method="post"
       className="form admin__form"
       onSubmit={(e) => handleSubmit(e)}
+      noValidate
     >
       <p className="form__message">{message}</p>
       {children}
