@@ -22,7 +22,7 @@ export default async (req, res) => {
       checkIfDeviceRegisteredQuery = `Select id from devices where id=${dbQuery.escape(
         id,
       )}`;
-      checkIfDeviceRegistered = dbQuery(checkIfDeviceRegisteredQuery);
+      checkIfDeviceRegistered = await dbQuery(checkIfDeviceRegisteredQuery);
       if (checkIfDeviceRegistered.length === 1) {
         query = `INSERT INTO measurements(device_id,measurement_date, measurement_time, receive_date,receive_time, humidity, temperature, pm1,pm25,pm10) values(${dbQuery.escape(
           id,
