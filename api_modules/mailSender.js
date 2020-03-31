@@ -49,7 +49,7 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
     if (!suffix) {
       fromSuffix = '';
     } else {
-      fromSuffix =` ${suffix}`;
+      fromSuffix = ` ${suffix}`;
     }
 
     if (errors.length > 0) {
