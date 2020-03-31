@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Context from './Context';
 
-export default (WrappedComponent) => ({ value }) => (
-  <Context.Provider value={value}>
-    <WrappedComponent />
+export default (WrappedComponent) => (props) => (
+  <Context.Provider value={props.value}>
+    <WrappedComponent {...props} />
   </Context.Provider>
 );

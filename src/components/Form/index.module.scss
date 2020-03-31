@@ -16,6 +16,7 @@
   border-radius: $spacing;
   &:disabled {
     color: #000;
+    cursor: default;
   }
   @include button($dark-bg);
   &--success {
@@ -25,6 +26,7 @@
     background-color: $very-good;
     &:disabled {
       color: $light-bg;
+      cursor: default;
     }
   }
 }

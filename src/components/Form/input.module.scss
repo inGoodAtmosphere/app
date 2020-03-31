@@ -20,6 +20,9 @@
     transform-origin: left;
     z-index: 0;
   }
+  &--error {
+    border-color: $bad;
+  }
 }
 .form__label {
   background-color: $dark-bg;

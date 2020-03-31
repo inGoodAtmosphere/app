@@ -9,11 +9,17 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [content, setContent] = useState('');
+  const [errors, setErrors] = useState([]);
   const data = { name, email, subject, content };
   return (
     <main className="content contact__content">
       <ContactHeaders />
-      <Form data={data} endpoint="/api/sendMail" submitText="Wyślij">
+      <Form
+        data={data}
+        endpoint="/api/sendMail"
+        submitText="Wyślij"
+        value={{ errors, setErrors }}
+      >
         <Input
           name="name"
           label="Imię i Nazwisko"

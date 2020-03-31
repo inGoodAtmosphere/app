@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import withContext from '../../utils/withContext';
 import './index.module.scss';
+import Context from '../../utils/Context';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
-  const [errors, setErrors] = useState([]);
+  const { setErrors } = useContext(Context);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors([]);
@@ -33,12 +35,6 @@ const Form = ({ children, data, endpoint, submitText }) => {
       onSubmit={(e) => handleSubmit(e)}
       noValidate
     >
-      {errors.length > 0 &&
-        errors.map((error) => (
-          <p key={error} className="form__error">
-            {error}
-          </p>
-        ))}
       {children}
       <button
         type="submit"
@@ -62,4 +58,4 @@ Form.propTypes = {
   submitText: PropTypes.string.isRequired,
 };
 
-export default Form;
+export default withContext(Form);
