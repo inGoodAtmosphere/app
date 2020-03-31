@@ -4,8 +4,6 @@ import styles from './Button.module.scss';
 
 const Button = () => {
   const { link, isEven } = useContext(Context);
-  if (link.href === 'mapa')
-    return <span className={styles.mapa}>Już wkrótce</span>;
   return (
     <a
       href={`/${link.href}`}

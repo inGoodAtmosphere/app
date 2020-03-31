@@ -1,0 +1,28 @@
+@import '../../styles/base/settings';
+
+.map__data__caqi {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  border-radius: $spacing;
+  padding: $spacing;
+  color: $light-bg;
+}
+.map__data__caqi__measurement,
+.map__data__caqi__title {
+  margin: $spacing / 2 0;
+  text-align: center;
+}
+.map__data__caqi__wrapper {
+  padding: 0 $spacing * 2 0 $spacing;
+}
+.map__data__caqi__measurement {
+  font-size: $l-size;
+}
+.map__data__caqi__title {
+  font-size: $m-size;
+}
+.map__data__status {
+  font-size: $s-size;
+  margin: 0;
+}

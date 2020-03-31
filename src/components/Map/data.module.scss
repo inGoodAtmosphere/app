@@ -1,0 +1,12 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+@media #{$media-query-m} {
+  .data {
+    width: 100%;
+    grid-column: 2;
+    height: calc(100vh - #{$header-height});
+    padding: 0 $spacing;
+    @include scroll($primary-accent);
+  }
+}

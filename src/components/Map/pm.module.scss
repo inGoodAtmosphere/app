@@ -1,0 +1,29 @@
+@import '../../styles/base/settings';
+
+.map__data__pm {
+  border-radius: $spacing;
+  background-color: $light-accent;
+  padding: $spacing;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  color: $light-bg;
+  &:first-child {
+    margin-right: $spacing;
+  }
+}
+.map__data__pm__measurement,
+.map__data__pm__title {
+  margin: $spacing / 2 0;
+}
+.map__data__pm__measurement {
+  font-size: $m-size;
+}
+.map__data__pm__title {
+  font-size: $s-size;
+}
+.map__data__percent {
+  color: $dark-bg;
+}

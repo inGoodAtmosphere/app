@@ -4,7 +4,14 @@ import Item from './Item';
 import styles from './index.module.scss';
 
 const Menu = ({ isActive }) => {
-  const anchors = ['Kampania', 'O nas', 'Encyklopedia', 'Mierniki', 'Kontakt'];
+  const anchors = [
+    'Mapa',
+    'Kampania',
+    'O nas',
+    'Encyklopedia',
+    'Mierniki',
+    'Kontakt',
+  ];
   return (
     <nav className={`${styles.menu} ${isActive ? styles.menuIsActive : ''}`}>
       {anchors.map((anchor) => (

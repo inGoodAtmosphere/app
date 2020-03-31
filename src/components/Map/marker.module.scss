@@ -1,0 +1,14 @@
+.marker {
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 100%;
+  border: none;
+  height: 1.5rem;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  &:active {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+}

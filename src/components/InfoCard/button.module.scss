@@ -1,0 +1,51 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.landing-page__btn {
+  align-self: flex-end;
+  padding: $spacing;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  outline: none;
+  &:hover,
+  &:focus {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  &:active {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+}
+
+.landing-page__map {
+  .landing-page__btn {
+    @include button($primary-accent);
+  }
+}
+
+.landing-page__sensors {
+  .landing-page__btn {
+    @include button($dark-accent);
+  }
+}
+
+.landing-page__encyclopedia {
+  .landing-page__btn {
+    @include button($light-accent);
+  }
+}
+
+.landing-page__contact {
+  .landing-page__btn {
+    @include button($bright-accent);
+  }
+}
+
+.landing-page__project {
+  .landing-page__btn {
+    @include button($light-bg);
+  }
+}
