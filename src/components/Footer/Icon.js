@@ -6,6 +6,7 @@ import {
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { logEvent } from '../../utils/analytics';
+import './icon.module.scss';
 
 const Icon = ({ socialMedia, link }) => {
   return (
