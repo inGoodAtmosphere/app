@@ -32,10 +32,14 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
       reject(error);
     }
     if (!subject) {
-      errors.push(new ValidationError('Musisz wpisać temat wiadomości',"subject"));
+      errors.push(
+        new ValidationError('Musisz wpisać temat wiadomości', 'subject'),
+      );
     }
     if (!htmlContent) {
-      errors.push(new ValidationError('Treść emaila nie może być pusta',"content"));
+      errors.push(
+        new ValidationError('Treść emaila nie może być pusta', 'content'),
+      );
     }
     if (!prefix || !suffix) {
       fromPrefix = '';

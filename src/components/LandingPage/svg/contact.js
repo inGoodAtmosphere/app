@@ -308,10 +308,7 @@ function ContactSvg() {
           />
         </g>
       </a>
-      <a
-        href="mailto:ingoodatmosphere@gmail.com"
-        className="landing-page__svg__contact__icon"
-      >
+      <a href="/kontakt" className="landing-page__svg__contact__icon">
         <g className="landing-page__svg__contact__icon">
           <path
             opacity={0.1}

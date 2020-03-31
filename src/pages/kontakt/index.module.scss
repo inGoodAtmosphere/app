@@ -1,0 +1,12 @@
+@import '../../styles/base/settings';
+
+.contact__text {
+  text-align: center;
+  margin-top: $spacing * 2;
+  justify-content: center;
+}
+.contact__text__link {
+  text-decoration: underline;
+  color: $light-bg;
+  font-size: $xs-size;
+}

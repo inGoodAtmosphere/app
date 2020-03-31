@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import './input.module.scss';
 import withLabel from './withLabel';
 
-const Input = ({ name, type, placeholder, value, onChange, className }) => {
+const Input = ({ name, id, type, placeholder, value, onChange, className }) => {
   return (
     <input
       name={name}
+      id={id}
       type={type}
       placeholder={placeholder}
       className={className}
@@ -24,6 +25,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,

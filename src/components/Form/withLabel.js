@@ -4,6 +4,7 @@ import Context from '../../utils/Context';
 
 export default (WrappedComponent) => ({
   name,
+  id,
   label,
   type,
   placeholder,
@@ -19,6 +20,7 @@ export default (WrappedComponent) => ({
         {isError && <p className="form__error">{error.msg}</p>}
         <WrappedComponent
           name={name}
+          id={id}
           type={type}
           placeholder={placeholder}
           value={value}

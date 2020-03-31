@@ -16,20 +16,36 @@ export default async (req, res) => {
 
     // checking if email is set
     if (!req.body.email) {
-      errors.push(new ValidationError('Musisz wypełnić pole z twoim adresem email', "email"));
+      errors.push(
+        new ValidationError(
+          'Musisz wypełnić pole z twoim adresem email',
+          'email',
+        ),
+      );
     }
     // checking if name is set or is too short
     if (!req.body.name) {
-      errors.push(new ValidationError('Musisz wypełnić pole z twoim imieniem',"name"));
+      errors.push(
+        new ValidationError('Musisz wypełnić pole z twoim imieniem', 'name'),
+      );
     }
     if (req.body.name.length < 2) {
-      errors.push(new ValidationError('Twoje imię musi zawierać co najmniej 2 znaki',"name"));
+      errors.push(
+        new ValidationError(
+          'Twoje imię musi zawierać co najmniej 2 znaki',
+          'name',
+        ),
+      );
     }
     // checking if content is set or is too short
     if (!req.body.content) {
-      errors.push(new ValidationError('Treść wiadomości nie może być pusta',"content"));
+      errors.push(
+        new ValidationError('Treść wiadomości nie może być pusta', 'content'),
+      );
     } else if (req.body.content.length < 10) {
-      errors.push(new ValidationError('Tresć wiadomości jest zbyt krótka',"content"));
+      errors.push(
+        new ValidationError('Tresć wiadomości jest zbyt krótka', 'content'),
+      );
     }
     const subject = req.body.subject || 'brak tematu';
     if (errors.length === 0) {
