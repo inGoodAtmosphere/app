@@ -1,0 +1,28 @@
+@import '../../styles/base/settings';
+
+.form__input__wrapper {
+  position: relative;
+  margin: $spacing * 1 0;
+  width: 100%;
+}
+.form__label {
+  background-color: $dark-bg;
+  position: absolute;
+  cursor: text;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: $spacing;
+  font-size: $s-size;
+  margin-bottom: $spacing;
+  transition: transform 0.2s;
+}
+.form__error {
+  color: $bad;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}

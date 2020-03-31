@@ -1,10 +1,5 @@
 @import '../../styles/base/settings';
 
-.form__input__wrapper {
-  position: relative;
-  margin-bottom: $spacing * 1.5;
-  width: 100%;
-}
 .form__input {
   width: 100%;
   border: $border solid $light-bg;
@@ -23,16 +18,4 @@
   &--error {
     border-color: $bad;
   }
-}
-.form__label {
-  background-color: $dark-bg;
-  position: absolute;
-  cursor: text;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-50%);
-  left: $spacing;
-  font-size: $s-size;
-  margin-bottom: $spacing;
-  transition: transform 0.2s;
 }
