@@ -6,6 +6,10 @@ require('dotenv').config();
 module.exports = withOffline(
   withCSS(
     withSass({
+      env: {
+        CAPTCHA_SITE_KEY: process.env.CAPTCHA_SITE_KEY,
+        CAPTCHA_SECRET_KEY: process.env.CAPTCHA_SECRET_KEY,
+      },
       poweredByHeader: false,
       webpack(config) {
         config.module.rules.push({

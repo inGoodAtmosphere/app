@@ -9,6 +9,27 @@ const Form = ({ children, data, endpoint, submitText }) => {
   const { setErrors } = useContext(Context);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    window.grecaptcha.execute(process.env.CAPTCHA_SITE_KEY).then((token) => {
+      fetch('/api/verify', {
+        method: 'post',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(token),
+      });
+      // fetch(
+      //   `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET_KEY}&response=${process.env.CAPTCHA_SITE_KEY}`,
+      //   {
+      //     method: 'post',
+      //     headers: {
+      //       Accept: 'application/json',
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(token),
+      //   },
+      // );
+    });
     setErrors([]);
     setMessage('');
     setMessage('Wysyłanie');
