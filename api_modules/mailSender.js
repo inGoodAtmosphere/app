@@ -41,12 +41,15 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
         new ValidationError('Treść emaila nie może być pusta', 'content'),
       );
     }
-    if (!prefix || !suffix) {
+    if (!prefix) {
       fromPrefix = '';
+    } else {
+      fromPrefix = `${prefix} `;
+    }
+    if (!suffix) {
       fromSuffix = '';
     } else {
-      fromPrefix += `${prefix} `;
-      fromSuffix = ` ${suffix}`;
+      fromSuffix =` ${suffix}`;
     }
 
     if (errors.length > 0) {
@@ -55,7 +58,7 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
       // send mail with defined transport object
       transporter.sendMail(
         {
-          from: `"${fromPrefix} anything ${fromSuffix}" <${process.env.MAIL_USER}>`, // sender address
+          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${process.env.MAIL_USER}>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
           text: htmlContent, // plain text body

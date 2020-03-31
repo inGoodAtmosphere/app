@@ -57,7 +57,7 @@ export default async (req, res) => {
           recipient,
           `Kontakt: ${subject}`,
           plainContent,
-          `${req.body.name} do`,
+          `${req.body.name} do`
         ).catch((error) => {
           console.log(error);
           res.status(500);
