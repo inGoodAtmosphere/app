@@ -23,7 +23,7 @@ export default async (req, res) => {
         id,
       )}`;
       checkIfDeviceRegistered = dbQuery(checkIfDeviceRegisteredQuery);
-      if (checkIfDeviceRegistered === 1) {
+      if (checkIfDeviceRegistered.length === 1) {
         query = `INSERT INTO measurements(device_id,measurement_date, measurement_time, receive_date,receive_time, humidity, temperature, pm1,pm25,pm10) values(${dbQuery.escape(
           id,
         )},${dbQuery.escape(req.body.measurementDate)},${dbQuery.escape(
@@ -34,7 +34,7 @@ export default async (req, res) => {
           req.body.pm1,
         )},${dbQuery.escape(req.body.pm25)},${dbQuery.escape(req.body.pm10)})`;
         result = await dbQuery(query);
-      } else if (checkIfDeviceRegistered === 0) {
+      } else if (checkIfDeviceRegistered.length === 0) {
         result = { error: 'Device not registered' };
       } else {
         result = { error: 'Data error' };
