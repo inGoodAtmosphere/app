@@ -1,5 +1,6 @@
 // create reusable transporter object using the default SMTP transport
 const nodemailer = require('nodemailer');
+const ValidationError = require('./validationError');
 require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
@@ -31,10 +32,10 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
       reject(error);
     }
     if (!subject) {
-      errors.push('Musisz wpisać temat wiadomości');
+      errors.push(new ValidationError('Musisz wpisać temat wiadomości',"subject"));
     }
     if (!htmlContent) {
-      errors.push('Treść emaila nie może być pusta');
+      errors.push(new ValidationError('Treść emaila nie może być pusta',"content"));
     }
     if (!prefix || !suffix) {
       fromPrefix = '';
