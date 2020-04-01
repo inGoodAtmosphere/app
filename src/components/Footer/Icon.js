@@ -22,7 +22,7 @@ const Icon = ({ socialMedia, link }) => {
     >
       <FontAwesomeIcon
         icon={socialMedia === 'Facebook' ? faFacebookSquare : faInstagram}
-        size="4x"
+        size="3x"
       />
     </a>
   );

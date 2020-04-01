@@ -7,11 +7,12 @@
   font-weight: bold;
   padding: $spacing;
   text-transform: uppercase;
-  @include link($light-bg);
+  @include link($dark-bg);
 }
 
 @media #{$media-query-m} {
   .menu__item {
+    @include link($light-bg);
     color: $light-bg;
     font-size: $m-size - 0.3;
     text-align: center;
