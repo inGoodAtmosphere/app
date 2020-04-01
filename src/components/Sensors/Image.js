@@ -18,7 +18,11 @@ const Image = ({ className }) => {
         PM10, a następnie wysyła dane do naszej strony aby każdy mógł się
         cieszyć pomiarami z naszych urządzeń.
         <br />
-        {className && 'Kliknij i dowiedz się więcej'}
+        {className && (
+          <span className="sensors__image__text__link">
+            Kliknij i dowiedz się więcej
+          </span>
+        )}
       </span>
     </div>
   );
