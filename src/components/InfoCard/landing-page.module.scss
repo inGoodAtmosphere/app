@@ -20,15 +20,12 @@
 }
 
 .landing-page__contact {
-  background-color: $text;
+  background-color: #276f98;
 }
 
 .landing-page__project {
   * {
     color: $text;
-  }
-  a {
-    border: $border solid $text;
   }
 }
 

@@ -18,12 +18,13 @@
     color: #000;
     cursor: default;
   }
-  @include button($dark-bg);
+  @include button($light-bg);
   &--success {
     padding: $spacing;
     border: none;
     border-radius: $spacing;
     background-color: $very-good;
+    box-shadow: inset 0 -0.2rem 0.2rem darken($very-good, 20%);
     &:disabled {
       color: $light-bg;
       cursor: default;

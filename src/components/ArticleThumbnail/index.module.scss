@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .article-container {
   -webkit-box-align: start;
@@ -34,14 +35,14 @@
   align-self: center;
   margin-bottom: $spacing / 3;
   border-radius: $spacing * 3;
-  border: $border solid $dark-accent;
   justify-self: center;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   outline: none;
-  padding: $spacing / 3 $spacing;
+  padding: $spacing / 2 $spacing;
+  @include button($light-bg);
   &:hover,
   &:focus {
     -webkit-transform: scale(1.03);

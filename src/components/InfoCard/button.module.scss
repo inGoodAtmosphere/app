@@ -3,7 +3,6 @@
 
 .landing-page__btn {
   align-self: flex-end;
-  border: $border solid $light-bg;
   padding: $spacing;
   transition: transform 0.2s;
   outline: none;
@@ -17,8 +16,8 @@
 }
 
 .landing-page__btn__map {
-  border: $border solid $light-bg;
   border-radius: $spacing;
+  @include button($primary-accent);
   padding: $spacing;
   width: fit-content;
   align-self: flex-end;
@@ -42,7 +41,7 @@
 
 .landing-page__contact {
   .landing-page__btn {
-    @include button($text);
+    @include button(#276f98);
   }
 }
 
