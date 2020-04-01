@@ -40,13 +40,13 @@
 
 .landing-page__hero__btn {
   font-weight: 500;
-  background-color: $dark-accent;
+  background-color: $primary-accent;
   color: $light-bg;
   border-radius: $spacing;
   padding: $spacing;
   align-self: center;
   font-size: $m-size;
-  @include button($dark-accent);
+  @include button($primary-accent);
 }
 
 @media #{$media-query-s} {
