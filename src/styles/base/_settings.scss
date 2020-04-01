@@ -1,17 +1,17 @@
 // Colors:
-$primary-accent: #3088a1;
-$light-bg: #f9f9f9;
-$dark-bg: #1c233c;
-$light-accent: #547ea3;
-$dark-accent: #0e364f;
-$bright-accent: #2988bd;
+$primary-accent: hsl(193, 54%, 41%);
+$light-bg: hsl(0, 0%, 98%);
+$dark-bg: hsl(227, 36%, 17%);
+$light-accent: hsl(208, 32%, 48%);
+$dark-accent: hsl(203, 70%, 18%);
+$bright-accent: hsl(202, 59%, 37%);
 
-$very-good: #44a368;
-$good: #a9c46e;
-$warning: #c19330;
-$bad: #e1625a;
+$very-good: hsl(143, 41%, 45%);
+$good: hsl(79, 42%, 60%);
+$warning: hsl(41, 60%, 47%);
+$bad: hsl(4, 69%, 62%);
 
-$text: #0c0f18;
+$text: hsl(225, 33%, 7%);
 
 // Sizes:
 $l-size: 2.125rem;
