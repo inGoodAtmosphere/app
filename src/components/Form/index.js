@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import withContext from '../../utils/withContext';
 import './index.module.scss';
 import Context from '../../utils/Context';
+import Bots from './Bots';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
   const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
-  const handleSubmit = async (e) => {
+  const verifyCaptcha = () => {
     window.grecaptcha.ready(async () => {
       const token = await window.grecaptcha.execute(
         process.env.CAPTCHA_SITE_KEY,
@@ -24,28 +25,35 @@ const Form = ({ children, data, endpoint, submitText }) => {
       const { googleResponse } = await res.json();
       setScore(googleResponse.score);
     });
-    e.preventDefault();
-
-    setErrors([]);
-    setMessage('');
-    setMessage('Wysyłanie');
-    const res = await fetch(endpoint, {
-      method: 'post',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    const json = await res.json();
-    if (json.errors.length) {
-      setErrors(json.errors);
-      setMessage('');
-    } else {
-      setMessage(json.message);
+  };
+  const sendMail = async () => {
+    if (score > 0.3) {
+      setMessage('Wysyłanie');
+      const res = await fetch(endpoint, {
+        method: 'post',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (json.errors.length) {
+        setErrors(json.errors);
+        setMessage('');
+      } else {
+        setMessage(json.message);
+      }
     }
   };
-  console.log(score);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    verifyCaptcha();
+    sendMail();
+    setErrors([]);
+    setMessage('');
+  };
   return (
     <form
       method="post"
@@ -65,6 +73,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       >
         {message || submitText}
       </button>
+      {score < 0.3 && <Bots />}
     </form>
   );
 };
