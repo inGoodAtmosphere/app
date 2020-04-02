@@ -8,28 +8,22 @@ const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
   const { setErrors } = useContext(Context);
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    window.grecaptcha.execute(process.env.CAPTCHA_SITE_KEY).then((token) => {
-      fetch('/api/verify', {
-        method: 'post',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(token),
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute(process.env.CAPTCHA_SITE_KEY).then((token) => {
+        fetch('/api/captcha', {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          method: 'post',
+          body: JSON.stringify(token),
+        })
+          .then((res) => res.text())
+          .then((text) => console.log(text));
       });
-      // fetch(
-      //   `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET_KEY}&response=${process.env.CAPTCHA_SITE_KEY}`,
-      //   {
-      //     method: 'post',
-      //     headers: {
-      //       Accept: 'application/json',
-      //       'Content-Type': 'application/json',
-      //     },
-      //     body: JSON.stringify(token),
-      //   },
-      // );
     });
+    e.preventDefault();
+
     setErrors([]);
     setMessage('');
     setMessage('Wysyłanie');
@@ -49,6 +43,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       setMessage(json.message);
     }
   };
+
   return (
     <form
       method="post"
