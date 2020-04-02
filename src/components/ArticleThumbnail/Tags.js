@@ -4,11 +4,11 @@ import './tags.module.scss';
 
 const Tags = ({ tags }) => {
   return (
-    <p className="article-container__tags">
+    <p className="article-thumbnail__tags">
       {tags.map((tag) => (
         <span
           key={tag}
-          className="article-container__tag"
+          className="article-thumbnail__tag"
           aria-label="Znajdź inne artykuły z tym tagiem"
         >
           {`#${tag} `}

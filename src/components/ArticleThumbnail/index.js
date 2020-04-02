@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.module.scss';
@@ -7,17 +6,18 @@ import Tags from './Tags';
 
 const ArticleThumbnail = ({ images, header, description, tags, link }) => {
   return (
-    <div className="article-container">
+    <div className="article-thumbnail">
       <Thumbnail images={images} link={link} />
-      <h2 className="article-container__header">{header}</h2>
+      <h2 className="article-thumbnail__header">{header}</h2>
       <Tags tags={tags} />
-      <p className="article-container__description">{description}</p>
-      <a href={`/kampania/${link}`} className="article-container__link">
+      <p className="article-thumbnail__description">{description}</p>
+      <a href={`/kampania/${link}`} className="article-thumbnail__link">
         Czytaj więcej
       </a>
     </div>
   );
 };
+
 ArticleThumbnail.propTypes = {
   images: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
