@@ -65,7 +65,6 @@ export default async (req, res) => {
         }),
       );
     }
-    console.log(errors);
     if (errors.length > 0) {
       res.json({
         message:
