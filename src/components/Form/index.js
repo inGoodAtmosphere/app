@@ -6,21 +6,23 @@ import Context from '../../utils/Context';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
+  const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
   const handleSubmit = async (e) => {
-    window.grecaptcha.ready(() => {
-      window.grecaptcha.execute(process.env.CAPTCHA_SITE_KEY).then((token) => {
-        fetch('/api/captcha', {
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          method: 'post',
-          body: JSON.stringify(token),
-        })
-          .then((res) => res.text())
-          .then((text) => console.log(text));
+    window.grecaptcha.ready(async () => {
+      const token = await window.grecaptcha.execute(
+        process.env.CAPTCHA_SITE_KEY,
+      );
+      const res = await fetch('/api/captcha', {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        method: 'post',
+        body: JSON.stringify(token),
       });
+      const { googleResponse } = await res.json();
+      setScore(googleResponse.score);
     });
     e.preventDefault();
 
@@ -43,7 +45,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       setMessage(json.message);
     }
   };
-
+  console.log(score);
   return (
     <form
       method="post"
