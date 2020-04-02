@@ -23,12 +23,12 @@
     transition: all 0.4s ease-out;
   }
   &::before {
-    bottom: -5%;
+    bottom: 0;
     -webkit-transform-origin: bottom;
     transform-origin: bottom;
   }
   &::after {
-    top: -5%;
+    top: 0;
     -webkit-transform-origin: top;
     transform-origin: top;
   }
@@ -37,6 +37,10 @@
       -webkit-transition: opacity 0.2s 0.4s ease-out;
       transition: opacity 0.2s 0.4s ease-out;
       opacity: 1;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
     &::before,
     &::after {
@@ -58,7 +62,7 @@
 .sensors__image__text {
   opacity: 0;
   z-index: 1;
-  padding-right: $spacing; // TODO: Check what is wrong with centralize text
+  padding-right: $spacing;
   text-align: center;
   -webkit-transition: opacity 0.2s 0s ease-out;
   transition: opacity 0.2s 0s ease-out;
