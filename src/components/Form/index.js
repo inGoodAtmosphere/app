@@ -43,6 +43,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
         setMessage('');
       } else {
         setMessage(json.message);
+        setErrors([]);
       }
     }
   };
@@ -51,8 +52,6 @@ const Form = ({ children, data, endpoint, submitText }) => {
     e.preventDefault();
     verifyCaptcha();
     sendMail();
-    setErrors([]);
-    setMessage('');
   };
   return (
     <form
