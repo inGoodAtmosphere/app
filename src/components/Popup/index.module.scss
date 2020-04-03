@@ -1,0 +1,28 @@
+@import '../../styles/base/settings';
+
+.popup {
+  background-color: $primary-accent;
+  color: $light-bg;
+  outline: none;
+  display: -webkit-box;
+  display: flex;
+  position: absolute;
+  top: 110%;
+  left: $spacing * 2;
+  width: 50%;
+  max-width: 20rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.popup__close {
+  background: none;
+  color: $light-bg;
+  border: none;
+  align-self: flex-end;
+  font-size: $m-size;
+}
+
+.popup__header {
+  margin: 0;
+  font-weight: bolder;
+}
