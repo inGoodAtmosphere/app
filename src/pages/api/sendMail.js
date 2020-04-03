@@ -3,9 +3,6 @@ const ValidationError = require('../../../api_modules/validationError.js');
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    // TODO CHECK if validation works
-    // TODO CHECK why names doesnt appears on gmail
-    // TODO to add captcha or something like this
     // TODO to add <br>s to emails
     // TODO apply regex
     // TODO update docs
@@ -19,6 +16,15 @@ export default async (req, res) => {
       errors.push(
         new ValidationError(
           'Musisz wypełnić pole z twoim adresem email',
+          'email',
+        ),
+      );
+    }
+    const pattern = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$)/;
+    if (pattern.test(req.body.email)) {
+      errors.push(
+        new ValidationError(
+          'Niepoprawny adres email',
           'email',
         ),
       );
