@@ -9,10 +9,12 @@ const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
   const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
+  const devKey = process.env.CAPTCHA_SITE_KEY;
+  const productionKey = process.env.CAPTCHA_SITE_KEY_PRODUCTION;
   const verifyCaptcha = () => {
     window.grecaptcha.ready(async () => {
       const token = await window.grecaptcha.execute(
-        process.env.CAPTCHA_SITE_KEY,
+        process.env.NODE_ENV === 'production' ? productionKey : devKey,
       );
       const res = await fetch('/api/captcha', {
         headers: {
