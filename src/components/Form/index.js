@@ -25,7 +25,9 @@ const Form = ({ children, data, endpoint, submitText }) => {
         body: JSON.stringify(token),
       });
       const { googleResponse } = await res.json();
-      setScore(googleResponse.score);
+      if (googleResponse) {
+        setScore(googleResponse.score);
+      }
     });
   };
   const sendMail = async () => {
