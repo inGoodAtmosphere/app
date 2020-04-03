@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 
 export default () => {
-  const [width, setWidth] = useState();
+  const [dimensions, setDimensions] = useState({});
   useEffect(() => {
-    setWidth(window.innerWidth);
+    setDimensions({ width: window.innerWidth, height: window.innerHeight });
     const handleResize = () => {
-      setWidth(window.innerWidth);
+      setDimensions({ width: window.innerWidth, height: window.innerHeight });
     };
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  return width;
+  return dimensions;
 };

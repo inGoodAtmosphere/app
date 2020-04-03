@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowWidth from '../../hooks/useWindowDimensions';
 import Context from '../../utils/Context';
 import './image.module.scss';
 
 const Image = () => {
   const { link, Svg } = useContext(Context);
-  const width = useWindowWidth();
+  const { width } = useWindowWidth();
   if (width > 1024 && link.href === 'kontakt') return <Svg />;
   return (
     width > 1024 && (

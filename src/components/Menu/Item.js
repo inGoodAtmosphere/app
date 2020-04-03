@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowWidth from '../../hooks/useWindowDimensions';
 import './item.module.scss';
 
 const Item = ({ isActive, anchor }) => {
-  const width = useWindowWidth();
+  const { width } = useWindowWidth();
 
   const link = anchor.replace(' ', '-').toLowerCase();
   return (

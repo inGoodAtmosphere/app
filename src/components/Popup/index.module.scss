@@ -10,8 +10,16 @@
   top: 110%;
   left: $spacing * 2;
   width: 50%;
+  opacity: 0;
   max-width: 20rem;
   box-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: opacity 0.2s ease-in-out;
+  &--visible {
+    animation: fadeIn 0.2s both;
+  }
+  &--invisible {
+    animation: fadeOut 0.2s both;
+  }
 }
 
 .popup__close {
@@ -25,4 +33,32 @@
 .popup__header {
   margin: 0;
   font-weight: bolder;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 0;
+  }
 }

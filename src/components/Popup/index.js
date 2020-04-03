@@ -3,13 +3,22 @@ import Modal from 'react-modal';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.module.scss';
+import useScroll from '../../hooks/useScroll';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 Modal.setAppElement('.content');
+
 const Popup = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const scroll = useScroll();
+  const { height } = useWindowDimensions();
   return (
     <Modal
-      className="card popup"
+      className={`card popup ${
+        scroll > height / 4 && scroll < height
+          ? 'popup--visible'
+          : 'popup--invisible'
+      }`}
       isOpen={isOpen}
       contentLabel="Ciekawostka"
       portalClassName="popup__portal"
