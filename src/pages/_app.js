@@ -19,17 +19,13 @@ config.autoAddCss = false;
 
 const App = ({ Component, pageProps }) => {
   const [isBannerOpen, setIsBannerOpen] = useState(Cookies.get('isBannerOpen'));
-  // slice to last segment url
   const convertTitle = (title) => {
     if (title === '/') return 'inGoodAtmosphere';
-    const slicedTitle = title.slice(title.lastIndexOf('/') + 1);
-    return (
-      slicedTitle.charAt(0).toUpperCase() +
-      slicedTitle.slice(1).replace(/-/g, ' ')
-    );
+    // [1] because / is [0] so first letter is [1]
+    return title.charAt(1).toUpperCase() + title.slice(2).replace(/-/g, ' ');
   };
   const router = useRouter();
-  const title = convertTitle(router.asPath);
+  const title = convertTitle(router.pathname);
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
@@ -90,14 +86,24 @@ const App = ({ Component, pageProps }) => {
           property="og:image"
           content="https://ingoodatmosphere.com/img/opengraph-icon.png"
         />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:card"
+          key="twitter:card"
+          content="summary_large_image"
+        />
         <meta
           name="twitter:description"
+          key="twitter:description"
           content='Realizujemy projekt w ramach olimpiady "Zwolnieni z Teorii". Celem naszego projektu, jest uświadomienie ludz o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska.'
         />
-        <meta name="twitter:title" content="inGoodAtmosphere" />
+        <meta
+          name="twitter:title"
+          key="twitter:title"
+          content="inGoodAtmosphere"
+        />
         <meta
           name="twitter:image"
+          key="twitter:image"
           content="https://ingoodatmosphere.com/img/opengraph-icon.png"
         />
         <title key="title">{title}</title>
