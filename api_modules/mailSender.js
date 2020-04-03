@@ -8,10 +8,7 @@ const transporter = nodemailer.createTransport({
   port: process.env.MAIL_PORT, // SSL PORT
   secure: true,
   auth: {
-    user:
-      process.env.NODE_ENV === 'production'
-        ? process.env.MAIL_USER_PRODUCTION
-        : process.env.MAIL_USER_TEST,
+    user: process.env.NODE_ENV==="production"?process.env.MAIL_USER_PRODUCTION:process.env.MAIL_USER_TEST,
     pass: process.env.MAIL_PASSWORD,
   },
   tls: {
@@ -61,7 +58,7 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
       // send mail with defined transport object
       transporter.sendMail(
         {
-          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${process.env.MAIL_USER}>`, // sender address
+          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${process.env.MAIL_USER_TEST}>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
           text: htmlContent, // plain text body
