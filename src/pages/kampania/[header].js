@@ -10,21 +10,24 @@ const Article = ({ data }) => {
   if (router.isFallback) return <Loading />;
   return <ArticleContent value={data[0]} />;
 };
+
 export async function getStaticPaths() {
-  const res = await fetch('https://ingoodatmosphere.com/api/articles');
+  const res = await fetch('https://obx88.usermd.net/api/articles');
   const thumbnails = await res.json();
   const paths = thumbnails.map((thumbnail) => ({
     params: { header: thumbnail.link },
   }));
   return { paths, fallback: false };
 }
+
 export async function getStaticProps({ params }) {
   const res = await fetch(
-    `https://ingoodatmosphere.com/api/articles/${params.header}`,
+    `https://obx88.usermd.net/api/articles/${params.header}`,
   );
   const data = await res.json();
   return { props: { data } };
 }
+
 Article.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.objectOf(

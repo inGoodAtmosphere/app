@@ -5,7 +5,6 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     // TODO update docs
     // TODO try domain with git clone
-    console.log(req.body);
 
     // validation shit here
     const errors = []; // array for errors

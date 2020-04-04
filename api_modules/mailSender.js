@@ -3,22 +3,20 @@ const nodemailer = require('nodemailer');
 const ValidationError = require('./validationError');
 require('dotenv').config();
 
+const testMail = process.env.MAIL_USER_TEST;
+const productionMail = process.env.MAIL_USER_PRODUCTION;
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: process.env.MAIL_PORT, // SSL PORT
   secure: true,
   auth: {
-    user:
-      process.env.NODE_ENV === 'production'
-        ? process.env.MAIL_USER_PRODUCTION
-        : process.env.MAIL_USER_TEST,
+    user: process.env.NODE_ENV === 'production' ? productionMail : testMail,
     pass: process.env.MAIL_PASSWORD,
   },
   tls: {
     rejectUnauthorized: false,
   },
 });
-
 const sendMail = async (recipient, subject, plainContent, prefix, suffix) =>
   new Promise((resolve, reject) => {
     // Data validation - if something wrong then it adds errors to array which is returned then
@@ -62,9 +60,7 @@ const sendMail = async (recipient, subject, plainContent, prefix, suffix) =>
       transporter.sendMail(
         {
           from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${
-            process.env.NODE_ENV === 'production'
-              ? process.env.MAIL_USER_PRODUCTION
-              : process.env.MAIL_USER_TEST
+            process.env.NODE_ENV === 'production' ? productionMail : testMail
           }>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
