@@ -61,7 +61,11 @@ const sendMail = async (recipient, subject, plainContent, prefix, suffix) =>
       // send mail with defined transport object
       transporter.sendMail(
         {
-          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${process.env.MAIL_USER_TEST}>`, // sender address
+          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${
+            process.env.NODE_ENV === 'production'
+              ? process.env.MAIL_USER_PRODUCTION
+              : process.env.MAIL_USER_TEST
+          }>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
           text: `Treść: ${plainContent}`, // plain text body
