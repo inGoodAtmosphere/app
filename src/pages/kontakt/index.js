@@ -12,15 +12,14 @@ const Contact = () => {
   const [content, setContent] = useState('');
   const [errors, setErrors] = useState([]);
   const data = { name, email, subject, content };
-  const devKey = process.env.CAPTCHA_SITE_KEY;
-  const productionKey = process.env.CAPTCHA_SITE_KEY_PRODUCTION;
-
+  const captchaKey =
+    process.env.NODE_ENV === 'production'
+      ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
+      : process.env.CAPTCHA_SITE_KEY;
   useEffect(() => {
     // Add reCaptcha
     const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?render=${
-      process.env.NODE_ENV === 'production' ? productionKey : devKey
-    }`;
+    script.src = `https://www.google.com/recaptcha/api.js?render=${captchaKey}`;
     document.body.appendChild(script);
   }, []);
 
