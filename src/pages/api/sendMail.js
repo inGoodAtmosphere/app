@@ -4,9 +4,9 @@ const ValidationError = require('../../../api_modules/validationError.js');
 export default async (req, res) => {
   if (req.method === 'POST') {
     // TODO to add <br>s to emails
-    // TODO apply regex
     // TODO update docs
     // TODO try domain with git clone
+    console.log(req.body);
 
     // validation shit here
     const errors = []; // array for errors

@@ -8,7 +8,10 @@ const transporter = nodemailer.createTransport({
   port: process.env.MAIL_PORT, // SSL PORT
   secure: true,
   auth: {
-    user: process.env.NODE_ENV==="production"?process.env.MAIL_USER_PRODUCTION:process.env.MAIL_USER_TEST,
+    user:
+      process.env.NODE_ENV === 'production'
+        ? process.env.MAIL_USER_PRODUCTION
+        : process.env.MAIL_USER_TEST,
     pass: process.env.MAIL_PASSWORD,
   },
   tls: {
@@ -16,7 +19,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
+const sendMail = async (recipient, subject, plainContent, prefix, suffix) =>
   new Promise((resolve, reject) => {
     // Data validation - if something wrong then it adds errors to array which is returned then
     // Unless every argument is set then the code will reject a promise or if the argument isnt that important then the code will assign a standard value to the argument
@@ -36,7 +39,7 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
         new ValidationError('Musisz wpisać temat wiadomości', 'subject'),
       );
     }
-    if (!htmlContent) {
+    if (!plainContent) {
       errors.push(
         new ValidationError('Treść emaila nie może być pusta', 'content'),
       );
@@ -61,8 +64,8 @@ const sendMail = async (recipient, subject, htmlContent, prefix, suffix) =>
           from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${process.env.MAIL_USER_TEST}>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
-          text: htmlContent, // plain text body
-          html: htmlContent, // html body
+          text: `Treść: ${plainContent}`, // plain text body
+          html: `<br><h2>treść:</h2><br>${plainContent.replace(/\n/g, '<br>')}`, // html body
         },
         (err) => {
           if (err) {
