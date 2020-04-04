@@ -18,6 +18,7 @@
 @media #{$media-query-s} {
   .admin__content {
     margin-bottom: 0;
+    margin-left: $spacing + $header-height;
   }
   .admin__wrapper {
     height: calc(100vh - #{$header-height});

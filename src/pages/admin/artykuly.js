@@ -2,14 +2,14 @@ import React from 'react';
 import SubPage from '../../components/Admin/SubPage';
 import adminPropTypes from '../../utils/admin-prop-types';
 
-const Articles = ({ data }) => {
-  return <SubPage data={data} />;
+const Articles = ({ articles }) => {
+  return <SubPage data={articles} />;
 };
 
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/articles');
-  const data = await res.json();
-  return { props: { data } };
+  const articles = await res.json();
+  return { props: { articles } };
 }
 
 Articles.propTypes = adminPropTypes;

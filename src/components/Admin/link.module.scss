@@ -9,7 +9,7 @@
   font-size: $m-size;
   justify-content: center;
   align-items: center;
-  @include button($light-bg);
+  @include button($dark-bg);
 }
 @media #{$media-query-s} {
   .admin__sidebar__link {

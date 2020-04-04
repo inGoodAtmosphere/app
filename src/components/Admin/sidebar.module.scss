@@ -15,7 +15,7 @@
 @media #{$media-query-s} {
   .admin__sidebar {
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - #{$header-height});
     width: $header-height;
   }
 }
