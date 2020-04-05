@@ -19,6 +19,9 @@
 .slider {
   * {
     font-size: $base-font-size * 0.9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
   }
 }

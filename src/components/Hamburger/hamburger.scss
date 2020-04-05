@@ -38,6 +38,8 @@
     transition: transform 0.2s 0.2s ease-in-out,
       -webkit-transform 0.2s 0.2s ease-in-out;
     transition: transform 0.2s 0.2s ease-in-out;
+    transition: transform 0.2s 0.2s ease-in-out,
+      -webkit-transform 0.2s 0.2s ease-in-out;
   }
   &::before {
     top: -11px;

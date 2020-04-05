@@ -11,7 +11,9 @@
   font-size: $s-size;
   &:focus ~ .form__label,
   &:valid ~ .form__label {
+    -webkit-transform: translateY(-150%) scale(0.8);
     transform: translateY(-150%) scale(0.8);
+    -webkit-transform-origin: left;
     transform-origin: left;
     z-index: 0;
   }

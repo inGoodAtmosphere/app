@@ -3,6 +3,7 @@
 .contact__text {
   text-align: center;
   margin-top: $spacing * 2;
+  -webkit-box-pack: center;
   justify-content: center;
 }
 .contact__text__link {

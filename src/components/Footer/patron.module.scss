@@ -1,13 +1,18 @@
 @import '../../styles/base/settings';
 
 .footer__patron {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   margin: 0 $spacing;
   white-space: nowrap;
 }
 .footer__patrons__item {
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 0.6;
   outline: none !important;
@@ -23,7 +28,9 @@
 }
 @media screen and (min-width: 547px) {
   .footer__patron {
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-flex: 1;
     flex: 1;
   }
 }

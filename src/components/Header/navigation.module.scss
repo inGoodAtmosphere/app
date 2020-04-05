@@ -10,8 +10,11 @@
   background-color: $dark-accent;
   color: $light-bg;
   padding: $spacing;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   svg {
     margin-left: $spacing;
