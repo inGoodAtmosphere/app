@@ -4,7 +4,7 @@ import Illustration from './Illustration';
 import { logEvent } from '../../utils/analytics';
 import './index.module.scss';
 
-const Error = ({ message }) => {
+const Error = ({ message, text }) => {
   useEffect(() => {
     logEvent('Error', message);
   }, []);
@@ -17,7 +17,7 @@ const Error = ({ message }) => {
       <p className="error__text">
         Ups!
         <br />
-        Coś poszło nie tak
+        {text}
       </p>
       <button type="button" className="error__btn" onClick={refreshPage}>
         Spróbuj ponownie
@@ -27,5 +27,6 @@ const Error = ({ message }) => {
 };
 Error.propTypes = {
   message: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 export default Error;
