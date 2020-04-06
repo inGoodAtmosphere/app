@@ -19,9 +19,11 @@ const Error = ({ message, text }) => {
         <br />
         {text}
       </p>
-      <button type="button" className="error__btn" onClick={refreshPage}>
-        Spróbuj ponownie
-      </button>
+      {message === '500' && (
+        <button type="button" className="error__btn" onClick={refreshPage}>
+          Spróbuj ponownie
+        </button>
+      )}
     </div>
   );
 };

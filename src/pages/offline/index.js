@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Error from '../../components/Error';
+import dynamic from 'next/dynamic';
+
+const Error = dynamic(() => import('../../components/Error'));
 
 const Offline = ({ offline }) => {
   return <Error message={offline} text="Jesteś offline" />;

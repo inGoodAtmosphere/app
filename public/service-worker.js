@@ -1,15 +1,15 @@
-const staticCacheName = 'site-static-v2';
+const staticCacheName = 'site-static-v1';
 const dynamicCacheName = 'site-dynamic-v1';
 
-const obx = 'Xd3O1AJhfJ6_iPAEwR0F1';
-const localhost = 'v9lu_CgfvHVSE9FCgHH9G';
-
+const id = 'aZOavV4ZGonvUXXzX4o1h';
+const styles = 'styles.925b4a1a';
 const assets = [
   '/offline',
   'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext',
-  '/_next/static/css/styles.ee74b118.chunk.css',
-  `/_next/static/${localhost}/pages/_app.js`,
-  `/_next/static/${localhost}/pages/_error.js`,
+  `/_next/static/css/${styles}.chunk.css`,
+  `/_next/static/${id}/pages/_error.js`,
+  `/_next/static/${id}/pages/_app.js`,
+  `/_next/static/${id}/pages/offline.js`,
 ];
 
 self.addEventListener('install', (event) => {
