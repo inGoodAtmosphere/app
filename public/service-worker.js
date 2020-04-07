@@ -1,7 +1,7 @@
-const staticCacheName = 'site-static-v1';
+const staticCacheName = 'site-static-v2';
 const dynamicCacheName = 'site-dynamic-v1';
 
-const id = 'aZOavV4ZGonvUXXzX4o1h';
+const id = 'h6xGca8acqemXW0wPWD16';
 const styles = 'styles.925b4a1a';
 const assets = [
   '/offline',

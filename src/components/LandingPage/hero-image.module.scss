@@ -25,7 +25,7 @@
       from(rgba($dark-bg, 0.7)),
       color-stop(85%, rgba($dark-bg, 0.95))
     );
-    background: linear-gradient(rgba($dark-bg, 0.7), rgba($dark-bg, 0.95) 85%);
+    background: linear-gradient(rgba($dark-bg, 0.65), rgba($dark-bg, 0.85) 85%);
   }
 }
 
