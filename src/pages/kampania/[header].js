@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import { useRouter } from 'next/router';
 import ArticleContent from '../../components/Article';
 import Loading from '../../components/Loading';
+import Popup from '../../components/Popup';
 
 const Article = ({ data }) => {
   const router = useRouter();
+  const [articleHeight, setArticleHeight] = useState();
   if (router.isFallback) return <Loading />;
-  return <ArticleContent value={data[0]} />;
+  return (
+    <>
+      <Popup articleHeight={articleHeight} />
+      <ArticleContent value={data[0]} setArticleHeight={setArticleHeight} />
+    </>
+  );
 };
 
 export async function getStaticPaths() {

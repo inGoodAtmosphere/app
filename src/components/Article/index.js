@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './index.module.scss';
 import Head from './Head';
 import Header from './Header';
@@ -7,13 +8,17 @@ import Context from '../../utils/Context';
 import Section from './Section';
 import Paragraph from './Paragraph';
 
-const Article = () => {
+const Article = ({ setArticleHeight }) => {
   const { subHeaders, contents } = useContext(Context);
   const contentArray = contents.split('okoń');
+  const container = useRef(null);
+  useEffect(() => {
+    setArticleHeight(container.current.offsetHeight);
+  }, []);
   return (
     <>
       <Head />
-      <main className="content">
+      <main className="content" ref={container}>
         <article className="card article__card">
           <Header />
 
@@ -31,6 +36,10 @@ const Article = () => {
       </main>
     </>
   );
+};
+
+Article.propTypes = {
+  setArticleHeight: PropTypes.func.isRequired,
 };
 
 export default withContext(Article);

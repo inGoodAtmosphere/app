@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,16 +9,15 @@ import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 Modal.setAppElement('.content');
 
-const Popup = () => {
+const Popup = ({ articleHeight }) => {
   const [isOpen, setIsOpen] = useState(true);
   const scroll = useScroll();
   const { height } = useWindowDimensions();
+  const isScrolled = scroll > articleHeight - height / 2;
   return (
     <Modal
       className={`card popup ${
-        scroll > height / 4 && scroll < height
-          ? 'popup--visible'
-          : 'popup--invisible'
+        isScrolled && isOpen ? 'popup--visible' : 'popup--invisible'
       }`}
       isOpen={isOpen}
       contentLabel="Ciekawostka"
@@ -33,11 +33,20 @@ const Popup = () => {
       </button>
       <p className="popup__header">Czy wiesz, że...</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-        voluptatem cumque inventore.
+        W miastach o dużym zaludnieniu, w których często dochodzi do korków,
+        powietrze, które dostaje się do środka samochodu, może być aż 10 razy
+        bardziej szkodliwe niż na zewnątrz. Działanie jest podobne jak w
+        przypadku zamkniętych pomieszczeń. Brak cyrkulacji powietrza kumuluje w
+        jednym miejscu coraz więcej szkodliwych pyłów. Może warto trzymać w
+        schowku samochodowym maseczki antysmogowe, szczególnie jeśli w aucie
+        znajdują się dzieci?
       </p>
     </Modal>
   );
+};
+
+Popup.propTypes = {
+  articleHeight: PropTypes.number.isRequired,
 };
 
 export default Popup;
