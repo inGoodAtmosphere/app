@@ -19,7 +19,7 @@ const Article = ({ data }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch('https://obx88.usermd.net/api/articles');
+  const res = await fetch('https://ingoodatmosphere.com/api/articles');
   const thumbnails = await res.json();
   const paths = thumbnails.map((thumbnail) => ({
     params: { header: thumbnail.link },
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const res = await fetch(
-    `https://obx88.usermd.net/api/articles/${params.header}`,
+    `https://ingoodatmosphere.com/api/articles/${params.header}`,
   );
   const data = await res.json();
   return { props: { data } };
