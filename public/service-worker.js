@@ -1,8 +1,8 @@
 const staticCacheName = 'site-static-v2';
 const dynamicCacheName = 'site-dynamic-v1';
 
-const id = 'h6xGca8acqemXW0wPWD16';
-const styles = 'styles.925b4a1a';
+const id = 'df2L7dp6WPUNWC6IXvPk8';
+const styles = 'styles.ec18ad68';
 const assets = [
   '/offline',
   'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext',
