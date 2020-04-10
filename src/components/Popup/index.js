@@ -15,10 +15,7 @@ const Popup = ({ articleHeight }) => {
   const scroll = useScroll();
   const { height } = useWindowDimensions();
   const isScrolled = scroll > articleHeight - height / 2;
-  const {
-    data: { content },
-    error,
-  } = useFetch('/api/interestingFact');
+  const { data, isLoaded, error } = useFetch('/api/interestingFact');
   return (
     <Modal
       className={`card popup ${
@@ -37,7 +34,7 @@ const Popup = ({ articleHeight }) => {
         <FontAwesomeIcon icon={faTimes} />
       </button>
       <p className="popup__header">Czy wiesz, że...</p>
-      <p>{content}</p>
+      {!isLoaded && <p>{data.content}</p>}
     </Modal>
   );
 };
