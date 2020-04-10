@@ -5,3 +5,4 @@ README.md
 /build
 /.vscode
 /out
+package-lock.json

@@ -8,6 +8,7 @@
   background: darken($dark-bg, 2%);
   bottom: 0;
   display: -webkit-box;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -16,5 +17,8 @@
   z-index: 5;
   * {
     color: $light-bg;
+  }
+  &--visible {
+    visibility: visible;
   }
 }
