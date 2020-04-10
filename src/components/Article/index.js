@@ -9,12 +9,13 @@ import Section from './Section';
 import Paragraph from './Paragraph';
 
 const Article = ({ setArticleHeight }) => {
-  const { subHeaders, contents } = useContext(Context);
+  const { subHeaders, contents, author } = useContext(Context);
   const contentArray = contents.split('okoń');
   const container = useRef(null);
   useEffect(() => {
     setArticleHeight(container.current.offsetHeight);
   }, []);
+
   return (
     <>
       <Head />
@@ -32,6 +33,7 @@ const Article = ({ setArticleHeight }) => {
                 .map((content) => (
                   <Paragraph key={content.substring(1, 12)} content={content} />
                 ))}
+          <p className="article__author">{author}</p>
         </article>
       </main>
     </>

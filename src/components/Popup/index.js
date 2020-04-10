@@ -19,9 +19,11 @@ const Popup = ({ articleHeight }) => {
   return (
     <Modal
       className={`card popup ${
-        isScrolled && isOpen ? 'popup--visible' : 'popup--invisible'
+        isScrolled && isOpen && !error && !isLoaded
+          ? 'popup--visible'
+          : 'popup--invisible'
       }`}
-      isOpen={isOpen && !error}
+      isOpen={isOpen && !error && !isLoaded}
       contentLabel="Ciekawostka"
       portalClassName="popup__portal"
       overlayClassName="popup__overlay"

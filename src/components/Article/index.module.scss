@@ -4,3 +4,9 @@
   padding: $spacing;
   position: relative;
 }
+
+.article__author {
+  align-self: flex-end;
+  color: #999;
+  padding: $spacing $spacing 0 0;
+}
