@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default () => {
-  const [dimensions, setDimensions] = useState({});
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   useEffect(() => {
     setDimensions({ width: window.innerWidth, height: window.innerHeight });
     const handleResize = () => {

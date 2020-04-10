@@ -8,7 +8,7 @@ import Popup from '../../components/Popup';
 
 const Article = ({ data }) => {
   const router = useRouter();
-  const [articleHeight, setArticleHeight] = useState();
+  const [articleHeight, setArticleHeight] = useState(0);
   if (router.isFallback) return <Loading />;
   return (
     <>
