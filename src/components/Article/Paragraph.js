@@ -4,31 +4,30 @@ import './paragraph.module.scss';
 
 const Paragraph = ({ content }) => {
   const listContent = content.split('stencel');
-  const reg = /\$link:((\w|\s)+)\$((\w|-|\/|:|.|\?)+)(?:\${1})/g;
+  const reg = /\$link:([(\w|\s)]+)\$([\w-/|:|.|?]+)\$*/gm;
   const linkContent = content.split(reg);
-  const createContent = (text) => {
+  const createList = (text) => {
     const list = [];
     for (let i = 1; i < text.length; i += 1) {
       list.push(text[i]);
     }
     return list;
   };
-  const list = createContent(listContent);
-  const link = createContent(linkContent);
-  if (link.length) {
-    // linkContent[3] because regex group looks like this: [0]: paragraph [1]: link text [3]: link href and [5] is a optional rest of the paragraph
+  const list = createList(listContent);
+  if (linkContent.length > 1) {
+    // linkContent[3] because regex group looks like this: [0]: paragraph [1]: link text [2]: link href and [3] is a optional rest of the paragraph
     return (
       <p className="article__paragraph">
         {linkContent[0]}
         <a
           className="article__paragraph__link"
-          href={linkContent[3]}
+          href={linkContent[2]}
           target="_blank"
           rel="noopener noreferrer"
         >
           {linkContent[1]}
         </a>
-        {linkContent[5]}
+        {linkContent[3]}
       </p>
     );
   }
