@@ -27,7 +27,7 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired,
   onChange: PropTypes.func.isRequired,
 };
 export default withLabel(Input);
