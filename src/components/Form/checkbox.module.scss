@@ -1,8 +1,9 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .form__checkbox {
   font-size: $s-size;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-bottom: $spacing;
   display: flex;
   align-items: center;
@@ -21,10 +22,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: relative;
+
+  &:focus ~ &--styled {
+    transform: scale(1.03);
+  }
 
   &:checked ~ &--styled {
     * {
@@ -49,5 +54,6 @@
     background: none;
     border: $border solid $light-bg;
     border-radius: $spacing;
+    @include button($dark-bg);
   }
 }

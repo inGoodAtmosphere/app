@@ -12,6 +12,7 @@ const Checkbox = ({ ariaLabel, name, isChecked, setIsChecked }) => {
     <label htmlFor={name} className="form__checkbox">
       <div className="form__checkbox__container">
         <input
+          tabIndex={0}
           type="checkbox"
           aria-label={ariaLabel}
           id={name}
@@ -24,7 +25,7 @@ const Checkbox = ({ ariaLabel, name, isChecked, setIsChecked }) => {
           <FontAwesomeIcon icon={faCheck} />
         </div>
       </div>
-      Zapamiętaj mnie
+      {ariaLabel}
     </label>
   );
 };

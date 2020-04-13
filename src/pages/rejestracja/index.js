@@ -3,6 +3,7 @@ import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import Checkbox from '../../components/Form/Checkbox';
 import SocialMediaBtn from '../../components/Form/SocialMediaBtn';
+import './index.module.scss';
 
 const SignUp = () => {
   const [login, setLogin] = useState('');

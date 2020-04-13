@@ -90,7 +90,9 @@ const Form = ({ children, data, endpoint, submitText }) => {
 
 Form.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  ).isRequired,
   endpoint: PropTypes.string.isRequired,
   submitText: PropTypes.string.isRequired,
 };
