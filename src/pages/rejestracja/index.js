@@ -26,13 +26,13 @@ const SignUp = () => {
 
   return (
     <main className="content sign-up__content">
-      <h2 className="sign-up__header">Zarejsetruj się a otrzymasz:</h2>
+      <h2 className="sign-up__header">Zarejestruj się a otrzymasz:</h2>
       <p className="sign-up__text">Dostęp do cotygodniowego newslettera</p>
       <p className="sign-up__text">
         Możliwość dodawania czujników do ulubionych
       </p>
       <p className="sign-up__text">Lorem ipsum dolor sit amet.</p>
-      <a className="sign-up__link" href="/login">
+      <a className="sign-up__link" href="/logowanie">
         Masz już konto? Zaloguj się
       </a>
       <SocialMediaBtn

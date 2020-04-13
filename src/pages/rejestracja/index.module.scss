@@ -5,9 +5,22 @@
   flex-direction: column;
   align-items: center;
 }
+
 .sign-up__header {
   color: $light-bg;
+  margin: 0;
 }
+
 .sign-up__or {
   color: $light-accent;
+  margin-bottom: 0;
+}
+
+.sign-up__text {
+  margin: $spacing / 2;
+}
+
+.sign-up__link {
+  color: $light-accent;
+  margin-top: $spacing;
 }
