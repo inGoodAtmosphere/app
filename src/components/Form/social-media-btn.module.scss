@@ -1,0 +1,26 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.social-media-btn {
+  padding: $spacing;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  border-radius: $spacing;
+  margin-top: $spacing;
+  svg {
+    width: $m-size;
+    margin-right: $spacing;
+    font-size: $m-size;
+  }
+  &--facebook {
+    background-color: #1877f2;
+    color: $light-bg;
+    @include button(#1877f2);
+  }
+  &--google {
+    background-color: $light-bg;
+    @include button($light-bg);
+  }
+}

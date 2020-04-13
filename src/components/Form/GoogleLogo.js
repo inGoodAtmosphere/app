@@ -1,7 +1,6 @@
 import * as React from 'react';
-import './google-logo.module.scss';
 
-function Svg64PxGoogleGLogo() {
+function GoogleLogo() {
   return (
     <svg viewBox="0 0 533.5 544.3" className="form__google__btn__svg">
       <path
@@ -24,4 +23,4 @@ function Svg64PxGoogleGLogo() {
   );
 }
 
-export default Svg64PxGoogleGLogo;
+export default GoogleLogo;

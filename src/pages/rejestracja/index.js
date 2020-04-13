@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import Checkbox from '../../components/Form/Checkbox';
+import SocialMediaBtn from '../../components/Form/SocialMediaBtn';
 
-const Register = () => {
+const SignUp = () => {
   const [login, setLogin] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,16 +16,27 @@ const Register = () => {
   const data = { login, password };
 
   return (
-    <main className="content register__content">
-      <h2 className="register__header">Zarejsetruj się a otrzymasz:</h2>
-      <p className="register__text">Dostęp do cotygodniowego newslettera</p>
-      <p className="register__text">
+    <main className="content sign-up__content">
+      <h2 className="sign-up__header">Zarejsetruj się a otrzymasz:</h2>
+      <p className="sign-up__text">Dostęp do cotygodniowego newslettera</p>
+      <p className="sign-up__text">
         Możliwość dodawania czujników do ulubionych
       </p>
-      <p className="register__text">Lorem ipsum dolor sit amet.</p>
-      <a className="register__link" href="/login">
+      <p className="sign-up__text">Lorem ipsum dolor sit amet.</p>
+      <a className="sign-up__link" href="/login">
         Masz już konto? Zaloguj się
       </a>
+      <SocialMediaBtn
+        socialMedia="facebook"
+        purpose="signup"
+        endpoint="/api/signUpFacebook"
+      />
+      <SocialMediaBtn
+        socialMedia="google"
+        purpose="signup"
+        endpoint="/api/signUpGoogle"
+      />
+      <p className="sign-up__or">lub</p>
       <Form
         data={data}
         endpoint="/api/signUp"
@@ -87,4 +99,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default SignUp;
