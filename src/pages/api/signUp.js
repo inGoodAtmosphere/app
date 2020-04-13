@@ -39,7 +39,7 @@ export default async (req, res) => {
       errors.push(
         new ValidationError('Musisz podać swój adres email', 'email'),
       );
-    } else if (emailPattern.test()) {
+    } else if (await regexPromise(emailPattern, email)) {
       errors.push(
         new ValidationError('Musisz wpisać poprawny adres email', 'email'),
       );
@@ -159,8 +159,8 @@ export default async (req, res) => {
               )}, ${dbQuery.escape(newsletter)}${NestedTemplateStrings[2]}${
                 NestedTemplateStrings[3]
               })`;
-              result = await dbQuery(insertQuery).catch((err) => {
-                console.log(`insertQuery error: ${err}`);
+              result = await dbQuery(insertQuery).catch((error) => {
+                console.log(`insertQuery error: ${error}`);
                 res.json({
                   succeed: false,
                   message:
