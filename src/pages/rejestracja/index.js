@@ -37,12 +37,12 @@ const SignUp = () => {
       </a>
       <SocialMediaBtn
         socialMedia="facebook"
-        purpose="signup"
+        purpose="sign-up"
         endpoint="/api/signUpFacebook"
       />
       <SocialMediaBtn
         socialMedia="google"
-        purpose="signup"
+        purpose="sign-up"
         endpoint="/api/signUpGoogle"
       />
       <p className="sign-up__or">lub</p>

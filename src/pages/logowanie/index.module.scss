@@ -1,0 +1,16 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.login__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sign-in__link {
+  color: $light-accent;
+  margin-top: $spacing;
+}
+.sign-in__or {
+  color: $light-accent;
+  margin-bottom: 0;
+}

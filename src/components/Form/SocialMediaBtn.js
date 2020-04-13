@@ -16,7 +16,7 @@ const SocialMediaBtn = ({ socialMedia, endpoint, purpose }) => {
       ) : (
         <GoogleLogo />
       )}
-      {purpose === 'signin' ? 'Zaloguj się przez' : 'Zarejestruj się przez '}
+      {purpose === 'sign-in' ? 'Zaloguj się przez ' : 'Zarejestruj się przez '}
       {socialMedia.charAt(0).toUpperCase() + socialMedia.slice(1)}
     </a>
   );
