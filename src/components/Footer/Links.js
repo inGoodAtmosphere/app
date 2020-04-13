@@ -11,10 +11,14 @@ const Links = () => {
   return (
     <div className="footer__links">
       <div className="footer__links__item">
-        <a href="/kontakt">Kontakt</a>
+        <a href="/kontakt" className="footer__links__item__a">
+          Kontakt
+        </a>
       </div>
       <div className="footer__links__item">
-        <a href="/polityka-prywatnosci">Polityka prywatności</a>
+        <a href="/polityka-prywatnosci" className="footer__links__item__a">
+          Polityka prywatności
+        </a>
       </div>
       <div
         className={`footer__links__item ${display === 'none' &&

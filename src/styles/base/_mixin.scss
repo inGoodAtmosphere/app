@@ -45,6 +45,34 @@
     }
   }
 }
+@mixin link-without-padding($color) {
+  position: relative;
+  outline: none !important;
+  &::before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: '';
+    width: 10%;
+    height: $spacing / 4;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    background: $color;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 1;
+      -webkit-transform: scaleX(6) translateX(-7%) translateY(100%);
+      transform: scaleX(6) translateX(-7%) translateY(100%);
+    }
+  }
+}
 @mixin scroll($color) {
   overflow-y: scroll;
   &::-webkit-scrollbar {

@@ -1,4 +1,5 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
 .footer__links {
   -webkit-box-pack: justify;
@@ -13,6 +14,7 @@
   border: none;
   color: $dark-bg;
   padding: 0;
+  @include link-without-padding($dark-bg);
 }
 
 .footer__links__item {
@@ -25,4 +27,7 @@
   &--hidden {
     display: none;
   }
+}
+.footer__links__item__a {
+  @include link-without-padding($dark-bg);
 }

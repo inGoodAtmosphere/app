@@ -9,6 +9,7 @@
 .sign-in__link {
   color: $light-accent;
   margin-top: $spacing;
+  @include link-without-padding($light-accent);
 }
 .sign-in__or {
   color: $light-accent;
