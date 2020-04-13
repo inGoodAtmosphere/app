@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ContactHeaders from '../../components/Contact/Headers';
 import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
@@ -12,16 +12,6 @@ const Contact = () => {
   const [content, setContent] = useState('');
   const [errors, setErrors] = useState([]);
   const data = { name, email, subject, content };
-  const captchaKey =
-    process.env.NODE_ENV === 'production'
-      ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
-      : process.env.CAPTCHA_SITE_KEY;
-  useEffect(() => {
-    // Add reCaptcha
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?render=${captchaKey}`;
-    document.body.appendChild(script);
-  }, []);
 
   return (
     <main className="content contact__content">

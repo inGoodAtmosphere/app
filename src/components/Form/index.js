@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import withContext from '../../utils/withContext';
 import './index.module.scss';
@@ -7,12 +7,20 @@ import Bots from './Bots';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
+  const [isSucceed, setIsSucceed] = useState(null);
   const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
   const captchaKey =
     process.env.NODE_ENV === 'production'
       ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
       : process.env.CAPTCHA_SITE_KEY;
+
+  useEffect(() => {
+    // Add reCaptcha
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${captchaKey}`;
+    document.body.appendChild(script);
+  }, []);
 
   const verifyCaptcha = () => {
     window.grecaptcha.ready(async () => {
@@ -31,9 +39,9 @@ const Form = ({ children, data, endpoint, submitText }) => {
       }
     });
   };
-  const sendMail = async () => {
+  const performAction = async () => {
     if (score > 0.3) {
-      setMessage('Wysyłanie');
+      setMessage('Proszę czekać');
       const res = await fetch(endpoint, {
         method: 'post',
         headers: {
@@ -44,9 +52,11 @@ const Form = ({ children, data, endpoint, submitText }) => {
       });
       const json = await res.json();
       if (json.errors.length) {
+        setIsSucceed(false);
         setErrors(json.errors);
         setMessage('');
       } else {
+        setIsSucceed(true);
         setMessage(json.message);
         setErrors([]);
       }
@@ -56,7 +66,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     verifyCaptcha();
-    sendMail();
+    performAction();
   };
   return (
     <form
@@ -68,12 +78,8 @@ const Form = ({ children, data, endpoint, submitText }) => {
       {children}
       <button
         type="submit"
-        className={`${
-          message === 'Twój email został wysłany pomyślnie'
-            ? 'form__btn--success'
-            : 'form__btn'
-        }`}
-        disabled={!!message}
+        className={`${isSucceed ? 'form__btn--success' : 'form__btn'}`}
+        disabled={isSucceed}
       >
         {message || submitText}
       </button>
