@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // TODO add notification when critical error while salting the password or connecting to the db
 // todo password strength
-
+const saltRounds = process.env.SALT_ROUNDS;
 const regexPromise = (regex, textToTest) =>
   new Promise((resolve) => {
     resolve(!regex.test(textToTest));
@@ -39,7 +39,7 @@ export default async (req, res) => {
       errors.push(
         new ValidationError('Musisz podać swój adres email', 'email'),
       );
-    } else if (await regexPromise(emailPattern, email)) {
+    } else if (emailPattern.test()) {
       errors.push(
         new ValidationError('Musisz wpisać poprawny adres email', 'email'),
       );
@@ -104,7 +104,16 @@ export default async (req, res) => {
         email,
       )};`;
 
-      const selectResult = await dbQuery(selectQuery);
+      const selectResult = await dbQuery(selectQuery).catch((err) => {
+        console.log(`selectResult error: ${err}`);
+        res.json({
+          succeed: false,
+          message:
+            'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
+          errors,
+        });
+      });
+      console.log(selectResult);
       if (selectResult.length > 0) {
         errors.push(
           new ValidationError(
@@ -119,49 +128,56 @@ export default async (req, res) => {
         });
       } else {
         // encryption
-        bcrypt.hash(password, process.env.SALT_ROUNDS, async (err, hash) => {
-          if (err) {
-            res.json({
-              succeed: false,
-              message:
-                'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
-              errors,
-            });
-            console.log(err);
-          } else {
-            // I assigned these conditionals to array to fix bracket colors
-            const NestedTemplateStrings = [
-              !firstName ? '' : `,${dbQuery.escapeId('first-name')}`,
-              !lastName ? '' : `,${dbQuery.escapeId('last-name')}`,
-              !firstName ? '' : `,${dbQuery.escape(firstName)}`,
-              !lastName ? '' : `,${dbQuery.escape(lastName)}`,
-            ];
-
-            const insertQuery = `insert into users(email,login,${dbQuery.escapeId(
-              'password',
-            )},permissions,newsletter${NestedTemplateStrings[0]}${
-              NestedTemplateStrings[1]
-            }) values(${dbQuery.escape(email)},${dbQuery.escape(
-              login,
-            )},${dbQuery.escape(hash)},${dbQuery.escape(
-              'user',
-            )}, ${dbQuery.escape(newsletter)}${NestedTemplateStrings[2]}${
-              NestedTemplateStrings[3]
-            })`;
-
-            result = await dbQuery(insertQuery).catch((error) => {
-              console.log(error);
+        await bcrypt.hash(
+          password,
+          parseInt(saltRounds, 10),
+          async (err, hash) => {
+            if (err) {
               res.json({
                 succeed: false,
-                message: 'Nie udało się przesłać formularza',
+                message:
+                  'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
                 errors,
               });
-            });
-            console.log(result);
-          }
-        });
-
-        // if encryption and db insert succeeds then this code is executed
+              console.log(err);
+            } else {
+              // I assigned these conditionals to array to fix bracket colors
+              const NestedTemplateStrings = [
+                !firstName ? '' : `,${dbQuery.escapeId('first-name')}`,
+                !lastName ? '' : `,${dbQuery.escapeId('last-name')}`,
+                !firstName ? '' : `,${dbQuery.escape(firstName)}`,
+                !lastName ? '' : `,${dbQuery.escape(lastName)}`,
+              ];
+              const insertQuery = `insert into users(email,login,${dbQuery.escapeId(
+                'password',
+              )},permissions,newsletter${NestedTemplateStrings[0]}${
+                NestedTemplateStrings[1]
+              }) values(${dbQuery.escape(email)},${dbQuery.escape(
+                login,
+              )},${dbQuery.escape(hash)},${dbQuery.escape(
+                'user',
+              )}, ${dbQuery.escape(newsletter)}${NestedTemplateStrings[2]}${
+                NestedTemplateStrings[3]
+              })`;
+              result = await dbQuery(insertQuery).catch((err) => {
+                console.log(`insertQuery error: ${err}`);
+                res.json({
+                  succeed: false,
+                  message:
+                    'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
+                  errors,
+                });
+              });
+              console.log(result);
+              // if encryption and db insert succeeds then this code is executed
+              // res.json({
+              //   succeed: true,
+              //   message: 'Rejestracja powiodła się',
+              //   errors,
+              // });
+            }
+          },
+        );
         res.json({
           succeed: true,
           message: 'Rejestracja powiodła się',
