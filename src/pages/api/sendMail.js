@@ -9,6 +9,9 @@ export default async (req, res) => {
     // validation shit here
     const errors = []; // array for errors
 
+    // regex for checking if email is correct
+    const emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
     // checking if email is set
     if (!req.body.email) {
       errors.push(
@@ -17,11 +20,10 @@ export default async (req, res) => {
           'email',
         ),
       );
-    }
-    const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    if (!pattern.test(req.body.email)) {
+    } else if (!emailPattern.test(req.body.email)) {
       errors.push(new ValidationError('Niepoprawny adres email', 'email'));
     }
+
     // checking if name is set or is too short
     if (!req.body.name) {
       errors.push(

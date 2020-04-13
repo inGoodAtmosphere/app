@@ -5,12 +5,13 @@ require('dotenv').config();
 
 const testMail = process.env.MAIL_USER_TEST;
 const productionMail = process.env.MAIL_USER_PRODUCTION;
+const mail = process.env.NODE_ENV === 'production' ? productionMail : testMail;
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: process.env.MAIL_PORT, // SSL PORT
   secure: true,
   auth: {
-    user: process.env.NODE_ENV === 'production' ? productionMail : testMail,
+    user: mail,
     pass: process.env.MAIL_PASSWORD,
   },
   tls: {
@@ -59,9 +60,7 @@ const sendMail = async (recipient, subject, plainContent, prefix, suffix) =>
       // send mail with defined transport object
       transporter.sendMail(
         {
-          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${
-            process.env.NODE_ENV === 'production' ? productionMail : testMail
-          }>`, // sender address
+          from: `"${fromPrefix} InGoodAtmosphere ${fromSuffix}" <${mail}>`, // sender address
           to: recipient, // list of recipients
           subject, // Subject line
           text: `Treść: ${plainContent}`, // plain text body
