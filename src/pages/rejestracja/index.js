@@ -13,7 +13,15 @@ const SignUp = () => {
   const [lastName, setLastName] = useState('');
   const [newsletter, setNewsletter] = useState(false);
   const [errors, setErrors] = useState([]);
-  const data = { login, password };
+  const data = {
+    login,
+    email,
+    password,
+    confirmPassword,
+    firstName,
+    lastName,
+    newsletter,
+  };
 
   return (
     <main className="content sign-up__content">
