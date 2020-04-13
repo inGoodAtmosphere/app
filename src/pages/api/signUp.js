@@ -11,8 +11,6 @@ const regexPromise = (regex, textToTest) =>
     resolve(!regex.test(textToTest));
   });
 
-let result;
-
 // regex patterns for validation
 const emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 const passwordPattern = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/;
@@ -154,12 +152,12 @@ export default async (req, res) => {
                 NestedTemplateStrings[1]
               }) values(${dbQuery.escape(email)},${dbQuery.escape(
                 login,
-              )},${dbQuery.escape(hash)},${dbQuery.escape(
-                'user',
-              )}, ${dbQuery.escape(newsletter)}${NestedTemplateStrings[2]}${
-                NestedTemplateStrings[3]
-              })`;
-              result = await dbQuery(insertQuery).catch((error) => {
+              )},${dbQuery.escape(hash)},${dbQuery.escape('user')}, ${
+                !newsletter
+                  ? dbQuery.escape('false')
+                  : dbQuery.escape(newsletter)
+              }${NestedTemplateStrings[2]}${NestedTemplateStrings[3]})`;
+              const result = await dbQuery(insertQuery).catch((error) => {
                 console.log(`insertQuery error: ${error}`);
                 res.json({
                   succeed: false,
