@@ -53,26 +53,3 @@
     }
   }
 }
-.sensors {
-  .button {
-    @include button($dark-accent);
-  }
-}
-
-.encyclopedia {
-  .button {
-    @include button($light-accent);
-  }
-}
-
-.contact {
-  .button {
-    @include button(#276f98);
-  }
-}
-
-.project {
-  .button {
-    @include button($light-bg);
-  }
-}

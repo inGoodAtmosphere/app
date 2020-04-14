@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.menu__item {
+.item {
   color: $dark-bg;
   font-size: $m-size;
   font-weight: bold;
@@ -11,7 +11,7 @@
 }
 
 @media #{$media-query-m} {
-  .menu__item {
+  .item {
     @include link($light-bg);
     color: $light-bg;
     font-size: $m-size - 0.3;

@@ -21,7 +21,7 @@
   transition: transform 0.4s ease-in;
   width: 100%;
   z-index: 10;
-  &--isActive {
+  &isActive {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
@@ -38,7 +38,7 @@
     position: static;
     transform: translateX(0);
   }
-  .menu__item {
+  .item {
     color: $light-bg;
     font-size: $m-size - 0.3;
     text-align: center;

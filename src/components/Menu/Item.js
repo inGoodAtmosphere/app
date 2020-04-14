@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useWindowWidth from '../../hooks/useWindowDimensions';
-import './item.module.scss';
+import styles from './Item.module.scss';
 
 const Item = ({ isActive, anchor }) => {
   const { width } = useWindowWidth();
@@ -10,7 +10,7 @@ const Item = ({ isActive, anchor }) => {
   return (
     <a
       href={`/${link}`}
-      className="menu__item"
+      className={styles.item}
       tabIndex={isActive || width > 1024 ? 0 : -1}
     >
       {anchor}

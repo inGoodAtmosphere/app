@@ -29,6 +29,7 @@
 
 .mierniki {
   @include button($dark-accent);
+  align-self: flex-start;
 }
 
 .encyklopedia {

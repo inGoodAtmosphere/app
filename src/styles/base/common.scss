@@ -1,12 +1,4 @@
 @import './settings';
-.container {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
 
 .content {
   -webkit-box-flex: 1;
@@ -16,10 +8,9 @@
   max-width: 54rem;
   min-height: calc(100vh - #{$header-height});
   padding: 0 $spacing;
-}
-
-.content > h2 {
-  color: $light-accent;
+  h2 {
+    color: $light-accent;
+  }
 }
 
 .card {
