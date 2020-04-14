@@ -4,16 +4,15 @@ import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
 import Loading from '../../components/Loading';
+import styles from './index.module.scss';
 
 const Campaign = ({ data }) => {
   const router = useRouter();
   if (router.isFallback) return <Loading />;
   return (
-    <main className="content campaign__content">
+    <main className={styles.content}>
       <h1>Nasze artykuły</h1>
-      <h2 className="campaign__h2">
-        Tutaj przeczytasz wszystkie nasze artykuły
-      </h2>
+      <h2 className={styles.h2}>Tutaj przeczytasz wszystkie nasze artykuły</h2>
       {data.length &&
         data.map((article) => {
           const tags = article.tags.split(', ');

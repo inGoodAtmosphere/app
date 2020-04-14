@@ -8,7 +8,7 @@
   max-width: 54rem;
   min-height: calc(100vh - #{$header-height});
   padding: 0 $spacing;
-  h2 {
+  & > h2 {
     color: $light-accent;
   }
 }

@@ -14,14 +14,13 @@
 .header {
   margin: 0;
   padding: $spacing;
+  color: $text;
 }
 
 .description {
   margin: 0;
   padding: $spacing;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
 }
 
