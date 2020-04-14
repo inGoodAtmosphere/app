@@ -1,15 +1,13 @@
 @import '../../styles/base/settings';
 
-.popup {
+.card {
+  composes: card from '../../styles/base/common.scss';
   background-color: $primary-accent;
   color: $light-bg;
   outline: none;
-  display: -webkit-box;
-  display: flex;
   position: fixed;
   left: 50%;
   bottom: 10%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 100%;
   visibility: hidden;
@@ -17,20 +15,18 @@
   z-index: 2;
   max-width: 20rem;
   box-shadow: 0.2rem 0.2rem 0.2rem #000;
-  -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
-  &--visible {
+  &Visible {
     visibility: visible;
-    -webkit-animation: fadeIn 0.2s both;
+
     animation: fadeIn 0.2s both;
   }
-  &--invisible {
-    -webkit-animation: fadeOut 0.2s both;
+  &Invisible {
     animation: fadeOut 0.2s both;
   }
 }
 
-.popup__close {
+.close {
   background: none;
   color: $light-bg;
   border: none;
@@ -38,25 +34,9 @@
   font-size: $m-size;
 }
 
-.popup__header {
+.header {
   margin: 0;
   font-weight: bolder;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-    -webkit-transform: scale(1.1) translateX(-50%);
-    transform: scale(1.1) translateX(-50%);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1) translateX(-50%);
-    transform: scale(1) translateX(-50%);
-  }
 }
 
 @keyframes fadeIn {
@@ -65,43 +45,20 @@
   }
   70% {
     opacity: 1;
-    -webkit-transform: scale(1.1) translateX(-50%);
     transform: scale(1.1) translateX(-50%);
   }
   to {
     opacity: 1;
-    -webkit-transform: scale(1) translateX(-50%);
     transform: scale(1) translateX(-50%);
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    // opacity: 1;
-    // visibility: visible;
-    -webkit-transform: scale(1) translateX(-50%);
-    transform: scale(1) translateX(-50%);
-  }
-  30% {
-    opacity: 1;
-    -webkit-transform: scale(1.1) translateX(-50%);
-    transform: scale(1.1) translateX(-50%);
-  }
-  to {
-    opacity: 0;
   }
 }
 
 @keyframes fadeOut {
   from {
-    // opacity: 1;
-    // visibility: visible;
-    -webkit-transform: scale(1) translateX(-50%);
     transform: scale(1) translateX(-50%);
   }
   30% {
     opacity: 1;
-    -webkit-transform: scale(1.1) translateX(-50%);
     transform: scale(1.1) translateX(-50%);
   }
   to {
@@ -110,7 +67,7 @@
 }
 
 @media #{$media-query-m} {
-  .popup {
+  .card {
     left: 20%;
   }
 }

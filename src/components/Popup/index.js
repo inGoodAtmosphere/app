@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Modal from 'react-modal';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './index.module.scss';
 import useScroll from '../../hooks/useScroll';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import useFetch from '../../hooks/useFetch';
-
-Modal.setAppElement('#content');
+import styles from './index.module.scss';
 
 const Popup = ({ articleHeight }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,27 +14,24 @@ const Popup = ({ articleHeight }) => {
   const isScrolled = scroll > articleHeight - height / 2;
   const { data, isLoaded, error } = useFetch('/api/interestingFact');
   return (
-    <Modal
-      className={`card popup ${
+    <div
+      className={`${styles.card} ${
         isScrolled && isOpen && !error && !isLoaded
-          ? 'popup--visible'
-          : 'popup--invisible'
+          ? styles.cardVisible
+          : styles.cardInvisible
       }`}
       isOpen={isOpen && !error && !isLoaded}
-      contentLabel="Ciekawostka"
-      portalClassName="popup__portal"
-      overlayClassName="popup__overlay"
     >
       <button
         type="button"
         onClick={() => setIsOpen(false)}
-        className="popup__close"
+        className={styles.close}
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
-      <p className="popup__header">Czy wiesz, że...</p>
+      <p className={styles.header}>Czy wiesz, że...</p>
       {!isLoaded && <p>{data.content}</p>}
-    </Modal>
+    </div>
   );
 };
 
