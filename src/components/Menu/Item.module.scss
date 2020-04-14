@@ -8,10 +8,7 @@
   padding: $spacing;
   text-transform: uppercase;
   @include link($dark-bg);
-}
-
-@media #{$media-query-m} {
-  .item {
+  @media #{$media-query-m} {
     @include link($light-bg);
     color: $light-bg;
     font-size: $m-size - 0.3;

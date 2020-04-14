@@ -2,16 +2,12 @@
 @import '../../styles/base/mixin';
 
 .header {
-  -webkit-box-align: center;
-  -webkit-box-pack: justify;
   align-items: center;
   background: $dark-bg;
   color: $text;
-  display: -webkit-box;
   display: flex;
   height: $header-height;
   justify-content: space-between;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;

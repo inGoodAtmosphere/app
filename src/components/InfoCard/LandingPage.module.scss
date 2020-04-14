@@ -34,16 +34,10 @@
 
 @media #{$media-query-m} {
   .card {
-    -webkit-box-align: center;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: justify;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     &:nth-child(even) {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
       flex-direction: row-reverse;
     }
     &:nth-child(odd) {

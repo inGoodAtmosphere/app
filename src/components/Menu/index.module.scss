@@ -1,10 +1,6 @@
 @import '../../styles/base/settings';
 
 .menu {
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-transition: -webkit-transform 0.4s ease-in;
   align-items: center;
   background: $light-bg;
   display: -webkit-box;
@@ -16,12 +12,10 @@
   overflow: hidden;
   position: fixed;
   top: $header-height;
-  transition: -webkit-transform 0.4s ease-in;
-  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
   transition: transform 0.4s ease-in;
   width: 100%;
   z-index: 10;
-  &isActive {
+  &IsActive {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
@@ -29,9 +23,6 @@
 
 @media #{$media-query-m} {
   .menu {
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -webkit-transform: translateX(0);
     background: none;
     flex-direction: row;
     height: auto;

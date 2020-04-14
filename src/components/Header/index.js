@@ -10,13 +10,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      {width < 1024 ? (
-        <>
-          <Navigation />
-        </>
-      ) : (
-        <Menu />
-      )}
+      {width < 1024 ? <Navigation /> : <Menu />}
     </header>
   );
 };

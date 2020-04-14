@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './hamburger.module.scss';
+import styles from './Hamburger.module.scss';
 
 const Hamburger = ({ isActive, setIsActive }) => (
   <button
     type="button"
-    className={`hamburger ${isActive ? 'hamburger--isActive' : ''}`}
+    className={`${styles.hamburger} ${isActive && styles.hamburgerIsActive}`}
     onClick={() => setIsActive(!isActive)}
     aria-hidden="true"
     aria-label="Otwórz menu"
@@ -13,8 +13,8 @@ const Hamburger = ({ isActive, setIsActive }) => (
     aria-expanded="false"
     aria-controls="menu"
   >
-    <span className="hamburger__box">
-      <span className="hamburger__line" />
+    <span className={styles.box}>
+      <span className={styles.line} />
     </span>
   </button>
 );
