@@ -8,7 +8,7 @@ import useScroll from '../../hooks/useScroll';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import useFetch from '../../hooks/useFetch';
 
-Modal.setAppElement('.content');
+Modal.setAppElement('#content');
 
 const Popup = ({ articleHeight }) => {
   const [isOpen, setIsOpen] = useState(true);

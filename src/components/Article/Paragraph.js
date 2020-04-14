@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './paragraph.module.scss';
+import styles from './Paragraph.module.scss';
 
 const Paragraph = ({ content }) => {
   const listContent = content.split('stencel');
@@ -17,10 +17,10 @@ const Paragraph = ({ content }) => {
   if (linkContent.length > 1) {
     // linkContent[3] because regex group looks like this: [0]: paragraph [1]: link text [2]: link href and [3] is a optional rest of the paragraph
     return (
-      <p className="article__paragraph">
+      <p className={styles.paragraph}>
         {linkContent[0]}
         <a
-          className="article__paragraph__link"
+          className={styles.link}
           href={linkContent[2]}
           target="_blank"
           rel="noopener noreferrer"
@@ -34,8 +34,8 @@ const Paragraph = ({ content }) => {
   if (list.length) {
     return (
       <>
-        <p className="article__paragraph">{listContent[0]}</p>
-        <ul className="article__paragraph__list">
+        <p className={styles.paragraph}>{listContent[0]}</p>
+        <ul className={styles.list}>
           {list.map((listItem) => (
             <li key={listItem.substr(1, 12)}>{listItem}</li>
           ))}
@@ -43,7 +43,7 @@ const Paragraph = ({ content }) => {
       </>
     );
   }
-  return <p className="article__paragraph">{content}</p>;
+  return <p className={styles.paragraph}>{content}</p>;
 };
 
 Paragraph.propTypes = {

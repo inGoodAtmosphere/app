@@ -1,10 +1,10 @@
 @import '../../styles/base/settings';
 
-.article__paragraph {
+.paragraph {
   margin: $spacing / 2 0 0 0;
   text-indent: $spacing;
 }
-.article__paragraph__list {
+.list {
   list-style: none;
   li {
     margin-bottom: $spacing;
@@ -17,6 +17,6 @@
     }
   }
 }
-.article__paragraph__link {
+.link {
   text-decoration: underline;
 }

@@ -1,11 +1,16 @@
 @import '../../styles/base/settings';
 
-.article__card {
+.content {
+  composes: content from '../../styles/base/common.scss';
+}
+
+.card {
+  composes: card from '../../styles/base/common.scss';
   padding: $spacing;
   position: relative;
 }
 
-.article__author {
+.author {
   align-self: flex-end;
   color: #999;
   padding: $spacing $spacing 0 0;

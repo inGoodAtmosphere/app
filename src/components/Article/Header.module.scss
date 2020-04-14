@@ -1,16 +1,13 @@
 @import '../../styles/base/settings';
 
-.article__header {
+.header {
   margin: 0;
   padding: $spacing * 5 $spacing;
   position: relative;
   z-index: 1;
   min-height: 12rem;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   &::after {
     content: '';
@@ -25,17 +22,16 @@
   }
 }
 
-.article__header__text {
+.text {
   border-radius: $spacing;
   color: $light-bg;
   font-size: $l-size * 0.8;
   margin: 0;
   text-align: center;
-  text-align: center;
   z-index: 1;
 }
 
-.article__header__img {
+.image {
   border-radius: $spacing;
   height: 100%;
   left: 0;

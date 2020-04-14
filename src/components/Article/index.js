@@ -1,12 +1,12 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './index.module.scss';
 import Head from './Head';
 import Header from './Header';
 import withContext from '../../utils/withContext';
 import Context from '../../utils/Context';
 import Section from './Section';
 import Paragraph from './Paragraph';
+import styles from './index.module.scss';
 
 const Article = ({ setArticleHeight }) => {
   const { subHeaders, contents, author } = useContext(Context);
@@ -19,8 +19,8 @@ const Article = ({ setArticleHeight }) => {
   return (
     <>
       <Head />
-      <main className="content" ref={container}>
-        <article className="card article__card">
+      <main className={styles.content} id="content" ref={container}>
+        <article className={styles.card}>
           <Header />
 
           {subHeaders
@@ -33,7 +33,7 @@ const Article = ({ setArticleHeight }) => {
                 .map((content) => (
                   <Paragraph key={content.substring(1, 12)} content={content} />
                 ))}
-          <p className="article__author">{author}</p>
+          <p className={styles.author}>{author}</p>
         </article>
       </main>
     </>
