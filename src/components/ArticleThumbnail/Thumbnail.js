@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './thumbnail.module.scss';
+import styles from './Thumbnail.module.scss';
 
 const Thumbnail = ({ link, images }) => {
   return (
-    <a href={`/kampania/${link}`} className="article-thumbnail__image__link">
+    <a href={`/kampania/${link}`} className={styles.link}>
       <img
-        className="article-thumbnail__image"
+        className={styles.image}
         src={`/data/articles/${images}/thumbnail.jpg`}
         alt="Miniaturka"
       />
-      <span className="article-thumbnail__image__link__text">
-        Czytaj więcej
-      </span>
+      <span className={styles.text}>Czytaj więcej</span>
     </a>
   );
 };

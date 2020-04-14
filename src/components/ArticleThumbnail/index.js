@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './index.module.scss';
 import Thumbnail from './Thumbnail';
 import Tags from './Tags';
+import styles from './index.module.scss';
 
 const ArticleThumbnail = ({ images, header, description, tags, link }) => {
   return (
-    <div className="article-thumbnail">
+    <div className={styles.wrapper}>
       <Thumbnail images={images} link={link} />
-      <h2 className="article-thumbnail__header">{header}</h2>
+      <h2 className={styles.header}>{header}</h2>
       <Tags tags={tags} />
-      <p className="article-thumbnail__description">{description}</p>
-      <a href={`/kampania/${link}`} className="article-thumbnail__link">
+      <p className={styles.description}>{description}</p>
+      <a href={`/kampania/${link}`} className={styles.link}>
         Czytaj więcej
       </a>
     </div>

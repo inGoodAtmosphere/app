@@ -1,8 +1,7 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.article-thumbnail {
-  -webkit-box-align: start;
+.wrapper {
   align-items: start;
   background-color: $light-bg;
   border-radius: $spacing;
@@ -12,12 +11,12 @@
   margin: $spacing 0;
 }
 
-.article-thumbnail__header {
+.header {
   margin: 0;
   padding: $spacing;
 }
 
-.article-thumbnail__description {
+.description {
   margin: 0;
   padding: $spacing;
   display: -webkit-box;
@@ -26,7 +25,7 @@
   align-items: center;
 }
 
-.article-thumbnail__link {
+.link {
   color: $text;
   margin-bottom: $spacing / 3;
   border-radius: $spacing;
@@ -36,10 +35,10 @@
   @include button($light-bg);
 }
 @media screen and (min-width: 432px) {
-  .article-thumbnail {
+  .wrapper {
     grid-template-columns: 8.5rem auto;
   }
-  .article-thumbnail__description {
+  .description {
     min-height: 6rem;
   }
 }
