@@ -1,12 +1,13 @@
 @import '../../styles/base/settings';
 
-.header__navigation {
+.navigation {
   -webkit-box-align: center;
   align-items: center;
   display: -webkit-box;
   display: flex;
 }
-.header__navigation__btn {
+
+.button {
   background-color: $dark-accent;
   color: $light-bg;
   padding: $spacing;

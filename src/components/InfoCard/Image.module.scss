@@ -1,11 +1,11 @@
 @import '../../styles/base/settings';
 
-.landing-page__svg {
+.svg {
   padding: $spacing;
   width: 15rem;
 }
 
-.landing-page__svg__link {
+.link {
   border: none !important;
   outline: none;
   &:hover,

@@ -1,12 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function SvgMap() {
+function SvgMap({ className }) {
   return (
-    <svg
-      className="landing-page__svg landing-page__svg__map"
-      viewBox="0 0 326 266"
-      fill="none"
-    >
+    <svg className={className} viewBox="0 0 326 266" fill="none">
       <g clipPath="url(#map_svg__clip0)">
         <path
           opacity={0.1}
@@ -185,5 +182,9 @@ function SvgMap() {
     </svg>
   );
 }
+
+SvgMap.propTypes = {
+  className: PropTypes.string.isRequired,
+};
 
 export default SvgMap;

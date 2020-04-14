@@ -14,7 +14,7 @@ const Image = () => {
         className={styles.link}
         aria-label={link && link.href}
       >
-        <Svg />
+        <Svg className={styles.svg} />
       </a>
     )
   );

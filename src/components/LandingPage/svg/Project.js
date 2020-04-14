@@ -1,13 +1,14 @@
 import React from 'react';
-import './project.module.scss';
+import PropTypes from 'prop-types';
+import './Project.module.scss';
 
-function Icon() {
+function Icon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 364 271"
-      className="landing-page__svg landing-page__svg__project"
+      className={className}
     >
       <g id="undraw_good_team_m7uu (2) 1" clipPath="url(#clip0)">
         <path
@@ -369,5 +370,9 @@ function Icon() {
     </svg>
   );
 }
+
+Icon.propTypes = {
+  className: PropTypes.string.isRequired,
+};
 
 export default Icon;

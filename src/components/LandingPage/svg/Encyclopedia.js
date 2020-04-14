@@ -1,13 +1,10 @@
 import * as React from 'react';
-import './encyclopedia.module.scss';
+import PropTypes from 'prop-types';
+import styles from './Encyclopedia.module.scss';
 
-function SvgFrame4() {
+function SvgFrame4({ className }) {
   return (
-    <svg
-      className="landing-page__svg landing-page__svg__encyclopedia"
-      viewBox="0 0 221 198"
-      fill="none"
-    >
+    <svg className={className} viewBox="0 0 221 198" fill="none">
       <path
         d="M110.791 31.436s-3.426 13.952-8.547 17.844c-5.286 4.017-10.771-3.701-10.771-3.701l-3.054 5.527s5.647 9.13 11.34 9.341c5.692.212 10.688-4.892 10.688-4.892l.344-24.119z"
         fill="#0E364F"
@@ -157,7 +154,7 @@ function SvgFrame4() {
         fill="#fff"
       />
 
-      <g className="landing-page__svg__encyclopedia__head">
+      <g className={styles.head}>
         <path
           d="M122.838 27.685a5.276 5.276 0 01-3.575 1.87 5.264 5.264 0 01-3.849-1.21l-.182-.158s-6.214 6.225.066 6.976c3.314.415 7.395-3.602 8.576-5.872l-1.036-1.606z"
           fill="#3F3D56"
@@ -480,5 +477,9 @@ function SvgFrame4() {
     </svg>
   );
 }
+
+SvgFrame4.propTypes = {
+  className: PropTypes.string.isRequired,
+};
 
 export default SvgFrame4;

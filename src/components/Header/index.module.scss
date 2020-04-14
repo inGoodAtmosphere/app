@@ -1,5 +1,6 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
+
 .header {
   -webkit-box-align: center;
   -webkit-box-pack: justify;
@@ -14,8 +15,4 @@
   position: sticky;
   top: 0;
   z-index: 10;
-}
-.header__link {
-  padding: $spacing 0;
-  @include link($light-bg);
 }

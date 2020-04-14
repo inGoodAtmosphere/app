@@ -1,13 +1,10 @@
 import * as React from 'react';
-import './sensor.module.scss';
+import PropTypes from 'prop-types';
+import './Sensor.module.scss';
 
-function Sensor() {
+function Sensor({ className }) {
   return (
-    <svg
-      viewBox="0 0 237 208"
-      fill="none"
-      className="landing-page__svg landing-page__svg__sensor"
-    >
+    <svg viewBox="0 0 237 208" fill="none" className={className}>
       <g clipRule="evenodd">
         <path
           fillRule="evenodd"
@@ -72,5 +69,9 @@ function Sensor() {
     </svg>
   );
 }
+
+Sensor.propTypes = {
+  className: PropTypes.string.isRequired,
+};
 
 export default Sensor;

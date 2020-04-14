@@ -1,0 +1,7 @@
+@import '../../styles/base/settings';
+@import '../../styles/base/mixin';
+
+.link {
+  padding: $spacing 0;
+  @include link($light-bg);
+}
