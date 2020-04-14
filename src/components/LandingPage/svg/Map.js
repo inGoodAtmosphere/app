@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SvgMap({ className }) {
+function SvgMap({ className, animated }) {
   return (
     <svg className={className} viewBox="0 0 326 266" fill="none">
       <g clipPath="url(#map_svg__clip0)">
@@ -74,7 +74,7 @@ function SvgMap({ className }) {
           d="M206.783 155.991h-35.642v-15.529l33.701-.176 2.118 6-.177 9.705z"
           fill="#3088A1"
         />
-        <g className="landing-page__svg__map__marker">
+        <g className={animated}>
           <path
             d="M189.139 75.525a19.51 19.51 0 00-19.508 19.51c0 10.774 19.508 45.78 19.508 45.78s19.507-34.992 19.507-45.78a19.511 19.511 0 00-19.507-19.51zm0 27.831a8.585 8.585 0 01-7.929-5.298 8.581 8.581 0 117.929 5.295v.003z"
             fill="#3088A1"
@@ -185,6 +185,7 @@ function SvgMap({ className }) {
 
 SvgMap.propTypes = {
   className: PropTypes.string.isRequired,
+  animated: PropTypes.string.isRequired,
 };
 
 export default SvgMap;

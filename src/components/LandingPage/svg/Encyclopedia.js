@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Encyclopedia.module.scss';
 
-function SvgFrame4({ className }) {
+function SvgFrame4({ className, animated }) {
   return (
     <svg className={className} viewBox="0 0 221 198" fill="none">
       <path
@@ -154,7 +154,7 @@ function SvgFrame4({ className }) {
         fill="#fff"
       />
 
-      <g className={styles.head}>
+      <g className={`${animated} ${styles.head}`}>
         <path
           d="M122.838 27.685a5.276 5.276 0 01-3.575 1.87 5.264 5.264 0 01-3.849-1.21l-.182-.158s-6.214 6.225.066 6.976c3.314.415 7.395-3.602 8.576-5.872l-1.036-1.606z"
           fill="#3F3D56"
@@ -480,6 +480,7 @@ function SvgFrame4({ className }) {
 
 SvgFrame4.propTypes = {
   className: PropTypes.string.isRequired,
+  animated: PropTypes.string.isRequired,
 };
 
 export default SvgFrame4;

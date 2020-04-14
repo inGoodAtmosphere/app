@@ -40,10 +40,5 @@
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-    &:nth-child(odd) {
-      .btn {
-        align-self: flex-start;
-      }
-    }
   }
 }

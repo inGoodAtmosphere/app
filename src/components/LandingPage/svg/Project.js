@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Project.module.scss';
+import styles from './Project.module.scss';
 
-function Icon({ className }) {
+function Icon({ className, animated }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ function Icon({ className }) {
         />
         <path
           id="hand3"
-          className="hand2"
+          className={animated}
           fill="#2F2E41"
           d="M71.26 134.825c2.532-6.633 2.899-12.655.819-13.451-2.08-.796-5.82 3.936-8.352 10.568-2.533 6.633-2.9 12.656-.82 13.451 2.08.796 5.82-3.935 8.353-10.568z"
         />
@@ -210,7 +210,7 @@ function Icon({ className }) {
         />
         <path
           id="hand4"
-          className="hand2"
+          className={animated}
           fill="#2F2E41"
           d="M26.42 146.38c.955-2.014-3.467-6.114-9.876-9.157-6.41-3.043-12.379-3.877-13.333-1.863-.955 2.015 3.468 6.114 9.877 9.157 6.41 3.043 12.379 3.877 13.333 1.863z"
         />
@@ -285,13 +285,13 @@ function Icon({ className }) {
         />
         <path
           id="hand2"
-          className="hand"
+          className={`${animated} ${styles.hand}`}
           fill="#2F2E41"
           d="M283.66 59.86c.497-2.172-4.705-5.22-11.619-6.806-6.914-1.587-12.923-1.111-13.42 1.061-.498 2.173 4.704 5.22 11.618 6.807 6.915 1.587 12.923 1.111 13.421-1.061z"
         />
         <path
           id="hand1"
-          className="hand"
+          className={`${animated} ${styles.hand}`}
           fill="#2F2E41"
           d="M334.085 68.255c.497-2.173-4.704-5.22-11.619-6.807-6.914-1.587-12.923-1.111-13.42 1.062-.498 2.172 4.704 5.22 11.619 6.806 6.914 1.587 12.922 1.111 13.42-1.061z"
         />
@@ -300,7 +300,7 @@ function Icon({ className }) {
           fill="#fff"
           d="M301.915 71.806a5.862 5.862 0 01-2.592 5.971 5.844 5.844 0 01-6.503-.112 5.863 5.863 0 01-2.424-3.771c-.575-3.184 1.884-4.311 5.065-4.888 3.181-.576 5.878-.384 6.454 2.8z"
         />
-        <g id="balloon">
+        <g className={animated}>
           <path
             id="Vector_52"
             stroke="#3F3D56"
@@ -373,6 +373,7 @@ function Icon({ className }) {
 
 Icon.propTypes = {
   className: PropTypes.string.isRequired,
+  animated: PropTypes.string.isRequired,
 };
 
 export default Icon;

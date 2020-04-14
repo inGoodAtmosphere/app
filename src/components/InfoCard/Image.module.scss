@@ -10,19 +10,17 @@
   outline: none;
   &:hover,
   &:focus {
-    .landing-page__svg__sensor__text {
+    .mierniki {
       opacity: 1;
       transform: scale(1.02);
     }
-    .landing-page__svg__map__marker {
+    .mapa {
       animation: jump 0.22s 2 linear;
     }
-    .hand,
-    .hand2,
-    #balloon {
+    .o-nas {
       animation: move 0.22s 2 linear;
     }
-    .landing-page__svg__encyclopedia__head {
+    .encyklopedia {
       animation: rotate 0.6s linear;
     }
   }

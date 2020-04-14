@@ -1,15 +1,7 @@
 @import '../../../styles/base/settings';
 
 .hand,
-#balloon {
-  -webkit-transform-origin: -30% 0%;
+.balloon {
   transform-origin: -30% 0%;
-  -webkit-transition: -webkit-transform 0.1s linear;
-  transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
-}
-.hand2 {
-  -webkit-transform-origin: bottom;
-  transform-origin: bottom;
 }

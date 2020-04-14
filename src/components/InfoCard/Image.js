@@ -14,7 +14,7 @@ const Image = () => {
         className={styles.link}
         aria-label={link && link.href}
       >
-        <Svg className={styles.svg} />
+        <Svg className={styles.svg} animated={styles[link.href]} />
       </a>
     )
   );
