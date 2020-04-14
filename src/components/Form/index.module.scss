@@ -13,6 +13,7 @@
   flex-direction: column;
   font-size: $m-size;
   position: relative;
+  width: 100%;
 }
 
 .form__btn {
@@ -20,6 +21,7 @@
   padding: $spacing;
   border: none;
   border-radius: $spacing;
+  margin-top: $spacing;
   &:disabled {
     color: #000;
     cursor: default;

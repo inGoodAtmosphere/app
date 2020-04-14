@@ -16,8 +16,10 @@ export default (WrappedComponent) => ({
   const isError = !!error;
   return (
     <>
-      <div className="form__input__wrapper">
-        {isError && <p className="form__error">{error.msg}</p>}
+      <div
+        className="form__input__wrapper"
+        style={{ marginBottom: type === 'textarea' && '-0.3rem' }}
+      >
         <WrappedComponent
           name={name}
           id={id}
@@ -36,6 +38,7 @@ export default (WrappedComponent) => ({
           {label}
         </label>
       </div>
+      {isError && <p className="form__error">{error.msg}</p>}
     </>
   );
 };

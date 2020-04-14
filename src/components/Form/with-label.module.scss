@@ -2,8 +2,11 @@
 
 .form__input__wrapper {
   position: relative;
-  margin: $spacing 0;
+  margin-top: $spacing * 2;
   width: 100%;
+  &:first-child {
+    margin: 0;
+  }
 }
 .form__label {
   background-color: $dark-bg;
@@ -24,10 +27,5 @@
 .form__error {
   color: $bad;
   margin: 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-  transform: translate(-50%, -100%);
-  white-space: nowrap;
+  align-self: flex-start;
 }
