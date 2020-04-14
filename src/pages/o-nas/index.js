@@ -5,7 +5,7 @@ import breakpoints from '../../components/AboutUs/breakpoints';
 import portraits from '../../components/AboutUs/portraits';
 import useWindowWidth from '../../hooks/useWindowDimensions';
 import { people } from '../../../public/data/about-us.json';
-import './about-us.module.scss';
+import styles from './index.module.scss';
 
 const AboutUs = () => {
   const { width } = useWindowWidth();
@@ -16,8 +16,9 @@ const AboutUs = () => {
   };
   const currentBreakpoint = setBreakpoints();
   return (
-    <main className="wrapper content about-us__wrapper">
+    <main className={styles.wrapper}>
       <Carousel
+        className={styles.slider}
         enableKeyboardControls
         cellSpacing={-40}
         slidesToShow={currentBreakpoint.slidesToShow}

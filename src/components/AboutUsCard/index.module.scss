@@ -1,17 +1,16 @@
 @import '../../styles/base/settings';
 
-.about-us__card__wrapper {
+.wrapper {
   align-self: center;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 2em 17em -webkit-min-content;
   grid-template-rows: 2em 17em min-content;
   padding: 0;
   width: 67vw;
 }
 
 @media screen and (max-height: 44rem) {
-  .about-us__card__wrapper {
+  .wrapper {
     grid-template-rows: 5% 40% auto;
     height: 100%;
   }

@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import Context from '../../utils/Context';
-import './card.module.scss';
+import styles from './Card.module.scss';
 
 const Card = () => {
   const { name, role, description } = useContext(Context);
   return (
     <>
-      <div className="card about-us__card" />
-      <div className="about-us__card__content">
-        <h2 className="about-us__card__content__name">{name}</h2>
-        <h3 className="about-us__card__content__role">{role}</h3>
-        <p className="about-us__card__content__description">{description}</p>
+      <div className={styles.card} />
+      <div className={styles.content}>
+        <h2 className={styles.name}>{name}</h2>
+        <h3 className={styles.role}>{role}</h3>
+        <p className={styles.description}>{description}</p>
       </div>
     </>
   );

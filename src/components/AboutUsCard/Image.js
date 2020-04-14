@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import Context from '../../utils/Context';
-import './image.module.scss';
+import styles from './Image.module.scss';
 
 const Image = () => {
   const { name, image } = useContext(Context);
   return (
-    <div className="about-us__card__image__wrapper">
+    <div className={styles.wrapper}>
       <img
         src={image}
         alt={name}
-        className={`about-us__card__image about-us__card__image__${name}`}
+        className={`${styles.image} ${styles[name]}`}
       />
     </div>
   );

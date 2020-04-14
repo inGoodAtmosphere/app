@@ -1,48 +1,43 @@
 @import '../../styles/base/settings';
-.slider-slide {
-  display: -webkit-box !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-  justify-content: center;
-  height: calc(100% - #{$header-height}) !important;
-}
-.about-us__wrapper {
+
+.wrapper {
+  composes: content from '../../styles/base/common.scss';
   height: 100vh;
   max-width: 100%;
   width: 100%;
 }
-.slider-list {
-  display: -webkit-box;
-  display: flex;
-  height: calc(100% - #{$header-height}) !important;
-}
+
 .slider {
   * {
     font-size: $base-font-size * 0.9;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+  }
+  :global(.slider-list) {
+    display: flex;
+    height: calc(100% - #{$header-height}) !important;
+  }
+  :global(.slider-slide) {
+    display: flex !important;
+    justify-content: center;
+    height: calc(100% - #{$header-height}) !important;
   }
 }
 @media #{$media-query-m} {
-  .about-us__wrapper {
+  .wrapper {
     height: calc(100vh - #{$header-height});
   }
-  .slider-list {
-    height: 100% !important;
-  }
   .slider {
-    display: -webkit-box !important;
     display: flex !important;
-    -webkit-box-pack: center;
     justify-content: center;
-  }
-  .slider-frame {
-    width: 90%;
-  }
-  .slider-slide {
-    height: calc(100% - 1rem) !important;
+    :global(.slider-list) {
+      height: 100% !important;
+    }
+    :global(.slider-slide) {
+      height: calc(100% - 1rem) !important;
+    }
+    :global(.slider-frame) {
+      width: 90%;
+    }
   }
 }
 @media screen and (max-width: 93,75rem) and (min-aspect-ratio: 16/10),
@@ -55,7 +50,7 @@
   }
 }
 @media #{$media-query-m} and (min-aspect-ratio: 4/3) {
-  slider {
+  .slider {
     * {
       font-size: $base-font-size * 0.9;
     }

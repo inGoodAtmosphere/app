@@ -1,11 +1,11 @@
 import React from 'react';
-import './index.module.scss';
 import Image from './Image';
 import Card from './Card';
 import withContext from '../../utils/withContext';
+import styles from './index.module.scss';
 
 const AboutUsCard = () => (
-  <div className="about-us__card__wrapper">
+  <div className={styles.wrapper}>
     <Image />
     <Card />
   </div>

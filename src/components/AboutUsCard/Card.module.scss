@@ -1,40 +1,41 @@
 @import '../../styles/base/settings';
 
-.about-us__card {
+.card {
+  composes: card from '../../styles/base/common.scss';
   grid-column: 1/4;
   grid-row: 2/4;
   height: 100%;
   margin: 0;
 }
 
-.about-us__card__content {
+.content {
   color: $dark-bg;
   grid-column: 2;
   grid-row: 3;
   text-align: justify;
 }
 
-.about-us__card__content__name {
-  font-size: $base-font-size * 1.1 !important;
+.name {
+  font-size: $base-font-size * 1.1;
   margin-bottom: 0;
 }
 
-.about-us__card__content__role {
+.role {
   margin: 0;
 }
 
-.about-us__card__content__description {
+.description {
   font-size: $s-size;
 }
 
 @media screen and (max-height: 44rem) {
-  .about-us__card__content {
+  .content {
     align-self: center;
   }
-  .about-us__card__content__name {
+  .name {
     margin-top: $spacing / 2;
   }
-  .about-us__card__content__description {
+  .description {
     font-size: 0.8em;
   }
 }

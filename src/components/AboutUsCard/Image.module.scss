@@ -1,26 +1,23 @@
 @import '../../styles/base/settings';
 
-.about-us__card__image__wrapper {
+.wrapper {
   grid-column: 2;
   grid-row: 1/3;
   margin: 0;
   z-index: 1;
 }
 
-.about-us__card__image {
-  -o-object-fit: cover;
+.image {
   border-radius: $spacing;
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-.about-us__card__image__Michał {
-  -o-object-position: 50% 35%;
+.Michał {
   object-position: 50% 35%;
 }
 
-.about-us__card__image__Julia {
-  -o-object-position: 50% 100%;
+.Julia {
   object-position: 50% 100%;
 }

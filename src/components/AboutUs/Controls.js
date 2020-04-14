@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import './controls.module.scss';
+import styles from './controls.module.scss';
 
 const Controls = ({ previousSlide, nextSlide }) => {
   return (
     <button
       type="button"
-      className="slider__btn"
+      className={styles.button}
       onClick={previousSlide || nextSlide}
     >
       <FontAwesomeIcon
