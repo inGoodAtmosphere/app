@@ -5,9 +5,13 @@ import styles from './Button.module.scss';
 const Button = () => {
   const { link } = useContext(Context);
   if (link.href === 'mapa')
-    return <span className={styles.map}>Już wkrótce</span>;
+    return <span className={styles.mapa}>Już wkrótce</span>;
   return (
-    <a href={`/${link.href}`} className={styles.button} aria-label={link.href}>
+    <a
+      href={`/${link.href}`}
+      className={`${styles.button} ${styles[link.href]}`}
+      aria-label={link.href}
+    >
       {link.text}
     </a>
   );

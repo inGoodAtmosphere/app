@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import useWindowWidth from '../../hooks/useWindowDimensions';
 import Context from '../../utils/Context';
-import './image.module.scss';
+import styles from './Image.module.scss';
 
 const Image = () => {
   const { link, Svg } = useContext(Context);
@@ -11,7 +11,7 @@ const Image = () => {
     width > 1024 && (
       <a
         href={link && link.href}
-        className="landing-page__svg__link"
+        className={styles.link}
         aria-label={link && link.href}
       >
         <Svg />

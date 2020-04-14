@@ -1,20 +1,17 @@
 @import '../../styles/base/settings';
 
-.landing-page__card__content {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
+.wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.landing-page__header {
+.header {
   margin: $spacing / 2 0;
   padding: 0;
   text-transform: none;
 }
 
-.landing-page__description {
+.description {
   margin: 0;
   padding: $spacing * 2 0;
 }

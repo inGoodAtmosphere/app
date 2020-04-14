@@ -1,36 +1,38 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
-.landing-page__card {
+.card {
   width: 100%;
   * {
     color: $light-bg;
   }
+  composes: card from '../../styles/base/common.scss';
 }
 
-.landing-page__sensors {
+.sensors {
   background: $dark-accent;
 }
 
-.landing-page__encyclopedia {
+.encyclopedia {
   background: $light-accent;
 }
 
-.landing-page__map {
+.map {
   background: $primary-accent;
 }
 
-.landing-page__contact {
+.contact {
   background-color: $bright-accent;
 }
 
-.landing-page__project {
+.project {
   * {
     color: $text;
   }
 }
 
 @media #{$media-query-m} {
-  .landing-page__card {
+  .card {
     -webkit-box-align: center;
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
@@ -44,9 +46,32 @@
       flex-direction: row-reverse;
     }
     &:nth-child(odd) {
-      .landing-page__btn {
+      .btn {
         align-self: flex-start;
       }
     }
+  }
+}
+.sensors {
+  .button {
+    @include button($dark-accent);
+  }
+}
+
+.encyclopedia {
+  .button {
+    @include button($light-accent);
+  }
+}
+
+.contact {
+  .button {
+    @include button(#276f98);
+  }
+}
+
+.project {
+  .button {
+    @include button($light-bg);
   }
 }
