@@ -1,10 +1,10 @@
 @import '../../../styles/base/settings';
 
-.landing-page__svg__contact {
+.wrapper {
   width: 20rem;
 }
 
-.landing-page__svg__contact__icon {
+.icon {
   #facebook,
   #instagram {
     -webkit-transition: fill 0.2s ease-out;
@@ -19,13 +19,13 @@
   outline: none;
   &:hover,
   &:focus {
-    #instagram {
+    .instagram {
       fill: #dd2a7b;
     }
-    #facebook {
+    .facebook {
       fill: #2e77f2;
     }
-    #mail {
+    .mail {
       path {
         fill: #ffd77c;
       }
@@ -33,6 +33,6 @@
   }
 }
 
-.landing-page__svg__contact__icon__circle {
+.circle {
   fill: hsl(202, 59%, 27%);
 }

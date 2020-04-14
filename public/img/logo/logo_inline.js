@@ -1,5 +1,5 @@
 import React from 'react';
-import './logo_inline.scss';
+import './logo_inline.module.scss';
 
 function SvgLogoInline() {
   return (

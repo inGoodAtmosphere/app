@@ -1,19 +1,19 @@
 import React from 'react';
-import './hero-image.module.scss';
+import styles from './HeroImage.module.scss';
 
 const HeroImage = () => {
   return (
-    <div className="landing-page__hero">
+    <div className={styles.wrapper}>
       <img
-        className="landing-page__hero__image"
+        className={styles.image}
         src="/img/hero-images/1280.jpg"
         srcSet="/img/hero-images/640.jpg 640w, /img/hero-images/1280.jpg 1280w,/img/hero-images/1920.jpg 1920w,/img/hero-images/4896.jpg 4896w"
         alt="Hero"
       />
-      <h1 className="landing-page__hero__text">
+      <h1 className={styles.text}>
         Stwórzmy razem przyjazną atmosferę wolną od smogu w całej Polsce!
       </h1>
-      <a href="/kampania" className="landing-page__hero__btn">
+      <a href="/kampania" className={styles.button}>
         Zobacz jak
       </a>
     </div>

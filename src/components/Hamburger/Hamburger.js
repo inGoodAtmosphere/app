@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './hamburger.scss';
+import './hamburger.module.scss';
 
 const Hamburger = ({ isActive, setIsActive }) => (
   <button

@@ -6,7 +6,7 @@ import './index.module.scss';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <Icons />
       <Links />
       <Patrons />

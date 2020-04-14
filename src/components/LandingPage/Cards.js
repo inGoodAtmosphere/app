@@ -4,7 +4,7 @@ import ProjectSvg from './svg/project';
 import MapSvg from './svg/map';
 import EncyclopediaSvg from './svg/encyclopedia';
 import SensorSvg from './svg/sensor';
-import ContactSvg from './svg/contact';
+import ContactSvg from './svg/Contact';
 import { content } from '../../../public/data/landing-page.json';
 
 const Cards = () => {

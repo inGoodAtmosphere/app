@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import { config } from '@fortawesome/fontawesome-svg-core';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -10,12 +9,10 @@ import CookiesBanner from '../components/CookiesBanner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { initGA, logPageView } from '../utils/analytics';
-import '../styles/base/_base.scss';
+import '../styles/base/base.scss';
 import 'normalize.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'focus-visible';
-
-config.autoAddCss = false;
 
 const App = ({ Component, pageProps }) => {
   const [isBannerOpen, setIsBannerOpen] = useState(Cookies.get('isBannerOpen'));
