@@ -6,12 +6,12 @@ import {
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { logEvent } from '../../utils/analytics';
-import './icon.module.scss';
+import styles from './Icon.module.scss';
 
 const Icon = ({ socialMedia, link }) => {
   return (
     <a
-      className="footer__icon"
+      className={styles.icon}
       aria-label={socialMedia}
       href={link}
       target="_blank"

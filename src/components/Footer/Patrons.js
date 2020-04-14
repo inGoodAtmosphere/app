@@ -1,12 +1,12 @@
 import React from 'react';
 import Patron from './Patron';
-import './patrons.module.scss';
+import styles from './Patrons.module.scss';
 
 const Patrons = () => {
   return (
     <>
-      <div className="footer__patrons">
-        <div className="footer__patron">
+      <div className={styles.wrapper}>
+        <div className={styles.patron}>
           <h3>Patron honorowy: </h3>
           <Patron
             name="Gliwice"
@@ -14,7 +14,7 @@ const Patrons = () => {
             img="/img/gliwice.png"
           />
         </div>
-        <div className="footer__patron">
+        <div className={styles.patron}>
           <h3>Patron medialny: </h3>
           <Patron
             name="TVP"
@@ -23,7 +23,7 @@ const Patrons = () => {
           />
         </div>
 
-        <div className="footer__patron">
+        <div className={styles.patron}>
           <h3>Patroni: </h3>
           <Patron
             name="Młodzieżowy Strajk Klimatyczny"
@@ -31,8 +31,8 @@ const Patrons = () => {
             img="/img/msk.png"
           />
         </div>
-        <div className="break" />
-        <div className="footer__patron">
+        <div className={styles.break} />
+        <div className={styles.patron}>
           <h3>Partnerzy: </h3>
           <Patron
             name="Botland"

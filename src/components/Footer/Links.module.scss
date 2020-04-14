@@ -1,15 +1,13 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.footer__links {
-  -webkit-box-pack: justify;
-  display: -webkit-box;
+.links {
   display: flex;
   justify-content: space-between;
   margin: $spacing 0;
 }
 
-.footer__pwa__btn {
+.pwa__btn {
   background: none;
   border: none;
   color: $dark-bg;
@@ -17,17 +15,15 @@
   @include link-without-padding($dark-bg);
 }
 
-.footer__links__item {
-  -webkit-box-pack: center;
-  display: -webkit-box;
+.item {
   display: flex;
   justify-content: center;
   white-space: nowrap;
   width: 100%;
-  &--hidden {
+  &Hidden {
     display: none;
   }
 }
-.footer__links__item__a {
+.link {
   @include link-without-padding($dark-bg);
 }

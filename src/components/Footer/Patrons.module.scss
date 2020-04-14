@@ -1,8 +1,6 @@
 @import '../../styles/base/settings';
 
-.footer__patrons {
-  -webkit-box-pack: space-around;
-  display: -webkit-box;
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -10,10 +8,14 @@
   margin: 0 auto;
 }
 
-.footer__patron {
-  display: -webkit-box;
+.patron {
   display: flex;
   justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 $spacing;
+  white-space: nowrap;
 }
 .break {
   width: 100%;

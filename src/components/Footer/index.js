@@ -2,11 +2,11 @@ import React from 'react';
 import Patrons from './Patrons';
 import Icons from './Icons';
 import Links from './Links';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <Icons />
       <Links />
       <Patrons />

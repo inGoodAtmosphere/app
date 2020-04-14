@@ -1,0 +1,16 @@
+@import '../../styles/base/settings';
+
+.item {
+  transition: opacity 0.3s;
+  opacity: 0.6;
+  outline: none !important;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.image {
+  height: $header-height;
+  max-width: 100%;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from './Icon';
-import './icons.module.scss';
+import styles from './Icons.module.scss';
 
 const Icons = () => {
   return (
-    <div className="footer__icons">
+    <div className={styles.icons}>
       <Icon
         link="https://www.facebook.com/inGoodAtmosphere-100599628162747"
         socialMedia="Facebook"

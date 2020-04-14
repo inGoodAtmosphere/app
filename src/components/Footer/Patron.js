@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './patron.module.scss';
+import styles from './Patron.module.scss';
 
 const Patron = ({ name, link, img }) => {
   return (
@@ -8,12 +8,12 @@ const Patron = ({ name, link, img }) => {
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className={`footer__patrons__item footer__patrons__item__${name}`}
+      className={`${styles.item} ${styles[name]}`}
     >
       <img
         src={img}
         alt={name}
-        className={`footer__patrons__item__image footer__patrons__item__image__${name}`}
+        className={`${styles.image} ${styles.imageName}`}
       />
     </a>
   );
