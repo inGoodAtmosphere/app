@@ -1,0 +1,13 @@
+@import '../../styles/base/settings';
+.content {
+  composes: content from '../../styles/base/common.scss';
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.article {
+  composes: card from '../../styles/base/common.scss';
+  padding: $spacing;
+}

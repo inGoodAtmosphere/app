@@ -1,10 +1,10 @@
 import React from 'react';
-import './privacy-policy.module.scss';
+import styles from './PrivacyPolicy.module.scss';
 
 const PrivacyPolicy = () => (
-  <main className="content">
+  <main className={styles.content}>
     <h1>Polityka prywatności</h1>
-    <article className="card article__card privacy-policy__article">
+    <article className={styles.article}>
       <ol>
         <li>
           Niniejsza Polityka Prywatności określa zasady przetwarzania danych
@@ -112,7 +112,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=pl"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -122,7 +122,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://support.mozilla.org/pl/kb/usuwanie-ciasteczek-i-danych-stron-firefox?redirectlocale=pl&redirectslug=usuwanie-ciasteczek"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -132,7 +132,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://help.opera.com/pl/latest/security-and-privacy/"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -153,7 +153,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://support.microsoft.com/pl-pl/help/4027947/microsoft-edge-delete-cookies"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -164,7 +164,7 @@ const PrivacyPolicy = () => (
             <li>
               <a
                 href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies"
-                className="privacy-policy__link"
+                className={styles.link}
                 target="_blank"
                 rel="noreferrer noopener"
               >
