@@ -6,6 +6,7 @@ export default async (req, res) => {
     // TODO update docs
     // TODO add isSuccessful to json response
     // TODO try domain with git clone
+    // todo update json
 
     // validation shit here
     const errors = []; // array for errors
