@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.social-media-btn {
+.button {
   padding: $spacing;
   display: flex;
   align-items: center;
@@ -9,19 +9,20 @@
   font-weight: bold;
   border-radius: $spacing;
   width: 100%;
+  max-width: 20rem;
   margin-top: $spacing;
   svg {
     width: $m-size;
     margin-right: $spacing;
     font-size: $m-size;
   }
-  &--facebook {
-    background-color: #1877f2;
-    color: $light-bg;
-    @include button(#1877f2);
-  }
-  &--google {
-    background-color: $light-bg;
-    @include button($light-bg);
-  }
+}
+.facebook {
+  background-color: #1877f2;
+  color: $light-bg;
+  @include button(#1877f2);
+}
+.google {
+  background-color: $light-bg;
+  @include button($light-bg);
 }

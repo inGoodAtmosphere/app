@@ -3,7 +3,7 @@ import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import Checkbox from '../../components/Form/Checkbox';
 import SocialMediaBtn from '../../components/Form/SocialMediaBtn';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const SignUp = () => {
   const [login, setLogin] = useState('');
@@ -25,14 +25,12 @@ const SignUp = () => {
   };
 
   return (
-    <main className="content sign-up__content">
-      <h2 className="sign-up__header">Zarejestruj się a otrzymasz:</h2>
-      <p className="sign-up__text">Dostęp do cotygodniowego newslettera</p>
-      <p className="sign-up__text">
-        Możliwość dodawania czujników do ulubionych
-      </p>
-      <p className="sign-up__text">Lorem ipsum dolor sit amet.</p>
-      <a className="sign-up__link" href="/logowanie">
+    <main className={styles.content}>
+      <h2 className={styles.header}>Zarejestruj się a otrzymasz:</h2>
+      <p className={styles.text}>Dostęp do cotygodniowego newslettera</p>
+      <p className={styles.text}>Możliwość dodawania czujników do ulubionych</p>
+      <p className={styles.text}>Lorem ipsum dolor sit amet.</p>
+      <a className={styles.link} href="/logowanie">
         Masz już konto? Zaloguj się
       </a>
       <SocialMediaBtn
@@ -45,7 +43,7 @@ const SignUp = () => {
         purpose="sign-up"
         endpoint="/api/signUpGoogle"
       />
-      <p className="sign-up__or">lub</p>
+      <p className={styles.or}>lub</p>
       <Form
         data={data}
         endpoint="/api/signUp"

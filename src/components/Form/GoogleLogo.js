@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function GoogleLogo() {
   return (
-    <svg viewBox="0 0 533.5 544.3" className="form__google__btn__svg">
+    <svg viewBox="0 0 533.5 544.3">
       <path
         d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
         fill="#4285f4"

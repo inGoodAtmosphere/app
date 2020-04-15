@@ -3,7 +3,7 @@ import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import SocialMediaBtn from '../../components/Form/SocialMediaBtn';
 import Checkbox from '../../components/Form/Checkbox';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Login = () => {
   const [login, setLogin] = useState('');
@@ -13,7 +13,7 @@ const Login = () => {
   const data = { login, password, isRemember };
 
   return (
-    <main className="content login__content">
+    <main className={styles.content}>
       <SocialMediaBtn
         socialMedia="facebook"
         purpose="sign-in"
@@ -24,7 +24,7 @@ const Login = () => {
         purpose="sign-in"
         endpoint="/api/signInGoogle"
       />
-      <p className="sign-in__or">lub</p>
+      <p className={styles.or}>lub</p>
       <Form
         data={data}
         endpoint="/api/signIn"
@@ -53,10 +53,10 @@ const Login = () => {
           name="rememberMe"
         />
       </Form>
-      <a href="/remind" className="sign-in__link">
+      <a href="/remind" className={styles.link}>
         Nie pamiętasz hasła
       </a>
-      <a href="/rejestracja" className="sign-in__link">
+      <a href="/rejestracja" className={styles.link}>
         Nie masz konta? Zarejestruj się
       </a>
     </main>

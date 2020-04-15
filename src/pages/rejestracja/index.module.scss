@@ -1,26 +1,28 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.sign-up__content {
+.content {
+  composes: content from '../../styles/base/common.scss';
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 20rem;
 }
 
-.sign-up__header {
+.header {
   color: $light-bg;
   margin: 0;
 }
 
-.sign-up__or {
+.or {
   color: $light-accent;
 }
 
-.sign-up__text {
+.text {
   margin: $spacing / 2;
 }
 
-.sign-up__link {
+.link {
   color: $light-accent;
   margin-top: $spacing;
   @include link-without-padding($light-accent);

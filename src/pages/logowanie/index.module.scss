@@ -1,16 +1,18 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.login__content {
+.content {
+  composes: content from '../../styles/base/common.scss';
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 20rem;
 }
-.sign-in__link {
+.link {
   color: $light-accent;
   margin-top: $spacing;
   @include link-without-padding($light-accent);
 }
-.sign-in__or {
+.or {
   color: $light-accent;
 }
