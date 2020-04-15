@@ -164,15 +164,10 @@ export default async (req, res) => {
                 });
               });
               console.log(result);
-              // if encryption and db insert succeeds then this code is executed
-              // res.json({
-              //   succeed: true,
-              //   message: 'Rejestracja powiodła się',
-              //   errors,
-              // });
             }
           },
         );
+        // if encryption and db insert succeeds then this code is executed
         res.json({
           isSuccessful: true,
           message: 'Rejestracja powiodła się',
