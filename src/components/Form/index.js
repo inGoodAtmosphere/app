@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import withContext from '../../utils/withContext';
 import Context from '../../utils/Context';
@@ -10,6 +11,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
   const [isSuccessful, setIsSuccessful] = useState(null);
   const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
+  const router = useRouter();
   const captchaKey =
     process.env.NODE_ENV === 'production'
       ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
@@ -58,6 +60,12 @@ const Form = ({ children, data, endpoint, submitText }) => {
         setMessage('');
       } else {
         setIsSuccessful(true);
+        if (json.formName === 'signIn') {
+          router.push('/admin');
+        }
+        if (json.formName === 'signUp') {
+          router.push('/logowanie');
+        }
         setMessage(json.message);
         setErrors([]);
       }
