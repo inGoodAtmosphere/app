@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './index.module.scss';
 import Button from './Button';
 import Content from './Content';
+import styles from './index.module.scss';
 
 const CookiesBanner = ({ isBannerOpen, setIsBannerOpen }) => {
   return (
     <div
-      className={`"cookies-banner__wrapper ${isBannerOpen === '' &&
-        'cookies-banner__wrapper cookies-banner__wrapper--visible'}`}
+      className={`${styles.wrapper} ${isBannerOpen === '' &&
+        styles.wrapperVisible}`}
     >
       <Button setIsBannerOpen={setIsBannerOpen} />
       <Content />

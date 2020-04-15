@@ -1,13 +1,9 @@
 @import '../../styles/base/settings';
 
-.cookies-banner__wrapper {
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
+.wrapper {
   align-items: center;
   background: darken($dark-bg, 2%);
   bottom: 0;
-  display: -webkit-box;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -18,7 +14,7 @@
   * {
     color: $light-bg;
   }
-  &--visible {
+  &Visible {
     visibility: visible;
   }
 }

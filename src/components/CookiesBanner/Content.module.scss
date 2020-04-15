@@ -1,13 +1,13 @@
 @import '../../styles/base/settings';
 
-.cookies-banner__link,
-.cookies-banner__text {
+.link,
+.text {
   font-size: 0.7rem;
   margin: 0;
   text-align: center;
 }
 
-.cookies-banner__link {
+.link {
   padding: $spacing / 2;
   text-decoration: underline;
 }
