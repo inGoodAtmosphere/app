@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './illustration.module.scss';
+import styles from './Illustration.module.scss';
 
 function SvgError() {
   return (
-    <svg fill="none" className="error__svg" viewBox="0 0 339 211">
+    <svg fill="none" className={styles.svg} viewBox="0 0 339 211">
       <path
         d="M88.597 128.592c35.619 0 64.494-28.786 64.494-64.296C153.091 28.786 124.216 0 88.597 0 52.98 0 24.105 28.786 24.105 64.296c0 35.51 28.874 64.296 64.492 64.296z"
         fill="#0E364F"

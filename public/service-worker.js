@@ -1,12 +1,12 @@
 const staticCacheName = 'site-static-v3';
 const dynamicCacheName = 'site-dynamic-v1';
 
-const id = 'df2L7dp6WPUNWC6IXvPk8';
+const id = 'w0EYfALkr4YCNdTJBfZm7';
 const styles = 'styles.ec18ad68';
 const assets = [
   '/offline',
   'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext',
-  `/_next/static/css/${styles}.chunk.css`,
+  // `/_next/static/css/${styles}.chunk.css`,
   `/_next/static/${id}/pages/_error.js`,
   `/_next/static/${id}/pages/_app.js`,
   `/_next/static/${id}/pages/offline.js`,

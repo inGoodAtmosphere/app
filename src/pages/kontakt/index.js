@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ContactHeaders from '../../components/Contact/Headers';
 import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import TextArea from '../../components/Form/TextArea';
@@ -15,7 +14,11 @@ const Contact = () => {
 
   return (
     <main className={styles.content}>
-      <ContactHeaders />
+      <h1>Skontaktuj się z nami</h1>
+      <h2>
+        Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany
+        naszym czujnikiem? Wypełnij poniższy formularz kontaktowy
+      </h2>
       <Form
         data={data}
         endpoint="/api/sendMail"

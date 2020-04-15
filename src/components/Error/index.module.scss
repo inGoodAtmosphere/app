@@ -1,23 +1,23 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.error__content {
-  display: -webkit-box;
+.content {
+  composes: content from '../../styles/base/common.scss';
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
   justify-content: center;
 }
-.error__text {
+.text {
   font-size: $l-size;
   font-weight: bold;
   text-align: center;
 }
-.error__btn {
+.button {
   background-color: $light-bg;
   color: $dark-bg;
+  text-align: center;
+  align-self: center;
+  width: fit-content;
   border-radius: $spacing;
   padding: $spacing;
   font-size: $m-size;

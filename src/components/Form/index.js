@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
-  const [isSucceed, setIsSucceed] = useState(null);
+  const [isSuccessful, setIsSuccessful] = useState(null);
   const [score, setScore] = useState(1);
   const { setErrors } = useContext(Context);
   const captchaKey =
@@ -52,11 +52,11 @@ const Form = ({ children, data, endpoint, submitText }) => {
       });
       const json = await res.json();
       if (json.errors.length) {
-        setIsSucceed(false);
+        setIsSuccessful(false);
         setErrors(json.errors);
         setMessage('');
       } else {
-        setIsSucceed(true);
+        setIsSuccessful(true);
         setMessage(json.message);
         setErrors([]);
       }
@@ -78,8 +78,8 @@ const Form = ({ children, data, endpoint, submitText }) => {
       {children}
       <button
         type="submit"
-        className={`${isSucceed ? styles.buttonSuccess : styles.button}`}
-        disabled={isSucceed}
+        className={`${isSuccessful ? styles.buttonSuccess : styles.button}`}
+        disabled={isSuccessful}
       >
         {message || submitText}
       </button>

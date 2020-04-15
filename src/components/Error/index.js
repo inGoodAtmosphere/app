@@ -1,34 +1,39 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Illustration from './Illustration';
+import Illustration500 from './Illustration500';
+import Illustration404 from './Illustration404';
 import { logEvent } from '../../utils/analytics';
-import './index.module.scss';
+import styles from './index.module.scss';
 
-const Error = ({ message, text }) => {
+const Error = ({ status, text }) => {
   useEffect(() => {
-    logEvent('Error', message);
+    logEvent('Error', status.toString());
   }, []);
   const refreshPage = () => {
     window.location.reload(false);
   };
   return (
-    <div className="content error__content">
-      <Illustration />
-      <p className="error__text">
+    <div className={styles.content}>
+      {status === 404 ? <Illustration404 /> : <Illustration500 />}
+      <p className={styles.text}>
         Ups!
         <br />
         {text}
       </p>
-      {message === '500' && (
-        <button type="button" className="error__btn" onClick={refreshPage}>
+      {status === 500 ? (
+        <button type="button" className={styles.button} onClick={refreshPage}>
           Spróbuj ponownie
         </button>
+      ) : (
+        <a className={styles.button} href="/">
+          Strona Główna
+        </a>
       )}
     </div>
   );
 };
 Error.propTypes = {
-  message: PropTypes.string.isRequired,
+  status: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
 };
 export default Error;

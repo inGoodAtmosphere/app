@@ -20,7 +20,6 @@ const Popup = ({ articleHeight }) => {
           ? styles.cardVisible
           : styles.cardInvisible
       }`}
-      isOpen={isOpen && !error && !isLoaded}
     >
       <button
         type="button"
