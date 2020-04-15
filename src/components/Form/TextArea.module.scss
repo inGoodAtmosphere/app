@@ -1,0 +1,10 @@
+@import '../../styles/base/settings';
+
+.input {
+  composes: input from './Input.module.scss';
+  resize: none;
+  height: 8rem;
+  &Error {
+    border-color: $bad;
+  }
+}

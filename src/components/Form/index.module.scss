@@ -2,21 +2,16 @@
 @import '../../styles/base/mixin';
 
 .form {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
   font-size: $m-size;
   position: relative;
   width: 100%;
 }
 
-.form__btn {
+.button {
   background-color: $light-bg;
   padding: $spacing;
   border: none;
@@ -27,7 +22,7 @@
     cursor: default;
   }
   @include button($light-bg);
-  &--success {
+  &Success {
     padding: $spacing;
     border: none;
     border-radius: $spacing;

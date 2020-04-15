@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 @import '../../styles/base/mixin';
 
-.form__checkbox {
+.label {
   font-size: $s-size;
   align-self: flex-start;
   margin-top: $spacing;
@@ -11,14 +11,14 @@
   user-select: none;
 }
 
-.form__checkbox__container {
+.wrapper {
   position: relative;
   width: $m-size;
   height: $m-size;
   margin-right: $spacing;
 }
 
-.form__checkbox__check {
+.checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@
     }
   }
 
-  &--styled {
+  &Styled {
     * {
       opacity: 0;
       transition: opacity 0.15s ease-in;

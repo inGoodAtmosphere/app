@@ -1,16 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './input.module.scss';
 import withLabel from './withLabel';
+import styles from './Input.module.scss';
 
-const Input = ({ name, id, type, placeholder, value, onChange, className }) => {
+const Input = ({
+  name,
+  id,
+  type,
+  placeholder,
+  value,
+  onChange,
+  isError,
+  className,
+}) => {
   return (
     <input
       name={name}
       id={id}
       type={type}
       placeholder={placeholder}
-      className={className}
+      className={`${className} ${styles.input} ${isError && styles.inputError}`}
       value={value}
       required
       onChange={(e) => onChange(e.target.value)}
@@ -29,5 +38,6 @@ Input.propTypes = {
   className: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired,
   onChange: PropTypes.func.isRequired,
+  isError: PropTypes.bool.isRequired,
 };
 export default withLabel(Input);

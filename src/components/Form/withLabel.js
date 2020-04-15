@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import './with-label.module.scss';
 import Context from '../../utils/Context';
+import styles from './withLabel.module.scss';
 
 export default (WrappedComponent) => ({
   name,
@@ -17,7 +17,7 @@ export default (WrappedComponent) => ({
   return (
     <>
       <div
-        className="form__input__wrapper"
+        className={styles.wrapper}
         style={{ marginBottom: type === 'textarea' && '-0.3rem' }}
       >
         <WrappedComponent
@@ -27,18 +27,21 @@ export default (WrappedComponent) => ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`form__input ${isError && 'form__input--error'} ${type ===
-            'textarea' && 'form__input__textarea'}`}
+          isError={isError}
+          className={type === 'textarea' ? styles.textArea : styles.input}
         />
         <label
-          className={`form__label ${type === 'textarea' &&
-            'form__label__textarea'} `}
+          className={
+            type === 'textarea'
+              ? `${styles.labelTextArea} ${styles.label}`
+              : styles.label
+          }
           htmlFor={name}
         >
           {label}
         </label>
       </div>
-      {isError && <p className="form__error">{error.msg}</p>}
+      {isError && <p className={styles.error}>{error.msg}</p>}
     </>
   );
 };

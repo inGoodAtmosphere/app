@@ -1,12 +1,15 @@
 @import '../../styles/base/settings';
 
-.contact__text {
+.content {
+  composes: content from '../../styles/base/common.scss';
+}
+
+.text {
   text-align: center;
   margin-top: $spacing * 2;
-  -webkit-box-pack: center;
   justify-content: center;
 }
-.contact__text__link {
+.link {
   text-decoration: underline;
   color: $light-bg;
   font-size: $xs-size;

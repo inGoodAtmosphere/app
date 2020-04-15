@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './illustration.module.scss';
+import styles from './Illustration.module.scss';
 
 function SvgRobots1() {
   return (
-    <svg viewBox="0 0 184 184" fill="none" className="form__bots__illustration">
+    <svg viewBox="0 0 184 184" fill="none" className={styles.illustration}>
       <circle
         cx={92}
         cy={92}

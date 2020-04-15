@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import GoogleLogo from './GoogleLogo';
-import './social-media-btn.module.scss';
+import styles from './SocialMediaBtn.module.scss';
 
 const SocialMediaBtn = ({ socialMedia, endpoint, purpose }) => {
   return (
-    <a
-      href={endpoint}
-      className={`social-media-btn social-media-btn--${socialMedia}`}
-    >
+    <a href={endpoint} className={`${styles.button} ${styles[socialMedia]}`}>
       {socialMedia === 'facebook' ? (
         <FontAwesomeIcon icon={faFacebook} />
       ) : (

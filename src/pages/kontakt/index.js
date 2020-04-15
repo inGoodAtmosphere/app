@@ -3,7 +3,7 @@ import ContactHeaders from '../../components/Contact/Headers';
 import Form from '../../components/Form';
 import Input from '../../components/Form/Input';
 import TextArea from '../../components/Form/TextArea';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -14,7 +14,7 @@ const Contact = () => {
   const data = { name, email, subject, content };
 
   return (
-    <main className="content contact__content">
+    <main className={styles.content}>
       <ContactHeaders />
       <Form
         data={data}
@@ -53,10 +53,10 @@ const Contact = () => {
         />
       </Form>
       {/* prettier-ignore */}
-      <p className="contact__text">
+      <p className={styles.text}>
         lub skontaktuj się bezpośrednio na
         {' '}
-        <a href="mailto:ingoodatmosphere@gmail.com" className="contact__text__link">
+        <a href="mailto:ingoodatmosphere@gmail.com" className={styles.link}>
           ingoodatmosphere@gmail.com
         </a>
       </p>

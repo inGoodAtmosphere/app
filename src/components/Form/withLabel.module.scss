@@ -1,6 +1,6 @@
 @import '../../styles/base/settings';
 
-.form__input__wrapper {
+.wrapper {
   position: relative;
   margin-top: $spacing * 2;
   width: 100%;
@@ -8,23 +8,41 @@
     margin: 0;
   }
 }
-.form__label {
+
+.input {
+  &:focus ~ .label,
+  &:valid ~ .label {
+    transform: translateY(-150%) scale(0.8);
+    transform-origin: left;
+    z-index: 0;
+  }
+}
+.textArea {
+  &:focus ~ .label,
+  &:valid ~ .label {
+    transform-origin: left;
+    z-index: 0;
+    transform: translateY(-50%) scale(0.8);
+  }
+}
+
+.label {
   background-color: $dark-bg;
   position: absolute;
   cursor: text;
   z-index: -1;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: $spacing;
   font-size: $s-size;
   margin-bottom: $spacing;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
+  &TextArea {
+    top: 0;
+    transform: translateY(50%);
+  }
 }
-.form__error {
+.error {
   color: $bad;
   margin: 0;
   align-self: flex-start;

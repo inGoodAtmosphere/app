@@ -1,29 +1,23 @@
 @import '../../../styles/base/settings';
 
-.form__bots {
+.wrapper {
   width: 90%;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   position: fixed;
   max-width: calc(54rem - 10%);
   z-index: 21;
   background-color: $primary-accent;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   border-radius: $spacing;
   padding: $spacing;
   box-shadow: 0.2rem 0.4rem 0.3rem #000;
 }
 
-.form__bots__bg {
+.background {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -32,11 +26,11 @@
   z-index: 9;
 }
 
-.form__bots__text {
+.text {
   text-align: center;
 }
 
-.form__bots__mail {
+.mail {
   text-decoration: underline;
   color: $light-bg;
   font-size: $xs-size;

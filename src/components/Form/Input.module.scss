@@ -1,0 +1,15 @@
+@import '../../styles/base/settings';
+
+.input {
+  width: 100%;
+  border: $border solid $light-bg;
+  color: $light-bg;
+  outline: none !important;
+  padding: $spacing;
+  background: none;
+  border-radius: $spacing;
+  font-size: $s-size;
+  &Error {
+    border-color: $bad;
+  }
+}

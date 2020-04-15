@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import withContext from '../../utils/withContext';
-import './index.module.scss';
 import Context from '../../utils/Context';
 import Bots from './Bots';
+import styles from './index.module.scss';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
@@ -71,14 +71,14 @@ const Form = ({ children, data, endpoint, submitText }) => {
   return (
     <form
       method="post"
-      className="form"
+      className={styles.form}
       onSubmit={(e) => handleSubmit(e)}
       noValidate
     >
       {children}
       <button
         type="submit"
-        className={`${isSucceed ? 'form__btn--success' : 'form__btn'}`}
+        className={`${isSucceed ? styles.buttonSuccess : styles.button}`}
         disabled={isSucceed}
       >
         {message || submitText}
