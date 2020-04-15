@@ -12,7 +12,7 @@ folder containing modules, used in api.
 
 **List of modules:**
 
-- #### **selectQuery.js**
+- #### **dbQuery.js**
 
   Module which exports Promise as export parent and escape function as exports children. It sends query to the db and returns result. If query succeed then it resolves with result. Otherwise it will reject with an error given by database. It uses Pool connection to make connection stable. But it uses more user connections than usual connection to db. Be aware of running out of connections.
 
