@@ -23,6 +23,7 @@
   }
   @include button($light-bg);
   &Success {
+    margin-top: $spacing;
     padding: $spacing;
     border: none;
     border-radius: $spacing;

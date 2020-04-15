@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isRemember, setIsRemember] = useState(false);
   const [errors, setErrors] = useState([]);
+  // TODO: Add isRemember
   const data = { email, password };
 
   return (

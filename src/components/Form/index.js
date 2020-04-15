@@ -79,7 +79,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       {children}
       <button
         type="submit"
-        className={`${isSuccessful ? styles.buttonSuccess : styles.button}`}
+        className={isSuccessful ? styles.buttonSuccess : styles.button}
         disabled={isSuccessful}
       >
         {message || submitText}
