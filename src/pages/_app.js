@@ -108,13 +108,13 @@ const App = ({ Component, pageProps }) => {
       <div className="container">
         <Header />
         <Component {...pageProps} />
+        {!('offline' in pageProps) && <Footer />}
         {isBannerOpen !== 'false' && !('offline' in pageProps) && (
           <CookiesBanner
             setIsBannerOpen={setIsBannerOpen}
             isBannerOpen={isBannerOpen}
           />
         )}
-        {!('offline' in pageProps) && <Footer />}
       </div>
     </>
   );

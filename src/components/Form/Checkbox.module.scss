@@ -27,11 +27,11 @@
   height: 100%;
   position: relative;
 
-  &:focus ~ &--styled {
+  &:focus ~ &Styled {
     transform: scale(1.03);
   }
 
-  &:checked ~ &--styled {
+  &:checked ~ &Styled {
     * {
       opacity: 1;
     }

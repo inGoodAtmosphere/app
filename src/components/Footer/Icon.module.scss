@@ -1,7 +1,7 @@
 @import '../../styles/base/settings';
 
 .icon {
-  outline: none;
+  outline: none !important;
   :global(.fa-facebook-square),
   :global(.fa-instagram) {
     path {
