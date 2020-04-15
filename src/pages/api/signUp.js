@@ -99,21 +99,17 @@ export default async (req, res) => {
     // validation ends here
 
     if (errors.length === 0) {
-      const selectQuery = `select id from users where email=${dbQuery.escape(
-        email,
-      )};`;
-
-      const selectResult = await dbQuery(selectQuery).catch((err) => {
-        console.log(`selectResult error: ${err}`);
-        res.json({
-          succeed: false,
-          message:
-            'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
-          errors,
-        });
+      const user = await dbQuery.findUser(email, (err) => {
+        if (err) {
+          res.json({
+            isSuccessful: false,
+            message:
+              'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
+            errors,
+          });
+        }
       });
-      console.log(selectResult);
-      if (selectResult.length > 0) {
+      if (user) {
         errors.push(
           new ValidationError(
             'Konto z podanym adresem email już istnieje',
