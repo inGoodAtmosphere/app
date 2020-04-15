@@ -1,11 +1,13 @@
 const bcrypt = require('bcrypt');
 const dbQuery = require('../../../api_modules/dbQuery');
+const resJson = require('../../../api_modules/resJsonStandardized');
 const ValidationError = require('../../../api_modules/validationError');
 require('dotenv').config();
 
 // TODO add notification when critical error while salting the password or connecting to the db
 // todo password strength
 // TODO add verification email, sending status to db and signup date
+const formName = 'signUp';
 const saltRounds = process.env.SALT_ROUNDS;
 const regexPromise = (regex, textToTest) =>
   new Promise((resolve) => {
@@ -101,12 +103,13 @@ export default async (req, res) => {
     if (errors.length === 0) {
       const user = await dbQuery.findUser(email, (err) => {
         if (err) {
-          res.json({
-            isSuccessful: false,
-            message:
+          res.json(
+            resJson(
+              false,
               'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
-            errors,
-          });
+              errors,
+            ),
+          );
         }
       });
       if (user) {
@@ -116,11 +119,14 @@ export default async (req, res) => {
             'email',
           ),
         );
-        res.json({
-          isSuccessful: false,
-          message: 'Rejestracja nie powiodła się, napraw zaistniałe błędy',
-          errors,
-        });
+        res.json(
+          resJson(
+            formName,
+            false,
+            'Rejestracja nie powiodła się, napraw zaistniałe błędy',
+            errors,
+          ),
+        );
       } else {
         // encryption
         await bcrypt.hash(
@@ -128,12 +134,14 @@ export default async (req, res) => {
           parseInt(saltRounds, 10),
           async (err, hash) => {
             if (err) {
-              res.json({
-                isSuccessful: false,
-                message:
+              res.json(
+                resJson(
+                  formName,
+                  false,
                   'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
-                errors,
-              });
+                  errors,
+                ),
+              );
               console.log(err);
             } else {
               // I assigned these conditionals to array to fix bracket colors
@@ -156,30 +164,31 @@ export default async (req, res) => {
               }${NestedTemplateStrings[2]}${NestedTemplateStrings[3]})`;
               const result = await dbQuery(insertQuery).catch((error) => {
                 console.log(`insertQuery error: ${error}`);
-                res.json({
-                  isSuccessful: false,
-                  message:
+                res.json(
+                  resJson(
+                    formName,
+                    false,
                     'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
-                  errors,
-                });
+                    errors,
+                  ),
+                );
               });
               console.log(result);
             }
           },
         );
         // if encryption and db insert succeeds then this code is executed
-        res.json({
-          isSuccessful: true,
-          message: 'Rejestracja powiodła się',
-          errors,
-        });
+        res.json(resJson(formName, true, 'Rejestracja powiodła się', errors));
       }
     } else if (errors.length > 0) {
-      res.json({
-        isSuccessful: false,
-        message: 'Rejestracja nie powiodła się, napraw zaistniałe błędy',
-        errors,
-      });
+      res.json(
+        resJson(
+          formName,
+          false,
+          'Rejestracja nie powiodła się, napraw zaistniałe błędy',
+          errors,
+        ),
+      );
     }
   } else {
     res.status(403);

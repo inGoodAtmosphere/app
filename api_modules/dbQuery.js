@@ -59,7 +59,7 @@ const findUserById = async (id, callback) => {
   return result[0];
 };
 module.exports = queryExecute;
-module.exports.findUser = findUserById;
+module.exports.findUserById = findUserById;
 module.exports.escape = mysql.escape;
 module.exports.escapeId = mysql.escapeId;
 module.exports.findUser = findUserByEmail;

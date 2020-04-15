@@ -18,6 +18,9 @@ import nextConnect from 'next-connect';
 import localStrategy from '../../../api_modules/passport';
 import { encryptSession } from '../../../api_modules/iron';
 import { setTokenCookie } from '../../../api_modules/auth-cookies';
+import resJson from '../../../api_modules/resJsonStandardized';
+
+const formName = 'signIn';
 
 const authenticate = (method, req, res) =>
   new Promise((resolve, reject) => {
@@ -43,17 +46,9 @@ export default nextConnect()
       const token = await encryptSession(session);
 
       setTokenCookie(res, token);
-      res.json({
-        isSuccessful: true,
-        message: 'Logowanie przebiegło pomyślnie',
-        errors: [],
-      });
+      res.json(resJson(formName, true, 'Logowanie przebiegło pomyślnie', []));
     } catch (error) {
       console.error(error);
-      res.json({
-        isSuccessful: false,
-        message: 'napotkaliśmy jakiś błąd',
-        errors: [new Error('stencel chuj')],
-      });
+      res.json(resJson(formName, false, 'Napotkaliśmy jakiś błąd', []));
     }
   });
