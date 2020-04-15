@@ -1,0 +1,12 @@
+@import '../../styles/settings.scss';
+
+.card {
+  composes: card from '../../styles/common.scss';
+  width: 100%;
+  margin: $spacing;
+  padding: $spacing;
+  align-items: center;
+  p {
+    margin: $spacing 0;
+  }
+}

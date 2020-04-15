@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import adminPropTypes from '../../utils/admin-prop-types';
 import Input from '../Form/Input';
 import styles from './SubPage.module.scss';
+import Card from './Card';
 
 const SubPage = ({ data }) => {
   const [textFilter, setTextFilter] = useState('');
@@ -32,11 +33,7 @@ const SubPage = ({ data }) => {
         />
         <main className={styles.content}>
           {data.map((element) => (
-            <div key={element.id} className={styles.card}>
-              {Object.keys(element).map((key) => (
-                <p key={key}>{element[key]}</p>
-              ))}
-            </div>
+            <Card element={element} />
           ))}
         </main>
       </div>
