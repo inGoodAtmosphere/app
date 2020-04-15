@@ -1,7 +1,7 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
 .card {
-  composes: card from '../../styles/base/common.scss';
+  composes: card from '../../styles/common.scss';
   background: rgb(255, 255, 255);
   background: linear-gradient(170deg, rgb(197, 197, 197) 0%, $light-bg 60%);
   justify-content: center;

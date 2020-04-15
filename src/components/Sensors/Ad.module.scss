@@ -1,7 +1,7 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
 .card {
-  composes: card from '../../styles/base/common.scss';
+  composes: card from '../../styles/common.scss';
   background: $dark-accent;
   color: $light-bg;
 }

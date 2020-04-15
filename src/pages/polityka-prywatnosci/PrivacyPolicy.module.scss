@@ -1,6 +1,6 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 .content {
-  composes: content from '../../styles/base/common.scss';
+  composes: content from '../../styles/common.scss';
 }
 
 .link {
@@ -8,6 +8,6 @@
 }
 
 .article {
-  composes: card from '../../styles/base/common.scss';
+  composes: card from '../../styles/common.scss';
   padding: $spacing;
 }

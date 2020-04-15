@@ -1,12 +1,12 @@
-@import '../../styles/base/settings';
-@import '../../styles/base/mixin';
+@import '../../styles/settings';
+@import '../../styles/mixin';
 
 .card {
   width: 100%;
   * {
     color: $light-bg;
   }
-  composes: card from '../../styles/base/common.scss';
+  composes: card from '../../styles/common.scss';
 }
 
 .sensors {

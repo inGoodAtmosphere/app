@@ -1,7 +1,7 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
 .wrapper {
-  composes: content from '../../styles/base/common.scss';
+  composes: content from '../../styles/common.scss';
   height: 100vh;
   max-width: 100%;
   width: 100%;
