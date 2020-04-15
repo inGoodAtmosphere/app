@@ -1,23 +1,28 @@
 @import '../../styles/settings';
+
+.wrapper {
+  width: 100%;
+  height: calc(100% - #{$spacing * 5}); // search height + margin
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: $spacing;
+  height: 100%;
   width: 100%;
   padding-right: $spacing * 2;
-  height: 100%;
   overflow-y: scroll;
   flex-wrap: wrap;
   margin-bottom: $header-height;
   @media #{$media-query-s} {
     margin-bottom: 0;
-    // margin-left: $spacing + $header-height;
   }
-
   @media screen and (max-width: 369px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+
 .card {
   composes: card from '../../styles/common.scss';
   width: 100%;
@@ -28,4 +33,10 @@
   p {
     margin: $spacing 0;
   }
+}
+
+.search {
+  margin: 0 $spacing $spacing;
+  width: calc(100% - #{$spacing * 2});
+  max-width: 20rem;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import adminPropTypes from '../../utils/admin-prop-types';
-import TextFilter from '../TextFilter/TextFilter';
+import Input from '../Form/Input';
 import styles from './SubPage.module.scss';
 
 const SubPage = ({ data }) => {
@@ -20,16 +20,26 @@ const SubPage = ({ data }) => {
   console.log(filteredData);
   return (
     <>
-      <main className={styles.content}>
-        <TextFilter textFilter={textFilter} setTextFilter={setTextFilter} />
-        {data.map((element) => (
-          <div key={element.id} className={styles.card}>
-            {Object.keys(element).map((key) => (
-              <p key={key}>{element[key]}</p>
-            ))}
-          </div>
-        ))}
-      </main>
+      <div className={styles.wrapper}>
+        <Input
+          className={styles.search}
+          name="filter"
+          id="filter"
+          type="search"
+          value={textFilter}
+          placeholder="Wyszukaj artykuł lub słowa kluczowe"
+          onChange={setTextFilter}
+        />
+        <main className={styles.content}>
+          {data.map((element) => (
+            <div key={element.id} className={styles.card}>
+              {Object.keys(element).map((key) => (
+                <p key={key}>{element[key]}</p>
+              ))}
+            </div>
+          ))}
+        </main>
+      </div>
     </>
   );
 };

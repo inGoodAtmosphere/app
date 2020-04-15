@@ -10,9 +10,10 @@ export default (WrappedComponent) => ({
   placeholder,
   value,
   onChange,
+  className,
 }) => {
-  const { errors } = useContext(Context);
-  const error = errors.find((err) => err.field === name);
+  const context = useContext(Context);
+  const error = context && context.errors.find((err) => err.field === name);
   const isError = !!error;
   return (
     <>
@@ -28,7 +29,9 @@ export default (WrappedComponent) => ({
           value={value}
           onChange={onChange}
           isError={isError}
-          className={type === 'textarea' ? styles.textArea : styles.input}
+          className={`${className} ${
+            type === 'textarea' ? styles.textArea : styles.input
+          }`}
         />
         <label
           className={
