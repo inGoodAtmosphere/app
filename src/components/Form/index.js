@@ -14,7 +14,8 @@ const Form = ({ children, data, endpoint, submitText }) => {
     process.env.NODE_ENV === 'production'
       ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
       : process.env.CAPTCHA_SITE_KEY;
-
+  // rejestracja powiodla sie
+  // logowanie przebieglo pomyslnie
   useEffect(() => {
     // Add reCaptcha
     const script = document.createElement('script');

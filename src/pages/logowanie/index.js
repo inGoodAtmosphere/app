@@ -6,11 +6,11 @@ import Checkbox from '../../components/Form/Checkbox';
 import styles from './index.module.scss';
 
 const Login = () => {
-  const [login, setLogin] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRemember, setIsRemember] = useState(false);
   const [errors, setErrors] = useState([]);
-  const data = { login, password, isRemember };
+  const data = { email, password };
 
   return (
     <main className={styles.content}>
@@ -32,11 +32,11 @@ const Login = () => {
         value={{ errors, setErrors }}
       >
         <Input
-          name="login"
-          id="login"
+          name="email"
+          id="email"
           label="Email lub login"
-          onChange={setLogin}
-          value={login}
+          onChange={setEmail}
+          value={email}
         />
         <Input
           name="password"
