@@ -1,11 +1,12 @@
 @import '../../styles/base/settings';
 
-.sensors__ad {
+.card {
+  composes: card from '../../styles/base/common.scss';
   background: $dark-accent;
   color: $light-bg;
 }
 
-.sensors__ad__link {
+.link {
   color: $light-bg;
   text-decoration: underline;
 }
