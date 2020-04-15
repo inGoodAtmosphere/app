@@ -9,17 +9,17 @@ module.exports = withOffline({
     CAPTCHA_SECRET_KEY_PRODUCTION: process.env.CAPTCHA_SECRET_KEY_PRODUCTION,
   },
   poweredByHeader: false,
-  // webpack(config) {
-  //   config.module.rules.push({
-  //     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-  //     use: {
-  //       loader: 'url-loader',
-  //       options: {
-  //         limit: 100000,
-  //       },
-  //     },
-  //   });
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 100000,
+        },
+      },
+    });
 
-  //   return config;
-  // },
+    return config;
+  },
 });
