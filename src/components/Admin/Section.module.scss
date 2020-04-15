@@ -1,7 +1,9 @@
-@import '../../styles/base/settings';
-@import '../../styles/base/mixin';
+@import '../../styles/settings';
+@import '../../styles/mixin';
 
-.admin__section {
+.section {
+  composes: card from '../../styles/common.scss';
+  padding: $spacing;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -10,63 +12,63 @@
     margin: 0;
   }
 }
-.admin__section__powiadomienia {
+.powiadomienia {
   background-color: $primary-accent;
-  .admin__list {
+  .list {
     &::-webkit-scrollbar {
       &-thumb {
         background-color: $light-accent;
       }
     }
   }
-  .admin__section__link {
+  .link {
     @include button($primary-accent);
   }
 }
-.admin__section__uzytkownicy {
+.uzytkownicy {
   background-color: $dark-accent;
-  .admin__list {
+  .list {
     &::-webkit-scrollbar {
       &-thumb {
         background-color: $light-accent;
       }
     }
   }
-  .admin__section__link {
+  .link {
     @include button($dark-accent);
   }
 }
-.admin__section__artykuly {
+.artykuly {
   background-color: $light-accent;
-  .admin__list {
+  .list {
     &::-webkit-scrollbar {
       &-thumb {
         background-color: $primary-accent;
       }
     }
   }
-  .admin__section__link {
+  .link {
     @include button($light-accent);
   }
 }
-.admin__section__mierniki {
+.mierniki {
   background-color: $bright-accent;
-  .admin__list {
+  .list {
     &::-webkit-scrollbar {
       &-thumb {
         background-color: $light-accent;
       }
     }
   }
-  .admin__section__link {
+  .link {
     @include button($bright-accent);
   }
 }
-.admin__section__header {
+.header {
   margin: 0;
   color: $light-bg;
 }
-.admin__section__link {
+.link {
   background-color: rgba(0, 0, 0, 0.3);
   width: fit-content;
   padding: $spacing / 2;
@@ -75,14 +77,14 @@
   color: $light-bg;
 }
 @media #{$media-query-s} {
-  .admin__section__uzytkownicy {
+  .uzytkownicy {
     grid-column: 2 span;
   }
-  .admin__section__mierniki {
+  .mierniki {
     grid-column: 2 span;
     grid-row: 2;
   }
-  .admin__section__artykuly {
+  .artykuly {
     grid-row: 2;
   }
 }

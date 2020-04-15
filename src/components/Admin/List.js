@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ListItem from './ListItem';
 import Context from '../../utils/Context';
-import './list.module.scss';
+import styles from './List.module.scss';
 
 const List = () => {
   const { data } = useContext(Context);
@@ -11,7 +11,7 @@ const List = () => {
     });
   };
   const item = setItem();
-  return <div className="admin__list">{item}</div>;
+  return <div className={styles.list}>{item}</div>;
 };
 
 export default List;

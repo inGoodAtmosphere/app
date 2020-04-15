@@ -1,7 +1,7 @@
-@import '../../styles/base/settings';
-@import '../../styles/base/mixin';
+@import '../../styles/settings';
+@import '../../styles/mixin';
 
-.admin__section__edit-btn {
+.button {
   padding: $spacing / 2;
   background-color: $primary-accent;
   width: fit-content;

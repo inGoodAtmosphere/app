@@ -7,11 +7,11 @@ import {
   faSmog,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from './Link';
-import './sidebar.module.scss';
+import styles from './Sidebar.module.scss';
 
 const Sidebar = () => {
   return (
-    <nav className="admin__sidebar">
+    <nav className={styles.sidebar}>
       <Link href="/admin" icon={faHome} />
       <Link href="/admin/uzytkownicy" icon={faUsers} />
       <Link href="/admin/artykuly" icon={faNewspaper} />

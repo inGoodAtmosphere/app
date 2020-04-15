@@ -1,0 +1,9 @@
+@import '../../styles/settings';
+@import '../../styles/mixin';
+
+.list {
+  height: 100%;
+  @media #{$media-query-s} {
+    @include scroll($dark-accent);
+  }
+}

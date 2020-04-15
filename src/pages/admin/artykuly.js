@@ -1,4 +1,5 @@
 import React from 'react';
+import fetch from 'isomorphic-unfetch';
 import SubPage from '../../components/Admin/SubPage';
 import adminPropTypes from '../../utils/admin-prop-types';
 

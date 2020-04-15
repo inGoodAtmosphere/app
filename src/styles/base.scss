@@ -73,3 +73,13 @@ button {
     cursor: pointer;
   }
 }
+
+.admin__wrapper {
+  display: flex;
+  // flex-direction: column;
+}
+@media #{$media-query-s} {
+  .admin__wrapper {
+    height: calc(100vh - #{$header-height});
+  }
+}

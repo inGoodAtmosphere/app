@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import adminPropTypes from '../../utils/admin-prop-types';
 import TextFilter from '../TextFilter/TextFilter';
+import styles from './SubPage.module.scss';
 
 const SubPage = ({ data }) => {
   const [textFilter, setTextFilter] = useState('');
@@ -18,16 +19,18 @@ const SubPage = ({ data }) => {
   );
   console.log(filteredData);
   return (
-    <main className="content admin__content">
-      <TextFilter textFilter={textFilter} setTextFilter={setTextFilter} />
-      {data.map((element) => (
-        <div key={element.id} className="card admin__subpage__card">
-          {Object.keys(element).map((key) => (
-            <p key={key}>{element[key]}</p>
-          ))}
-        </div>
-      ))}
-    </main>
+    <>
+      <main className={styles.content}>
+        <TextFilter textFilter={textFilter} setTextFilter={setTextFilter} />
+        {data.map((element) => (
+          <div key={element.id} className={styles.card}>
+            {Object.keys(element).map((key) => (
+              <p key={key}>{element[key]}</p>
+            ))}
+          </div>
+        ))}
+      </main>
+    </>
   );
 };
 

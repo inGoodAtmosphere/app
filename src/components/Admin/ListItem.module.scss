@@ -1,6 +1,7 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
-.admin__list__card {
+.card {
+  composes: card from '../../styles/common.scss';
   display: flex;
   flex-direction: row;
   justify-content: space-between;

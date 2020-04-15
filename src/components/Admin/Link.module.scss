@@ -1,7 +1,7 @@
-@import '../../styles/base/settings';
-@import '../../styles/base/mixin';
+@import '../../styles/settings';
+@import '../../styles/mixin';
 
-.admin__sidebar__link {
+.link {
   padding: $spacing;
   background-color: $dark-bg;
   color: $light-bg;
@@ -10,9 +10,7 @@
   justify-content: center;
   align-items: center;
   @include button($dark-bg);
-}
-@media #{$media-query-s} {
-  .admin__sidebar__link {
+  @media #{$media-query-s} {
     margin-bottom: $spacing;
   }
 }

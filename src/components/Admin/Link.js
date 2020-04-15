@@ -3,12 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './link.module.scss';
+import styles from './Link.module.scss';
 
 const NavLink = ({ href, icon }) => {
   return (
     <Link href={href}>
-      <a className="admin__sidebar__link">
+      <a className={styles.link}>
         <FontAwesomeIcon icon={icon} />
       </a>
     </Link>

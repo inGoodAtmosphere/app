@@ -1,6 +1,6 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
-.admin__sidebar {
+.sidebar {
   width: 100%;
   height: $header-height;
   display: flex;
@@ -11,11 +11,10 @@
   bottom: 0;
   z-index: 3;
   background-color: $light-bg;
-}
-@media #{$media-query-s} {
-  .admin__sidebar {
+  @media #{$media-query-s} {
+    position: static;
     flex-direction: column;
-    height: calc(100% - #{$header-height});
+    height: 100%;
     width: $header-height;
   }
 }

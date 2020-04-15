@@ -5,7 +5,7 @@ import Notification from './Notification';
 import User from './User';
 import Article from './Article';
 import Sensor from './Sensor';
-import './list-item.module.scss';
+import styles from './ListItem.module.scss';
 
 const ListItem = ({ id, data }) => {
   const { title } = useContext(Context);
@@ -24,7 +24,7 @@ const ListItem = ({ id, data }) => {
     }
   };
   const item = setItem();
-  return <div className="card admin__list__card">{item}</div>;
+  return <div className={styles.card}>{item}</div>;
 };
 
 ListItem.propTypes = {

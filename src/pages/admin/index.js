@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import Section from '../../components/Admin/Section';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Admin = ({ notifications, users, locations, articles }) => {
   return (
-    <main className="content admin__content">
+    <main className={styles.content}>
       <Section
         link="powiadomienia"
         value={{ data: notifications, title: 'Powiadomienia' }}

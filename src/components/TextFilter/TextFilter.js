@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './text-filter.scss';
+import styles from './index.module.scss';
 
 const TextFilter = ({ setTextFilter, textFilter }) => (
   <input
@@ -8,7 +8,7 @@ const TextFilter = ({ setTextFilter, textFilter }) => (
     value={textFilter}
     type="search"
     placeholder="Wyszukaj artykuł lub słowa kluczowe"
-    className="campaign__search"
+    className={styles.search}
     onChange={(e) => {
       setTextFilter(
         e.target.value
