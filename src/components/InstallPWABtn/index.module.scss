@@ -1,10 +1,20 @@
 @import '../../styles/base/settings';
+@import '../../styles/base/mixin';
 
-.header__pwa__btn {
+.headerButton {
   background: $dark-accent;
   border-radius: $spacing;
   border: none;
   color: $light-bg;
   font-size: $s-size * 0.685;
   padding: $spacing;
+  @include button($dark-accent);
+}
+
+.footerButton {
+  background: none;
+  border: none;
+  color: $dark-bg;
+  padding: 0;
+  @include link-without-padding($dark-bg);
 }

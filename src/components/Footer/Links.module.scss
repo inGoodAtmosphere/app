@@ -7,14 +7,6 @@
   margin: $spacing 0;
 }
 
-.pwa__btn {
-  background: none;
-  border: none;
-  color: $dark-bg;
-  padding: 0;
-  @include link-without-padding($dark-bg);
-}
-
 .item {
   display: flex;
   justify-content: center;

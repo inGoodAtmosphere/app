@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './index.module.scss';
 import { logEvent } from '../../utils/analytics';
+import styles from './index.module.scss';
 
 const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -25,7 +25,7 @@ const InstallPWABtn = ({ isFooter, display, setDisplay }) => {
   };
   return (
     <button
-      className={`${isFooter ? 'footer__pwa__btn' : 'header__pwa__btn'}`}
+      className={`${isFooter ? styles.footerButton : styles.headerButton}`}
       type="button"
       style={{ display }}
       onClick={handleClick}
