@@ -1,10 +1,11 @@
 const bcrypt = require('bcrypt');
-const dbQuery = require('../../../api_modules/selectQuery');
+const dbQuery = require('../../../api_modules/dbQuery');
 const ValidationError = require('../../../api_modules/validationError');
 require('dotenv').config();
 
 // TODO add notification when critical error while salting the password or connecting to the db
 // todo password strength
+// TODO add verification email, sending status to db and signup date
 const saltRounds = process.env.SALT_ROUNDS;
 const regexPromise = (regex, textToTest) =>
   new Promise((resolve) => {
@@ -120,7 +121,7 @@ export default async (req, res) => {
           ),
         );
         res.json({
-          succeed: false,
+          isSuccessful: false,
           message: 'Rejestracja nie powiodła się, napraw zaistniałe błędy',
           errors,
         });
@@ -132,7 +133,7 @@ export default async (req, res) => {
           async (err, hash) => {
             if (err) {
               res.json({
-                succeed: false,
+                isSuccessful: false,
                 message:
                   'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
                 errors,
@@ -160,7 +161,7 @@ export default async (req, res) => {
               const result = await dbQuery(insertQuery).catch((error) => {
                 console.log(`insertQuery error: ${error}`);
                 res.json({
-                  succeed: false,
+                  isSuccessful: false,
                   message:
                     'Błąd podczas przetwarzania formularza, jeżeli widzisz ten błąd bezzwłocznie skontaktuj się z nami',
                   errors,
@@ -177,14 +178,14 @@ export default async (req, res) => {
           },
         );
         res.json({
-          succeed: true,
+          isSuccessful: true,
           message: 'Rejestracja powiodła się',
           errors,
         });
       }
     } else if (errors.length > 0) {
       res.json({
-        succeed: false,
+        isSuccessful: false,
         message: 'Rejestracja nie powiodła się, napraw zaistniałe błędy',
         errors,
       });

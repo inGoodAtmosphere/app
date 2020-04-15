@@ -4,7 +4,7 @@ const ValidationError = require('../../../api_modules/validationError.js');
 export default async (req, res) => {
   if (req.method === 'POST') {
     // TODO update docs
-    // TODO add succeed to json response
+    // TODO add isSuccessful to json response
     // TODO try domain with git clone
 
     // validation shit here
@@ -69,12 +69,17 @@ export default async (req, res) => {
     }
     if (errors.length > 0) {
       res.json({
+        isSuccessful: false,
         message:
           'Nie mogliśmy wysłać twojej wiadomości, napraw zaistniałe błędy',
         errors,
       });
     } else {
-      res.json({ message: 'Twój email został wysłany pomyślnie', errors });
+      res.json({
+        isSuccessful: true,
+        message: 'Twój email został wysłany pomyślnie',
+        errors,
+      });
     }
   } else {
     res.status(403);

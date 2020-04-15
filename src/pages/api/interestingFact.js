@@ -1,4 +1,4 @@
-const dbQuery = require('../../../api_modules/selectQuery');
+const dbQuery = require('../../../api_modules/dbQuery');
 
 // TODO add catch error
 export default async (req, res) => {

@@ -1,5 +1,5 @@
 // header, description, images, tags
-const dbQuery = require('../../../../api_modules/selectQuery');
+const dbQuery = require('../../../../api_modules/dbQuery');
 
 export default async (req, res) => {
   const query =
