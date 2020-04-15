@@ -1,13 +1,13 @@
 import React from 'react';
 import Clouds from './Clouds';
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Loading = () => {
   return (
-    <div className="content loading__content" style={{}}>
-      <div className="loading__wrapper">
+    <div className={styles.content}>
+      <div className={styles.wrapper}>
         <Clouds />
-        <h1 className="loading__header">Ładowanie</h1>
+        <h1 className={styles.header}>Ładowanie</h1>
       </div>
     </div>
   );

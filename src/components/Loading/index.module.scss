@@ -1,24 +1,18 @@
 @import '../../styles/base/settings';
 
-.loading__content {
-  display: -webkit-box;
+.content {
+  composes: content from '../../styles/base/common.scss';
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
 }
-.loading__wrapper {
+.wrapper {
   position: relative;
   margin-bottom: $header-height;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
 }
-.loading__header {
+.header {
   margin-bottom: 0;
 }

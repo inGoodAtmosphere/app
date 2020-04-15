@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './cloud.module.scss';
+import styles from './Cloud.module.scss';
 
 function SvgCloud() {
   return (
-    <svg viewBox="0 0 82 52" className="loading__cloud" fill="none">
+    <svg viewBox="0 0 82 52" className={styles.cloud} fill="none">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

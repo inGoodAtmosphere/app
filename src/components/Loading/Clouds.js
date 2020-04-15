@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Cloud from './Cloud';
 import Kitty from './Kitty';
-import './clouds.module.scss';
+import styles from './Clouds.module.scss';
 
 const Clouds = () => {
   const wrapper = useRef(null);
@@ -42,11 +42,7 @@ const Clouds = () => {
   }, []);
   return (
     <>
-      <div
-        className="loading__clouds"
-        style={{ alignItems: 'center' }}
-        ref={wrapper}
-      >
+      <div className={styles.clouds} ref={wrapper}>
         <Cloud />
         <Cloud />
         <Cloud />

@@ -1,8 +1,7 @@
 @import '../../styles/base/settings';
 
-.loading__clouds {
-  display: -webkit-box;
+.clouds {
   display: flex;
-  -webkit-box-pack: center;
+  align-items: center;
   justify-content: center;
 }
