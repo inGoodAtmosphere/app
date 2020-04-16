@@ -2,7 +2,7 @@
 @import '../../styles/mixin';
 
 .button {
-  align-self: flex-end;
+  align-self: flex-start;
   padding: $spacing;
   transition: transform 0.2s;
   outline: none;
@@ -29,9 +29,6 @@
 
 .mierniki {
   @include button($dark-accent);
-  @media #{$media-query-m} {
-    align-self: flex-start;
-  }
 }
 
 .encyklopedia {
@@ -39,7 +36,7 @@
 }
 
 .kontakt {
-  @include button(#276f98);
+  @include button($bright-accent);
 }
 
 .o-nas {
