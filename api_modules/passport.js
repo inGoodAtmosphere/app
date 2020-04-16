@@ -7,9 +7,13 @@ const dbQuery = require('./dbQuery');
 export default new LocalStrategy(
   { usernameField: 'email' },
   async (username, password, done) => {
-    const user = await dbQuery.findUser(username).catch((err) => {
-      return done(err, false);
-    });
+    const user = await dbQuery
+      .findUser(username, (err) => {
+        if (err) return done(err, false);
+      })
+      .catch((err) => {
+        return done(err, false);
+      });
     if (!user) {
       return done(
         null,

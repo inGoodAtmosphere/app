@@ -45,6 +45,7 @@ export default nextConnect()
       if (user instanceof ValidationError) {
         errors.push(user);
         res.json(resJson(formName, false, 'Logowanie nie udało się', errors));
+        console.log('nie udało się');
       }
       // session is the payload to save in the token, it may contain basic info about the user
       const session = { ...user };
@@ -52,9 +53,11 @@ export default nextConnect()
       const token = await encryptSession(session);
 
       setTokenCookie(res, token);
+      console.log('udało się');
       res.json(resJson(formName, true, 'Logowanie przebiegło pomyślnie', []));
     } catch (error) {
       console.error(error);
+      console.log('a teraz spierdalaj');
       res.json(resJson(formName, false, 'Napotkaliśmy jakiś błąd', []));
     }
   });
