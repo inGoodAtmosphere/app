@@ -16,6 +16,7 @@
 import passport from 'passport';
 import nextConnect from 'next-connect';
 import localStrategy from '../../../api_modules/passport';
+import ValidationError from '../../../api_modules/validationError';
 import { encryptSession } from '../../../api_modules/iron';
 import { setTokenCookie } from '../../../api_modules/auth-cookies';
 import resJson from '../../../api_modules/resJsonStandardized';
@@ -39,7 +40,12 @@ export default nextConnect()
   .use(passport.initialize())
   .post(async (req, res) => {
     try {
+      const errors = [];
       const user = await authenticate('local', req, res);
+      if (user instanceof ValidationError) {
+        errors.push(user);
+        res.json(resJson(formName, false, 'Logowanie nie udało się', errors));
+      }
       // session is the payload to save in the token, it may contain basic info about the user
       const session = { ...user };
       // The token is a string with the encrypted session

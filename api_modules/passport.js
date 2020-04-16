@@ -1,23 +1,31 @@
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local').Strategy;
+const ValidationError = require('./validationError');
 // const passport = require('passport');
 const dbQuery = require('./dbQuery');
 
 export default new LocalStrategy(
   { usernameField: 'email' },
-  async (email, password, done) => {
-    const user = await dbQuery.findUser(email);
+  async (username, password, done) => {
+    const user = await dbQuery.findUser(username).catch((err) => {
+      return done(err, false);
+    });
     if (!user) {
-      return done(null, false, {
-        message: 'Nie znaleziono użytkownika o podanym adresie email',
-      });
+      return done(
+        null,
+        new ValidationError(
+          'Nie znaleziono użytkownika o podanym adresie email',
+          'email',
+        ),
+      );
     }
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (err) {
         console.log(err);
+        return done(err, false);
       }
       if (!isMatch) {
-        return done(null, false, { message: 'Złe hasło' });
+        return done(null, new ValidationError('Złe hasło', 'password'));
       }
       return done(null, user);
     });
