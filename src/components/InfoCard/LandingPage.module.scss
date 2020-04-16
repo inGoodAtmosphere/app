@@ -25,6 +25,10 @@
   background-color: $bright-accent;
 }
 
+.support {
+  background-color: hsl(201, 64%, 45%);
+}
+
 .project {
   background-color: $light-bg;
   * {
@@ -39,6 +43,9 @@
     justify-content: space-between;
     &:nth-child(even) {
       flex-direction: row-reverse;
+      a {
+        align-self: flex-end;
+      }
     }
   }
 }

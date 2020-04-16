@@ -2,7 +2,7 @@
 @import '../../styles/mixin';
 
 .button {
-  align-self: flex-end;
+  align-self: flex-start;
   padding: $spacing;
   transition: transform 0.2s;
   outline: none;
@@ -39,9 +39,13 @@
 }
 
 .kontakt {
-  @include button(#276f98);
+  @include button($bright-accent);
 }
 
 .o-nas {
   @include button($light-bg);
+}
+
+.wsparcie {
+  @include button(hsl(201, 64%, 45%));
 }
