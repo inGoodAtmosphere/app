@@ -28,6 +28,7 @@ const Marker = ({ data: { data, error } }) => {
       aria-label="Znacznik czujnika"
       onClick={handleClick}
       className={styles.marker}
+      tabIndex={-1}
       style={{
         backgroundColor: color,
         boxShadow: ` 0px 0px ${color !== '#999999' && '1rem 1rem'} ${color}`,
