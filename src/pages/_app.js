@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import CookiesBanner from '../components/CookiesBanner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { initGA, logPageView } from '../utils/analytics';
+import { GA_TRACKING_ID, logPageView } from '../utils/analytics';
 import '../styles/base.scss';
 import 'normalize.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -30,14 +30,8 @@ const App = ({ Component, pageProps }) => {
   };
   const router = useRouter();
   const title = convertTitle(router.pathname);
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-  }, []);
-  initGA();
+  Router.events.on('routeChangeComplete', (url) => logPageView(url));
+
   return (
     <>
       <Head>
@@ -111,6 +105,22 @@ const App = ({ Component, pageProps }) => {
           content="https://ingoodatmosphere.com/img/opengraph-icon.png"
         />
         <title key="title">{title}</title>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <div className="container">
         <Header />

@@ -7,6 +7,7 @@ module.exports = withOffline({
     CAPTCHA_SECRET_KEY: process.env.CAPTCHA_SECRET_KEY,
     CAPTCHA_SITE_KEY_PRODUCTION: process.env.CAPTCHA_SITE_KEY_PRODUCTION,
     CAPTCHA_SECRET_KEY_PRODUCTION: process.env.CAPTCHA_SECRET_KEY_PRODUCTION,
+    GA_TRACKING_ID: process.env.GA_TRACKING_ID,
   },
   poweredByHeader: false,
   webpack(config) {
