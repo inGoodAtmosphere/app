@@ -15,8 +15,8 @@
   padding-right: $spacing * 2;
   flex-wrap: wrap;
   margin-bottom: $header-height;
-  @include scroll($primary-accent);
   @media #{$media-query-s} {
+    @include scroll($primary-accent);
     margin-bottom: 0;
   }
   @media screen and (max-width: 369px) {

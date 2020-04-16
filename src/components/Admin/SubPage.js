@@ -23,7 +23,6 @@ const SubPage = ({ data }) => {
       )
       .find((key) => key === true),
   );
-  console.log(filteredData);
 
   return (
     <>
@@ -38,7 +37,7 @@ const SubPage = ({ data }) => {
           onChange={setTextFilter}
         />
         <main className={styles.content}>
-          {data.map((element) => (
+          {filteredData.map((element) => (
             <Card element={element} />
           ))}
         </main>
