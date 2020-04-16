@@ -1,7 +1,6 @@
 @import './settings';
 
 .content {
-  -webkit-box-flex: 1;
   width: 100%;
   align-self: center;
   flex: 1;
@@ -14,12 +13,9 @@
 }
 
 .card {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
   background: $light-bg;
   border-radius: $spacing;
   color: $dark-bg;
-  display: -webkit-box;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

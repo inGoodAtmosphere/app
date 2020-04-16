@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useWindowWidth from '../../hooks/useWindowDimensions';
+import useWindowWidth from '../../utils/hooks/useWindowDimensions';
 import Context from '../../utils/Context';
 import styles from './Image.module.scss';
 

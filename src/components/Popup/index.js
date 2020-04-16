@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useScroll from '../../hooks/useScroll';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
-import useFetch from '../../hooks/useFetch';
+import useScroll from '../../utils/hooks/useScroll';
+import useWindowDimensions from '../../utils/hooks/useWindowDimensions';
+import useFetch from '../../utils/hooks/useFetch';
 import styles from './index.module.scss';
 
 const Popup = ({ articleHeight }) => {

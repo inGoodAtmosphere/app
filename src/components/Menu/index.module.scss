@@ -3,7 +3,6 @@
 .menu {
   align-items: center;
   background: $light-bg;
-  display: -webkit-box;
   display: flex;
   flex-direction: column;
   height: calc(100% - #{$header-height});
@@ -16,7 +15,6 @@
   width: 100%;
   z-index: 10;
   &IsActive {
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 }

@@ -1,9 +1,6 @@
 @import './settings';
 
 .container {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
   display: flex;
   flex-direction: column;
   min-height: 100%;

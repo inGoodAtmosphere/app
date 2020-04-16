@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import Menu from '../Menu';
 import Logo from './Link';
-import useWindowWidth from '../../hooks/useWindowDimensions';
+import useWindowWidth from '../../utils/hooks/useWindowDimensions';
 import styles from './index.module.scss';
 
 const Header = () => {

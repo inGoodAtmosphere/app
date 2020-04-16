@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useWindowWidth from '../../hooks/useWindowDimensions';
+import useWindowWidth from '../../utils/hooks/useWindowDimensions';
 import styles from './Item.module.scss';
 
 const Item = ({ isActive, anchor }) => {

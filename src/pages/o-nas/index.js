@@ -3,7 +3,7 @@ import Carousel from 'nuka-carousel';
 import Card from '../../components/AboutUsCard';
 import breakpoints from '../../components/AboutUs/breakpoints';
 import portraits from '../../components/AboutUs/portraits';
-import useWindowWidth from '../../hooks/useWindowDimensions';
+import useWindowWidth from '../../utils/hooks/useWindowDimensions';
 import { people } from '../../../public/data/about-us.json';
 import styles from './index.module.scss';
 

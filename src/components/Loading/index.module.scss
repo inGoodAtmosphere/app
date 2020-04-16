@@ -4,6 +4,7 @@
   composes: content from '../../styles/common.scss';
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .wrapper {
   position: relative;
