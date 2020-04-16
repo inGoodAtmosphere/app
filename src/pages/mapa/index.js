@@ -5,7 +5,7 @@ import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
 import Data from '../../components/Map/Data';
 import MapContext from '../../utils/map-context';
-import mapReducer from '../../reducers/map-reducer';
+import mapReducer from '../../utils/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import styles from './index.module.scss';
