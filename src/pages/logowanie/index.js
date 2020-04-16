@@ -10,8 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isRemember, setIsRemember] = useState(false);
   const [errors, setErrors] = useState([]);
-  // TODO: Add isRemember
-  const data = { email, password };
+  const data = { email, password, isRemember };
 
   return (
     <main className={styles.content}>
