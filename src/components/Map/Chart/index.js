@@ -16,7 +16,7 @@ import MapContext from '../../../utils/map-context';
 import Button from './Button';
 import countCaqi from '../countCaqi';
 import styles from './index.module.scss';
-import useWindowDimensions from '../../../hooks/useWindowDimensions';
+import useWindowDimensions from '../../../utils/hooks/useWindowDimensions';
 
 const Chart = () => {
   const {
