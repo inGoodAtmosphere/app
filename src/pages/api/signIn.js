@@ -45,12 +45,7 @@ export default nextConnect()
       res.json(resJson(formName, false, 'Logowanie nie udało się', errors));
     }
     if (!req.body.password || req.body.password === '') {
-      errors.push(
-        new ValidationError(
-          'error in component Form on line 5, missing ";"',
-          'password',
-        ),
-      );
+      errors.push(new ValidationError('Musisz wpisać hasło', 'password'));
       res.json(resJson(formName, false, 'Logowanie nie udało się', errors));
     }
     try {
