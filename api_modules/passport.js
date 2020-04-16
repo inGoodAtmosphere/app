@@ -10,6 +10,7 @@ export default new LocalStrategy(
     const user = await dbQuery
       .findUser(username, (err) => {
         if (err) return done(err, false);
+        return null;
       })
       .catch((err) => {
         return done(err, false);
