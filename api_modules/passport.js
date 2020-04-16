@@ -15,7 +15,7 @@ export default new LocalStrategy(
       .catch((err) => {
         return done(err, false);
       });
-    if (!user) {
+    if (!user || username === '' || user.email === '') {
       return done(
         null,
         new ValidationError(
@@ -29,7 +29,7 @@ export default new LocalStrategy(
         console.log(err);
         return done(err, false);
       }
-      if (!isMatch) {
+      if (!isMatch || password === '' || user.password === '') {
         return done(null, new ValidationError('Złe hasło', 'password'));
       }
       return done(null, user);

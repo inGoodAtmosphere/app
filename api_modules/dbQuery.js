@@ -23,6 +23,10 @@ const queryExecute = (queryContent) =>
   });
 
 const findUserByEmail = async (email, callback) => {
+  if (email === '') {
+    callback(null);
+    return null;
+  }
   const query = `select id,email, login, password, 'first-name' as firstName, 'last-name' as lastName, permissions, newsletter, signup_date as signupDate, status from users where email = ${mysql.escape(
     email,
   )}; `;
