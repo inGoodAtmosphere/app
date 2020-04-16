@@ -6,19 +6,25 @@ import Card from './Card';
 
 const SubPage = ({ data }) => {
   const [textFilter, setTextFilter] = useState('');
+  const keys = Object.keys(data[0]);
   const filteredData = data.filter((element) =>
-    Object.values(element)
-      .map((value) => value.toString())
-      .find(() => '2'),
-  );
-  console.log(
-    data.map((element) =>
-      Object.values(element)
-        .map((value) => value.toString())
-        .find((el) => el === '13.2839'),
-    ),
+    keys
+      .map((key) =>
+        element[key]
+          .toString()
+          .toLowerCase()
+          .includes(
+            textFilter
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .replace(/ł/g, 'l'),
+          ),
+      )
+      .find((key) => key === true),
   );
   console.log(filteredData);
+
   return (
     <>
       <div className={styles.wrapper}>
