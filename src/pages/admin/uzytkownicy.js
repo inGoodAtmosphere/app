@@ -3,13 +3,14 @@ import fetch from 'isomorphic-unfetch';
 import SubPage from '../../components/Admin/SubPage';
 import adminPropTypes from '../../utils/admin-prop-types';
 
-const Users = ({ users }) => {
-  return <SubPage data={users} />;
+const Users = ({ data, users }) => {
+  return <SubPage data={data} users={users} />;
 };
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/users');
-  const users = await res.json();
-  return { props: { users } };
+  const data = await res.json();
+  const users = 'users';
+  return { props: { data, users } };
 }
 Users.propTypes = adminPropTypes;
 

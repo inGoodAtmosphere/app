@@ -38,7 +38,7 @@ const SubPage = ({ data }) => {
         />
         <main className={styles.content}>
           {filteredData.map((element) => (
-            <Card element={element} />
+            <Card element={element} key={element.id} />
           ))}
         </main>
       </div>
