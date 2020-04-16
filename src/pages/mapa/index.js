@@ -8,6 +8,7 @@ import MapContext from '../../utils/map-context';
 import mapReducer from '../../reducers/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import styles from './index.module.scss';
 
 const MapPage = ({ measurements, markers }) => {
   const [sensorMeasurement, setSensorMeasurement] = useState([]);
@@ -56,7 +57,7 @@ const MapPage = ({ measurements, markers }) => {
         sensorMeasurement,
       }}
     >
-      <main className="content map__content">
+      <main className={styles.content}>
         <Map />
         <Data />
       </main>

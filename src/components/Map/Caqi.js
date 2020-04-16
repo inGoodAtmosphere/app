@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import mapContext from '../../utils/map-context';
 import { descriptions } from '../../../public/data/caqi-descriptions.json';
 import countCaqi from './countCaqi';
-import './caqi.module.scss';
+import styles from './Caqi.module.scss';
 
 const Caqi = () => {
   const {
@@ -21,14 +21,14 @@ const Caqi = () => {
   return (
     <a
       href="/encyklopedia#caqi"
-      className="map__data__caqi"
+      className={styles.caqi}
       style={{ backgroundColor }}
     >
-      <div className="map__data__caqi__wrapper">
-        <h3 className="map__data__caqi__title">CAQI</h3>
-        <h2 className="map__data__caqi__measurement">{caqi}</h2>
+      <div className={styles.wrapper}>
+        <h3 className={styles.title}>CAQI</h3>
+        <h2 className={styles.measurement}>{caqi}</h2>
       </div>
-      <p className="map__data__status">{status}</p>
+      <p className={styles.status}>{status}</p>
     </a>
   );
 };

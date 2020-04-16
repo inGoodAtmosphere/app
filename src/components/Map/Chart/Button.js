@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.module.scss';
+import styles from './Button.module.scss';
 
 const Button = ({ purpose, setActiveChart, isActive }) => {
   return (
     <button
       type="button"
-      className={`chart__btn ${isActive && 'chart__btn--isActive'}`}
+      className={`${styles.button} ${isActive && styles.buttonActive}`}
       onClick={() => {
         setActiveChart(purpose);
       }}

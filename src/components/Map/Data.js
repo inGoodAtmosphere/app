@@ -3,15 +3,13 @@ import Measurements from './Measurements';
 import Chart from './Chart';
 import Weather from './Weather';
 import AboutDevice from './AboutDevice';
-import useWindowWidth from '../../hooks/useWindowWidth';
-import './data.module.scss';
+import styles from './Data.module.scss';
 
 const Data = () => {
-  const width = useWindowWidth();
   return (
-    <div className="data">
+    <div className={styles.data}>
       <Measurements />
-      <Chart width={width} />
+      <Chart />
       <Weather />
       <AboutDevice />
     </div>

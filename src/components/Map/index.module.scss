@@ -1,4 +1,4 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
 .map {
   height: calc(50vh - #{$header-height});
@@ -6,7 +6,7 @@
 }
 
 @media #{$media-query-m} {
-  .map__content {
+  .content {
     display: grid;
     width: 100%;
     grid-template-columns: calc(40% - #{$spacing}) 60%;

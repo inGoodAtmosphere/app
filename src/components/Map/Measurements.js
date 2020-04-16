@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import Caqi from './Caqi';
 import Pm from './Pm';
-import './measurements.module.scss';
 import MapContext from '../../utils/map-context';
 import useLocationName from '../../hooks/useLocationName';
+import styles from './Measurements.module.scss';
 
 const Measurements = () => {
   const {
@@ -15,9 +15,9 @@ const Measurements = () => {
   const { title, isLoaded } = useLocationName(markers, deviceId);
   return (
     <>
-      <h1 className="map__city">{isLoaded ? '...' : title}</h1>
+      <h1 className={styles.city}>{isLoaded ? '...' : title}</h1>
       <Caqi />
-      <div className="map__pm">
+      <div className={styles.pm}>
         <Pm purpose="pm2.5" />
         <Pm purpose="pm10" />
       </div>

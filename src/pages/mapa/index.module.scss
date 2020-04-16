@@ -1,0 +1,12 @@
+@import '../../styles/settings';
+.content {
+  composes: content from '../../styles/common.scss';
+  @media #{$media-query-m} {
+    display: grid;
+    width: 100%;
+    grid-template-columns: calc(40% - #{$spacing}) 60%;
+    max-width: none;
+    padding-bottom: $spacing;
+    padding-right: 0;
+  }
+}

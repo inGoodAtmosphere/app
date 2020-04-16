@@ -1,6 +1,6 @@
-@import '../../../styles/base/settings';
+@import '../../../styles/settings';
 
-.chart__btn {
+.button {
   margin-left: $spacing;
   border-radius: $spacing;
   padding: $spacing / 2;
@@ -9,11 +9,11 @@
   background: none;
   font-size: $xs-size;
   color: $dark-accent;
-}
-.chart__btn:first-child {
-  margin-left: 0;
-}
-.chart__btn--isActive {
-  background-color: $dark-accent;
-  color: $light-bg;
+  &:first-child {
+    margin-left: 0;
+  }
+  &Active {
+    background-color: $dark-accent;
+    color: $light-bg;
+  }
 }

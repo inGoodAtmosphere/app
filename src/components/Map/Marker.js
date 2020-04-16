@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import mapContext from '../../utils/map-context';
 import useColor from '../../hooks/useColor';
-import './marker.module.scss';
+import styles from './Marker.module.scss';
 
 const Marker = ({ data: { data, error } }) => {
   const { dispatch } = useContext(mapContext);
@@ -27,7 +27,7 @@ const Marker = ({ data: { data, error } }) => {
       type="button"
       aria-label="Znacznik czujnika"
       onClick={handleClick}
-      className="marker"
+      className={styles.marker}
       style={{
         backgroundColor: color,
         boxShadow: ` 0px 0px ${color !== '#999999' && '1rem 1rem'} ${color}`,

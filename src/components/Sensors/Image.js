@@ -19,9 +19,7 @@ const Image = ({ className }) => {
         cieszyć pomiarami z naszych urządzeń.
         <br />
         {className && (
-          <span className="sensors__image__text__link">
-            Kliknij i dowiedz się więcej
-          </span>
+          <span className={styles.link}>Kliknij i dowiedz się więcej</span>
         )}
       </span>
     </div>

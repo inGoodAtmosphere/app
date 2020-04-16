@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import GoogleMap from 'google-map-react';
 import Marker from './Marker';
 import MapContext from '../../utils/map-context';
-import './map.module.scss';
+import styles from './index.module.scss';
 
 const Map = () => {
   const { measurements, markers, activeSensor } = useContext(MapContext);
@@ -10,7 +10,7 @@ const Map = () => {
     (marker) => marker.id === activeSensor.current.deviceId,
   );
   return (
-    <div className="map">
+    <div className={styles.map}>
       <GoogleMap
         defaultCenter={{
           lat: activeMarker.lat,

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 import {
   LineChart,
   XAxis,
@@ -14,16 +13,17 @@ import {
 import moment from 'moment';
 import 'moment/locale/pl';
 import MapContext from '../../../utils/map-context';
-import './index.module.scss';
 import Button from './Button';
-
 import countCaqi from '../countCaqi';
+import styles from './index.module.scss';
+import useWindowDimensions from '../../../hooks/useWindowDimensions';
 
-const Chart = ({ width }) => {
+const Chart = () => {
   const {
     activeSensor: { avg },
   } = useContext(MapContext);
   const [activeChart, setActiveChart] = useState('pm');
+  const { width } = useWindowDimensions();
   const formatDate = (day) => moment(day).format('dddd');
   const formattedData = avg.map((day) => {
     return {
@@ -45,8 +45,8 @@ const Chart = ({ width }) => {
   };
   const margin = setMargin();
   return (
-    <div className="card chart__card">
-      <div className="chart__buttons">
+    <div className={styles.card}>
+      <div className={styles.buttons}>
         <Button
           purpose="pm"
           isActive={activeChart === 'pm'}
@@ -147,10 +147,6 @@ const Chart = ({ width }) => {
       </ResponsiveContainer>
     </div>
   );
-};
-
-Chart.propTypes = {
-  width: PropTypes.number.isRequired,
 };
 
 export default Chart;

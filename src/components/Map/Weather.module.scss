@@ -1,12 +1,12 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
-.map__weather {
+.weather {
+  composes: card from '../../styles/common.scss';
   background-color: $dark-accent;
   color: $light-bg;
 }
 
-.map__weather__data {
-  display: -webkit-box;
+.data {
   display: flex;
   font-size: $m-size;
   justify-content: space-around;

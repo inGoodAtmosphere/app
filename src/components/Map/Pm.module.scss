@@ -1,6 +1,6 @@
-@import '../../styles/base/settings';
+@import '../../styles/settings';
 
-.map__data__pm {
+.pm {
   border-radius: $spacing;
   background-color: $light-accent;
   padding: $spacing;
@@ -14,16 +14,16 @@
     margin-right: $spacing;
   }
 }
-.map__data__pm__measurement,
-.map__data__pm__title {
+.measurement,
+.title {
   margin: $spacing / 2 0;
 }
-.map__data__pm__measurement {
+.measurement {
   font-size: $m-size;
 }
-.map__data__pm__title {
+.title {
   font-size: $s-size;
 }
-.map__data__percent {
+.percent {
   color: $dark-bg;
 }

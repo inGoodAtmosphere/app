@@ -1,13 +1,14 @@
-@import '../../../styles/base/settings';
+@import '../../../styles/settings';
 
-.chart__card {
+.card {
+  composes: card from '../../../styles/common.scss';
   width: calc(100vw - #{$spacing} * 2);
   max-width: 100%;
   height: 16rem;
   padding: $spacing;
 }
 
-.chart__buttons {
+.buttons {
   margin-bottom: $spacing;
   display: flex;
   justify-content: space-around;

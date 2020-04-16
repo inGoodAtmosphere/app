@@ -14,6 +14,8 @@ module.exports = withOffline({
     CAPTCHA_SITE_KEY_PRODUCTION: process.env.CAPTCHA_SITE_KEY_PRODUCTION,
     CAPTCHA_SECRET_KEY_PRODUCTION: process.env.CAPTCHA_SECRET_KEY_PRODUCTION,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
+    GEOCODING_API_KEY: process.env.GEOCODING_API_KEY,
+    MAP_API_KEY: process.env.MAP_API_KEY,
   },
   poweredByHeader: false,
   webpack(config) {
