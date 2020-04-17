@@ -9,6 +9,7 @@ import resJson from '../../../../api_modules/resJsonStandardized';
 // todo autorization
 // todo facebook login
 // todo google login
+// todo forgot password
 
 const formName = 'signIn';
 
