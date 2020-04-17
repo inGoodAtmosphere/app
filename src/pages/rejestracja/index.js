@@ -36,12 +36,12 @@ const SignUp = () => {
       <SocialMediaBtn
         socialMedia="facebook"
         purpose="sign-up"
-        endpoint="/api/signUpFacebook"
+        endpoint="/api/signUp/facebook"
       />
       <SocialMediaBtn
         socialMedia="google"
         purpose="sign-up"
-        endpoint="/api/signUpGoogle"
+        endpoint="/api/signUp/google"
       />
       <p className={styles.or}>lub</p>
       <Form

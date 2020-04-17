@@ -17,12 +17,12 @@ const Login = () => {
       <SocialMediaBtn
         socialMedia="facebook"
         purpose="sign-in"
-        endpoint="/api/signInFacebook"
+        endpoint="/api/signIn/facebook"
       />
       <SocialMediaBtn
         socialMedia="google"
         purpose="sign-in"
-        endpoint="/api/signInGoogle"
+        endpoint="/api/signIn/google"
       />
       <p className={styles.or}>lub</p>
       <Form
