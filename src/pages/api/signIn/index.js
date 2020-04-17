@@ -1,25 +1,14 @@
-/* eslint-disable consistent-return */
-// const passport = require('passport');
-
-// export default (req, res, next) => {
-//   passport.authenticate('auth0', (err, user) => {
-//     if (err) return next(err);
-//     if (!user) return res.redirect('/login');
-//     req.logIn(user, (error) => {
-//       if (error) return next(error);
-//       console.log('logged succesfully');
-//       // res.redirect('/');
-//     });
-//   })(req, res, next);
-// };
-
 import passport from 'passport';
 import nextConnect from 'next-connect';
-import localStrategy from '../../../api_modules/passport';
-import ValidationError from '../../../api_modules/validationError';
-import { encryptSession } from '../../../api_modules/iron';
-import { setTokenCookie } from '../../../api_modules/auth-cookies';
-import resJson from '../../../api_modules/resJsonStandardized';
+import localStrategy from '../../../../api_modules/passport';
+import ValidationError from '../../../../api_modules/validationError';
+import { encryptSession } from '../../../../api_modules/iron';
+import { setTokenCookie } from '../../../../api_modules/auth-cookies';
+import resJson from '../../../../api_modules/resJsonStandardized';
+
+// todo autorization
+// todo facebook login
+// todo google login
 
 const formName = 'signIn';
 
@@ -39,6 +28,7 @@ passport.use(localStrategy);
 export default nextConnect()
   .use(passport.initialize())
   .post(async (req, res) => {
+    // validation to prevent logging on root
     const errors = [];
     if (!req.body.email || req.body.email === '') {
       errors.push(new ValidationError('Musisz wpisać email', 'email'));
@@ -48,6 +38,8 @@ export default nextConnect()
       errors.push(new ValidationError('Musisz wpisać hasło', 'password'));
       res.json(resJson(formName, false, 'Logowanie nie udało się', errors));
     }
+    // end of validation
+
     try {
       const user = await authenticate('local', req, res);
       if (user instanceof ValidationError) {
