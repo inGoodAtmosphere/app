@@ -1,7 +1,13 @@
 const withOffline = require('next-offline');
+const path = require('path');
 require('dotenv').config();
 
 module.exports = withOffline({
+  generateSw: false,
+  workboxOpts: {
+    swSrc: './service-worker.js',
+    swDest: path.resolve('./.next/static/service-worker.js'),
+  },
   env: {
     CAPTCHA_SITE_KEY: process.env.CAPTCHA_SITE_KEY,
     CAPTCHA_SECRET_KEY: process.env.CAPTCHA_SECRET_KEY,
@@ -23,4 +29,14 @@ module.exports = withOffline({
 
     return config;
   },
+  // experimental: {
+  //   async rewrites() {
+  //     return [
+  //       {
+  //         source: '/service-worker.js',
+  //         destination: '/_next/static/service-worker.js',
+  //       },
+  //     ];
+  //   },
+  // },
 });

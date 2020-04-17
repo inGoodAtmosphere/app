@@ -1,6 +1,7 @@
 const express = require('express');
 const next = require('next');
 const helmet = require('helmet');
+const path = require('path');
 
 const port = process.env.PORT || 3000;
 const app = next({ dev: process.env.NODE_ENV !== 'production' });
@@ -9,7 +10,6 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   server.use(helmet());
-
   server.get('/', (req, res) => {
     return app.render(req, res, '/', req.query);
   });
@@ -32,7 +32,11 @@ app.prepare().then(() => {
   server.get('/polityka-prywatnosci', (req, res) => {
     return app.render(req, res, '/polityka-prywatnosci', req.query);
   });
-
+  server.get('/service-worker.js', (req, res) => {
+    const filePath = path.join(__dirname, '.next/static', req.path);
+    console.log(filePath);
+    app.serveStatic(req, res, path.resolve(filePath));
+  });
   server.all('*', (req, res) => {
     return handle(req, res);
   });
