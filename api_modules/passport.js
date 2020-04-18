@@ -1,9 +1,27 @@
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const ValidationError = require('./validationError');
 // const passport = require('passport');
 const dbQuery = require('./dbQuery');
+require('dotenv').config();
 
+const callbackURL =
+  process.env.NODE_ENV === 'PRODUCTION'
+    ? 'localhost:3000/api/logowanie'
+    : 'www.ingoodatmosphere.com/logowanie';
+
+export const facebook = new FacebookStrategy(
+  {
+    clientID: process.env.FB_APP_ID,
+    clientSecret: process.env.FB_APP_SECRET,
+    callbackURL,
+  },
+  (accessToken, refreshToken, profile, cb) => {
+    console.log(profile);
+    return cb(null, profile);
+  },
+);
 export default new LocalStrategy(
   { usernameField: 'email' },
   async (username, password, done) => {
@@ -37,20 +55,3 @@ export default new LocalStrategy(
     return null;
   },
 );
-// passport.serializeUser((user, done) => {
-//   done(null, user.id);
-// });
-
-// // used to deserialize the user
-// passport.deserializeUser(async (id, done) => {
-//   let error;
-//   const user = await dbQuery.findUserById(id, (err) => {
-//     if (err) {
-//       error = err;
-//     }
-//   });
-//   if (!user) {
-//     error = new Error('Błąd połączenia z serwerem');
-//   }
-//   done(error, user);
-// });
