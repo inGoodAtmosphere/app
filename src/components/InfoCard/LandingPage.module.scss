@@ -39,8 +39,10 @@
     justify-content: space-between;
     &:nth-child(even) {
       flex-direction: row-reverse;
+    }
+    &:nth-child(odd) {
       a {
-        align-self: flex-end;
+        align-self: flex-start;
       }
     }
   }

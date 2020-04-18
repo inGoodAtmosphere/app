@@ -2,7 +2,7 @@
 @import '../../styles/mixin';
 
 .button {
-  align-self: flex-start;
+  align-self: flex-end;
   padding: $spacing;
   transition: transform 0.2s;
   outline: none;

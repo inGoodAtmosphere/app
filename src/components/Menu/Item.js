@@ -11,7 +11,7 @@ const Item = ({ isActive, anchor }) => {
     <a
       href={`/${link}`}
       className={styles.item}
-      tabIndex={isActive || width > 1024 ? 0 : -1}
+      tabIndex={isActive || width >= 1024 ? 0 : -1}
     >
       {anchor}
     </a>
