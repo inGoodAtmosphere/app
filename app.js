@@ -34,7 +34,6 @@ app.prepare().then(() => {
   });
   server.get('/service-worker.js', (req, res) => {
     const filePath = path.join(__dirname, '.next/static', req.path);
-    console.log(filePath);
     app.serveStatic(req, res, path.resolve(filePath));
   });
   server.all('*', (req, res) => {

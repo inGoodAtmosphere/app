@@ -1,9 +1,11 @@
-workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
-self.addEventListener('install', () => {
-  console.log('sdf');
-});
+import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { StaleWhileRevalidate } from 'workbox-strategies';
 
-workbox.registerRoute(
+precacheAndRoute(self.__WB_MANIFEST);
+self.addEventListener('install', () => {});
+
+registerRoute(
   new RegExp('\\.png$'),
-  new workbox.strategies.StaleWhileRevalidate({ cacheName: 'asd' }),
+  new StaleWhileRevalidate({ cacheName: 'png' }),
 );
