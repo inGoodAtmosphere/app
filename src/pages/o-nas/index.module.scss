@@ -49,13 +49,7 @@
     }
   }
 }
-@media #{$media-query-m} and (min-aspect-ratio: 4/3) {
-  .slider {
-    * {
-      font-size: $base-font-size * 0.9;
-    }
-  }
-}
+
 @media screen and (max-height: 34rem) {
   .slider {
     * {

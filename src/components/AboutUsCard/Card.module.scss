@@ -16,7 +16,7 @@
 }
 
 .name {
-  font-size: $base-font-size * 1.1;
+  font-size: $base-font-size * 1.1 !important;
   margin-bottom: 0;
 }
 
@@ -26,6 +26,7 @@
 
 .description {
   font-size: $s-size;
+  margin-top: 0.5em;
 }
 
 @media screen and (max-height: 44rem) {
