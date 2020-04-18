@@ -33,11 +33,12 @@
   white-space: nowrap;
   @include button($light-bg);
 }
+
 @media screen and (min-width: 432px) {
   .wrapper {
-    grid-template-columns: 8.5rem auto;
+    grid-template-columns: 2fr 5fr;
   }
   .description {
-    min-height: 6rem;
+    min-height: 4.5rem;
   }
 }
