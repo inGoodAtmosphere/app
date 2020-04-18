@@ -1,3 +1,10 @@
+@import '../../styles/settings';
+
 .content {
   composes: content from '../../styles/common.scss';
+}
+
+.link {
+  color: $light-bg;
+  text-decoration: underline;
 }

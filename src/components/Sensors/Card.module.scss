@@ -2,8 +2,15 @@
 
 .card {
   composes: card from '../../styles/common.scss';
-  background: $light-accent;
   color: $light-bg;
+}
+
+.lightAccent {
+  background-color: $light-accent;
+}
+
+.darkAccent {
+  background-color: $dark-accent;
 }
 
 .header {
