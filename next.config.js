@@ -29,14 +29,4 @@ module.exports = withOffline({
 
     return config;
   },
-  // experimental: {
-  //   async rewrites() {
-  //     return [
-  //       {
-  //         source: '/service-worker.js',
-  //         destination: '/_next/static/service-worker.js',
-  //       },
-  //     ];
-  //   },
-  // },
 });
