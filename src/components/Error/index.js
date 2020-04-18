@@ -20,7 +20,7 @@ const Error = ({ status, text }) => {
         <br />
         {text}
       </p>
-      {status === 500 ? (
+      {status === 500 || status === 0 ? (
         <button type="button" className={styles.button} onClick={refreshPage}>
           Spróbuj ponownie
         </button>
