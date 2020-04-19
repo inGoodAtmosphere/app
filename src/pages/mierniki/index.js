@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import InfoCard from '../../components/InfoCard';
 import Image from '../../components/Sensors/Image';
@@ -11,7 +10,7 @@ const Sensors = () => {
       <h1>mierniki</h1>
       <Image />
       {content.map((card) => (
-        <InfoCard value={{ env: 'sensors', ...card }} />
+        <InfoCard value={{ env: 'sensors', ...card }} key={card.header} />
       ))}
     </main>
   );

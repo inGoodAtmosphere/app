@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Paragraph.module.scss';
 
-const Paragraph = ({ content }) => {
+const Paragraph = ({ content, className }) => {
   const listContent = content.split('stencel');
   const reg = /\$link:([(\w|\s)]+)\$([\w-/|:|.|?]+)\$*/gm;
   const linkContent = content.split(reg);
@@ -17,7 +17,7 @@ const Paragraph = ({ content }) => {
   if (linkContent.length > 1) {
     // linkContent[3] because regex group looks like this: [0]: paragraph [1]: link text [2]: link href and [3] is a optional rest of the paragraph
     return (
-      <p className={styles.paragraph}>
+      <p className={`${styles.paragraph} ${className}`}>
         {linkContent[0]}
         <a
           className={styles.link}
@@ -34,7 +34,7 @@ const Paragraph = ({ content }) => {
   if (list.length) {
     return (
       <>
-        <p className={styles.paragraph}>{listContent[0]}</p>
+        <p className={`${styles.paragraph} ${className}`}>{listContent[0]}</p>
         <ul className={styles.list}>
           {list.map((listItem) => (
             <li key={listItem.substr(1, 12)}>{listItem}</li>
@@ -43,10 +43,15 @@ const Paragraph = ({ content }) => {
       </>
     );
   }
-  return <p className={styles.paragraph}>{content}</p>;
+  return <p className={` ${styles.paragraph} ${className} `}>{content}</p>;
+};
+
+Paragraph.defaultProps = {
+  className: '',
 };
 
 Paragraph.propTypes = {
   content: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 export default Paragraph;

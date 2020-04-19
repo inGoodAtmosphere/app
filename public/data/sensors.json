@@ -8,7 +8,7 @@
     {
       "header": "Zainteresowany miernikiem?",
       "color": "darkAccent",
-      "text": "$link:/kontakt$Kliknij tutaj$ i skontaktuj się z nami"
+      "text": "$link:Kliknij tutaj$/kontakt$ i skontaktuj się z nami"
     }
   ]
 }
