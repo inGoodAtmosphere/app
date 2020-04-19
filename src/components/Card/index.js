@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 import Content from './Content';
 import withContext from '../../utils/withContext';
 
-const InfoCard = () => {
+const Card = () => {
   const { env, color, isEven } = useContext(Context);
   return (
     <div
@@ -13,9 +13,9 @@ const InfoCard = () => {
         (isEven ? styles.even : styles.odd)} ${styles[color]}`}
     >
       <Content />
-      {env === 'landing-page' && <Image />}
+      {env === 'LandingPage' && <Image />}
     </div>
   );
 };
 
-export default withContext(InfoCard);
+export default withContext(Card);

@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Paragraph from './Paragraph';
 
-const Section = ({ subHeader, content }) => {
+const Section = ({ subHeader, content, className }) => {
   return (
-    <section key={subHeader}>
+    <section>
       <h2>{subHeader}</h2>
-      <Paragraph content={content} />
+      <Paragraph content={content} className={className} />
     </section>
   );
 };
@@ -14,6 +14,7 @@ const Section = ({ subHeader, content }) => {
 Section.propTypes = {
   subHeader: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Section;

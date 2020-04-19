@@ -11,9 +11,12 @@ const Content = () => {
       className={`${styles.wrapper} ${typeof isEven === 'boolean' &&
         (isEven ? styles.even : styles.odd)}`}
     >
-      <h2 className={styles.header}>{header}</h2>
-      <Paragraph content={text} className={styles.text} />
-      {env === 'landing-page' && <Button link={link} />}
+      <h2 className={`${styles.header} ${styles[`header${env}`]}`}>{header}</h2>
+      <Paragraph
+        content={text}
+        className={`${styles.paragraph} ${styles[`paragraph${env}`]}`}
+      />
+      {env === 'LandingPage' && <Button link={link} />}
     </div>
   );
 };

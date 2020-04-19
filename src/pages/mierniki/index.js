@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../../components/InfoCard';
+import Card from '../../components/Card';
 import Image from '../../components/Sensors/Image';
 import { content } from '../../../public/data/sensors.json';
 import styles from './index.module.scss';
@@ -10,7 +10,7 @@ const Sensors = () => {
       <h1>mierniki</h1>
       <Image />
       {content.map((card) => (
-        <InfoCard value={{ env: 'sensors', ...card }} key={card.header} />
+        <Card value={{ env: 'Sensors', ...card }} key={card.header} />
       ))}
     </main>
   );

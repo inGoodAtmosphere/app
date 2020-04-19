@@ -26,12 +26,16 @@ const Article = ({ setArticleHeight }) => {
           {subHeaders
             ? // prettier-ignore
               subHeaders.map((subHeader, i) => (
-                <Section subHeader={subHeader} content={contentArray[i]} />
+                <Section className={styles.paragraph} subHeader={subHeader} content={contentArray[i]} key={subHeader} />
               ))
             : contents
                 .split('\r\n')
                 .map((content) => (
-                  <Paragraph key={content.substring(1, 12)} content={content} />
+                  <Paragraph
+                    key={content.substring(1, 12)}
+                    content={content}
+                    className={styles.paragraph}
+                  />
                 ))}
           <p className={styles.author}>{author}</p>
         </article>

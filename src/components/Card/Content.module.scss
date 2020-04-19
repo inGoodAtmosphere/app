@@ -1,0 +1,48 @@
+@import '../../styles/settings';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header {
+  font-size: $l-size;
+  margin: 0 0 $spacing * 2 0;
+  padding: 0;
+  text-transform: none;
+  &Sensors {
+    font-size: $s-size;
+  }
+
+  &Encyclopedia {
+    margin-bottom: $spacing * 2;
+  }
+}
+
+.paragraph {
+  margin: 0;
+  &LandingPage {
+    margin: 0 0 $spacing * 2 0;
+  }
+}
+
+.link {
+  text-decoration: underline;
+}
+
+@media #{$media-query-m} {
+  .even {
+    margin-right: $spacing * 2.5;
+  }
+
+  .odd {
+    margin-left: $spacing * 2.5;
+  }
+  .headerLandingPage {
+    margin: 0;
+  }
+  .paragraphLandingPage {
+    margin: 0;
+  }
+}

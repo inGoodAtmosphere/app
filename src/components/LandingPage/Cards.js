@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../InfoCard';
+import Card from '../Card';
 import ProjectSvg from './svg/Project';
 import MapSvg from './svg/Map';
 import EncyclopediaSvg from './svg/Encyclopedia';
@@ -10,10 +10,10 @@ import { content } from '../../../public/data/landing-page.json';
 const Cards = () => {
   const SVGs = [ProjectSvg, MapSvg, EncyclopediaSvg, SensorSvg, ContactSvg];
   return content.map((card, i) => (
-    <InfoCard
+    <Card
       key={card.header}
       value={{
-        env: 'landing-page',
+        env: 'LandingPage',
         isEven: (i + 1) % 2 === 0,
         Svg: SVGs[i],
         ...card,

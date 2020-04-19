@@ -17,7 +17,7 @@ const Paragraph = ({ content, className }) => {
   if (linkContent.length > 1) {
     // linkContent[3] because regex group looks like this: [0]: paragraph [1]: link text [2]: link href and [3] is a optional rest of the paragraph
     return (
-      <p className={`${styles.paragraph} ${className}`}>
+      <p className={className}>
         {linkContent[0]}
         <a
           className={styles.link}
@@ -34,7 +34,7 @@ const Paragraph = ({ content, className }) => {
   if (list.length) {
     return (
       <>
-        <p className={`${styles.paragraph} ${className}`}>{listContent[0]}</p>
+        <p className={className}>{listContent[0]}</p>
         <ul className={styles.list}>
           {list.map((listItem) => (
             <li key={listItem.substr(1, 12)}>{listItem}</li>
@@ -43,7 +43,7 @@ const Paragraph = ({ content, className }) => {
       </>
     );
   }
-  return <p className={` ${styles.paragraph} ${className} `}>{content}</p>;
+  return <p className={className}>{content}</p>;
 };
 
 Paragraph.defaultProps = {

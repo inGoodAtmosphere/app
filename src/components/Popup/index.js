@@ -11,7 +11,7 @@ const Popup = ({ articleHeight }) => {
   const [isOpen, setIsOpen] = useState(true);
   const scroll = useScroll();
   const { height } = useWindowDimensions();
-  const isScrolled = scroll > articleHeight - height / 2;
+  const isScrolled = scroll > articleHeight - height / 1.9;
   const { data, isLoaded, error } = useFetch('/api/interestingFact');
   return (
     <div
@@ -28,7 +28,7 @@ const Popup = ({ articleHeight }) => {
       >
         <FontAwesomeIcon icon={faTimes} />
       </button>
-      <p className={styles.header}>Czy wiesz, że...</p>
+      <h2 className={styles.header}>Czy wiesz, że...</h2>
       {!isLoaded && <p>{data.content}</p>}
     </div>
   );
