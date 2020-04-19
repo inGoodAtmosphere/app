@@ -8,7 +8,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   grid-gap: $spacing;
   height: 100%;
   width: 100%;
@@ -20,7 +20,7 @@
     margin-bottom: 0;
   }
   @media screen and (max-width: 369px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 
