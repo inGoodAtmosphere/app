@@ -6,9 +6,9 @@ import styles from './Image.module.scss';
 const Image = () => {
   const { link, Svg } = useContext(Context);
   const { width } = useWindowWidth();
-  if (width >= 1024 && link.href === 'kontakt') return <Svg />;
+  if (width >= 768 && link.href === 'kontakt') return <Svg />;
   return (
-    width >= 1024 && (
+    width >= 768 && (
       <a
         href={link && link.href}
         className={styles.link}

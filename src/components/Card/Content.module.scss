@@ -31,7 +31,7 @@
   text-decoration: underline;
 }
 
-@media #{$media-query-m} {
+@media #{$media-query-s} {
   .even {
     margin-right: $spacing * 2.5;
   }

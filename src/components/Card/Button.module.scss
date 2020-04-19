@@ -22,7 +22,7 @@
   width: fit-content;
   align-self: flex-end;
   opacity: 0.7;
-  @media #{$media-query-m} {
+  @media #{$media-query-s} {
     align-self: flex-start;
   }
 }
@@ -43,7 +43,7 @@
   @include button($light-bg);
 }
 
-@media #{$media-query-m} {
+@media #{$media-query-s} {
   .even {
     align-self: flex-start;
   }
