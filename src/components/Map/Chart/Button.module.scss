@@ -9,11 +9,16 @@
   background: none;
   font-size: $xs-size;
   color: $dark-accent;
+  transition: background-color 0.25s ease-in-out;
   &:first-child {
     margin-left: 0;
   }
   &Active {
     background-color: $dark-accent;
+    color: $light-bg;
+  }
+  &:hover {
+    background-color: lighten($dark-accent, 10%);
     color: $light-bg;
   }
 }

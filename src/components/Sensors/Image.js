@@ -5,7 +5,7 @@ import styles from './Image.module.scss';
 const Image = ({ className }) => {
   const imgPath = '/img/sensors/sensor-';
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${className}`}>
       <img
         srcSet={`${imgPath}420.png 420w, ${imgPath}640.png 640w, ${imgPath}1280.png 1280w, ${imgPath}1920.png 1920w`}
         sizes="50vw"

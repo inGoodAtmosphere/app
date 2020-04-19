@@ -5,7 +5,7 @@ import styles from './AboutDevice.module.scss';
 const AboutDevice = () => {
   return (
     <a href="/mierniki">
-      <Image className={styles.AboutDevice} />
+      <Image className={styles.aboutDevice} />
     </a>
   );
 };

@@ -3,20 +3,9 @@
 .map {
   height: calc(50vh - #{$header-height});
   width: 100%;
-}
-
-@media #{$media-query-m} {
-  .content {
-    display: grid;
+  @media #{$media-query-m} {
     width: 100%;
-    grid-template-columns: calc(40% - #{$spacing}) 60%;
-    max-width: none;
-    padding-bottom: $spacing;
-    padding-right: 0;
-  }
-  .map {
-    width: 100%;
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - #{$header-height} - #{$spacing});
     grid-column: 1;
   }
 }
