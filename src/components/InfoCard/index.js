@@ -6,9 +6,12 @@ import Content from './Content';
 import withContext from '../../utils/withContext';
 
 const InfoCard = () => {
-  const { env, color } = useContext(Context);
+  const { env, color, isEven } = useContext(Context);
   return (
-    <div className={`${styles.card} ${styles[color]}`}>
+    <div
+      className={`${styles.card} ${typeof isEven === 'boolean' &&
+        (isEven ? styles.even : styles.odd)} ${styles[color]}`}
+    >
       <Content />
       {env === 'landing-page' && <Image />}
     </div>

@@ -14,7 +14,7 @@ const Cards = () => {
       key={card.header}
       value={{
         env: 'landing-page',
-        no: i,
+        isEven: (i + 1) % 2 === 0,
         Svg: SVGs[i],
         ...card,
       }}

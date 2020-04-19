@@ -42,3 +42,9 @@
 .o-nas {
   @include button($light-bg);
 }
+
+@media #{$media-query-m} {
+  .even {
+    align-self: flex-start;
+  }
+}

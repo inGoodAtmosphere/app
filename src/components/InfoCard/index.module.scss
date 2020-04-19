@@ -37,13 +37,8 @@
   .card {
     flex-direction: row;
     justify-content: space-between;
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    &:nth-child(odd) {
-      a {
-        align-self: flex-start;
-      }
-    }
+  }
+  .odd {
+    flex-direction: row-reverse;
   }
 }
