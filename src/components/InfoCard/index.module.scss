@@ -3,29 +3,30 @@
 
 .card {
   width: 100%;
+  padding: $spacing * 2.5;
   * {
     color: $light-bg;
   }
   composes: card from '../../styles/common.scss';
 }
 
-.sensors {
+.darkAccent {
   background: $dark-accent;
 }
 
-.encyclopedia {
+.lightAccent {
   background: $light-accent;
 }
 
-.map {
+.primaryAccent {
   background: $primary-accent;
 }
 
-.contact {
+.brightAccent {
   background-color: $bright-accent;
 }
 
-.project {
+.lightBg {
   background-color: $light-bg;
   * {
     color: $text;
@@ -34,7 +35,6 @@
 
 @media #{$media-query-m} {
   .card {
-    align-items: center;
     flex-direction: row;
     justify-content: space-between;
     &:nth-child(even) {

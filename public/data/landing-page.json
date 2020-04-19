@@ -2,7 +2,7 @@
   "content": [
     {
       "header": "Nasz projekt",
-      "purpose": "project",
+      "color": "lightBg",
       "description": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska",
       "link": {
         "href": "o-nas",
@@ -11,7 +11,7 @@
     },
     {
       "header": "Mapa z naszymi miernikami!",
-      "purpose": "map",
+      "color": "primaryAccent",
       "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
       "link": {
         "href": "mapa",
@@ -20,7 +20,7 @@
     },
     {
       "header": "Encyklopedia",
-      "purpose": "encyclopedia",
+      "color": "lightAccent",
       "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne",
       "link": {
         "href": "encyklopedia",
@@ -29,7 +29,7 @@
     },
     {
       "header": "Nasze mierniki",
-      "purpose": "sensors",
+      "color": "darkAccent",
       "description": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapie",
       "link": {
         "href": "mierniki",
@@ -38,7 +38,7 @@
     },
     {
       "header": "Kontakt",
-      "purpose": "contact",
+      "color": "brightAccent",
       "description": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?",
       "link": {
         "href": "kontakt",

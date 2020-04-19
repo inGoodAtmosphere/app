@@ -9,7 +9,7 @@ const Encyclopedia = () => {
       <h1>Encyklopedia</h1>
       {definitions.map((definition) => (
         <InfoCard
-          key={definition.purpose}
+          key={definition.header}
           value={{ env: 'encyclopedia', ...definition }}
         />
       ))}

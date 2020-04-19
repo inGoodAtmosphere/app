@@ -1,17 +1,17 @@
 {
   "definitions": [
     {
-      "purpose": "caqi",
+      "color": "primaryAccent",
       "header": "CAQI",
       "content": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych."
     },
     {
-      "purpose": "pm2.5",
+      "color": "lightBg",
       "header": "PM2.5",
       "content": "PM 2.5 to aerozole atmosferyczne, których średnica nie jest większa niż 2.5 mikrometra. Tego rodzaju pył jest uznawany za najgroźniejszy dla zdrowia człowieka. Wszystko dlatego, że pył jest bardzo drobny, a w takiej postaci może się przedostać bezpośrednio do krwiobiegu. "
     },
     {
-      "purpose": "pm10",
+      "color": "lightAccent",
       "header": "PM10",
       "content": "PM10 to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – czyli  rakotwórcze metale ciężkie. PM10 to pył zawieszony, który przede wszystkim wpływa negatywnie na układ oddechowy, który jest odpowiedzialny za ataki kaszlu, świszczący oddech oraz pogorszenie się stanu zdrowia  osób z astmą."
     }

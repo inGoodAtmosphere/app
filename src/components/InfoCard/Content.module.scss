@@ -3,15 +3,24 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.even {
+  margin-right: $spacing * 2.5;
+}
+
+.odd {
+  margin-left: $spacing * 2.5;
 }
 
 .header {
-  margin: $spacing / 2 0;
+  font-size: $l-size;
+  margin: 0 0 $spacing / 2 0;
   padding: 0;
   text-transform: none;
 }
 
-.description {
+.text {
   margin: 0;
-  padding: $spacing * 2 0;
 }

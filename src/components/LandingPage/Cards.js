@@ -11,10 +11,11 @@ const Cards = () => {
   const SVGs = [ProjectSvg, MapSvg, EncyclopediaSvg, SensorSvg, ContactSvg];
   return content.map((card, i) => (
     <InfoCard
-      key={card.purpose}
+      key={card.header}
       value={{
         env: 'landing-page',
-        purpose: card.purpose,
+        no: i,
+        color: card.color,
         header: card.header,
         content: card.description,
         Svg: SVGs[i],
