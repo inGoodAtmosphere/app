@@ -3,7 +3,7 @@
     {
       "header": "Nasz projekt",
       "color": "lightBg",
-      "description": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska",
+      "text": "Jesteśmy grupą uczniów szkół średnich biorących udział w olimpiadzie “Zwolnieni z Teorii”. Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska",
       "link": {
         "href": "o-nas",
         "text": "Poznaj nasz zespół"
@@ -12,7 +12,7 @@
     {
       "header": "Mapa z naszymi miernikami!",
       "color": "primaryAccent",
-      "description": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
+      "text": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
       "link": {
         "href": "mapa",
         "text": "Zobacz aktualny stan powietrza"
@@ -21,7 +21,7 @@
     {
       "header": "Encyklopedia",
       "color": "lightAccent",
-      "description": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne",
+      "text": "W encyklopedii możesz znaleźć krótkie wyjaśnienia pojęć takich jak CAQI, PM2.5, PM10 i inne",
       "link": {
         "href": "encyklopedia",
         "text": "Zajrzyj w tę zakładkę!"
@@ -30,7 +30,7 @@
     {
       "header": "Nasze mierniki",
       "color": "darkAccent",
-      "description": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapie",
+      "text": "Mierniki są konstruowane przez nasz zespół wkrótce będziecie je mogli zobaczyć na naszej mapie",
       "link": {
         "href": "mierniki",
         "text": "Dowiedz się więcej"
@@ -39,7 +39,7 @@
     {
       "header": "Kontakt",
       "color": "brightAccent",
-      "description": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?",
+      "text": "Masz pomysł jak usprawnić działanie naszej strony? Jesteś zainteresowany naszym czujnikiem?",
       "link": {
         "href": "kontakt",
         "text": "Napisz do nas"

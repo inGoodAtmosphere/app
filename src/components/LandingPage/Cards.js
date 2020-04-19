@@ -15,11 +15,8 @@ const Cards = () => {
       value={{
         env: 'landing-page',
         no: i,
-        color: card.color,
-        header: card.header,
-        content: card.description,
         Svg: SVGs[i],
-        link: { ...card.link },
+        ...card,
       }}
     />
   ));
