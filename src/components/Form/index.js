@@ -5,6 +5,7 @@ import withContext from '../../utils/withContext';
 import Context from '../../utils/Context';
 import Bots from './Bots';
 import styles from './index.module.scss';
+import Submit from './Submit';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
@@ -16,8 +17,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
     process.env.NODE_ENV === 'production'
       ? process.env.CAPTCHA_SITE_KEY_PRODUCTION
       : process.env.CAPTCHA_SITE_KEY;
-  // rejestracja powiodla sie
-  // logowanie przebieglo pomyslnie
+
   useEffect(() => {
     // Add reCaptcha
     const script = document.createElement('script');
@@ -42,6 +42,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       }
     });
   };
+
   const performAction = async () => {
     if (score > 0.3) {
       setMessage('Proszę czekać');
@@ -86,13 +87,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
       noValidate
     >
       {children}
-      <button
-        type="submit"
-        className={isSuccessful ? styles.buttonSuccess : styles.button}
-        disabled={isSuccessful}
-      >
-        {message || submitText}
-      </button>
+      <Submit isSuccessful={isSuccessful}>{message || submitText}</Submit>
       {score < 0.3 && <Bots />}
     </form>
   );
