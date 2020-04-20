@@ -34,7 +34,7 @@ const SubPage = ({ data }) => {
           type="search"
           value={textFilter}
           placeholder="Wyszukaj artykuł lub słowa kluczowe"
-          onChange={setTextFilter}
+          setState={setTextFilter}
         />
         <main className={styles.content}>
           {filteredData.map((element) => (

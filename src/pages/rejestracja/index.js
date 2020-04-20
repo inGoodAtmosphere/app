@@ -54,7 +54,7 @@ const SignUp = () => {
           name="email"
           id="email"
           label="Email"
-          onChange={setEmail}
+          setState={setEmail}
           value={email}
         />
 
@@ -62,7 +62,7 @@ const SignUp = () => {
           name="login"
           id="login"
           label="Login"
-          onChange={setLogin}
+          setState={setLogin}
           value={login}
         />
         <Input
@@ -70,7 +70,7 @@ const SignUp = () => {
           id="password"
           type="password"
           label="Hasło"
-          onChange={setPassword}
+          setState={setPassword}
           value={password}
         />
         <Input
@@ -78,21 +78,21 @@ const SignUp = () => {
           id="confirmPassword"
           type="password"
           label="Powtórz Hasło"
-          onChange={setConfirmPassword}
+          setState={setConfirmPassword}
           value={confirmPassword}
         />
         <Input
           name="firstName"
           id="firstName"
           label="Imię (opcjonalnie)"
-          onChange={setFirstName}
+          setState={setFirstName}
           value={firstName}
         />
         <Input
           name="lastName"
           id="lastName"
           label="Nazwisko (opcjonalnie)"
-          onChange={setLastName}
+          setState={setLastName}
           value={lastName}
         />
         <Checkbox

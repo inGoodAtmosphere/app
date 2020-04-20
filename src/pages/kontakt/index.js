@@ -30,28 +30,28 @@ const Contact = () => {
           id="name"
           label="Imię i Nazwisko"
           value={name}
-          onChange={setName}
+          setState={setName}
         />
         <Input
           name="email"
           id="email"
           label="Adres e-mail"
           value={email}
-          onChange={setEmail}
+          setState={setEmail}
         />
         <Input
           name="subject"
           id="subject"
           label="Temat (opcjonalnie)"
           value={subject}
-          onChange={setSubject}
+          setState={setSubject}
         />
         <TextArea
           name="content"
           id="content"
           label="Treść"
           value={content}
-          onChange={setContent}
+          setState={setContent}
           type="textarea"
         />
       </Form>

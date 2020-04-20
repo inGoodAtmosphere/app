@@ -9,7 +9,7 @@ const Input = ({
   type,
   placeholder,
   value,
-  onChange,
+  setState,
   isError,
   className,
 }) => {
@@ -22,7 +22,8 @@ const Input = ({
       className={`${className} ${styles.input} ${isError && styles.inputError}`}
       value={value}
       required
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => setState(e.target.value)}
+      onBlur={() => setState(value.trim())}
     />
   );
 };
@@ -37,7 +38,7 @@ Input.propTypes = {
   id: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired,
-  onChange: PropTypes.func.isRequired,
+  setState: PropTypes.func.isRequired,
   isError: PropTypes.bool.isRequired,
 };
 export default withLabel(Input);

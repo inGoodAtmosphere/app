@@ -35,7 +35,7 @@ const Login = () => {
           name="email"
           id="email"
           label="Email lub login"
-          onChange={setEmail}
+          setState={setEmail}
           value={email}
         />
         <Input
@@ -43,7 +43,7 @@ const Login = () => {
           id="password"
           type="password"
           label="Hasło"
-          onChange={setPassword}
+          setState={setPassword}
           value={password}
         />
         <Checkbox

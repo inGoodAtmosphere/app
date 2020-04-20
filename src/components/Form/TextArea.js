@@ -8,7 +8,7 @@ const TextArea = ({
   id,
   placeholder,
   value,
-  onChange,
+  setState,
   isError,
   className,
 }) => {
@@ -20,7 +20,7 @@ const TextArea = ({
       className={`${styles.input} ${className} ${isError && styles.inputError}`}
       value={value}
       required
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => setState(e.target.value)}
     />
   );
 };
@@ -34,7 +34,7 @@ TextArea.propTypes = {
   id: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  setState: PropTypes.func.isRequired,
   isError: PropTypes.bool.isRequired,
 };
 

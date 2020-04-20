@@ -9,7 +9,7 @@ export default (WrappedComponent) => ({
   type,
   placeholder,
   value,
-  onChange,
+  setState,
   className,
 }) => {
   const context = useContext(Context);
@@ -27,7 +27,7 @@ export default (WrappedComponent) => ({
           type={type}
           placeholder={placeholder}
           value={value}
-          onChange={onChange}
+          setState={setState}
           isError={isError}
           className={`${className} ${
             type === 'textarea' ? styles.textArea : styles.input
