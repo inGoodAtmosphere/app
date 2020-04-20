@@ -7,14 +7,22 @@ const dbQuery = require('./dbQuery');
 require('dotenv').config();
 
 const callbackURL =
-  process.env.NODE_ENV === 'PRODUCTION'
-    ? 'localhost:3000/api/logowanie'
-    : 'www.ingoodatmosphere.com/logowanie';
+  process.env.NODE_ENV === 'production'
+    ? 'http://www.ingoodatmosphere.com/logowanie'
+    : 'http://localhost:3000/api/signIn/facebook';
+const clientID =
+  process.env.NODE_ENV === 'production'
+    ? process.env.FB_APP_ID
+    : '632567057597727';
+const clientSecret =
+  process.env.NODE_ENV === 'production'
+    ? process.env.FB_APP_SECRET
+    : '80c7d46012dcdfaba3f31354dcd94154';
 
 export const facebook = new FacebookStrategy(
   {
-    clientID: process.env.FB_APP_ID,
-    clientSecret: process.env.FB_APP_SECRET,
+    clientID,
+    clientSecret,
     callbackURL,
   },
   (accessToken, refreshToken, profile, cb) => {
