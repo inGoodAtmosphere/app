@@ -5,21 +5,20 @@ import styles from './Weather.module.scss';
 
 const Weather = () => {
   const {
-    activeSensor: { current },
+    activeSensor: { iaqi },
   } = useContext(mapContext);
-  const { temperature, humidity } = current;
   return (
     <div className={styles.weather}>
       <div className={styles.data}>
         <span>Temperatura</span>
         <span>
-          {temperature}
+          {iaqi.t.v}
           &#8451;
         </span>
       </div>
       <div className={styles.data}>
         <span>Wilgotność</span>
-        <span>{humidity}%</span>
+        <span>{iaqi.h.v}%</span>
       </div>
     </div>
   );

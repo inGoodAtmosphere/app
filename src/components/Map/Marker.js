@@ -1,55 +1,44 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import mapContext from '../../utils/map-context';
-import useColor from '../../hooks/useColor';
+import useColor from './setColor';
 import styles from './Marker.module.scss';
 
-const Marker = ({ data: { data, error } }) => {
+const Marker = ({ lat, lng, aqi }) => {
   const { dispatch } = useContext(mapContext);
-  const color = error ? '#999999' : useColor(data);
+  const { backgroundColor } = useColor(aqi);
   const handleClick = async () => {
-    if (!error) {
-      const sensorMeasurementRes = await fetch(
-        `/api/measurements/${data.deviceId}`,
-      );
-      const sensorMeasurementJson = await sensorMeasurementRes.json();
-
-      dispatch({
-        type: 'SET_ACTIVE_SENSOR',
-        current: data,
-        avg: sensorMeasurementJson,
-      });
-      localStorage.setItem('activeSensor', JSON.stringify(data.deviceId));
-    }
+    const coordinates = { lat, lng };
+    const res = await fetch(
+      `https://api.waqi.info/feed/geo:${coordinates.lat};${coordinates.lng}/?token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb`,
+    );
+    const json = await res.json();
+    dispatch({
+      type: 'SET_ACTIVE_SENSOR',
+      activeSensor: json,
+    });
+    localStorage.setItem('activeSensor', JSON.stringify(coordinates));
   };
+
   return (
     <button
       type="button"
+      disabled={backgroundColor === '#999999'}
       aria-label="Znacznik czujnika"
       onClick={handleClick}
       className={styles.marker}
       tabIndex={-1}
       style={{
-        backgroundColor: color,
-        boxShadow: ` 0px 0px ${color !== '#999999' && '1rem 1rem'} ${color}`,
+        backgroundColor,
+        boxShadow: ` 0px 0px ${backgroundColor !== '#999999' &&
+          '1rem 1rem'} ${backgroundColor}`,
       }}
     />
   );
 };
 Marker.propTypes = {
-  data: PropTypes.shape({
-    data: PropTypes.shape({
-      id: PropTypes.number,
-      deviceId: PropTypes.number,
-      humidity: PropTypes.number,
-      temperature: PropTypes.number,
-      pm1: PropTypes.number,
-      'pm2.5': PropTypes.number,
-      pm10: PropTypes.number,
-      measurementDate: PropTypes.string,
-      measurementTime: PropTypes.string,
-    }),
-    error: PropTypes.string,
-  }).isRequired,
+  lat: PropTypes.number.isRequired,
+  lng: PropTypes.number.isRequired,
+  aqi: PropTypes.string.isRequired,
 };
 export default Marker;

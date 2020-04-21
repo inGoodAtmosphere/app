@@ -1,5 +1,4 @@
 import React, { useReducer, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
@@ -8,31 +7,30 @@ import MapContext from '../../utils/map-context';
 import mapReducer from '../../utils/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import mapPropTypes from '../../utils/map-prop-types';
 import styles from './index.module.scss';
 
-const MapPage = ({ measurements, markers }) => {
-  const [sensorMeasurement, setSensorMeasurement] = useState([]);
+const MapPage = ({ measurements }) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const deviceId =
-          parseInt(localStorage.getItem('activeSensor'), 10) ||
-          measurements[0].deviceId;
+        const deviceCoordinates = JSON.parse(
+          localStorage.getItem('activeSensor'),
+        ) || {
+          lat: measurements[0].lat,
+          lng: measurements[0].lon,
+        };
         const sensorMeasurementRes = await fetch(
-          `/api/measurements/${deviceId}`,
+          `https://api.waqi.info/feed/geo:${deviceCoordinates.lat};${deviceCoordinates.lng}/?token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb`,
         );
         const sensorMeasurementJson = await sensorMeasurementRes.json();
         dispatch({
           type: 'SET_ACTIVE_SENSOR',
-          current: measurements.find(
-            (measurement) => measurement.deviceId === deviceId,
-          ),
-          avg: sensorMeasurementJson,
+          activeSensor: sensorMeasurementJson,
         });
-        setSensorMeasurement(sensorMeasurementJson);
         setIsLoaded(false);
       } catch (err) {
         setError(err);
@@ -45,43 +43,33 @@ const MapPage = ({ measurements, markers }) => {
   if (router.isFallback) return <Loading />;
   if (isLoaded) return <Loading />;
   if (error) {
-    return <Error message={error.message} />;
+    return <Error status={500} text="Coś poszło nie tak" />;
   }
   return (
-    <MapContext.Provider
-      value={{
-        activeSensor,
-        dispatch,
-        measurements,
-        markers,
-        sensorMeasurement,
-      }}
-    >
-      <main className={styles.content}>
-        <Map />
+    <main className={styles.content}>
+      <MapContext.Provider
+        value={{
+          activeSensor,
+          dispatch,
+        }}
+      >
+        <Map measurements={measurements} />
         <Data />
-      </main>
-    </MapContext.Provider>
+      </MapContext.Provider>
+    </main>
   );
 };
 
 export async function getServerSideProps() {
-  const res = await Promise.all([
-    fetch('https://obx88.usermd.net/api/measurements'),
-    fetch('https://obx88.usermd.net/api/locations'),
-  ]);
-  const measurements = await res[0].json();
-  const markers = await res[1].json();
-  return { props: { measurements, markers } };
+  const res = await fetch(
+    'https://api.waqi.info/map/bounds/?latlng=54.826651,14.473435,48.937351,24.053449&token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb',
+  );
+
+  const json = await res.json();
+  const measurements = json.data;
+  return { props: { measurements } };
 }
 
-MapPage.propTypes = {
-  measurements: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    ),
-  ).isRequired,
-  markers: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-};
+MapPage.propTypes = mapPropTypes;
 
 export default MapPage;

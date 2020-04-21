@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 
 const Error = ({ status, text }) => {
   useEffect(() => {
-    logEvent('Error', status.toString());
+    logEvent('Error', status && status.toString());
   }, []);
   const refreshPage = () => {
     window.location.reload(false);

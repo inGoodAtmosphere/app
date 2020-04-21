@@ -14,7 +14,6 @@ import moment from 'moment';
 import 'moment/locale/pl';
 import MapContext from '../../../utils/map-context';
 import Button from './Button';
-import countCaqi from '../countCaqi';
 import styles from './index.module.scss';
 import useWindowDimensions from '../../../utils/hooks/useWindowDimensions';
 
@@ -31,7 +30,7 @@ const Chart = () => {
       'PM2.5': day['pm2.5'],
       PM10: day.pm10,
       PM1: day.pm1,
-      CAQI: countCaqi(day['pm2.5'], day.pm10),
+      CAQI: day.caqi,
       Temperatura: day.temperature,
       Wilgotność: day.humidity,
     };
