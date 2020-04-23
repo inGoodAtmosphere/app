@@ -33,6 +33,10 @@
   }
 }
 
+.text {
+  background-color: $text;
+}
+
 @media #{$media-query-s} {
   .card {
     flex-direction: row;
