@@ -1,0 +1,11 @@
+@import '../../styles/settings';
+
+.svg {
+  height: calc(100% - #{$spacing});
+  opacity: 0.3;
+  max-width: calc(100% - #{$spacing});
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -5,8 +5,9 @@
   background-color: $light-accent;
   padding: $spacing;
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   flex: 1;
   color: $light-bg;
@@ -26,4 +27,10 @@
 }
 .percent {
   color: $dark-bg;
+}
+.noData {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import NoData from './NoData';
 import mapContext from '../../utils/map-context';
 import styles from './Pm.module.scss';
 
@@ -29,7 +30,12 @@ const Caqi = ({ purpose }) => {
           </h2>
         </>
       ) : (
-        <h2>Brak danych</h2>
+        <>
+          <NoData />
+          <h2 className={`${styles.noData} ${styles.measurement}`}>
+            Brak danych
+          </h2>
+        </>
       )}
     </a>
   );
