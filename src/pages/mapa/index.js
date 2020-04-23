@@ -1,4 +1,5 @@
 import React, { useReducer, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
@@ -7,24 +8,28 @@ import MapContext from '../../utils/map-context';
 import mapReducer from '../../utils/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
-import mapPropTypes from '../../utils/map-prop-types';
 import styles from './index.module.scss';
 
-const MapPage = ({ measurements }) => {
+const MapPage = ({ measurements: { data, status } }) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
   useEffect(() => {
+    if (status === 'error') {
+      setError(data);
+      setIsLoaded(false);
+      return;
+    }
     const fetchData = async () => {
       try {
         const deviceCoordinates = JSON.parse(
           localStorage.getItem('activeSensor'),
         ) || {
-          lat: measurements[0].lat,
-          lng: measurements[0].lon,
+          lat: data[0].lat,
+          lng: data[0].lon,
         };
         const sensorMeasurementRes = await fetch(
-          `https://api.waqi.info/feed/geo:${deviceCoordinates.lat};${deviceCoordinates.lng}/?token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb`,
+          `https://api.waqi.info/feed/geo:${deviceCoordinates.lat};${deviceCoordinates.lng}/?token=${process.env.WAQI_TOKEN}`,
         );
         const sensorMeasurementJson = await sensorMeasurementRes.json();
         dispatch({
@@ -43,7 +48,7 @@ const MapPage = ({ measurements }) => {
   if (router.isFallback) return <Loading />;
   if (isLoaded) return <Loading />;
   if (error) {
-    return <Error status={500} text="Coś poszło nie tak" />;
+    return <Error status={500} text="Coś poszło nie tak" label={error} />;
   }
   return (
     <main className={styles.content}>
@@ -53,7 +58,7 @@ const MapPage = ({ measurements }) => {
           dispatch,
         }}
       >
-        <Map measurements={measurements} />
+        <Map measurements={data} />
         <Data />
       </MapContext.Provider>
     </main>
@@ -62,14 +67,29 @@ const MapPage = ({ measurements }) => {
 
 export async function getServerSideProps() {
   const res = await fetch(
-    'https://api.waqi.info/map/bounds/?latlng=54.826651,14.473435,48.937351,24.053449&token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb',
+    `https://api.waqi.info/map/bounds/?latlng=54.826651,14.473435,48.937351,24.053449&token=${process.env.WAQI_TOKEN}`,
   );
 
   const json = await res.json();
-  const measurements = json.data;
+  const measurements = json;
   return { props: { measurements } };
 }
 
-MapPage.propTypes = mapPropTypes;
+MapPage.propTypes = {
+  measurements: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.arrayOf(
+        PropTypes.objectOf(
+          PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
+            PropTypes.objectOf(PropTypes.string),
+          ]),
+        ),
+      ),
+      PropTypes.string,
+    ]),
+  ).isRequired,
+};
 
 export default MapPage;

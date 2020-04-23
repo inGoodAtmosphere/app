@@ -1,17 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import GoogleMap from 'google-map-react';
 import Marker from './Marker';
 import MapContext from '../../utils/map-context';
-import mapPropTypes from '../../utils/map-prop-types';
 import styles from './index.module.scss';
 
 const Map = ({ measurements }) => {
-  const { activeSensor } = useContext(MapContext);
+  const {
+    activeSensor: { data },
+  } = useContext(MapContext);
   const [defaultCenter, setDefaultCenter] = useState({});
   useEffect(() => {
     setDefaultCenter({
-      lat: activeSensor.city.geo[0],
-      lng: activeSensor.city.geo[1],
+      lat: data.city.geo[0],
+      lng: data.city.geo[1],
     });
   }, []);
   return (
@@ -29,6 +31,16 @@ const Map = ({ measurements }) => {
   );
 };
 
-Map.propTypes = mapPropTypes;
+Map.propTypes = {
+  measurements: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.objectOf(PropTypes.string),
+      ]),
+    ),
+  ).isRequired,
+};
 
 export default Map;

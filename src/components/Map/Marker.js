@@ -10,7 +10,7 @@ const Marker = ({ lat, lng, aqi }) => {
   const handleClick = async () => {
     const coordinates = { lat, lng };
     const res = await fetch(
-      `https://api.waqi.info/feed/geo:${coordinates.lat};${coordinates.lng}/?token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb`,
+      `https://api.waqi.info/feed/geo:${coordinates.lat};${coordinates.lng}/?token=${process.env.WAQI_TOKEN}`,
     );
     const json = await res.json();
     dispatch({

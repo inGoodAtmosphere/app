@@ -5,7 +5,9 @@ import useColor from './setColor';
 
 const Caqi = () => {
   const {
-    activeSensor: { aqi },
+    activeSensor: {
+      data: { aqi },
+    },
   } = useContext(MapContext);
   const { backgroundColor, status } = useColor(aqi);
   return (

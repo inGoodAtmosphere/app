@@ -6,7 +6,9 @@ import styles from './Pm.module.scss';
 
 const Caqi = ({ purpose }) => {
   const {
-    activeSensor: { iaqi },
+    activeSensor: {
+      data: { iaqi },
+    },
   } = useContext(mapContext);
   return (
     <a className={styles.pm} href={`/encyklopedia#${purpose}`}>

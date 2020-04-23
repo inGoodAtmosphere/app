@@ -6,7 +6,9 @@ import styles from './Measurements.module.scss';
 
 const Measurements = () => {
   const {
-    activeSensor: { city },
+    activeSensor: {
+      data: { city },
+    },
   } = useContext(MapContext);
   const convertTitle = (name) => {
     const index = name.lastIndexOf(',');

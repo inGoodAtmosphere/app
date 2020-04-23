@@ -5,7 +5,9 @@ import styles from './Weather.module.scss';
 
 const Weather = () => {
   const {
-    activeSensor: { iaqi },
+    activeSensor: {
+      data: { iaqi },
+    },
   } = useContext(mapContext);
   return (
     <div className={styles.weather}>

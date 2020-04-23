@@ -16,6 +16,7 @@ module.exports = withOffline({
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
     GEOCODING_API_KEY: process.env.GEOCODING_API_KEY,
     MAP_API_KEY: process.env.MAP_API_KEY,
+    WAQI_TOKEN: process.env.WAQI_TOKEN,
   },
   poweredByHeader: false,
   webpack(config) {
