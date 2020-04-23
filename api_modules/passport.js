@@ -2,7 +2,6 @@ import findUser from './findUser';
 
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local').Strategy;
-// eslint-disable-next-line import/no-unresolved
 const FacebookStrategy = require('passport-facebook').Strategy;
 const ValidationError = require('./classes/validationError');
 // const passport = require('passport');
