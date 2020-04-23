@@ -67,7 +67,7 @@ const MapPage = ({ measurements: { data, status } }) => {
 
 export async function getServerSideProps() {
   const res = await fetch(
-    `https://api.waqi.info/map/bounds/?latlng=54.826651,14.473435,48.937351,24.053449&token=${process.env.WAQI_TOKEN}`,
+    `https://api.waqi.info/map/bounds/?latlng=90.000000,180.000000,-90.000000,-180.000000&token=b2b8543368a11919d02ea5c8fc303c4e8dae84cb`,
   );
 
   const json = await res.json();
