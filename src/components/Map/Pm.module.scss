@@ -2,6 +2,7 @@
 
 .pm {
   border-radius: $spacing;
+  min-height: $header-height;
   background-color: $light-accent;
   padding: $spacing;
   display: flex;

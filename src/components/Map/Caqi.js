@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import MapContext from '../../utils/map-context';
 import styles from './Caqi.module.scss';
-import useColor from './setColor';
+import setColor from './setColor';
 
 const Caqi = () => {
   const {
@@ -9,7 +9,7 @@ const Caqi = () => {
       data: { aqi },
     },
   } = useContext(MapContext);
-  const { backgroundColor, status } = useColor(aqi);
+  const { backgroundColor, status } = setColor(aqi);
   return (
     <a
       href="/encyklopedia#caqi"
