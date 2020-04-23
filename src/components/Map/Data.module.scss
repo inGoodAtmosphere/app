@@ -9,4 +9,10 @@
     padding-left: $spacing;
     @include scroll($primary-accent);
   }
+  .error {
+    width: 100%;
+    grid-column: 2;
+    height: calc(100vh - #{$header-height} - #{$spacing});
+    padding-left: $spacing;
+  }
 }
