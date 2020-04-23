@@ -1,37 +1,40 @@
 @import '../../styles/settings';
 
-.pm {
+.wrapper {
   border-radius: $spacing;
-  min-height: $header-height;
   background-color: $light-accent;
   padding: $spacing;
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  flex: 1;
   color: $light-bg;
-  &:first-child {
-    margin-right: $spacing;
-  }
 }
 .measurement,
 .title {
   margin: $spacing / 2 0;
 }
+
 .measurement {
   font-size: $m-size;
 }
+
 .title {
   font-size: $s-size;
 }
+
 .percent {
   color: $dark-bg;
 }
-.noData {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+.main {
+  background-color: $primary-accent;
+}
+.secondary {
+  .measurement {
+    font-size: $s-size;
+  }
+  .percent {
+    font-size: $s-size;
+  }
 }

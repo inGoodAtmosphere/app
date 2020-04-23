@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Measurements from './Measurements';
+import Measurements from './MeasurementsContainer';
 import Weather from './Weather';
 import AboutDevice from './AboutDevice';
 import Error from '../Error';

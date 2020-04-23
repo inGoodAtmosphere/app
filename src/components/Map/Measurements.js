@@ -1,32 +1,24 @@
-import React, { useContext } from 'react';
-import Caqi from './Caqi';
-import Pm from './Pm';
-import MapContext from '../../utils/map-context';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Measurement from './Measurement';
 import styles from './Measurements.module.scss';
 
-const Measurements = () => {
-  const {
-    activeSensor: {
-      data: { city },
-    },
-  } = useContext(MapContext);
-  const convertTitle = (name) => {
-    const index = name.lastIndexOf(',');
-    const title = name.slice(0, index);
-    if (title === 'K-Koźle') return 'Kędzierzyn Koźle';
-    return title;
-  };
-  const convertedTitle = convertTitle(city.name);
+const Measurements = ({ data, priority }) => {
   return (
-    <>
-      <h1 className={styles.city}>{convertedTitle}</h1>
-      <Caqi />
-      <div className={styles.pm}>
-        <Pm purpose="pm25" />
-        <Pm purpose="pm10" />
-      </div>
-    </>
+    <div className={styles.data}>
+      {Object.entries(data).map(
+        ([key, value]) =>
+          value && (
+            <Measurement purpose={key} value={value} priority={priority} />
+          ),
+      )}
+    </div>
   );
+};
+
+Measurements.propTypes = {
+  data: PropTypes.objectOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  priority: PropTypes.string.isRequired,
 };
 
 export default Measurements;

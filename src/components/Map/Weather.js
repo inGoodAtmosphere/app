@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import mapContext from '../../utils/map-context';
 import styles from './Weather.module.scss';
+import { getWeatherData } from '../../utils/groupMapData';
 
 const Weather = () => {
   const {
@@ -9,18 +10,19 @@ const Weather = () => {
       data: { iaqi },
     },
   } = useContext(mapContext);
+  const { temperature, humidity } = getWeatherData(iaqi);
   return (
     <div className={styles.weather}>
       <div className={styles.data}>
         <span>Temperatura</span>
         <span>
-          {iaqi.t.v.toFixed()}
+          {temperature}
           &#8451;
         </span>
       </div>
       <div className={styles.data}>
         <span>Wilgotność</span>
-        <span>{iaqi.h.v.toFixed()}%</span>
+        <span>{humidity}%</span>
       </div>
     </div>
   );

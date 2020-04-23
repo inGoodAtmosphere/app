@@ -1,19 +1,7 @@
 @import '../../styles/settings';
-
-.city {
-  text-align: center;
-  background-color: $dark-accent;
-  margin: 0 0 $spacing;
-  padding: $spacing;
-  text-transform: none;
-  border-radius: 0 0 $spacing $spacing;
-  @media #{$media-query-m} {
-    border-radius: $spacing;
-  }
-}
-
-.pm {
-  display: flex;
-  justify-content: space-between;
+.data {
+  display: grid;
   margin-top: $spacing;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-gap: $spacing;
 }
