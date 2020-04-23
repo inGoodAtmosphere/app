@@ -6,9 +6,10 @@ import Content from './Content';
 import withContext from '../../utils/withContext';
 
 const Card = () => {
-  const { env, color, isEven } = useContext(Context);
+  const { env, color, isEven, id } = useContext(Context);
   return (
     <div
+      id={id}
       className={`${styles.card} ${typeof isEven === 'boolean' &&
         (isEven ? styles.even : styles.odd)} ${styles[color]}`}
     >

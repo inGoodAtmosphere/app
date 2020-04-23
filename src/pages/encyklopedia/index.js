@@ -8,7 +8,7 @@ const Encyclopedia = () => {
     <main className={styles.content}>
       <h1>Encyklopedia</h1>
       {content.map((card) => (
-        <Card key={card.header} value={{ env: 'Encyclopedia', ...card }} />
+        <Card key={card.id} value={{ env: 'Encyclopedia', ...card }} />
       ))}
     </main>
   );
