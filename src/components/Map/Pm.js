@@ -15,16 +15,22 @@ const Caqi = ({ purpose }) => {
       <h3 className={styles.title}>
         {purpose === 'pm25' ? 'PM2.5' : purpose.toUpperCase()}
       </h3>
-      <h2 className={styles.measurement}>
-        {iaqi[purpose] && iaqi[purpose].v} µg/m³
-      </h2>
-      <h2 className={`${styles.percent} ${styles.measurement}`}>
-        {Math.round(
-          (iaqi[purpose] && iaqi[purpose].v / (purpose === 'pm25' ? 25 : 50)) *
-            100,
-        )}
-        %
-      </h2>
+      {iaqi[purpose] ? (
+        <>
+          <h2 className={styles.measurement}>
+            {iaqi[purpose] && iaqi[purpose].v} µg/m³
+          </h2>
+          <h2 className={`${styles.percent} ${styles.measurement}`}>
+            {Math.round(
+              (iaqi[purpose] &&
+                iaqi[purpose].v / (purpose === 'pm25' ? 25 : 50)) * 100,
+            )}
+            %
+          </h2>
+        </>
+      ) : (
+        <h2>Brak danych</h2>
+      )}
     </a>
   );
 };
