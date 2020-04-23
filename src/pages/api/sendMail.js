@@ -1,5 +1,5 @@
 const sendMail = require('../../../api_modules/mailSender.js');
-const ValidationError = require('../../../api_modules/validationError.js');
+const ValidationError = require('../../../api_modules/classes/validationError.js');
 
 export default async (req, res) => {
   if (req.method === 'POST') {

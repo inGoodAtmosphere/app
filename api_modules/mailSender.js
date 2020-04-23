@@ -1,6 +1,6 @@
 // create reusable transporter object using the default SMTP transport
 const nodemailer = require('nodemailer');
-const ValidationError = require('./validationError');
+const ValidationError = require('./classes/validationError');
 require('dotenv').config();
 
 const testMail = process.env.MAIL_USER_TEST;

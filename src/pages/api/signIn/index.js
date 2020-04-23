@@ -1,7 +1,7 @@
 import passport from 'passport';
 import nextConnect from 'next-connect';
 import localStrategy from '../../../../api_modules/passport';
-import ValidationError from '../../../../api_modules/validationError';
+import ValidationError from '../../../../api_modules/classes/validationError';
 import { encryptSession } from '../../../../api_modules/iron';
 import { setTokenCookie } from '../../../../api_modules/auth-cookies';
 import resJson from '../../../../api_modules/resJsonStandardized';

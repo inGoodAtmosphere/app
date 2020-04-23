@@ -1,7 +1,9 @@
+import findUser from '../../../api_modules/findUser';
+
 const bcrypt = require('bcrypt');
 const dbQuery = require('../../../api_modules/dbQuery');
 const resJson = require('../../../api_modules/resJsonStandardized');
-const ValidationError = require('../../../api_modules/validationError');
+const ValidationError = require('../../../api_modules/classes/validationError');
 require('dotenv').config();
 
 // TODO add notification when critical error while salting the password or connecting to the db
@@ -101,7 +103,7 @@ export default async (req, res) => {
     // validation ends here
 
     if (errors.length === 0) {
-      const user = await dbQuery.findUser(email, (err) => {
+      const user = await findUser(email, (err) => {
         if (err) {
           res.json(
             resJson(

@@ -1,9 +1,13 @@
+import findUser from './findUser';
+
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local').Strategy;
+// eslint-disable-next-line import/no-unresolved
 const FacebookStrategy = require('passport-facebook').Strategy;
-const ValidationError = require('./validationError');
+const ValidationError = require('./classes/validationError');
 // const passport = require('passport');
-const dbQuery = require('./dbQuery');
+// const dbQuery = require('./dbQuery');
+
 require('dotenv').config();
 
 const callbackURL =
@@ -33,14 +37,12 @@ export const facebook = new FacebookStrategy(
 export default new LocalStrategy(
   { usernameField: 'email' },
   async (username, password, done) => {
-    const user = await dbQuery
-      .findUser(username, (err) => {
-        if (err) return done(err, false);
-        return null;
-      })
-      .catch((err) => {
-        return done(err, false);
-      });
+    const user = await findUser(username, (err) => {
+      if (err) return done(err, false);
+      return null;
+    }).catch((err) => {
+      return done(err, false);
+    });
     if (!user || username === '' || user.email === '') {
       return done(
         null,
