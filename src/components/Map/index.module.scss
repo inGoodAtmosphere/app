@@ -3,7 +3,7 @@
 .map {
   height: calc(50vh - #{$header-height});
   width: 100%;
-  @media #{$media-query-m} {
+  @media #{$media-query-l} {
     width: 100%;
     height: calc(100vh - #{$header-height} - #{$spacing});
     grid-column: 1;

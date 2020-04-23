@@ -7,7 +7,7 @@
   padding: $spacing;
   text-transform: none;
   border-radius: 0 0 $spacing $spacing;
-  @media #{$media-query-m} {
+  @media #{$media-query-l} {
     border-radius: $spacing;
   }
 }

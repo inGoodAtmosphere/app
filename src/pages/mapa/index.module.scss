@@ -1,10 +1,10 @@
 @import '../../styles/settings';
 .content {
   composes: content from '../../styles/common.scss';
-  @media #{$media-query-m} {
+  @media #{$media-query-l} {
     display: grid;
     width: 100%;
-    grid-template-columns: calc(40% - #{$spacing}) 60%;
+    grid-template-columns: calc(45% - #{$spacing}) 55%;
     max-width: none;
     padding-right: 0;
   }

@@ -9,7 +9,12 @@ const Measurements = ({ data, priority }) => {
       {Object.entries(data).map(
         ([key, value]) =>
           value && (
-            <Measurement purpose={key} value={value} priority={priority} />
+            <Measurement
+              key={key}
+              purpose={key}
+              value={value}
+              priority={priority}
+            />
           ),
       )}
     </div>
@@ -17,7 +22,7 @@ const Measurements = ({ data, priority }) => {
 };
 
 Measurements.propTypes = {
-  data: PropTypes.objectOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  data: PropTypes.objectOf(PropTypes.number).isRequired,
   priority: PropTypes.string.isRequired,
 };
 
