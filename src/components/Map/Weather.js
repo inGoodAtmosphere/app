@@ -14,13 +14,13 @@ const Weather = () => {
       <div className={styles.data}>
         <span>Temperatura</span>
         <span>
-          {iaqi.t.v}
+          {iaqi.t.v.toFixed()}
           &#8451;
         </span>
       </div>
       <div className={styles.data}>
         <span>Wilgotność</span>
-        <span>{iaqi.h.v}%</span>
+        <span>{iaqi.h.v.toFixed()}%</span>
       </div>
     </div>
   );

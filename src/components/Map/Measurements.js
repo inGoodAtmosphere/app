@@ -12,7 +12,9 @@ const Measurements = () => {
   } = useContext(MapContext);
   const convertTitle = (name) => {
     const index = name.lastIndexOf(',');
-    return name.slice(0, index);
+    const title = name.slice(0, index);
+    if (title === 'K-Koźle') return 'Kędzierzyn Koźle';
+    return title;
   };
   const convertedTitle = convertTitle(city.name);
   return (
