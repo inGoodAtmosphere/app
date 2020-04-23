@@ -6,22 +6,39 @@ import MapContext from '../../utils/map-context';
 import styles from './index.module.scss';
 
 const Map = ({ measurements }) => {
+  const [zoom, setZoom] = useState(14);
+  const [center, setCenter] = useState({});
   const {
     activeSensor: { data },
   } = useContext(MapContext);
-  const [defaultCenter, setDefaultCenter] = useState({});
   useEffect(() => {
-    setDefaultCenter({
+    setCenter({
       lat: data.city.geo[0],
       lng: data.city.geo[1],
     });
   }, []);
+  const handleBoundsChange = (centerBounds, zoomBounds) => {
+    setZoom(zoomBounds);
+    setCenter(centerBounds);
+  };
+  const handleChildClick = (key, { lat, lng }) => {
+    setZoom(16);
+    setCenter({
+      lat,
+      lng,
+    });
+  };
   return (
     <div className={styles.map}>
       <GoogleMap
-        defaultCenter={defaultCenter}
-        defaultZoom={14}
-        bootstrapURLKeys={{ key: process.env.MAP_API_KEY }}
+        center={center}
+        zoom={zoom}
+        onBoundsChange={handleBoundsChange}
+        onChildClick={handleChildClick}
+        bootstrapURLKeys={{
+          key: process.env.MAP_API_KEY,
+          language: 'pl',
+        }}
       >
         {measurements.map(({ uid, lat, lon, aqi }) => {
           return <Marker key={uid} lat={lat} lng={lon} aqi={aqi} />;
