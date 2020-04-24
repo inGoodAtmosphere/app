@@ -1,6 +1,9 @@
 @import '../../styles/settings';
 
 .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: $dark-accent;
   margin: 0 0 $spacing;
