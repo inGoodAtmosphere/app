@@ -1,0 +1,8 @@
+@import '../../styles/settings';
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: lighten($light-accent, 10%);
+  margin-right: $spacing * 2;
+}
