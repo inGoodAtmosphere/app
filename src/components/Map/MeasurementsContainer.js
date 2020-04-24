@@ -1,4 +1,7 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+
 import Caqi from './Caqi';
 import MapContext from '../../utils/map-context';
 import Measurements from './Measurements';
@@ -10,6 +13,8 @@ const MeasurementsContainer = () => {
     activeSensor: {
       data: { city, iaqi },
     },
+    dispatch,
+    activeSensor,
   } = useContext(MapContext);
   const convertTitle = (name) => {
     const index = name.lastIndexOf(',');
@@ -27,7 +32,23 @@ const MeasurementsContainer = () => {
   const secondaryData = getSecondaryData(iaqi);
   return (
     <>
-      <h1 className={styles.city}>{convertedTitle}</h1>
+      <h1 className={styles.city}>
+        {convertedTitle}
+        <button
+          type="button"
+          onClick={() => {
+            dispatch({
+              type: 'SET_ACTIVE_SENSOR',
+              activeSensor: {
+                ...activeSensor,
+                data: { ...activeSensor.data, change: true },
+              },
+            });
+          }}
+        >
+          <FontAwesomeIcon icon={faLocationArrow} />
+        </button>
+      </h1>
       <Caqi />
       <Measurements priority="main" data={mainData} />
       <Measurements priority="secondary" data={secondaryData} />

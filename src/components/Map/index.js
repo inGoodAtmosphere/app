@@ -20,16 +20,20 @@ const Map = ({ measurements }) => {
       lng: data.city.geo[1],
     });
   }, []);
+  useEffect(() => {
+    setCenter(data.city.geo);
+    setZoom(16);
+  }, [data]);
   const handleChange = ({ center: centerBounds, zoom: zoomBounds }) => {
     setZoom(zoomBounds);
     setCenter(centerBounds);
   };
   const handleChildClick = (key, { lat, lng }) => {
-    setZoom(16);
     setCenter({
       lat,
       lng,
     });
+    setZoom(16);
   };
   return (
     <div className={styles.map}>
