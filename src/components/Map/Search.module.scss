@@ -37,7 +37,7 @@
   left: 10px;
   margin: 0;
   padding: 0;
-  background-color: rgba($light-bg, 0.95);
+  background-color: rgba($light-bg, 0.85);
   max-width: calc(100% - 20px);
   max-height: calc(100% - 50px);
   overflow-y: scroll;
@@ -46,9 +46,11 @@
   }
 }
 
-.button {
+.item {
   text-align: left;
   background: none;
   border: none;
   padding: $spacing / 1.5;
+  color: $dark-bg;
+  color: $dark-bg;
 }

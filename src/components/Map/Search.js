@@ -9,11 +9,13 @@ import styles from './Search.module.scss';
 
 const Search = ({ measurements }) => {
   const [suggestions, setSuggestions] = useState([]);
+  const [error, setError] = useState('');
   const [text, setText] = useState('');
   const { dispatch } = useContext(MapContext);
 
   const handleChange = ({ target: { value } }) => {
     setText(value);
+    setError('');
     if (value.length === 0) {
       setSuggestions([]);
     }
@@ -35,6 +37,9 @@ const Search = ({ measurements }) => {
         ),
       );
     }
+    if (text.length > 2 && suggestions.length === 0) {
+      setError('Nie znaleźliśmy takiego czujnika');
+    }
   };
 
   return (
@@ -50,24 +55,28 @@ const Search = ({ measurements }) => {
       </div>
       <OutsideClick onOutsideClick={() => setSuggestions([])}>
         <ul className={styles.list}>
-          {suggestions.map((suggestion) => (
-            <li className={styles.item}>
-              <button
-                className={styles.button}
-                type="button"
-                onClick={() => {
-                  setActiveSensor(
-                    { lat: suggestion.lat, lng: suggestion.lon },
-                    dispatch,
-                  );
-                  setSuggestions([]);
-                  setText('');
-                }}
-              >
-                {suggestion.station.name}
-              </button>
-            </li>
-          ))}
+          {error ? (
+            <li className={styles.item}>{error}</li>
+          ) : (
+            suggestions.map((suggestion) => (
+              <li>
+                <button
+                  className={styles.item}
+                  type="button"
+                  onClick={() => {
+                    setActiveSensor(
+                      { lat: suggestion.lat, lng: suggestion.lon },
+                      dispatch,
+                    );
+                    setSuggestions([]);
+                    setText('');
+                  }}
+                >
+                  {suggestion.station.name}
+                </button>
+              </li>
+            ))
+          )}
         </ul>
       </OutsideClick>
     </>
