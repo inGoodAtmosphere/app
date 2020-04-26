@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import setActiveSensor from './setActiveSensor';
+import MapContext from '../../utils/map-context';
 
 const Search = ({ measurements }) => {
   const [suggestions, setSuggestions] = useState([]);
+  const { dispatch } = useContext(MapContext);
 
   const handleChange = ({ target: { value } }) => {
     if (value.length === 0) {
@@ -33,7 +36,19 @@ const Search = ({ measurements }) => {
       <input type="text" onChange={handleChange} />
       <ul>
         {suggestions.map((suggestion) => (
-          <li>{suggestion.station.name}</li>
+          <li>
+            <button
+              type="button"
+              // prettier-ignore
+              onClick={() =>
+                setActiveSensor(
+                  { lat: suggestion.lat, lng: suggestion.lon },
+                  dispatch,
+                )}
+            >
+              {suggestion.station.name}
+            </button>
+          </li>
         ))}
       </ul>
     </>

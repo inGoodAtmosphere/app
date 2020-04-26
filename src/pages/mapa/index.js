@@ -9,6 +9,7 @@ import mapReducer from '../../utils/map-reducer';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import styles from './index.module.scss';
+import setActiveSensor from '../../components/Map/setActiveSensor';
 
 const MapPage = ({ measurements: { data, status } }) => {
   const [isLoaded, setIsLoaded] = useState(true);
@@ -28,14 +29,7 @@ const MapPage = ({ measurements: { data, status } }) => {
           lat: data[0].lat,
           lng: data[0].lon,
         };
-        const sensorMeasurementRes = await fetch(
-          `https://api.waqi.info/feed/geo:${deviceCoordinates.lat};${deviceCoordinates.lng}/?token=${process.env.WAQI_TOKEN}`,
-        );
-        const sensorMeasurementJson = await sensorMeasurementRes.json();
-        dispatch({
-          type: 'SET_ACTIVE_SENSOR',
-          activeSensor: sensorMeasurementJson,
-        });
+        await setActiveSensor(deviceCoordinates, dispatch);
         setIsLoaded(false);
       } catch (err) {
         setError(err);

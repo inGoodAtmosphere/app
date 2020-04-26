@@ -5,6 +5,7 @@ import Marker from './Marker';
 import MapContext from '../../utils/map-context';
 import styles from './index.module.scss';
 import Search from './Search';
+import setActiveSensor from './setActiveSensor';
 
 const Map = ({ measurements }) => {
   const {
@@ -13,8 +14,8 @@ const Map = ({ measurements }) => {
   } = useContext(MapContext);
   const [zoom, setZoom] = useState(14);
   const [center, setCenter] = useState({
-    lat: data.city.geo[0],
-    lng: data.city.geo[1],
+    lat: data?.city?.geo[0],
+    lng: data?.city?.geo[1],
   });
   useEffect(() => {
     if ('geolocation' in navigator) {
@@ -28,7 +29,7 @@ const Map = ({ measurements }) => {
     }
   }, []);
   useEffect(() => {
-    setCenter(data.city.geo);
+    setCenter(data?.city?.geo);
     setZoom(16);
   }, [data]);
   const handleChange = ({ center: centerBounds, zoom: zoomBounds }) => {
@@ -36,21 +37,7 @@ const Map = ({ measurements }) => {
     setCenter(centerBounds);
   };
   const handleChildClick = async (key, { lat, lng }) => {
-    const coordinates = { lat, lng };
-    const res = await fetch(
-      `https://api.waqi.info/feed/geo:${coordinates.lat};${coordinates.lng}/?token=${process.env.WAQI_TOKEN}`,
-    );
-    const json = await res.json();
-    dispatch({
-      type: 'SET_ACTIVE_SENSOR',
-      activeSensor: json,
-    });
-    setCenter({
-      lat,
-      lng,
-    });
-    setZoom(16);
-    localStorage.setItem('activeSensor', JSON.stringify(coordinates));
+    setActiveSensor({ lat, lng }, dispatch);
   };
   return (
     <div className={styles.map}>
