@@ -3,6 +3,7 @@
 .map {
   height: calc(50vh - #{$header-height});
   width: 100%;
+  position: relative;
   @media #{$media-query-l} {
     width: 100%;
     height: calc(100vh - #{$header-height} - #{$spacing});

@@ -1,13 +1,18 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import setActiveSensor from './setActiveSensor';
 import MapContext from '../../utils/map-context';
+import styles from './Search.module.scss';
 
 const Search = ({ measurements }) => {
   const [suggestions, setSuggestions] = useState([]);
+  const [text, setText] = useState('');
   const { dispatch } = useContext(MapContext);
 
   const handleChange = ({ target: { value } }) => {
+    setText(value);
     if (value.length === 0) {
       setSuggestions([]);
     }
@@ -33,18 +38,29 @@ const Search = ({ measurements }) => {
 
   return (
     <>
-      <input type="text" onChange={handleChange} />
-      <ul>
+      <div className={styles.wrapper}>
+        <input
+          type="text"
+          className={styles.input}
+          value={text}
+          onChange={handleChange}
+        />
+        <FontAwesomeIcon icon={faSearch} className={styles.icon} />
+      </div>
+      <ul className={styles.list}>
         {suggestions.map((suggestion) => (
-          <li>
+          <li className={styles.item}>
             <button
+              className={styles.button}
               type="button"
-              // prettier-ignore
-              onClick={() =>
+              onClick={() => {
                 setActiveSensor(
                   { lat: suggestion.lat, lng: suggestion.lon },
                   dispatch,
-                )}
+                );
+                setSuggestions([]);
+                setText('');
+              }}
             >
               {suggestion.station.name}
             </button>

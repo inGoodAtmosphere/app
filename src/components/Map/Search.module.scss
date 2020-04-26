@@ -1,0 +1,46 @@
+@import '../../styles/settings';
+
+.wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 40px;
+}
+
+.input {
+  height: 100%;
+  position: relative;
+  background-color: rgba($dark-bg, 0.5);
+  border-radius: $spacing;
+  border: $border solid $light-bg;
+  padding: $spacing;
+  z-index: 1;
+  color: $light-bg;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: calc(100% - #{$spacing});
+  transform: translate(-100%, -50%);
+}
+
+.list {
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba($light-bg, 0.95);
+  max-width: calc(100% - 20px);
+}
+
+.button {
+  text-align: left;
+  background: none;
+  border: none;
+  padding: $spacing / 1.5;
+}
