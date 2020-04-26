@@ -9,53 +9,58 @@
 
 <url>
   <loc>https://ingoodatmosphere.com/</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://ingoodatmosphere.com/mapa</loc>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://ingoodatmosphere.com/kampania</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/o-nas</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/encyklopedia</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/mierniki</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/kontakt</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
-  <priority>0.50</priority>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/polityka-prywatnosci</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
   <priority>0.10</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/kampania/Negatywne-skutki-zdrowotne-smogu</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
-  <priority>0.9</priority>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/kampania/Jak-odpowiednio-ogrzewac-dom</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
-  <priority>0.9</priority>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ingoodatmosphere.com/kampania/Naturalne-wskazniki-zanieczyszczenia-powietrza</loc>
-  <lastmod>2020-04-04T21:39:53+00:00</lastmod>
-  <priority>0.9</priority>
+  <lastmod>2020-04-26T21:31:23+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 
 
