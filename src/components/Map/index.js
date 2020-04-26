@@ -4,6 +4,7 @@ import GoogleMap from 'google-map-react';
 import Marker from './Marker';
 import MapContext from '../../utils/map-context';
 import styles from './index.module.scss';
+import Search from './Search';
 
 const Map = ({ measurements }) => {
   const {
@@ -53,6 +54,7 @@ const Map = ({ measurements }) => {
   };
   return (
     <div className={styles.map}>
+      <Search measurements={measurements} />
       <GoogleMap
         center={center}
         zoom={zoom}

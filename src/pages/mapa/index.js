@@ -74,7 +74,14 @@ export async function getServerSideProps() {
   const dataFromPoland = json.data.filter((location) =>
     location.station.name.includes('Poland'),
   );
-  const measurements = { status: json.status, data: dataFromPoland };
+  const formattedData = dataFromPoland.map((element) => ({
+    ...element,
+    station: {
+      ...element.station,
+      name: element.station.name.replace(', Poland', ''),
+    },
+  }));
+  const measurements = { status: json.status, data: formattedData };
   return { props: { measurements } };
 }
 
