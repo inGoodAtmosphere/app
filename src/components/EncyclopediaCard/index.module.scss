@@ -1,0 +1,28 @@
+@import '../../styles/settings';
+
+.card {
+  display: inline-block;
+  composes: card from '../../styles/common.scss';
+}
+
+.circleWrapper {
+  position: relative;
+  width: 15rem;
+  max-width: 50%;
+  float: left;
+  clip-path: circle();
+  shape-outside: circle();
+  margin-right: $spacing;
+}
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: $light-bg;
+}
+
+.paragraph {
+  text-align: justify !important;
+}

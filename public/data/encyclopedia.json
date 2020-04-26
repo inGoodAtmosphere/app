@@ -2,49 +2,49 @@
   "content": [
     {
       "id": "caqi",
-      "color": "primaryAccent",
+      "color": "hsl(193, 54%, 41%)",
       "header": "CAQI",
       "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych."
     },
     {
       "id": "przeliczanie",
-      "color": "darkAccent",
+      "color": "hsl(203, 70%, 18%)",
       "header": "Przeliczanie CAQI",
       "text": "Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu Nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
     },
     {
       "id": "pm2.5",
-      "color": "lightBg",
+      "color": "hsl(208, 32%, 48%)",
       "header": "PM2.5",
       "text": "PM2.5 to aerozole atmosferyczne, których średnica nie jest większa niż 2.5 mikrometra. Tego rodzaju pył jest uznawany za najgroźniejszy dla zdrowia człowieka. Wszystko dlatego, że pył jest bardzo drobny, a w takiej postaci może się przedostać bezpośrednio do krwiobiegu. "
     },
     {
       "id": "pm10",
-      "color": "brightAccent",
+      "color": "hsl(202, 59%, 37%)",
       "header": "PM10",
       "text": "PM10 to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – czyli  rakotwórcze metale ciężkie. PM10 to pył zawieszony, który przede wszystkim wpływa negatywnie na układ oddechowy, który jest odpowiedzialny za ataki kaszlu, świszczący oddech oraz pogorszenie się stanu zdrowia  osób z astmą."
     },
     {
       "id": "o3",
-      "color": "text",
+      "color": "hsl(225, 33%, 7%)",
       "header": "O₃",
       "text": "Ozon jest silnym utleniaczem fotochemicznym. Powoduje to, że w górnej części atmosfery chroni nas przed promieniowanie UV. Natomiast jeśli ozon występuje w dolnej części atmosfery jest zanieczyszczeniem powietrza. Powoduje problemy z oddychaniem oraz negatywnie wpływa na życie roślin. Najwyższe stężenie ozonu występują wiosną i latem, ponieważ powstawaniu ozonu sprzyja wysoka temperatura i bezchmurne niebo."
     },
     {
       "id": "so2",
-      "color": "darkAccent",
+      "color": "hsl(203, 70%, 18%)",
       "header": "SO₂",
       "text": "Dwutlenek siarki jest bezbarwnym gazem. Jego zapach przypomina zapach spalonych zapałek, a w dużych stężeniach jest gryzący i duszący. Jest naturalnie wytwarzany podczas erupcji wulkanów. Jest silnie toksyczny i szkodliwie oddziałuje na drogi oddechowe. Jest trujący dla zwierząt i szkodliwy dla roślin. Jest produktem podczas spalania paliw kopalnych.  Może działać szkodliwe podczas jego nadmiaru oraz opadów atmosferycznych kiedy to powoduje kwaśne deszcze."
     },
     {
       "id": "no2",
-      "color": "primaryAccent",
+      "color": "hsl(193, 54%, 41%)",
       "header": "NO₂",
       "text": "Dwutlenek azotu to gaz o ostrym zapachu i brunatnym zabarwieniu. Źródłami emisji są zjawiska naturalne takie jak wybuch wulkanu, ale przede wszystkim emisja spalin w transporcie drogowym. Dodatkowo dwutlenek azotu jest produkowany podczas korzystania z kuchenki gazowej oraz palenia papierosów. Nawet krótkotrwały kontakt z substancją powoduje podrażnienie układu oddechowego, oczu oraz kaszel. "
     },
     {
       "id": "co",
-      "color": "brightAccent",
+      "color": "hsl(202, 59%, 37%)",
       "header": "CO",
       "text": "Tlenek węgla (czad) również znany jako “cichy zabójca”, ze względu na jego silne właściwości toksyczne oraz brak właściwości takich jak zapach oraz barwa. Jest naturalnie wytwarzany podczas erupcji wulkanów oraz pożarów roślinności z temperaturą powyżej 1000 stopni Celsjusza. Ponadto znajduje się w spalinach samochodowych oraz jest wytwarzany na skutek większości procesów wysokotemperaturowych, w których paliwem jest węgiel lub ropa naftowa.  Przy ekspozycji na tlenek węgla może dojść do niedotlenienia tkanek, przy mniejszych stężeniach może dojść do omdlenia i śpiączki. Brak natychmiastowej pomocy powoduje śmierć."
     }
