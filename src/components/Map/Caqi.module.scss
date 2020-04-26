@@ -5,8 +5,30 @@
   display: flex;
   justify-content: space-around;
   border-radius: $spacing;
+  position: relative;
   padding: $spacing;
   color: $light-bg;
+  &:hover {
+    .tooltip {
+      visibility: visible;
+    }
+  }
+}
+.tooltip {
+  background-color: $dark-bg;
+  text-align: center;
+  border-radius: $spacing;
+  font-size: $xs-size;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: $spacing / 2;
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  &:hover {
+    visibility: visible;
+  }
 }
 
 .wrapper {

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import MapContext from '../../utils/map-context';
-import styles from './Caqi.module.scss';
+import Tooltip from './Tooltip';
 import setColor from './setColor';
+import styles from './Caqi.module.scss';
 
 const Caqi = () => {
   const {
@@ -11,17 +12,14 @@ const Caqi = () => {
   } = useContext(MapContext);
   const { backgroundColor, status } = setColor(aqi);
   return (
-    <a
-      href="/encyklopedia#caqi"
-      className={styles.caqi}
-      style={{ backgroundColor }}
-    >
+    <div className={styles.caqi} style={{ backgroundColor }}>
+      <Tooltip className={styles.tooltip} purpose="caqi" title="CAQI" />
       <div className={styles.wrapper}>
         <h3 className={styles.title}>CAQI</h3>
         <h2 className={styles.measurement}>{aqi}</h2>
       </div>
       <p className={styles.status}>{status}</p>
-    </a>
+    </div>
   );
 };
 
