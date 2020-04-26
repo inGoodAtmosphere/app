@@ -6,7 +6,7 @@ import styles from './Tooltip.module.scss';
 const Tooltip = ({ className, purpose, title }) => {
   return (
     <div className={className}>
-      Wszystkie wartości są podane w standardzie AQI opracowanym przez Agencja
+      Wszystkie wartości są podane w standardzie AQI opracowanym przez Agencję
       Ochrony Środowiska (US EPA)
       <a href={`/encyklopedia#${purpose}`} className={styles.link}>
         Dowiedz się więcej o {title}

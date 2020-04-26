@@ -10,9 +10,9 @@
       }
     },
     {
-      "header": "Mapa z naszymi miernikami!",
+      "header": "Mapa z naszymi miernikami",
       "color": "primaryAccent",
-      "text": "Wkrótce będziecie mogli sprawdzać jakość powietrza z naszych mierników, pracę nad mapą trwają, ale już wkrótce będą dostępne",
+      "text": "Mapa jest już gotowa! Sprawdź stan powietrza w całej Polsce. Nasze czujniki pojawią się tam wkrótce",
       "link": {
         "href": "mapa",
         "text": "Zobacz aktualny stan powietrza"
