@@ -67,11 +67,14 @@ const MapPage = ({ measurements: { data, status } }) => {
 
 export async function getServerSideProps() {
   const res = await fetch(
-    `https://api.waqi.info/map/bounds/?latlng=54.826651,14.473435,48.937351,24.053449&token=${process.env.WAQI_TOKEN}`,
+    `https://api.waqi.info/map/bounds/?latlng=54.835663,14.124400,49.002032,24.145578&token=${process.env.WAQI_TOKEN}`,
   );
 
   const json = await res.json();
-  const measurements = json;
+  const filteredData = json.data.filter((location) =>
+    location.station.name.includes('Poland'),
+  );
+  const measurements = { status: json.status, data: filteredData };
   return { props: { measurements } };
 }
 
