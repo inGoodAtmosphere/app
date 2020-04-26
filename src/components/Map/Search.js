@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import OutsideClick from 'react-outside-click-handler';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -47,26 +48,28 @@ const Search = ({ measurements }) => {
         />
         <FontAwesomeIcon icon={faSearch} className={styles.icon} />
       </div>
-      <ul className={styles.list}>
-        {suggestions.map((suggestion) => (
-          <li className={styles.item}>
-            <button
-              className={styles.button}
-              type="button"
-              onClick={() => {
-                setActiveSensor(
-                  { lat: suggestion.lat, lng: suggestion.lon },
-                  dispatch,
-                );
-                setSuggestions([]);
-                setText('');
-              }}
-            >
-              {suggestion.station.name}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <OutsideClick onOutsideClick={() => setSuggestions([])}>
+        <ul className={styles.list}>
+          {suggestions.map((suggestion) => (
+            <li className={styles.item}>
+              <button
+                className={styles.button}
+                type="button"
+                onClick={() => {
+                  setActiveSensor(
+                    { lat: suggestion.lat, lng: suggestion.lon },
+                    dispatch,
+                  );
+                  setSuggestions([]);
+                  setText('');
+                }}
+              >
+                {suggestion.station.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </OutsideClick>
     </>
   );
 };

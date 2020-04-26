@@ -5,15 +5,18 @@
   top: 10px;
   left: 10px;
   height: 40px;
+  max-width: calc(100% - 70px);
 }
 
 .input {
+  width: 100%;
   height: 100%;
   position: relative;
   background-color: rgba($dark-bg, 0.5);
   border-radius: $spacing;
   border: $border solid $light-bg;
   padding: $spacing;
+  padding-right: 1.5 + $spacing;
   z-index: 1;
   color: $light-bg;
 }
@@ -36,6 +39,11 @@
   padding: 0;
   background-color: rgba($light-bg, 0.95);
   max-width: calc(100% - 20px);
+  max-height: calc(100% - 50px);
+  overflow-y: scroll;
+  @media #{$media-query-l} {
+    overflow: auto;
+  }
 }
 
 .button {
