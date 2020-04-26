@@ -17,9 +17,11 @@ const Image = ({ className }) => {
         Nasze urządzenie mierzy stężenie pyłów zawieszonych PM1, PM2,5 oraz
         PM10, a następnie wysyła dane do naszej strony aby każdy mógł się
         cieszyć pomiarami z naszych urządzeń.
-        <br />
         {className && (
-          <span className={styles.link}>Kliknij i dowiedz się więcej</span>
+          <>
+            <p className={styles.soon}>JUŻ WKRÓTCE</p>
+            <p className={styles.link}>Kliknij i dowiedz się więcej</p>
+          </>
         )}
       </span>
     </div>

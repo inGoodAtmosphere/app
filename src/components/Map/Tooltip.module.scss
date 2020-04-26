@@ -1,0 +1,9 @@
+@import '../../styles/settings';
+@import '../../styles/mixin';
+
+.link {
+  color: $light-bg;
+  font-size: $xs-size;
+  text-decoration: underline;
+  display: block;
+}

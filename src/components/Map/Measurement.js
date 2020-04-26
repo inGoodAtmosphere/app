@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Measurement.module.scss';
+import Tooltip from './Tooltip';
 
 const Measurement = ({ purpose, value, priority }) => {
   const convertTitle = (title) => {
@@ -16,18 +17,17 @@ const Measurement = ({ purpose, value, priority }) => {
         return title;
     }
   };
-  const convertedTitle = convertTitle(purpose);
+  const convertedTitle = convertTitle(purpose).toUpperCase();
   return (
-    <a
-      className={`${styles.wrapper} ${styles[priority]}`}
-      href={`/encyklopedia#${purpose}`}
-    >
-      <h3 className={styles.title}>{convertedTitle.toUpperCase()}</h3>
-      <h2 className={styles.measurement}>{value} µg/m³</h2>
-      <h2 className={`${styles.percent} ${styles.measurement}`}>
-        {Math.round((value / (purpose === 'pm25' ? 25 : 50)) * 100)}%
-      </h2>
-    </a>
+    <div className={`${styles.wrapper} ${styles[priority]}`}>
+      <Tooltip
+        className={styles.tooltip}
+        title={convertedTitle}
+        purpose={purpose}
+      />
+      <h3 className={styles.title}>{convertedTitle}</h3>
+      <h2 className={styles.measurement}>{value}</h2>
+    </div>
   );
 };
 

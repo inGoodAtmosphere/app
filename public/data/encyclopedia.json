@@ -19,10 +19,10 @@
       "text": "Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
     },
     {
-      "id": "pm25",
+      "id": "pm2.5",
       "color": "lightBg",
       "header": "PM2.5",
-      "text": "PM 2.5 to aerozole atmosferyczne, których średnica nie jest większa niż 2.5 mikrometra. Tego rodzaju pył jest uznawany za najgroźniejszy dla zdrowia człowieka. Wszystko dlatego, że pył jest bardzo drobny, a w takiej postaci może się przedostać bezpośrednio do krwiobiegu. "
+      "text": "PM2.5 to aerozole atmosferyczne, których średnica nie jest większa niż 2.5 mikrometra. Tego rodzaju pył jest uznawany za najgroźniejszy dla zdrowia człowieka. Wszystko dlatego, że pył jest bardzo drobny, a w takiej postaci może się przedostać bezpośrednio do krwiobiegu. "
     },
     {
       "id": "pm10",

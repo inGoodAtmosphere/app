@@ -7,8 +7,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   text-align: center;
   color: $light-bg;
+  &:hover {
+    .tooltip {
+      visibility: visible;
+    }
+  }
+}
+.tooltip {
+  background-color: $dark-bg;
+  border-radius: $spacing;
+  font-size: $xs-size;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: $spacing / 2;
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  &:hover {
+    visibility: visible;
+  }
 }
 .measurement,
 .title {
