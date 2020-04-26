@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 const Map = ({ measurements }) => {
   const {
     activeSensor: { data },
+    dispatch,
   } = useContext(MapContext);
   const [zoom, setZoom] = useState(14);
   const [center, setCenter] = useState({
@@ -33,12 +34,22 @@ const Map = ({ measurements }) => {
     setZoom(zoomBounds);
     setCenter(centerBounds);
   };
-  const handleChildClick = (key, { lat, lng }) => {
+  const handleChildClick = async (key, { lat, lng }) => {
+    const coordinates = { lat, lng };
+    const res = await fetch(
+      `https://api.waqi.info/feed/geo:${coordinates.lat};${coordinates.lng}/?token=${process.env.WAQI_TOKEN}`,
+    );
+    const json = await res.json();
+    dispatch({
+      type: 'SET_ACTIVE_SENSOR',
+      activeSensor: json,
+    });
     setCenter({
       lat,
       lng,
     });
     setZoom(16);
+    localStorage.setItem('activeSensor', JSON.stringify(coordinates));
   };
   return (
     <div className={styles.map}>

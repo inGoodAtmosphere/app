@@ -71,10 +71,10 @@ export async function getServerSideProps() {
   );
 
   const json = await res.json();
-  const filteredData = json.data.filter((location) =>
+  const dataFromPoland = json.data.filter((location) =>
     location.station.name.includes('Poland'),
   );
-  const measurements = { status: json.status, data: filteredData };
+  const measurements = { status: json.status, data: dataFromPoland };
   return { props: { measurements } };
 }
 

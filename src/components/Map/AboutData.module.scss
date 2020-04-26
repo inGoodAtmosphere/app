@@ -1,0 +1,16 @@
+@import '../../styles/settings.scss';
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $bright-accent;
+  color: $light-bg;
+  composes: card from '../../styles/common.scss';
+}
+
+.image {
+  width: $header-height;
+  margin-right: $spacing * 2;
+}

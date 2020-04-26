@@ -6,6 +6,7 @@ import Error from '../Error';
 import withContext from '../../utils/withContext';
 import MapContext from '../../utils/map-context';
 import styles from './Data.module.scss';
+import AboutData from './AboutData';
 
 const Data = () => {
   const {
@@ -17,6 +18,7 @@ const Data = () => {
         <>
           <Measurements />
           <Weather />
+          <AboutData />
           <AboutDevice />
         </>
       ) : (
