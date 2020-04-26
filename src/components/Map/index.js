@@ -15,10 +15,15 @@ const Map = ({ measurements }) => {
     lng: data.city.geo[1],
   });
   useEffect(() => {
-    setCenter({
-      lat: data.city.geo[0],
-      lng: data.city.geo[1],
-    });
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setCenter({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+        setZoom(11);
+      });
+    }
   }, []);
   useEffect(() => {
     setCenter(data.city.geo);
