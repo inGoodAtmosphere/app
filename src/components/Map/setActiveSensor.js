@@ -7,6 +7,5 @@ export default async (coordinates, dispatch) => {
     type: 'SET_ACTIVE_SENSOR',
     activeSensor: json,
   });
-  console.log(json);
   localStorage.setItem('activeSensor', JSON.stringify(coordinates));
 };

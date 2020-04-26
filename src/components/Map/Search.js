@@ -12,7 +12,6 @@ const Search = ({ measurements }) => {
   const [error, setError] = useState('');
   const [text, setText] = useState('');
   const { dispatch } = useContext(MapContext);
-
   const handleChange = ({ target: { value } }) => {
     setText(value);
     setError('');
@@ -55,11 +54,11 @@ const Search = ({ measurements }) => {
       </div>
       <OutsideClick onOutsideClick={() => setSuggestions([])}>
         <ul className={styles.list}>
-          {error ? (
+          {error && suggestions.length === 0 ? (
             <li className={styles.item}>{error}</li>
           ) : (
             suggestions.map((suggestion) => (
-              <li>
+              <li key={suggestion.uid}>
                 <button
                   className={styles.item}
                   type="button"

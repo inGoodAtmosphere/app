@@ -7,16 +7,10 @@
       "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych."
     },
     {
-      "id": "skala",
-      "color": "lightAccent",
-      "header": "Skala CAQI",
-      "text": "TODO"
-    },
-    {
       "id": "przeliczanie",
       "color": "darkAccent",
       "header": "Przeliczanie CAQI",
-      "text": "Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
+      "text": "Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu Nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
     },
     {
       "id": "pm2.5",
@@ -34,13 +28,13 @@
       "id": "o3",
       "color": "text",
       "header": "O₃",
-      "text": "TODO"
+      "text": "Ozon jest silnym utleniaczem fotochemicznym. Powoduje to, że w górnej części atmosfery chroni nas przed promieniowanie UV. Natomiast jeśli ozon występuje w dolnej części atmosfery jest zanieczyszczeniem powietrza. Powoduje problemy z oddychaniem oraz negatywnie wpływa na życie roślin. Najwyższe stężenie ozonu występują wiosną i latem, ponieważ powstawaniu ozonu sprzyja wysoka temperatura i bezchmurne niebo."
     },
     {
       "id": "so2",
       "color": "darkAccent",
       "header": "SO₂",
-      "text": "TODO"
+      "text": "Dwutlenek siarki jest bezbarwnym gazem. Jego zapach przypomina zapach spalonych zapałek, a w dużych stężeniach jest gryzący i duszący. Jest naturalnie wytwarzany podczas erupcji wulkanów. Jest silnie toksyczny i szkodliwie oddziałuje na drogi oddechowe. Jest trujący dla zwierząt i szkodliwy dla roślin. Jest produktem podczas spalania paliw kopalnych.  Może działać szkodliwe podczas jego nadmiaru oraz opadów atmosferycznych kiedy to powoduje kwaśne deszcze."
     },
     {
       "id": "no2",
@@ -52,7 +46,7 @@
       "id": "co",
       "color": "brightAccent",
       "header": "CO",
-      "text": "TODO"
+      "text": "Tlenek węgla (czad) również znany jako “cichy zabójca”, ze względu na jego silne właściwości toksyczne oraz brak właściwości takich jak zapach oraz barwa. Jest naturalnie wytwarzany podczas erupcji wulkanów oraz pożarów roślinności z temperaturą powyżej 1000 stopni Celsjusza. Ponadto znajduje się w spalinach samochodowych oraz jest wytwarzany na skutek większości procesów wysokotemperaturowych, w których paliwem jest węgiel lub ropa naftowa.  Przy ekspozycji na tlenek węgla może dojść do niedotlenienia tkanek, przy mniejszych stężeniach może dojść do omdlenia i śpiączki. Brak natychmiastowej pomocy powoduje śmierć."
     }
   ]
 }
