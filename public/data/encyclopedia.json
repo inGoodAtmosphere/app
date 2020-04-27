@@ -2,9 +2,9 @@
   "content": [
     {
       "id": "caqi",
-      "color": "hsl(193, 54%, 41%)",
+      "color": "hsl(202, 59%, 37%)",
       "header": "CAQI",
-      "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych.$bar$ $b:Przeliczanie CAQI$ Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. Wzór dla zainteresowanych:"
+      "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych. Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu Nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
     },
     {
       "id": "pm2.5",
@@ -14,13 +14,13 @@
     },
     {
       "id": "pm10",
-      "color": "hsl(202, 59%, 37%)",
+      "color": "hsl(193, 54%, 41%)",
       "header": "PM10",
       "text": "PM10 to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – czyli  rakotwórcze metale ciężkie. PM10 to pył zawieszony, który przede wszystkim wpływa negatywnie na układ oddechowy, który jest odpowiedzialny za ataki kaszlu, świszczący oddech oraz pogorszenie się stanu zdrowia  osób z astmą."
     },
     {
       "id": "o3",
-      "color": "hsl(225, 33%, 7%)",
+      "color": "hsl(208, 32%, 48%)",
       "header": "O₃",
       "text": "Ozon jest silnym utleniaczem fotochemicznym. Powoduje to, że w górnej części atmosfery chroni nas przed promieniowanie UV. Natomiast jeśli ozon występuje w dolnej części atmosfery jest zanieczyszczeniem powietrza. Powoduje problemy z oddychaniem oraz negatywnie wpływa na życie roślin. Najwyższe stężenie ozonu występują wiosną i latem, ponieważ powstawaniu ozonu sprzyja wysoka temperatura i bezchmurne niebo."
     },

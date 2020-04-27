@@ -27,3 +27,16 @@
   margin: 0;
   text-align: justify;
 }
+
+@media screen and (min-width: 476px) {
+  .circleWrapper {
+    float: none;
+    width: 7rem;
+    height: 7rem;
+  }
+  .paragraph {
+    margin-left: 5rem;
+    margin-top: -$spacing;
+    text-indent: $spacing * 3;
+  }
+}
