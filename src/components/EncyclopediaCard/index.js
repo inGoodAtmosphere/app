@@ -16,7 +16,7 @@ const EncyclopediaCard = ({ content }) => {
         </svg>
         <h1 className={styles.header}>{content.header}</h1>
       </div>
-      <Paragraph content={content.text} />
+      <Paragraph content={content.text} className={styles.paragraph} />
     </div>
   );
 };
