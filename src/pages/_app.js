@@ -50,7 +50,7 @@ const App = ({ Component, pageProps }) => {
         <meta
           key="description"
           name="description"
-          content="inGoodAtmosphere ma na celu stworzenie przyjaznej atmosfery wolnej od smogu w całej Polsce!"
+          content="Cześć! Jesteśmy projektem o nazwie InGoodAtmosphere i działamy w ramach olimpiady zwolnieni z teorii. Sprawdź naszą stronę oraz mapę jakości powietrza, poprzez którą walczymy o czyste powietrze i abyśmy w szyscy żyli w dobrej atmosferze."
         />
         <meta name="robots" content="index" />
         <link
@@ -77,7 +77,7 @@ const App = ({ Component, pageProps }) => {
         <meta
           key="og:description"
           property="og:description"
-          content='Realizujemy projekt w ramach olimpiady "Zwolnieni z Teorii". Celem naszego projektu, jest uświadomienie ludzi o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska.'
+          content="Cześć! Jesteśmy projektem o nazwie InGoodAtmosphere i działamy w ramach olimpiady zwolnieni z teorii. Sprawdź naszą stronę oraz mapę jakości powietrza, poprzez którą walczymy o czyste powietrze i abyśmy w szyscy żyli w dobrej atmosferze."
         />
         <meta
           key="og:image"
@@ -92,7 +92,7 @@ const App = ({ Component, pageProps }) => {
         <meta
           name="twitter:description"
           key="twitter:description"
-          content='Realizujemy projekt w ramach olimpiady "Zwolnieni z Teorii". Celem naszego projektu, jest uświadomienie ludz o szkodliwości smogu i jego wpływu na nasze życie, organizm oraz niebezpieczeństwo dla środowiska.'
+          content="Cześć! Jesteśmy projektem o nazwie InGoodAtmosphere i działamy w ramach olimpiady zwolnieni z teorii. Sprawdź naszą stronę oraz mapę jakości powietrza, poprzez którą walczymy o czyste powietrze i abyśmy w szyscy żyli w dobrej atmosferze."
         />
         <meta
           name="twitter:title"

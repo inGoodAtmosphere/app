@@ -1,5 +1,6 @@
 import React, { useReducer, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import Map from '../../components/Map';
@@ -46,6 +47,23 @@ const MapPage = ({ measurements: { data, status } }) => {
   }
   return (
     <main className={styles.content}>
+      <Head>
+        <meta
+          property="description"
+          key="description"
+          content="Sprawdź naszą mapę z czujnikami smogu, dzięki niej sprawdzisz jaka jest jakość powietrza w twojej okolicy. Dowiedz się również o tym jak można walczyć o lepszy stan powietrza w Polsce."
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content="Sprawdź naszą mapę z czujnikami smogu, dzięki niej sprawdzisz jaka jest jakość powietrza w twojej okolicy. Dowiedz się również o tym jak można walczyć o lepszy stan powietrza w Polsce."
+        />
+        <meta
+          name="twitter:description"
+          key="twitter:description"
+          content="Sprawdź naszą mapę z czujnikami smogu, dzięki niej sprawdzisz jaka jest jakość powietrza w twojej okolicy. Dowiedz się również o tym jak można walczyć o lepszy stan powietrza w Polsce."
+        />
+      </Head>
       <MapContext.Provider
         value={{
           activeSensor,
