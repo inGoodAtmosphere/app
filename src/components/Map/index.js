@@ -20,17 +20,19 @@ const Map = ({ measurements }) => {
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        setCenter({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
-        setZoom(11);
+        setActiveSensor(
+          {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          },
+          dispatch,
+        );
       });
     }
   }, []);
   useEffect(() => {
     setCenter(data?.city?.geo);
-    setZoom(16);
+    setZoom(15);
   }, [data]);
   const handleChange = ({ center: centerBounds, zoom: zoomBounds }) => {
     setZoom(zoomBounds);
