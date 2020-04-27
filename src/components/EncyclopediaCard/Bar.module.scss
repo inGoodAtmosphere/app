@@ -4,7 +4,7 @@
   position: relative;
   margin-top: $spacing;
   @media screen and (min-width: 476px) {
-    width: calc(100% - $header-height);
+    width: calc(100% - #{$header-height});
     margin-left: $header-height;
   }
   height: $header-height;
