@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Paragraph from '../Article/Paragraph';
 import styles from './index.module.scss';
+import Bar from './Bar';
 
 const EncyclopediaCard = ({ content }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} id={content.id}>
       <div className={styles.circleWrapper}>
         <svg
           className={styles.circle}
@@ -17,6 +18,7 @@ const EncyclopediaCard = ({ content }) => {
         <h1 className={styles.header}>{content.header}</h1>
       </div>
       <Paragraph content={content.text} className={styles.paragraph} />
+      {content.id === 'caqi' && <Bar />}
     </div>
   );
 };

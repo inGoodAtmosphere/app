@@ -1,0 +1,55 @@
+@import '../../styles/settings';
+
+.wrapper {
+  position: relative;
+  margin-top: $spacing;
+  @media screen and (min-width: 476px) {
+    width: calc(100% - $header-height);
+    margin-left: $header-height;
+  }
+  height: $header-height;
+}
+
+.bar {
+  background: $very-good;
+  background: linear-gradient(
+    90deg,
+    $very-good 0%,
+    $good 25%,
+    $warning 50%,
+    $bad 75%,
+    $very-bad 100%
+  );
+  border-radius: $spacing;
+  height: $spacing * 2;
+  z-index: 1;
+  position: relative;
+}
+
+.span {
+  transform: translateX(-50%);
+  &:nth-child(2) {
+    transform: none;
+  }
+  &:nth-child(odd) {
+    top: 50%;
+  }
+  &:nth-child(even) {
+    bottom: 0;
+    .line {
+      height: 200%;
+    }
+  }
+  &:last-child {
+    transform: translateX(-100%);
+  }
+  position: absolute;
+}
+.line {
+  width: 1px;
+  height: 100%;
+  background-color: $text;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}

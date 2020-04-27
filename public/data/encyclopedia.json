@@ -4,7 +4,7 @@
       "id": "caqi",
       "color": "hsl(202, 59%, 37%)",
       "header": "CAQI",
-      "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych. Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu Nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu."
+      "text": "Indeks jakości powietrza (ang. Air Quality Index), jest to wskaźnik liczbowy stosowany do określania stopnia zanieczyszczenia powietrza. Im wyższy ,wskaźnik AQI, tym wyższy odsetek populacji jest narażony na wystąpienie negatywnych skutków zdrowotnych. Istnieje wiele metod na przeliczanie indeksu jakości powietrza. US EPA (Agencja Ochrony Środowiska) używa systemu Nowcast. Polega on na wyliczanie indeksu ze średniej ważonej pomiarów z ostatnich 12h, gdzie najnowsze pomiary mają najwyższą wagę. $link:Kliknij tutaj$https://aqicn.org/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/$ i przeczytaj cały artykuł z dokładnym wyjaśnieniem tego systemu. Skala CAQI w naszym kraju wygląda tak:"
     },
     {
       "id": "pm2.5",
