@@ -6,6 +6,7 @@ import Context from '../../utils/Context';
 import Bots from './Bots';
 import styles from './index.module.scss';
 import Submit from './Submit';
+import { logEvent } from '../../utils/analytics';
 
 const Form = ({ children, data, endpoint, submitText }) => {
   const [message, setMessage] = useState('');
@@ -60,6 +61,7 @@ const Form = ({ children, data, endpoint, submitText }) => {
         setErrors(json.errors);
         setMessage('');
       } else {
+        logEvent('Mail', 'Send');
         setIsSuccessful(true);
         if (json.formName === 'signIn') {
           router.push('/admin');
@@ -70,6 +72,8 @@ const Form = ({ children, data, endpoint, submitText }) => {
         setMessage(json.message);
         setErrors([]);
       }
+    } else {
+      logEvent('Mail', 'Bots');
     }
   };
 
