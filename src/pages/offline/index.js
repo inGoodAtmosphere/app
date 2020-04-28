@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const Error = dynamic(() => import('../../components/Error'));
 
 const Offline = ({ offline }) => {
-  return <Error status={0} text={offline} />;
+  return <Error status="Offline" text={offline} />;
 };
 
 export async function getStaticProps() {

@@ -20,7 +20,7 @@ const Error = ({ status, text, label, value }) => {
         <br />
         {text}
       </p>
-      {status === 500 || status === 0 ? (
+      {status === 500 || status === 'Offline' ? (
         <button type="button" className={styles.button} onClick={refreshPage}>
           Spróbuj ponownie
         </button>
@@ -37,7 +37,7 @@ Error.defaultProps = {
   value: '',
 };
 Error.propTypes = {
-  status: PropTypes.number.isRequired,
+  status: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   text: PropTypes.string.isRequired,
   label: PropTypes.string,
   value: PropTypes.string,
