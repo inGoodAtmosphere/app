@@ -26,12 +26,12 @@ $border: 0.0625em;
 $header-height: 5rem;
 
 // Breakpoints:
-$breakpoint-s: 48rem; // 768px
-$breakpoint-m: 64rem; // 1024px
-$breakpoint-l: 85.375rem; // 1366px
-$breakpoint-xl: 120rem; // 1920px
-$breakpoint-xxl: 160rem; // 2560px
-$breakpoint-xxxl: 200rem; // 32000px
+$breakpoint-s: 768px; // 768px
+$breakpoint-m: 1024px; // 1024px
+$breakpoint-l: 1366px; // 1366px
+$breakpoint-xl: 1920px; // 1920px
+$breakpoint-xxl: 2560px; // 2560px
+$breakpoint-xxxl: 32000px; // 32000px
 
 // Media queries:
 $media-query-s: '(min-width: #{$breakpoint-s})';
