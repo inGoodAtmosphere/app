@@ -5,7 +5,12 @@ export default () => {
   useEffect(() => {
     setDimensions({ width: window.innerWidth, height: window.innerHeight });
     const handleResize = () => {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      if (
+        window.innerWidth !== dimensions.width ||
+        window.innerHeight !== dimensions.height
+      ) {
+        setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      }
     };
     window.addEventListener('resize', handleResize);
     return () => {
