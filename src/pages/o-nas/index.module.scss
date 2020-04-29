@@ -40,9 +40,9 @@
     }
   }
 }
-@media screen and (max-width: 93,75rem) and (min-aspect-ratio: 16/10),
-  (max-width: 100rem) and (min-aspect-ratio: 16/9),
-  (max-width: 250rem) and (min-aspect-ratio: 21 / 9) {
+@media screen and (max-width: 1500px) and (min-aspect-ratio: 16/10),
+  (max-width: 1600px) and (min-aspect-ratio: 16/9),
+  (max-width: 4000px) and (min-aspect-ratio: 21 / 9) {
   .slider {
     * {
       font-size: $base-font-size * 0.7;
@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (max-height: 34rem) {
+@media screen and (max-height: 544px) {
   .slider {
     * {
       font-size: $base-font-size * 0.75;
