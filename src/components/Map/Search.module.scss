@@ -19,6 +19,10 @@
   padding-right: 1.5 + $spacing;
   z-index: 1;
   color: $light-bg;
+  outline: none;
+  &:focus {
+    border-color: $dark-bg;
+  }
 }
 
 .icon {

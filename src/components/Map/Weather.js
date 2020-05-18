@@ -17,7 +17,7 @@ const Weather = () => {
         <span>Temperatura</span>
         <span>
           {temperature}
-          &#8451;
+          &#176;C
         </span>
       </div>
       <div className={styles.data}>
