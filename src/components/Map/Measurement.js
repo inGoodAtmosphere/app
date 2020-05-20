@@ -16,13 +16,13 @@ const Measurement = ({ purpose, value, priority }) => {
       case 'o3':
         return (
           <>
-            SO<sub>2</sub>
+            O<sub>3</sub>
           </>
         );
       case 'no2':
         return (
           <>
-            SO<sub>2</sub>
+            NO<sub>2</sub>
           </>
         );
       default:
