@@ -8,16 +8,28 @@ const Measurement = ({ purpose, value, priority }) => {
   const convertTitle = (title) => {
     switch (title) {
       case 'so2':
-        return 'so\u2082';
+        return (
+          <>
+            SO<sub>2</sub>
+          </>
+        );
       case 'o3':
-        return 'o\u2083';
+        return (
+          <>
+            SO<sub>2</sub>
+          </>
+        );
       case 'no2':
-        return 'no\u2082';
+        return (
+          <>
+            SO<sub>2</sub>
+          </>
+        );
       default:
-        return title;
+        return title.toUpperCase();
     }
   };
-  const convertedTitle = convertTitle(purpose).toUpperCase();
+  const convertedTitle = convertTitle(purpose);
   return (
     <div className={`${styles.wrapper} ${styles[priority]}`}>
       <Tooltip
