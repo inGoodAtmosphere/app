@@ -21,19 +21,22 @@
     {
       "id": "o3",
       "color": "hsl(208, 32%, 48%)",
-      "header": "O₃",
+      "header": "O",
+      "sub": "3",
       "text": "Ozon jest silnym utleniaczem fotochemicznym. Powoduje to, że w górnej części atmosfery chroni nas przed promieniowaniem UV. Natomiast jeśli ozon występuje w dolnej części atmosfery jest zanieczyszczeniem powietrza. Powoduje problemy z oddychaniem oraz negatywnie wpływa na życie roślin. Najwyższe stężenie ozonu występuję wiosną i latem, ponieważ powstawaniu ozonu sprzyja wysoka temperatura i bezchmurne niebo."
     },
     {
       "id": "so2",
       "color": "hsl(203, 70%, 18%)",
-      "header": "SO₂",
+      "header": "SO",
+      "sub": "2",
       "text": "Dwutlenek siarki to bezbarwny gaz, którego zapach przypomina zapach spalonych zapałek, a w dużych stężeniach jest gryzący i duszący. Szkodliwie oddziaływuje na drogi oddechowe, a także może być trujący dla zwierząt, czy toksyczny dla roślin. Dwutlenek siarki jest produktem spalania paliw kopalnych, bądź naturalnie wytwarzany podczas erupcji wulkanów. Może się przyczyniać do powstawania kwaśnych deszczy."
     },
     {
       "id": "no2",
       "color": "hsl(193, 54%, 41%)",
-      "header": "NO₂",
+      "header": "NO",
+      "sub": "2",
       "text": "Dwutlenek azotu to gaz o ostrym zapachu i brunatnym zabarwieniu. Źródłami emisji są zjawiska naturalne takie jak wybuch wulkanu, ale przede wszystkim emisja spalin w transporcie drogowym. Dodatkowo dwutlenek azotu jest produkowany podczas korzystania z kuchenki gazowej oraz palenia papierosów. Nawet krótkotrwały kontakt z substancją powoduje podrażnienie układu oddechowego, oczu oraz kaszel. "
     },
     {

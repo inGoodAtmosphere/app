@@ -20,6 +20,7 @@
   z-index: 1;
   color: $light-bg;
   outline: none;
+  transition: border-color 0.2s ease-in-out;
   &:focus {
     border-color: $dark-bg;
   }

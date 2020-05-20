@@ -8,7 +8,11 @@ const Bar = () => {
     <div className={styles.wrapper}>
       <div className={styles.bar} />
       {breakpoints.map((breakpoint, i) => (
-        <span className={styles.span} style={{ left: `${i * 25}%` }}>
+        <span
+          className={styles.span}
+          key={breakpoint}
+          style={{ left: `${i * 25}%` }}
+        >
           <span className={styles.line} />
           {breakpoint}
         </span>

@@ -15,7 +15,10 @@ const EncyclopediaCard = ({ content }) => {
         >
           <circle cx="5" cy="5" r="5" fill={content.color} />
         </svg>
-        <h1 className={styles.header}>{content.header}</h1>
+        <h1 className={styles.header}>
+          {content.header}
+          <sub>{content.sub}</sub>
+        </h1>
       </div>
       <Paragraph content={content.text} className={styles.paragraph} />
       {content.id === 'caqi' && <Bar />}
@@ -29,6 +32,7 @@ EncyclopediaCard.propTypes = {
     header: PropTypes.string,
     color: PropTypes.string,
     text: PropTypes.string,
+    sub: PropTypes.string,
   }).isRequired,
 };
 

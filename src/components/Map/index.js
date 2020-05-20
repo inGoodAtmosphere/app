@@ -49,6 +49,9 @@ const Map = ({ measurements }) => {
         zoom={zoom}
         onChange={handleChange}
         onChildClick={handleChildClick}
+        options={() => ({
+          gestureHandling: 'greedy',
+        })}
         bootstrapURLKeys={{
           key: process.env.MAP_API_KEY,
           language: 'pl',
