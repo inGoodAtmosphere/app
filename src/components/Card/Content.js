@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import Button from './Button';
 import Context from '../../utils/Context';
 import styles from './Content.module.scss';
-import Paragraph from '../Article/Paragraph';
 
 const Content = () => {
   const { env, header, text, link, isEven } = useContext(Context);
@@ -12,10 +11,10 @@ const Content = () => {
         (isEven ? styles.even : styles.odd)}`}
     >
       <h2 className={`${styles.header} ${styles[`header${env}`]}`}>{header}</h2>
-      <Paragraph
-        content={text}
-        className={`${styles.paragraph} ${styles[`paragraph${env}`]}`}
-      />
+
+      <p className={`${styles.paragraph} ${styles[`paragraph${env}`]}`}>
+        {text}
+      </p>
       {env === 'LandingPage' && <Button link={link} />}
     </div>
   );

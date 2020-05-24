@@ -4,19 +4,36 @@
   composes: content from '../../styles/common.scss';
 }
 
-.card {
+.article {
   composes: card from '../../styles/common.scss';
   padding: $spacing;
   position: relative;
+  p {
+    margin: $spacing / 2 0 0 0;
+    text-indent: $spacing;
+    line-height: $m-size;
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: $spacing;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '- ';
+        text-indent: -$spacing;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 .author {
   align-self: flex-end;
   color: #999;
   padding: $spacing $spacing 0 0;
-}
-
-.paragraph {
-  margin: $spacing / 2 0 0 0;
-  text-indent: $spacing;
 }

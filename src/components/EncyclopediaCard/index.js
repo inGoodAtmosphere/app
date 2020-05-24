@@ -1,6 +1,6 @@
 import React from 'react';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
-import Paragraph from '../Article/Paragraph';
 import styles from './index.module.scss';
 import Bar from './Bar';
 
@@ -20,7 +20,7 @@ const EncyclopediaCard = ({ content }) => {
           <sub>{content.sub}</sub>
         </h1>
       </div>
-      <Paragraph content={content.text} className={styles.paragraph} />
+      <p className={styles.paragraph}>{parse(content.text)}</p>
       {content.id === 'caqi' && <Bar />}
     </div>
   );

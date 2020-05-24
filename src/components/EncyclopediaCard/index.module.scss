@@ -26,6 +26,9 @@
 .paragraph {
   margin: 0;
   text-align: justify;
+  a {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 476px) {
