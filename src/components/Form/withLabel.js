@@ -19,7 +19,7 @@ export default (WrappedComponent) => ({
     <>
       <div
         className={styles.wrapper}
-        style={{ marginBottom: type === 'textarea' && '-0.3rem' }}
+        style={{ marginBottom: type === 'textarea' ? '-0.3rem' : '0' }}
       >
         <WrappedComponent
           name={name}

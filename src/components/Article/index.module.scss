@@ -8,9 +8,10 @@
   composes: card from '../../styles/common.scss';
   padding: $spacing;
   position: relative;
+  text-align: justify;
   p {
-    margin: $spacing / 2 0 0 0;
-    text-indent: $spacing;
+    margin: $spacing * 2 0 0 0;
+    text-indent: $spacing * 2;
     line-height: $m-size;
   }
   ul {
@@ -29,6 +30,16 @@
 
   a {
     text-decoration: underline;
+  }
+  q {
+    font-weight: bold;
+    font-style: italic;
+  }
+  abbr {
+    display: block;
+    font-size: $xs-size;
+    line-height: $s-size;
+    text-align: right;
   }
 }
 

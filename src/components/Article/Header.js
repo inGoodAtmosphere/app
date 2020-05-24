@@ -13,6 +13,8 @@ const ArticleTitle = () => {
         src={`${imagesPath}1280.jpg`}
         alt="Miniaturka artykułu"
         srcSet={`${imagesPath}768.jpg 768w, ${imagesPath}1280.jpg 1280w, ${imagesPath}1920.jpg 1920w`}
+        sizes="(max-width: 768px) 768px,(max-width: 1920px) 1280px,
+            1920px"
       />
     </div>
   );

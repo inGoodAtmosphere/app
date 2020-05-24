@@ -13,7 +13,7 @@ const Hamburger = ({ isActive, setIsActive }) => (
     aria-expanded="false"
     aria-controls="menu"
   >
-    <span className={styles.box}>
+    <span className={styles.box} id="menu">
       <span className={styles.line} />
     </span>
   </button>

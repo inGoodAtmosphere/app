@@ -6,11 +6,7 @@ const Tags = ({ tags }) => {
   return (
     <p className={styles.tags}>
       {tags.map((tag) => (
-        <span
-          key={tag}
-          className={styles.tag}
-          aria-label="Znajdź inne artykuły z tym tagiem"
-        >
+        <span key={tag} className={styles.tag}>
           {`#${tag} `}
         </span>
       ))}
