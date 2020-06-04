@@ -26,6 +26,9 @@
   &LandingPage {
     margin: 0 0 $spacing * 2 0;
   }
+  a{
+    text-decoration: underline;
+  }
 }
 
 .link {

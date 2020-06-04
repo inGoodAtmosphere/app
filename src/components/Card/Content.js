@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import parse from 'html-react-parser';
 import Button from './Button';
 import Context from '../../utils/Context';
 import styles from './Content.module.scss';
@@ -13,7 +14,7 @@ const Content = () => {
       <h2 className={`${styles.header} ${styles[`header${env}`]}`}>{header}</h2>
 
       <p className={`${styles.paragraph} ${styles[`paragraph${env}`]}`}>
-        {text}
+        {parse(text)}
       </p>
       {env === 'LandingPage' && <Button link={link} />}
     </div>
