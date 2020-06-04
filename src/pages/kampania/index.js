@@ -21,6 +21,7 @@ const Campaign = ({ data }) => {
               key={article.id}
               images={article.images}
               header={article.header}
+              subHeader={article.subHeaders}
               description={article.description}
               tags={tags}
               link={article.link}

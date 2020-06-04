@@ -7,6 +7,7 @@
   z-index: 1;
   min-height: 12rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   &::after {
@@ -23,12 +24,18 @@
 }
 
 .text {
-  border-radius: $spacing;
   color: $light-bg;
   font-size: $l-size;
   margin: 0;
   text-align: center;
   z-index: 1;
+}
+
+.subheader{
+  font-size: $m-size;
+  margin: $spacing 0 0 0;
+  z-index: 1;
+  color: $light-bg;
 }
 
 .image {
