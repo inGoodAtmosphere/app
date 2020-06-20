@@ -81,8 +81,15 @@ export async function getServerSideProps() {
   const res = await fetch(
     `https://api.waqi.info/map/bounds/?latlng=54.835663,14.124400,49.002032,24.145578&token=${process.env.WAQI_TOKEN}`,
   );
-
   const json = await res.json();
+  const ourSensor = await fetch(
+    'https://ingoodatmosphere.com/api/measurements',
+  );
+  const ourSensorJson = await ourSensor.json();
+  const ourSensorLocations = await fetch(
+    'https://ingoodatmosphere.com/api/locations',
+  );
+  const ourSensorLocationsJson = await ourSensorLocations.json();
   const dataFromPoland = json.data.filter((location) =>
     location.station.name.includes('Poland'),
   );
@@ -93,7 +100,20 @@ export async function getServerSideProps() {
       name: element.station.name.replace(', Poland', ''),
     },
   }));
-  const measurements = { status: json.status, data: formattedData };
+  const formattedOurData = ourSensorJson.map((element) => ({
+    ...element,
+    lat: ourSensorLocationsJson.filter(location=>location.id === element.deviceId)[0].lat,
+    lon: ourSensorLocationsJson.filter(location=>location.id === element.deviceId)[0].lng,
+    uid: element.deviceId,
+    aqi: element.pm10,
+    station: {
+      name: 'Siemianowice Śląskie',
+    },
+  }));
+  const measurements = {
+    status: json.status,
+    data: [...formattedData, ...formattedOurData],
+  };
   return { props: { measurements } };
 }
 

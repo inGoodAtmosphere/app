@@ -39,7 +39,7 @@ const Map = ({ measurements }) => {
     setCenter(centerBounds);
   };
   const handleChildClick = async (key, { lat, lng }) => {
-    setActiveSensor({ lat, lng }, dispatch);
+    setActiveSensor({ lat, lng }, dispatch, key);
   };
   return (
     <div className={styles.map}>
@@ -58,7 +58,7 @@ const Map = ({ measurements }) => {
         }}
       >
         {measurements.map(({ uid, lat, lon, aqi }) => {
-          return <Marker key={uid} lat={lat} lng={lon} aqi={aqi} />;
+          return <Marker key={uid} lat={lat} lng={lon} aqi={aqi} uid={uid} />;
         })}
       </GoogleMap>
     </div>

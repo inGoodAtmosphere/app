@@ -11,6 +11,6 @@ export const getSecondaryData = (data) => ({
 });
 
 export const getWeatherData = (data) => ({
-  temperature: data.t && data.t.v.toFixed(),
-  humidity: data.h && data.h.v.toFixed(),
+  temperature: data.t.v && data.t.v.toFixed(),
+  humidity: data.h.v && data.h.v.toFixed(),
 });
