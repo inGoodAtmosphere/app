@@ -11,11 +11,13 @@ import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import styles from './index.module.scss';
 import setActiveSensor from '../../components/Map/setActiveSensor';
+import countCaqi from '../../utils/countCaqi';
 
 const MapPage = ({ measurements: { data, status } }) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
+  console.log(data);
   useEffect(() => {
     if (status === 'error') {
       setError(data);
@@ -102,10 +104,14 @@ export async function getServerSideProps() {
   }));
   const formattedOurData = ourSensorJson.map((element) => ({
     ...element,
-    lat: ourSensorLocationsJson.filter(location=>location.id === element.deviceId)[0].lat,
-    lon: ourSensorLocationsJson.filter(location=>location.id === element.deviceId)[0].lng,
+    lat: ourSensorLocationsJson.filter(
+      (location) => location.id === element.deviceId,
+    )[0].lat,
+    lon: ourSensorLocationsJson.filter(
+      (location) => location.id === element.deviceId,
+    )[0].lng,
     uid: element.deviceId,
-    aqi: element.pm10,
+    aqi: countCaqi(element.pm10, element['pm2.5']),
     station: {
       name: 'Siemianowice Śląskie',
     },

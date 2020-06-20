@@ -7,18 +7,21 @@ import withContext from '../../utils/withContext';
 import MapContext from '../../utils/map-context';
 import styles from './Data.module.scss';
 import AboutData from './AboutData';
+import Chart from './Chart';
 
 const Data = () => {
   const {
     activeSensor: { status, data },
   } = useContext(MapContext);
+  console.log(useContext(MapContext));
   return (
     <div className={` ${status === 'ok' ? styles.data : styles.error}`}>
       {status === 'ok' ? (
         <>
           <Measurements />
           <Weather />
-          <AboutData />
+          {data.idx === 71 && <Chart />}
+          <AboutData id={data.idx} />
           <AboutDevice />
         </>
       ) : (

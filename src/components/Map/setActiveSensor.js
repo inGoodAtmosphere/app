@@ -1,35 +1,46 @@
+import countCaqi from "../../utils/countCaqi";
+
 export default async (coordinates, dispatch, key) => {
   let res;
   let data;
-  if (key === '71') {
+  if (key === '71' || key === 71) {
     res = await fetch('/api/measurements/71');
-    const jsonArr = await res.json();
-    const json = jsonArr[jsonArr.length - 1]
+    const json = await res.json();
     const formattedData = {
       status: 'ok',
       data: {
         city: {
           geo: coordinates,
-          name: 'Siemianowice Śląskie',
+          name: 'Siemianowice Śląskie, Poland',
         },
-        aqi: json.pm10,
+        idx: 71,
+        aqi: countCaqi(json[json.length - 1].pm10, json[json.length - 1]['pm2.5']),
         iaqi: {
           h: {
-            v: json.humidity,
+            v: json[json.length - 1].humidity,
           },
           pm1: {
-            v: json.pm1,
+            v: json[json.length - 1].pm1,
           },
           pm10: {
-            v: json.pm10,
+            v: json[json.length - 1].pm10,
           },
           pm25: {
-            v: json['pm2.5'],
+            v: json[json.length - 1]['pm2.5'],
           },
           t: {
-            v: json.temperature,
+            v: json[json.length - 1].temperature,
           },
         },
+        history: json.map((element) => ({
+          measurementDate: element.measurementDate,
+          'pm2.5': element.pm25,
+          pm10: element.pm10,
+          pm1: element.pm1,
+          caqi: countCaqi(element.pm25, element.pm10),
+          temperature: element.temperature,
+          humidity: element.humidity,
+        })),
       },
     };
     data = formattedData;

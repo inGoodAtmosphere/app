@@ -19,12 +19,13 @@ import useWindowDimensions from '../../../utils/hooks/useWindowDimensions';
 
 const Chart = () => {
   const {
-    activeSensor: { avg },
+    activeSensor: { data },
   } = useContext(MapContext);
+  console.log(data);
   const [activeChart, setActiveChart] = useState('pm');
   const { width } = useWindowDimensions();
   const formatDate = (day) => moment(day).format('dddd');
-  const formattedData = avg.map((day) => {
+  const formattedData = data.history.slice(0,7).map((day) => {
     return {
       name: formatDate(day.measurementDate),
       'PM2.5': day['pm2.5'],

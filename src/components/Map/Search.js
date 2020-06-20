@@ -40,7 +40,6 @@ const Search = ({ measurements }) => {
       setError('Nie znaleźliśmy takiego czujnika');
     }
   };
-
   return (
     <>
       <div className={styles.wrapper}>
@@ -66,6 +65,7 @@ const Search = ({ measurements }) => {
                     setActiveSensor(
                       { lat: suggestion.lat, lng: suggestion.lon },
                       dispatch,
+                      suggestion.deviceId
                     );
                     setSuggestions([]);
                     setText('');

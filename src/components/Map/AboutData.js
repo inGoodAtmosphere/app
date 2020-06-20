@@ -1,8 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import styles from './AboutData.module.scss';
 
-const AboutData = () => {
-  return (
+const AboutData = ({id}) => {
+  return id === 71 ? (
+    <div className={styles.card}>
+      <img
+        src="icons/favicon-192.png"
+        alt="inGoodAtmosphere"
+        className={styles.image}
+      />
+      <p>Dane pochodzą z czujnika inGoodAtmosphere</p>
+    </div>
+  ) : (
     <a
       href="https://waqi.info/"
       className={styles.card}
@@ -13,6 +23,15 @@ const AboutData = () => {
       <p>Dane pochodzą ze strony waqi.info</p>
     </a>
   );
+  
 };
+
+AboutData.defaultProps = {
+  id: 0
+}
+
+AboutData.propTypes = {
+  id: PropTypes.number,
+}
 
 export default AboutData;
