@@ -17,7 +17,6 @@ const MapPage = ({ measurements: { data, status } }) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [error, setError] = useState(null);
   const [activeSensor, dispatch] = useReducer(mapReducer);
-  console.log(data);
   useEffect(() => {
     if (status === 'error') {
       setError(data);
@@ -80,19 +79,22 @@ const MapPage = ({ measurements: { data, status } }) => {
 };
 
 export async function getServerSideProps() {
-  const res = await fetch(
+  const waqi = await fetch(
     `https://api.waqi.info/map/bounds/?latlng=54.835663,14.124400,49.002032,24.145578&token=${process.env.WAQI_TOKEN}`,
   );
-  const json = await res.json();
+  const waqiJson = await waqi.json();
+
   const ourSensor = await fetch(
     'https://ingoodatmosphere.com/api/measurements',
   );
   const ourSensorJson = await ourSensor.json();
+
   const ourSensorLocations = await fetch(
     'https://ingoodatmosphere.com/api/locations',
   );
   const ourSensorLocationsJson = await ourSensorLocations.json();
-  const dataFromPoland = json.data.filter((location) =>
+
+  const dataFromPoland = waqiJson.data.filter((location) =>
     location.station.name.includes('Poland'),
   );
   const formattedData = dataFromPoland.map((element) => ({
@@ -117,7 +119,7 @@ export async function getServerSideProps() {
     },
   }));
   const measurements = {
-    status: json.status,
+    status: waqiJson.status,
     data: [...formattedData, ...formattedOurData],
   };
   return { props: { measurements } };

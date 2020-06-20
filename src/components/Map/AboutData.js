@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import styles from './AboutData.module.scss';
 
-const AboutData = ({id}) => {
+const AboutData = ({ id }) => {
   return id === 71 ? (
     <div className={styles.card}>
       <img
@@ -23,15 +23,14 @@ const AboutData = ({id}) => {
       <p>Dane pochodzą ze strony waqi.info</p>
     </a>
   );
-  
 };
 
 AboutData.defaultProps = {
-  id: 0
-}
+  id: 0,
+};
 
 AboutData.propTypes = {
   id: PropTypes.number,
-}
+};
 
 export default AboutData;

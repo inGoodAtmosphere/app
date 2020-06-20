@@ -25,7 +25,7 @@ const Marker = ({ aqi, uid }) => {
   );
 };
 Marker.propTypes = {
-  aqi: PropTypes.string.isRequired,
+  aqi: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   uid: PropTypes.number.isRequired,
 };
 export default Marker;

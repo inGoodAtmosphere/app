@@ -21,11 +21,10 @@ const Chart = () => {
   const {
     activeSensor: { data },
   } = useContext(MapContext);
-  console.log(data);
   const [activeChart, setActiveChart] = useState('pm');
   const { width } = useWindowDimensions();
   const formatDate = (day) => moment(day).format('dddd');
-  const formattedData = data.history.slice(0,7).map((day) => {
+  const formattedData = data.history.slice(0, 7).map((day) => {
     return {
       name: formatDate(day.measurementDate),
       'PM2.5': day['pm2.5'],
@@ -68,9 +67,6 @@ const Chart = () => {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          {
-            // TODO: startIndex set to last 7 days
-          }
           <Brush
             height={30}
             travellerWidth={7}

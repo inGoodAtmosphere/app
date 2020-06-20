@@ -18,7 +18,7 @@ const Tooltip = ({ className, purpose, title }) => {
 Tooltip.propTypes = {
   className: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
 };
 
 export default Tooltip;

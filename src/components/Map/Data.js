@@ -13,7 +13,6 @@ const Data = () => {
   const {
     activeSensor: { status, data },
   } = useContext(MapContext);
-  console.log(useContext(MapContext));
   return (
     <div className={` ${status === 'ok' ? styles.data : styles.error}`}>
       {status === 'ok' ? (

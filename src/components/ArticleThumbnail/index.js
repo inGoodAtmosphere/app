@@ -12,6 +12,7 @@ const ArticleThumbnail = ({
   tags,
   link,
 }) => {
+  // prettier-ignore
   return (
     <div className={styles.wrapper}>
       <Thumbnail images={images} link={link} />

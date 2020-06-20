@@ -65,7 +65,7 @@ const Search = ({ measurements }) => {
                     setActiveSensor(
                       { lat: suggestion.lat, lng: suggestion.lon },
                       dispatch,
-                      suggestion.deviceId
+                      suggestion.deviceId,
                     );
                     setSuggestions([]);
                     setText('');

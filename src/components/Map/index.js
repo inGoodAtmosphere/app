@@ -39,7 +39,7 @@ const Map = ({ measurements }) => {
     setCenter(centerBounds);
   };
   const handleChildClick = async (key, { lat, lng }) => {
-    setActiveSensor({ lat, lng }, dispatch, key);
+    setActiveSensor({ lat, lng }, dispatch, parseInt(key, 10));
   };
   return (
     <div className={styles.map}>

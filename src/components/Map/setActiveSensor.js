@@ -1,20 +1,23 @@
-import countCaqi from "../../utils/countCaqi";
+import countCaqi from '../../utils/countCaqi';
 
 export default async (coordinates, dispatch, key) => {
   let res;
   let data;
-  if (key === '71' || key === 71) {
+  if (key === 71) {
     res = await fetch('/api/measurements/71');
     const json = await res.json();
     const formattedData = {
       status: 'ok',
       data: {
         city: {
-          geo: coordinates,
+          geo: [coordinates.lat, coordinates.lng],
           name: 'Siemianowice Śląskie, Poland',
         },
         idx: 71,
-        aqi: countCaqi(json[json.length - 1].pm10, json[json.length - 1]['pm2.5']),
+        aqi: countCaqi(
+          json[json.length - 1].pm10,
+          json[json.length - 1]['pm2.5'],
+        ),
         iaqi: {
           h: {
             v: json[json.length - 1].humidity,
