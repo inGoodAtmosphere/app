@@ -126,7 +126,7 @@ const Chart = () => {
               stroke="#2988BD"
               strokeWidth={3}
               connectNulls
-              unit="&#8451;"
+              unit="&#xb0;C"
             />
           )}
           {activeChart === 'temperature' && (
