@@ -18,5 +18,8 @@ module.exports = {
     allowImportExportEverywhere: true
   },
   plugins: ['react'],
+  rules: {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
   "ignorePatterns": ["service-worker.js", "build/", "out/"],
 };

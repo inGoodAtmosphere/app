@@ -1,20 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import ArticleThumbnail from '../../components/ArticleThumbnail';
 import Loading from '../../components/Loading';
 import styles from './index.module.scss';
 
-const Campaign = ({ data }) => {
+const Campaign = () => {
   const router = useRouter();
+  const [articles, setArticles] = useState(null);
   if (router.isFallback) return <Loading />;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('/api/articles');
+      const data = await res.json();
+      setArticles(data);
+    };
+    fetchData();
+  }, []);
   return (
     <main className={styles.content}>
       <h1>Nasze artykuły</h1>
       <h2 className={styles.h2}>Tutaj przeczytasz wszystkie nasze artykuły</h2>
-      {data.length &&
-        data.map((article) => {
+      {articles &&
+        articles.map((article) => {
           const tags = article.tags.split(', ');
           return (
             <ArticleThumbnail
@@ -30,20 +39,6 @@ const Campaign = ({ data }) => {
         })}
     </main>
   );
-};
-
-export async function getStaticProps() {
-  const res = await fetch('https://ingoodatmosphere.com/api/articles');
-  const data = await res.json();
-  return { props: { data } };
-}
-
-Campaign.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    ),
-  ).isRequired,
 };
 
 export default Campaign;
