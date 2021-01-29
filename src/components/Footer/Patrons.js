@@ -14,15 +14,7 @@ const Patrons = () => {
             img="/img/gliwice.png"
           />
         </div>
-        <div className={styles.patron}>
-          <h3>Patron medialny: </h3>
-          <Patron
-            name="TVP"
-            link="https://katowice.tvp.pl/"
-            img="/img/tvp.png"
-          />
-        </div>
-
+        
         <div className={styles.patron}>
           <h3>Patroni: </h3>
           <Patron
