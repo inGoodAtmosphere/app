@@ -7,7 +7,6 @@ const mysql = require('serverless-mysql')({
     password: process.env.DB_PASSWORD,
   },
 });
-// TODO MAKE CLASS WITH USER
 
 const queryExecute = async (queryContent) => {
   let results = await mysql.query(queryContent);
