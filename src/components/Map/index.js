@@ -53,7 +53,6 @@ const Map = ({ measurements }) => {
           gestureHandling: 'greedy',
         })}
         bootstrapURLKeys={{
-          key: process.env.MAP_API_KEY,
           language: 'pl',
         }}
       >

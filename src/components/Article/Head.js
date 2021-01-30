@@ -3,15 +3,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Context from '../../utils/Context';
 
-const ArticleHead = () => {
-  const {
-    publishDate,
-    author,
-    section,
-    header,
-    description,
-    images,
-  } = useContext(Context);
+const ArticleHead = ({ article }) => {
+
   const router = useRouter();
   return (
     <Head>
@@ -25,29 +18,29 @@ const ArticleHead = () => {
       <meta
         key="article:published_time"
         property="article:published_time"
-        content={publishDate}
+        content={article.publishDate}
       />
-      <meta key="article:author" property="article:author" content={author} />
+      <meta key="article:author" property="article:author" content={article.author} />
       <meta
         key="article:section"
         property="article:section"
-        content={section}
+        content={article.section}
       />
-      <meta key="og:title" property="og:title" content={header} />
+      <meta key="og:title" property="og:title" content={article.header} />
       <meta
         key="og:description"
         property="og:description"
-        content={description}
+        content={article.description}
       />
       <meta
         key="og:image"
         property="og:image"
-        content={`https://ingoodatmosphere.com/data/articles/${images}/og.jpg`}
+        content={`https://ingoodatmosphere.com/data/articles/${article.images}/og.jpg`}
       />
       <meta
         key="twitter:description "
         name="twitter:description"
-        content={description}
+        content={article.description}
       />
       <meta
         key="twitter:title"
@@ -57,9 +50,9 @@ const ArticleHead = () => {
       <meta
         name="twitter:image"
         key="twitter:image"
-        content={`https://ingoodatmosphere.com/data/articles/${images}/og.jpg`}
+        content={`https://ingoodatmosphere.com/data/articles/${article.images}/og.jpg`}
       />
-      <title key="title">{header}</title>
+      <title key="title">{article.header}</title>
     </Head>
   );
 };
